@@ -1,0 +1,102 @@
+@use '../abstract/colors';
+@use '../components/button';
+
+.navbar {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: sticky;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        z-index: 2;
+        padding-left: 1em;
+    }
+
+    &__menu--open {
+        font-size: 2.5em;
+    }
+
+    &__menu--close {
+        font-size: 2.5em;
+        position: relative;
+        display: none;
+        z-index: 1000;
+        transition: 0.5s ease-in;
+    }
+
+    &__links {
+        position: fixed;
+        width: 98vw;
+        height: 95vh;
+        border-radius: 50px 0 0 50px;
+        border: 1px solid colors.$pink-400;
+        top: 16px;
+        right: -100vw;
+        background-color: colors.$pink-300;
+        transition: 0.5s ease-in;
+        z-index: 1;
+
+        &:hover {
+            color: gray;
+        }
+
+        &.active {
+            right: 0;
+        }
+
+        ul {
+            position: relative;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 7rem;
+            font-size: 1.5em;
+            margin-top: 3em;
+
+            li a {
+                color: rgb(78, 78, 78);
+                transition: color 0.5s ease;
+                font-weight: 600;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    &__btns {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+        gap: 2rem;
+        width: 90vw;
+        right: -100vw;
+        top: 70%;
+        z-index: 1000;
+        transition: 0.5s ease-in;
+
+        &.active {
+            right: 0;
+        }
+
+        &--white {
+            @include button.button-setup(white, black, 20px);
+            width: 90vw;
+        }
+
+        &--purple {
+            @include button.button-setup(colors.$primary, white, 20px);
+            width: 90vw;
+        }
+    }
+}
