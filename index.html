@@ -7,43 +7,39 @@
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <div>Hello World</div>
+        <nav>
+            <div class="navbar">
+                <div class="navbar__logo">
+                    <img src="/src/navbar/logo.svg" alt="logo image" />
+                </div>
 
-        <!-- Testing Fonts and Icomoon-Icons -->
-        <div style="font-family: 'Roboto', sans-serif; font-weight: 900">
-            Roboto Black
-        </div>
-        <div style="font-family: 'Roboto', sans-serif; font-weight: 700">
-            Roboto Bold
-        </div>
-        <div style="font-family: 'Roboto', sans-serif; font-weight: 500">
-            Roboto Medium
-        </div>
-        <div style="font-family: 'Roboto', sans-serif; font-weight: 400">
-            Roboto Regular
-        </div>
+                <div class="navbar__menu">
+                    <i class="icon-ham-menu" id="menu-open" alt="open menu">
+                    </i>
+                    <i
+                        class="icon-cross navbar__menu--close"
+                        src="/src/navbar/cross-cropped.svg"
+                        id="menu-close"
+                        alt="close menu"
+                    >
+                    </i>
+                </div>
 
-        <span class="icon-locationpin"
-            ><span class="path1"></span><span class="path2"></span
-        ></span>
-        <span class="icon-calendar"
-            ><span class="path1"></span><span class="path2"></span
-        ></span>
-        <span class="icon-coupon"
-            ><span class="path1"></span><span class="path2"></span
-        ></span>
-        <span class="icon-ham-menu"></span>
-        <span class="icon-play-circle"></span>
-        <span class="icon-work-bag"></span>
-        <span class="icon-mail-icon"></span>
-        <span class="icon-fb-logo"></span>
-        <span class="icon-insta-logo"
-            ><span class="path1"></span><span class="path2"></span
-        ></span>
-        <span class="icon-twt-logo"
-            ><span class="path1"></span><span class="path2"></span
-        ></span>
-        <span class="icon-cross"></span>
+                <div class="navbar__links">
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Discover</a></li>
+                        <li><a>Special Deals</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar__btns">
+                    <button class="navbar__btns--white">Log In</button>
+                    <button class="navbar__btns--purple">Sign Up</button>
+                </div>
+            </div>
+        </nav>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
