@@ -1,12 +1,14 @@
 @use '../abstract/colors';
 @use '../components/button';
+@use '../components/gradient-bg';
 
 .navbar {
     top: 0;
     left: 0;
+    right: 0;
     z-index: 2;
     position: sticky;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     padding: 0 15px;
     height: 120px;
@@ -21,6 +23,7 @@
 
     &__menu--open {
         font-size: 2.5em;
+        border: 1px solid black;
     }
 
     &__menu--close {
@@ -41,7 +44,7 @@
         right: -100vw;
         background-color: colors.$pink-300;
         transition: 0.5s ease-in;
-        z-index: 1;
+        z-index: 100;
 
         &:hover {
             color: gray;
@@ -147,8 +150,6 @@
     .navbar {
         height: 10em;
         padding: 10px 80px 0 150px;
-        box-sizing: border-box;
-        width: 100%;
 
         &__logo {
             padding-top: 10px;

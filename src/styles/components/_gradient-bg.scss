@@ -1,0 +1,23 @@
+@use '../abstract/colors';
+
+.bg-wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: radial-gradient(
+            circle,
+            colors.$pink-350 0,
+            colors.$pink-300 40%,
+            white 70%
+        );
+        border-radius: 50%;
+        top: -100px;
+        left: -15vw;
+        width: clamp(300px, 80vw, 800px);
+        height: clamp(300px, 80vw, 800px);
+        z-index: -2;
+    }
+}
