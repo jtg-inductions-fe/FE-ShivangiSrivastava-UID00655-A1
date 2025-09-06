@@ -17,20 +17,19 @@
     align-items: center;
 
     &__logo {
-        z-index: 2;
+        z-index: 200;
         padding-left: 1em;
     }
 
     &__menu--open {
         font-size: 2.5em;
-        border: 1px solid black;
     }
 
     &__menu--close {
         font-size: 2.5em;
         position: relative;
         display: none;
-        z-index: 1000;
+        z-index: 200;
         transition: 0.5s ease-in;
     }
 
@@ -84,7 +83,7 @@
         gap: 2rem;
         width: 90vw;
         right: -100vw;
-        top: 70%;
+        top: 50%;
         z-index: 1000;
         transition: 0.5s ease-in;
 
