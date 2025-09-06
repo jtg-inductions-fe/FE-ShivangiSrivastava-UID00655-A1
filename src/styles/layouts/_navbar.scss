@@ -100,3 +100,45 @@
         }
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .navbar {
+        padding: 0 45px 0 65px;
+
+        &__logo {
+            position: fixed;
+            left: 48%;
+        }
+
+        &__links {
+            border-radius: 0 50px 50px 0;
+            left: -100vw;
+            &.active {
+                left: 0;
+            }
+
+            ul {
+                margin-left: 5rem;
+            }
+        }
+
+        &__btns {
+            position: static;
+            flex-direction: row;
+            margin: 0;
+            gap: 0;
+            width: 250px;
+            height: 50px;
+            display: flex;
+            z-index: 0;
+
+            &--white {
+                @include button.button-setup(white, black, 15px);
+            }
+
+            &--purple {
+                @include button.button-setup(colors.$primary, white, 15px);
+            }
+        }
+    }
+}
