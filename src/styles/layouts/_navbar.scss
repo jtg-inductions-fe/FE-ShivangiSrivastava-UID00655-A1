@@ -1,14 +1,12 @@
 @use '../abstract/colors';
 @use '../components/button';
 @use '../components/gradient-bg';
+@use '../abstract/mixins';
 
 .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
+    max-width: 1440px;
     position: sticky;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     padding: 0 15px;
     height: 120px;
@@ -18,7 +16,7 @@
 
     &__logo {
         z-index: 200;
-        padding-left: 1em;
+        padding-left: 0.2em;
     }
 
     &__menu--open {
@@ -35,22 +33,18 @@
 
     &__links {
         position: fixed;
-        width: 98vw;
+        width: 100%;
         height: 95vh;
         border-radius: 50px 0 0 50px;
         border: 1px solid colors.$pink-400;
         top: 16px;
-        right: -100vw;
         background-color: colors.$pink-300;
-        transition: 0.5s ease-in;
         z-index: 100;
-
-        &:hover {
-            color: gray;
-        }
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
 
         &.active {
-            right: 0;
+            transform: translateX(0%);
         }
 
         ul {
@@ -62,6 +56,7 @@
             line-height: 7rem;
             font-size: 1.5em;
             margin-top: 3em;
+            margin-left: 1em;
 
             li a {
                 color: rgb(78, 78, 78);
@@ -81,14 +76,14 @@
         flex-direction: column;
         margin: 0 20px;
         gap: 2rem;
-        width: 90vw;
-        right: -100vw;
-        top: 50%;
+        width: 100vw;
+        top: 75%;
         z-index: 1000;
-        transition: 0.5s ease-in;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
 
         &.active {
-            right: 0;
+            transform: translateX(0%);
         }
 
         &--white {
@@ -114,9 +109,12 @@
 
         &__links {
             border-radius: 0 50px 50px 0;
-            left: -100vw;
+            transform: translateX(-100%);
+            left: 0;
+            transition: transform 0.5s ease-in;
+
             &.active {
-                left: 0;
+                transform: translateX(0%);
             }
 
             ul {
@@ -126,6 +124,7 @@
 
         &__btns {
             position: static;
+            transform: none;
             flex-direction: row;
             margin: 0;
             gap: 0;
@@ -167,6 +166,8 @@
             font-size: 16px;
             background-color: transparent;
             padding-bottom: 10px;
+            margin: 0;
+            transform: none;
             border: none;
 
             ul {
@@ -183,6 +184,7 @@
             flex-direction: row;
             position: static;
             margin: 0;
+            transform: none;
             gap: 0;
             width: 250px;
             height: 50px;

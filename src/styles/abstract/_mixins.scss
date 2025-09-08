@@ -1,0 +1,9 @@
+@mixin button-reset {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    line-height: normal;
+    padding: 0;
+}

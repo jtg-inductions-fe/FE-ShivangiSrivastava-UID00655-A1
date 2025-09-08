@@ -2,3 +2,8 @@
 @use './vendors/icomoon';
 @use './base/fonts';
 @use './layouts/navbar';
+@use './abstract/mixins';
+
+.icomoon-button {
+    @include mixins.button-reset;
+}

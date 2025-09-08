@@ -11,23 +11,33 @@
             <nav>
                 <div class="navbar">
                     <div class="navbar__logo">
-                        <img src="/src/assets/logo.png" alt="logo image" />
+                        <img
+                            src="/src/assets/logo.png"
+                            alt="logo image"
+                            aria-label="logo"
+                        />
                     </div>
 
-                    <div class="navbar__menu">
-                        <i
-                            class="icon-ham-menu navbar__menu--open"
-                            id="menu-open"
-                            alt="open menu"
-                        >
-                        </i>
-                        <i
-                            class="icon-cross navbar__menu--close"
-                            src="/src/navbar/cross-cropped.svg"
-                            id="menu-close"
-                            alt="close menu"
-                        >
-                        </i>
+                    <div class="navbar__menu" id="nav-menu">
+                        <button class="icomoon-button" aria-label="open menu">
+                            <span
+                                class="icon-ham-menu navbar__menu--open"
+                                id="menu-open"
+                                alt="open menu"
+                                aria-hidden="true"
+                            ></span>
+                        </button>
+
+                        <button class="icomoon-button" aria-label="close menu">
+                            <span
+                                class="icon-cross navbar__menu--close"
+                                src="/src/navbar/cross-cropped.svg"
+                                id="menu-close"
+                                alt="close menu"
+                                aria-hidden="true"
+                            >
+                            </span>
+                        </button>
                     </div>
 
                     <div class="navbar__links">
