@@ -1,0 +1,41 @@
+@use '../abstract/variables';
+
+//Roboto Black
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url(variables.$font-path + 'Black.woff') format('woff2'),
+        url(variables.$font-path + 'Black.woff') format('woff');
+    font-weight: 900;
+    font-size: normal;
+}
+
+//Roboto Bold
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url(variables.$font-path + 'Bold.woff2') format('woff2'),
+        url(variables.$font-path + 'Bold.woff') format('woff');
+    font-weight: 700;
+    font-size: normal;
+}
+
+//Roboto Regular
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url(variables.$font-path + 'Regular.woff2') format('woff2'),
+        url(variables.$font-path + 'Regular.woff') format('woff');
+    font-weight: 400;
+    font-size: normal;
+}
+
+//Roboto Medium
+@font-face {
+    font-family: 'Roboto';
+    src:
+        url(variables.$font-path + 'Medium.woff2') format('woff2'),
+        url(variables.$font-path + 'Medium.woff') format('woff');
+    font-weight: 500;
+    font-size: normal;
+}

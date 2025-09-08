@@ -1,1 +1,10 @@
-$icomoon-path: '../font/icomoon/icomoon';
+//path for icomoon files
+$icomoon-path: '../assets/font/icomoon/icomoon';
+
+//path for font files
+$font-path: '../assets/font/Roboto-';
+
+//breakpoints for mobile, tablet and desktop views
+$breakpoint-sm: 430px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1440px;
