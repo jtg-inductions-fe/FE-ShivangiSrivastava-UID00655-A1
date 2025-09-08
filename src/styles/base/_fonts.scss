@@ -4,7 +4,7 @@
 @font-face {
     font-family: 'Roboto';
     src:
-        url(variables.$font-path + 'Black.woff') format('woff2'),
+        url(variables.$font-path + 'Black.woff2') format('woff2'),
         url(variables.$font-path + 'Black.woff') format('woff');
     font-weight: variables.$font-weight-black;
     font-size: normal;
