@@ -100,7 +100,7 @@
     }
 }
 
-@media (min-width: 'variables.$breakpoint-sm') and (max-width: 'variables.$breakpoint-lg') {
+@media (min-width: variables.$breakpoint-md) and (max-width: variables.$breakpoint-lg) {
     .navbar {
         padding: 0 45px 0 65px;
 
