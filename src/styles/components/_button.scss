@@ -1,3 +1,5 @@
+@use '../abstract/variables';
+
 //reusable button
 @mixin button-setup($bg-color, $color, $font-size) {
     display: inline-block;
@@ -6,8 +8,9 @@
     width: 8em;
     border: none;
     border-radius: 4rem;
+    font-family: 'Roboto', sans-serif;
     font-size: $font-size;
-    font-weight: 800;
+    font-weight: variables.$font-weight-bold;
     text-align: center;
     cursor: pointer;
     background-color: $bg-color;
