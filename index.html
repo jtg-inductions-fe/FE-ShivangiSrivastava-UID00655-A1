@@ -78,66 +78,101 @@
 
             <!-- HERO SECTION -->
 
-            <section>
+            <section aria-label="Introduction Section">
                 <div class="hero">
-                    <div class="hero__bg">
-                        <picture>
-                            <source
-                                srcset="./src/assets/hero-img-tablet.png"
-                                media="(width >=1024px)"
-                            />
-                            <source
-                                srcset="./src/assets/hero-img-desktop.png"
-                                media="(width >=1440px)"
-                            />
-                            <img
-                                src="./src/assets/hero-img-mobile.png"
-                                alt="people traveling"
-                            />
-                        </picture>
-                    </div>
-                    <div class="hero__arrows">
-                        <img src="./src/assets/arrow.png" />
-                    </div>
+                    <div class="hero__main" aria-hidden="true">
+                        <div class="hero__bg" aria-hidden="true">
+                            <picture>
+                                <source
+                                    srcset="./src/assets/hero-img-tablet.png"
+                                    media="(width >=1024px)"
+                                />
+                                <source
+                                    srcset="./src/assets/hero-img-desktop.png"
+                                    media="(width >=1440px)"
+                                />
+                                <img
+                                    src="./src/assets/hero-img-mobile.png"
+                                    alt="people traveling"
+                                />
+                            </picture>
+                        </div>
+                        <div class="hero__arrows" aria-hidden="true">
+                            <img src="./src/assets/arrow.png" />
+                        </div>
 
-                    <div class="hero__content">
-                        <button class="hero__explorebtn">
-                            Explore the world!<span
-                                class="icon-work-bag"
-                            ></span>
-                        </button>
-                        <h1>
-                            Travel <span>top destination </span> of the world
-                        </h1>
-                        <p>
-                            We always make our customers happy by providing as
-                            many choices as possible
-                        </p>
-                        <div class="hero__buttons">
-                            <button class="hero__buttons--purple">
-                                Get Started
+                        <div class="hero__content">
+                            <button
+                                class="hero__explorebtn"
+                                role="button"
+                                tabindex="0"
+                            >
+                                Explore the world!<span
+                                    class="icon-work-bag"
+                                ></span>
                             </button>
-                            <button class="hero__buttons--white">
-                                <span class="icon-play-circle"></span>Watch Demo
-                            </button>
+                            <h1>
+                                Travel <span>top destination </span> of the
+                                world
+                            </h1>
+                            <p>
+                                We always make our customers happy by providing
+                                as many choices as possible
+                            </p>
+                            <div
+                                class="hero__buttons"
+                                role="group"
+                                aria-label="Startup Actions"
+                            >
+                                <button class="hero__buttons--purple">
+                                    Get Started
+                                </button>
+                                <button class="hero__buttons--white">
+                                    <span class="icon-play-circle"></span>Watch
+                                    Demo
+                                </button>
+                            </div>
                         </div>
                     </div>
 
                     <div class="hero__logos">
-                        <div class="hero__partnerlogo">
-                            <img src="./src/assets/trip-ad-logo.png" />
+                        <div
+                            class="hero__partnerlogo"
+                            aria-label="Trusted by leading companies"
+                        >
+                            <a href="https://www.tripadvisor.in/"
+                                ><img
+                                    src="./src/assets/trip-ad-logo.png"
+                                    alt="TripAdvisor"
+                            /></a>
                         </div>
                         <div class="hero__partnerlogo">
-                            <img src="./src/assets/expedia-logo.png" />
+                            <a href="https://www.expedia.co.in/"
+                                ><img
+                                    src="./src/assets/expedia-logo.png"
+                                    alt="Expedia"
+                            /></a>
                         </div>
                         <div class="hero__partnerlogo">
-                            <img src="./src/assets/booking-logo.png" />
+                            <a href="https://www.booking.com/in"
+                                ><img
+                                    src="./src/assets/booking-logo.png"
+                                    alt="Booking.com"
+                            /></a>
                         </div>
                         <div class="hero__partnerlogo">
-                            <img src="./src/assets/airbnb-logo.png" />
+                            <a href="https://www.airbnb.co.in/"
+                                ><img
+                                    src="./src/assets/airbnb-logo.png"
+                                    alt="Airbnb"
+                            /></a>
                         </div>
                         <div class="hero__partnerlogo">
-                            <img src="./src/assets/gabitz-logo.png" />
+                            <a href="https://www.orbitz.com/"
+                                ><img
+                                    src="./src/assets/gabitz-logo.png"
+                                    alt="orbitz"
+                            /></a>
                         </div>
                     </div>
                 </div>
