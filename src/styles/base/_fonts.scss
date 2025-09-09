@@ -26,7 +26,7 @@
     src:
         url(variables.$font-path + 'Regular.woff2') format('woff2'),
         url(variables.$font-path + 'Regular.woff') format('woff');
-    font-weight: variables.$font-weight-regular;
+    font-weight: variables.$font-weight-normal;
     font-size: normal;
 }
 
