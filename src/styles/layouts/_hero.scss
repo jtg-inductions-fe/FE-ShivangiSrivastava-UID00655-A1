@@ -5,6 +5,10 @@
 .hero {
     text-align: center;
 
+    &__arrows {
+        display: none;
+    }
+
     &__bg {
         padding: 1.56em 1em;
         width: 100vw;
@@ -65,7 +69,7 @@
     }
 
     &__logos {
-        margin-top: 40px;
+        margin-top: 55px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -73,13 +77,21 @@
     }
 
     &__partnerlogo {
-        height: 20px;
+        height: 1.3rem;
         margin-bottom: 10px;
     }
 }
 
 @media (min-width: variables.$breakpoint-md) {
     .hero {
+        &__arrows {
+            display: block;
+            position: absolute;
+            height: 180px;
+            left: 2rem;
+            top: 79rem;
+        }
+
         &__bg {
             padding: 4em 8em;
             height: 850px;
@@ -118,15 +130,10 @@
             margin: 9rem auto 0;
             height: 200px;
             width: 60%;
-            border: 1px solid black;
+        }
 
-            &__partnerlogo {
-                border: 1px solid black;
-                height: 100px;
-
-                // height:50%;
-                width: 100px;
-            }
+        &__partnerlogo {
+            height: 2rem;
         }
     }
 }
