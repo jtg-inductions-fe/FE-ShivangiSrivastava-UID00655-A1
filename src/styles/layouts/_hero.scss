@@ -64,16 +64,17 @@
         }
     }
 
-    &__logo {
+    &__logos {
         margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.5em;
+    }
 
-        img {
-            height: 20px;
-            margin-bottom: 10px;
-        }
+    &__partnerlogo {
+        width: 100px;
+        height: 20px;
+        margin-bottom: 10px;
     }
 }
