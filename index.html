@@ -11,7 +11,7 @@
             <!-- NAVIGATION BAR -->
             <nav>
                 <div class="navbar" aria-label="Primary">
-                    <div class="navbar__logo">
+                    <div class="navbar__logo" tabindex="0">
                         <a href="/" aria-label="Home">
                             <img
                                 src="src/assets/logo.png"
@@ -28,10 +28,10 @@
                             aria-label="open menu"
                             aria-expanded="false"
                             aria-controls="nav-links nav-btns"
+                            id="menu-open"
                         >
                             <span
                                 class="icon-ham-menu navbar__menu--openicon"
-                                id="menu-open"
                                 alt="open menu"
                                 aria-hidden="true"
                             ></span>
@@ -47,9 +47,9 @@
                             <span
                                 class="icon-cross navbar__menu--closeicon"
                                 src="src/navbar/cross-cropped.svg"
-                                id="menu-close"
                                 alt="close menu"
                                 aria-hidden="true"
+                                id="menu-close"
                             >
                             </span>
                         </button>

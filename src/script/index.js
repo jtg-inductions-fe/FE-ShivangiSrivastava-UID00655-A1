@@ -14,7 +14,8 @@ function toggleMenu(isOpen) {
     navBtns.classList.toggle('active', isOpen);
     navMenu.setAttribute('aria-expanded', isOpen);
     hamOpen.style.display = isOpen ? 'none' : 'block';
-    hamClose.style.display = isOpen ? 'block' : 'none';
+    hamClose.classList.toggle('active', isOpen);
+    document.body.classList.toggle('no-scroll', isOpen);
 }
 
 //Exit Navigation Sidebar with ESC
@@ -30,3 +31,11 @@ if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
+
+//
+hamOpen.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu(true);
+    }
+});
