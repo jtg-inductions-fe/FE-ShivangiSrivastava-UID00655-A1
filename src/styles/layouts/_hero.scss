@@ -1,9 +1,11 @@
 @use '../components/button';
 @use '../abstract/colors';
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .hero {
     text-align: center;
+    margin-top: 120px;
 
     &__arrows {
         display: none;
@@ -24,6 +26,7 @@
             margin-left: 15px;
             font-size: 1.2em;
         }
+        @include mixins.focus;
     }
     &__content {
         h1 {
@@ -80,6 +83,10 @@
     &__partnerlogo {
         height: 1.3rem;
         margin-bottom: 10px;
+
+        & a {
+            @include mixins.focus(10px);
+        }
     }
 }
 
@@ -96,6 +103,7 @@
         &__bg {
             padding: 4em 8em;
             height: 850px;
+            width: 1050px;
         }
 
         &__explorebtn {
@@ -145,11 +153,13 @@
 @media (min-width: variables.$breakpoint-lg) {
     .hero {
         max-width: variables.$breakpoint-lg;
+        margin-top: 10em;
 
         &__arrows {
             display: block;
             position: absolute;
-            inset: auto auto 2rem 2.5rem;
+            left: 3rem;
+            top: 54rem;
         }
 
         &__main {

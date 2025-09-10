@@ -32,8 +32,5 @@
         transform: scale(1.01);
     }
 
-    &:focus-visible {
-        outline: 2px solid black;
-        outline-offset: 2px;
-    }
+    @include mixins.focus;
 }
