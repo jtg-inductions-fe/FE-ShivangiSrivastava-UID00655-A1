@@ -6,24 +6,26 @@
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 3.2rem 1rem 0;
+    font-size: 16px;
 
     &__heading {
         @include mixins.section__heading(1rem, 3px);
     }
 
     &__description {
-        @include mixins.section__description;
+        @include mixins.section__description(2rem);
     }
 
     &__cardcontainer {
         display: flex;
         flex-direction: column;
+        margin-top: 1.2rem;
     }
 
     &__card {
         border: 1px solid rgba(colors.$gray, 0.2);
-        margin: 1rem 0 0;
-        border-radius: 3rem;
+        margin: 1em 0 0;
+        border-radius: 3em;
         height: 17.5rem;
         transition:
             box-shadow 0.3s ease,
@@ -34,10 +36,6 @@
             line-height: 2rem;
             font-size: 1.2rem;
         }
-    }
-
-    &__card:nth-child(1) {
-        margin-top: 1.2rem;
     }
 
     &__card:hover {
@@ -60,8 +58,89 @@
             @include mixins.section__heading(1.3rem, 6px);
         }
 
-        &__desc {
-            @include mixins.section__description(5rem);
+        &__description {
+            @include mixins.section__description(2.6rem);
+        }
+
+        &__cardcontainer {
+            flex-direction: row;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2.5em;
+        }
+
+        &__card {
+            width: 18em;
+            height: 28em;
+
+            box-sizing: border-box;
+
+            & > h2 {
+                font-size: 2em;
+                margin: 3.5rem 0 1rem;
+                padding: 0 3rem;
+            }
+
+            & > p {
+                padding: 0 2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        &__img {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media (min-width: variables.$breakpoint-lg) {
+    .services {
+        display: grid;
+        height: 30rem;
+        margin: 4rem 6rem;
+        border: 1px solid black;
+        grid-template-areas:
+            'head card'
+            'subh card';
+        grid-template-rows: 0.7fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
+
+        &__heading {
+            grid-area: head;
+            align-self: end;
+            justify-self: start;
+            border: 1px solid black;
+            vertical-align: bottom;
+            padding-left: 2rem;
+            @include mixins.section__heading(1.3rem, 6px);
+        }
+
+        &__description {
+            grid-area: subh;
+            border: 1px solid black;
+            @include mixins.section__description(2.6rem);
+            text-align: left;
+            padding-left: 2rem;
+        }
+
+        &__cardcontainer {
+            grid-area: card;
+            border: 1px solid black;
+            flex-direction: row;
+            padding: 0 1rem;
+            gap: 1rem;
+            margin-top: 0;
+        }
+
+        &__card {
+            border: 1px solid black;
+            margin: 0;
+            height: 28rem;
+            padding: 2rem 1rem 0;
+        }
+
+        &__card:nth-child(3) {
+            display: none;
         }
     }
 }
