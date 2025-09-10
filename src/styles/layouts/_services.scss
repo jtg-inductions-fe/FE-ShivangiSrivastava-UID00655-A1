@@ -1,0 +1,40 @@
+@use '../components/sectionheading';
+@use '../components/sectiondesc';
+@use '../abstract/colors';
+
+.services {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 3.2rem 1rem 0;
+
+    &__card {
+        border: 1px solid rgba(colors.$gray, 0.2);
+        margin: 1rem 0;
+        border-radius: 3rem;
+        height: 17.5rem;
+        transition:
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
+
+        & > p {
+            margin: 1.8rem 2rem;
+            line-height: 2rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__card:nth-child(1) {
+        margin-top: 1.2rem;
+    }
+
+    &__card:hover {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+    }
+
+    &__img {
+        height: 4rem;
+        width: 4rem;
+        margin: 2rem auto;
+    }
+}
