@@ -110,8 +110,9 @@
         padding: 0 45px 0 65px;
 
         &__logo {
-            position: fixed;
-            left: 48%;
+            position: static;
+            order: 2;
+            margin-left: 11.5rem;
         }
 
         &__links {
@@ -138,6 +139,7 @@
             height: 50px;
             display: flex;
             z-index: 0;
+            order: 3;
 
             &--white {
                 @include button.button-setup(white, black, 15px);
