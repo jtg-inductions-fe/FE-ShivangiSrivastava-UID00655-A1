@@ -10,8 +10,9 @@
     }
 
     &__bg {
+        position: relative;
         padding: 1.56em 1em;
-        width: 100vw;
+        width: 100%;
         box-sizing: border-box;
     }
 
@@ -148,9 +149,7 @@
         &__arrows {
             display: block;
             position: absolute;
-            height: 180px;
-            left: 2.5rem;
-            top: 54rem;
+            inset: auto auto 2rem 2.5rem;
         }
 
         &__main {
