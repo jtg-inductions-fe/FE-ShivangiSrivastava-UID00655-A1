@@ -98,7 +98,6 @@
         display: grid;
         height: 30rem;
         margin: 4rem 6rem;
-        border: 1px solid black;
         grid-template-areas:
             'head card'
             'subh card';
@@ -109,7 +108,6 @@
             grid-area: head;
             align-self: end;
             justify-self: start;
-            border: 1px solid black;
             vertical-align: bottom;
             padding-left: 2rem;
             @include mixins.section__heading(1.3rem, 6px);
@@ -117,7 +115,6 @@
 
         &__description {
             grid-area: subh;
-            border: 1px solid black;
             @include mixins.section__description(2.6rem);
             text-align: left;
             padding-left: 2rem;
@@ -125,7 +122,6 @@
 
         &__cardcontainer {
             grid-area: card;
-            border: 1px solid black;
             flex-direction: row;
             padding: 0 1rem;
             gap: 1rem;
@@ -133,10 +129,21 @@
         }
 
         &__card {
-            border: 1px solid black;
             margin: 0;
             height: 28rem;
             padding: 2rem 1rem 0;
+            margin-bottom: 5rem;
+            box-sizing: border-box;
+            width: 24rem;
+
+            & > h2 {
+                margin-top: 4rem;
+                font-size: 1.8rem;
+            }
+
+            & > p {
+                padding: 0 0.7rem;
+            }
         }
 
         &__card:nth-child(3) {
