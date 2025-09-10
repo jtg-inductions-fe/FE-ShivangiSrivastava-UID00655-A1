@@ -1,15 +1,28 @@
-@use '../components/sectionheading';
-@use '../components/sectiondesc';
 @use '../abstract/colors';
+@use '../abstract/variables';
+@use '../abstract/mixins';
 
 .services {
     font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 3.2rem 1rem 0;
 
+    &__heading {
+        @include mixins.section__heading(1rem, 3px);
+    }
+
+    &__description {
+        @include mixins.section__description;
+    }
+
+    &__cardcontainer {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__card {
         border: 1px solid rgba(colors.$gray, 0.2);
-        margin: 1rem 0;
+        margin: 1rem 0 0;
         border-radius: 3rem;
         height: 17.5rem;
         transition:
@@ -36,5 +49,19 @@
         height: 4rem;
         width: 4rem;
         margin: 2rem auto;
+    }
+}
+
+@media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
+    .services {
+        margin-top: 7.5rem;
+
+        &__heading {
+            @include mixins.section__heading(1.3rem, 6px);
+        }
+
+        &__desc {
+            @include mixins.section__description(5rem);
+        }
     }
 }
