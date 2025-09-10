@@ -1,4 +1,6 @@
 @mixin button-reset {
+    appearance: none;
+    -webkit-appearance: none;
     background: none;
     border: none;
     font: inherit;
@@ -6,4 +8,5 @@
     cursor: pointer;
     line-height: normal;
     padding: 0;
+    margin: 0;
 }

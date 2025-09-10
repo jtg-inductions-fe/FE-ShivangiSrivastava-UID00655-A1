@@ -1,6 +1,5 @@
 @use '../abstract/colors';
 @use '../components/button';
-@use '../components/gradient-bg';
 @use '../abstract/mixins';
 @use '../abstract/variables';
 @use '../base/fonts';
@@ -68,6 +67,7 @@
                 transition: color 0.5s ease;
                 font-family: 'Roboto', sans-serif;
                 font-weight: variables.$font-weight-bold;
+                text-decoration: none;
 
                 &:hover {
                     color: black;
@@ -184,7 +184,6 @@
         }
 
         &__btns {
-            display: static;
             padding-top: 15px;
             margin-left: 200px;
             flex-direction: row;
@@ -206,5 +205,12 @@
                 @include button.button-setup(colors.$primary, white, 15px);
             }
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar__links,
+    .navbar__btns {
+        transition: none;
     }
 }

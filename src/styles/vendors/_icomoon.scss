@@ -1,17 +1,18 @@
 @use '../abstract/variables';
+@use '../abstract/colors';
 
 @font-face {
     font-family: 'icomoon';
-    src: url(variables.$icomoon-path + '.eot?wl83df');
+    src: url('#{variables.$icomoon-path}.eot?wl83df');
     src:
-        url(variables.$icomoon-path + '.eot?wl83df#iefix')
+        url('#{variables.$icomoon-path}.eot?wl83df#iefix')
             format('embedded-opentype'),
-        url(variables.$icomoon-path + '.ttf?wl83df') format('truetype'),
-        url(variables.$icomoon-path + '.woff?wl83df') format('woff'),
-        url(variables.$icomoon-path + '.svg?wl83df#icomoon') format('svg');
+        url('#{variables.$icomoon-path}.ttf?wl83df') format('truetype'),
+        url('#{variables.$icomoon-path}.woff?wl83df') format('woff'),
+        url('#{variables.$icomoon-path}.svg?wl83df#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
 [class^='icon-'],
@@ -32,7 +33,7 @@
 
 .icon-locationpin .path1:before {
     content: '\e900';
-    color: rgb(255, 87, 34);
+    color: colors.$orange-400;
 }
 .icon-locationpin .path2:before {
     content: '\e901';
@@ -41,7 +42,7 @@
 }
 .icon-calendar .path1:before {
     content: '\e904';
-    color: rgb(250, 205, 73);
+    color: colors.$yellow-400;
 }
 .icon-calendar .path2:before {
     content: '\e905';
@@ -50,7 +51,7 @@
 }
 .icon-coupon .path1:before {
     content: '\e906';
-    color: rgb(248, 94, 159);
+    color: colors.$secondary;
 }
 .icon-coupon .path2:before {
     content: '\e907';
@@ -59,26 +60,26 @@
 }
 .icon-ham-menu:before {
     content: '\e908';
-    color: #5d50c6;
+    color: colors.$primary;
 }
 .icon-play-circle:before {
     content: '\e909';
-    color: #5d50c6;
+    color: colors.$primary;
 }
 .icon-work-bag:before {
     content: '\e90a';
-    color: #f85e9f;
+    color: colors.$secondary;
 }
 .icon-mail-icon:before {
     content: '\e90c';
 }
 .icon-fb-logo:before {
     content: '\e90d';
-    color: #5d50c6;
+    color: colors.$primary;
 }
 .icon-insta-logo .path1:before {
     content: '\e90e';
-    color: rgb(93, 80, 198);
+    color: colors.$primary;
 }
 .icon-insta-logo .path2:before {
     content: '\e90f';
@@ -87,7 +88,7 @@
 }
 .icon-twt-logo .path1:before {
     content: '\e902';
-    color: rgb(93, 80, 198);
+    color: colors.$primary;
 }
 .icon-twt-logo .path2:before {
     content: '\e903';
@@ -96,4 +97,5 @@
 }
 .icon-cross:before {
     content: '\ea0f';
+    color: colors.$primary;
 }

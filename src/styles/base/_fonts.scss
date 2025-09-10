@@ -7,7 +7,8 @@
         url(variables.$font-path + 'Black.woff2') format('woff2'),
         url(variables.$font-path + 'Black.woff') format('woff');
     font-weight: variables.$font-weight-black;
-    font-size: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 //Roboto Bold
@@ -17,7 +18,8 @@
         url(variables.$font-path + 'Bold.woff2') format('woff2'),
         url(variables.$font-path + 'Bold.woff') format('woff');
     font-weight: variables.$font-weight-bold;
-    font-size: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 //Roboto Regular
@@ -27,7 +29,8 @@
         url(variables.$font-path + 'Regular.woff2') format('woff2'),
         url(variables.$font-path + 'Regular.woff') format('woff');
     font-weight: variables.$font-weight-normal;
-    font-size: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 //Roboto Medium
@@ -37,5 +40,6 @@
         url(variables.$font-path + 'Medium.woff2') format('woff2'),
         url(variables.$font-path + 'Medium.woff') format('woff');
     font-weight: variables.$font-weight-medium;
-    font-size: normal;
+    font-style: normal;
+    font-display: swap;
 }
