@@ -7,13 +7,17 @@
 
 .navbar {
     position: sticky;
-    width: 100vw;
+    top: 0;
+    width: 100%;
     box-sizing: border-box;
     padding: 0 15px;
     height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1440px;
+    background-color: transparent;
+    z-index: 1;
 
     &__logo {
         z-index: 200;

@@ -1,12 +1,14 @@
 @use '../abstract/colors';
 
-.bg-wrapper {
+.wrapper {
     width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: center;
+    align-items: space-between;
     z-index: 1;
+    margin: 0 auto;
 
     &::before {
         content: '';
