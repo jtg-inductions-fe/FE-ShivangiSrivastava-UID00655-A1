@@ -2,7 +2,7 @@
 
 //media query for tablet
 @mixin responsive-tab {
-    @media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
+    @media (width >= variables.$breakpoint-md) and (width < variables.$breakpoint-lg) {
         @content;
     }
 }

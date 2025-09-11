@@ -1,6 +1,5 @@
 @use '../abstract' as *;
 @use '../components' as *;
-@use '../abstract' as *;
 @use '../base' as *;
 
 body.no-scroll {
@@ -14,7 +13,6 @@ body.no-scroll {
     width: 100%;
     box-sizing: border-box;
     padding: 0 15px;
-    height: 120px;
     @include flex-center;
     justify-content: space-between;
     max-width: 1440px;
