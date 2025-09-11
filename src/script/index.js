@@ -31,11 +31,3 @@ if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
-
-//Open Navigation SideBar with Enter or Space
-// hamOpen.addEventListener('keydown', (e) => {
-//     if (e.key === 'Enter' || e.key === ' ') {
-//         e.preventDefault();
-//         toggleMenu(true);
-//     }
-// });

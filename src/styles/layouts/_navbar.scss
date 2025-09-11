@@ -91,6 +91,7 @@ body.no-scroll {
         font-family: 'Roboto', sans-serif;
         font-weight: variables.$font-weight-bold;
         text-decoration: none;
+        overflow-y: auto;
 
         &:hover {
             color: black;
