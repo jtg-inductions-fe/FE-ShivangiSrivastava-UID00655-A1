@@ -1,9 +1,3 @@
-@use '../abstract/mixins';
-
-.icomoon-button {
-    @include mixins.button-reset;
-}
-
 img {
     display: block;
     width: 100%;

@@ -1,8 +1,7 @@
-@use '../abstract/colors';
-@use '../components/button';
-@use '../abstract/mixins';
-@use '../abstract/variables';
-@use '../base/fonts';
+@use '../abstract' as *;
+@use '../components' as *;
+@use '../abstract' as *;
+@use '../base' as *;
 
 body.no-scroll {
     overflow: hidden;
@@ -16,13 +15,12 @@ body.no-scroll {
     box-sizing: border-box;
     padding: 0 15px;
     height: 120px;
-    display: flex;
+    @include flex-center;
     justify-content: space-between;
-    align-items: center;
     max-width: 1440px;
     background-color: transparent;
     z-index: 1;
-    background: colors.$bg-color;
+    background: $bg-color;
 
     &__logo {
         z-index: 200;
@@ -35,8 +33,7 @@ body.no-scroll {
     }
 
     &__menu {
-        display: flex;
-        align-items: center;
+        @include flex-center;
         height: fit-content;
     }
 
@@ -64,7 +61,7 @@ body.no-scroll {
         height: 100vh;
         top: 0;
         left: 0;
-        background-color: colors.$pink-300;
+        background-color: $color-secondary-lighter;
         z-index: 100;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
@@ -88,8 +85,7 @@ body.no-scroll {
     &__item {
         color: rgb(78, 78, 78);
         transition: color 0.5s ease;
-        font-family: 'Roboto', sans-serif;
-        font-weight: variables.$font-weight-bold;
+        font-weight: $font-weight-bold;
         text-decoration: none;
         overflow-y: auto;
 
@@ -102,33 +98,29 @@ body.no-scroll {
         }
     }
 
-    &__btns {
+    &__actions {
         left: 0;
         position: fixed;
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        align-items: center;
         gap: 2rem;
         width: 100%;
         bottom: 10%;
         z-index: 1000;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        &--white {
-            @include button.button-setup(white, black, 20px, 90vw);
-        }
-
-        &--purple {
-            @include button.button-setup(colors.$primary, white, 20px, 90vw);
-        }
-
         &.active {
             transform: translateX(0%);
         }
     }
+
+    &__btns {
+        font-size: 20px;
+        width: 90vw;
+    }
 }
 
-@media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
+@include responsive-tab {
     .navbar {
         padding: 0 45px 0 65px;
         align-items: center;
@@ -166,30 +158,25 @@ body.no-scroll {
             margin-left: 5rem;
         }
 
-        &__btns {
+        &__actions {
             position: static;
             transform: none;
             flex-direction: row;
             margin: 0;
-            gap: 0;
+            gap: 0.5rem;
             width: 250px;
             height: 50px;
-            display: flex;
             z-index: 0;
             order: 3;
+        }
 
-            &--white {
-                @include button.button-setup(white, black, 15px);
-            }
-
-            &--purple {
-                @include button.button-setup(colors.$primary, white, 15px);
-            }
+        &__btns {
+            font-size: 18px;
         }
     }
 }
 
-@media (min-width: variables.$breakpoint-lg) {
+@include responsive-desktop {
     .navbar {
         height: 10em;
         padding: 10px 80px 0 150px;
@@ -204,8 +191,7 @@ body.no-scroll {
 
         &__links {
             position: static;
-            display: flex;
-            align-items: center;
+            @include flex-center;
             height: inherit;
             width: 480px;
             font-size: 16px;
@@ -222,27 +208,23 @@ body.no-scroll {
             font-size: 1em;
         }
 
-        &__btns {
+        &__actions {
             padding-top: 15px;
             margin-left: 200px;
             flex-direction: row;
             position: static;
             margin: 0;
             transform: none;
-            gap: 0;
+            gap: 0.5rem;
             width: 250px;
             height: 50px;
             display: flex;
             flex-direction: row;
             z-index: 0;
+        }
 
-            &--white {
-                @include button.button-setup(white, black, 15px);
-            }
-
-            &--purple {
-                @include button.button-setup(colors.$primary, white, 15px);
-            }
+        &__btns {
+            font-size: 15px;
         }
     }
 }

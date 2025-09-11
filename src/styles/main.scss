@@ -1,10 +1,5 @@
-@use './abstract/colors' as colors;
-@use './base/normalize' with (
-    $background: colors.$bg-color
-);
-@use './vendors/icomoon';
-@use './base/fonts';
-@use './layouts/navbar';
-@use './abstract/mixins';
-@use './base/base';
-@use '../components/gradient-bg';
+@use 'abstract';
+@use 'base';
+@use 'components';
+@use 'layouts';
+@use 'vendors';

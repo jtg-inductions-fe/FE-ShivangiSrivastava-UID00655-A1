@@ -1,12 +1,21 @@
-@mixin button-reset {
-    appearance: none;
-    -webkit-appearance: none;
-    background: none;
-    border: none;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    line-height: normal;
-    padding: 0;
-    margin: 0;
+@use 'variables';
+
+//media query for tablet
+@mixin responsive-tab {
+    @media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
+        @content;
+    }
+}
+
+//media query for desktop
+@mixin responsive-desktop {
+    @media (min-width: (variables.$breakpoint-lg)) {
+        @content;
+    }
+}
+
+//flex center
+@mixin flex-center {
+    display: flex;
+    align-items: center;
 }

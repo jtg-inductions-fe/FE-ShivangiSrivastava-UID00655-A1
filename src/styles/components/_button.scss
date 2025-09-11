@@ -1,24 +1,31 @@
-@use '../abstract/variables';
+@use '../abstract' as *;
 
 //reusable button
-@mixin button-setup($bg-color, $color, $font-size, $width: 8em) {
+.button {
     display: inline-block;
     padding: 0.6rem 1.2rem;
     height: 3em;
-    width: $width;
+    width: 8em;
     border: none;
     border-radius: 4rem;
-    font-family: 'Roboto', sans-serif;
-    font-size: $font-size;
-    font-weight: variables.$font-weight-bold;
+    font-size: 15px;
+    font-weight: $font-weight-bold;
     text-align: center;
     cursor: pointer;
-    background-color: $bg-color;
-    color: $color;
     transition:
         background-color 0.2s ease,
         box-shadow 0.2s ease;
     transform: 0.3s ease;
+
+    &--white {
+        background-color: white;
+        color: black;
+    }
+
+    &--purple {
+        background-color: $color-btn;
+        color: white;
+    }
 
     &:hover {
         opacity: 0.9;
