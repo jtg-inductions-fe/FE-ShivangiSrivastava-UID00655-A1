@@ -18,15 +18,6 @@ function toggleMenu(isOpen) {
     document.body.classList.toggle('no-scroll', isOpen);
 }
 
-//Exit Navigation Sidebar with ESC
-document.addEventListener('keydown', (e) => {
-    if (
-        e.key === 'Escape' &&
-        navMenu?.getAttribute('aria-expanded') === 'true'
-    ) {
-        toggleMenu(false);
-    }
-});
 if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));
     hamClose.addEventListener('click', () => toggleMenu(false));
