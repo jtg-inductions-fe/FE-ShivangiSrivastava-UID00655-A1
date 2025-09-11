@@ -2,10 +2,6 @@
 @use '../components' as *;
 @use '../base' as *;
 
-body.no-scroll {
-    overflow: hidden;
-    height: 100vh;
-}
 .navbar {
     position: fixed;
     top: 0;
@@ -15,7 +11,7 @@ body.no-scroll {
     padding: px-to-rem(0 15);
     @include flex-center;
     justify-content: space-between;
-    max-width: 1440px;
+    max-width: $breakpoint-lg;
     background-color: transparent;
     z-index: 1;
     background: $bg-color;
@@ -180,7 +176,7 @@ body.no-scroll {
         padding: px-to-rem(10 80 0 150);
 
         &__logo {
-            padding-top: 10px;
+            padding-top: px-to-rem(10);
         }
 
         &__menu {
@@ -191,10 +187,10 @@ body.no-scroll {
             position: static;
             @include flex-center;
             height: inherit;
-            width: 480px;
-            font-size: 16px;
+            width: px-to-rem(480);
+            font-size: px-to-rem(16);
             background-color: transparent;
-            padding-bottom: 10px;
+            padding-bottom: px-to-rem(10);
             margin: 0;
             transform: none;
             border: none;
@@ -203,7 +199,7 @@ body.no-scroll {
         &__list {
             flex-direction: row;
             flex: 1;
-            font-size: 1em;
+            font-size: 1rem;
             margin-top: px-to-rem(35);
             margin-left: 0;
         }
