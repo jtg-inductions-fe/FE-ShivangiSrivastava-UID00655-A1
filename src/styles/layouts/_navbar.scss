@@ -34,6 +34,12 @@ body.no-scroll {
         }
     }
 
+    &__menu {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+    }
+
     &__menu--openicon {
         font-size: 2.5em;
     }
@@ -66,33 +72,32 @@ body.no-scroll {
         &.active {
             transform: translateX(0%);
         }
+    }
 
-        ul {
-            position: relative;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            line-height: 6rem;
-            font-size: 1.7em;
-            margin-top: 3em;
-            margin-left: 1em;
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 6rem;
+        font-size: 1.7em;
+        margin-top: 3em;
+        margin-left: 1em;
+    }
 
-            li a {
-                color: rgb(78, 78, 78);
-                transition: color 0.5s ease;
-                font-family: 'Roboto', sans-serif;
-                font-weight: variables.$font-weight-bold;
-                text-decoration: none;
+    &__item {
+        color: rgb(78, 78, 78);
+        transition: color 0.5s ease;
+        font-family: 'Roboto', sans-serif;
+        font-weight: variables.$font-weight-bold;
+        text-decoration: none;
 
-                &:hover {
-                    color: black;
-                }
-                &:focus-visible {
-                    outline: 2px solid black;
-                    outline-offset: 20px;
-                }
-            }
+        &:hover {
+            color: black;
+        }
+        &:focus-visible {
+            outline: 2px solid black;
+            outline-offset: 20px;
         }
     }
 
@@ -108,19 +113,16 @@ body.no-scroll {
         z-index: 1000;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-
-        &.active {
-            transform: translateX(0%);
-        }
-
         &--white {
-            @include button.button-setup(white, black, 20px);
-            width: 90vw;
+            @include button.button-setup(white, black, 20px, 90vw);
         }
 
         &--purple {
-            @include button.button-setup(colors.$primary, white, 20px);
-            width: 90vw;
+            @include button.button-setup(colors.$primary, white, 20px, 90vw);
+        }
+
+        &.active {
+            transform: translateX(0%);
         }
     }
 }
@@ -128,11 +130,11 @@ body.no-scroll {
 @media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
     .navbar {
         padding: 0 45px 0 65px;
+        align-items: center;
 
         &__logo {
-            position: static;
-            order: 2;
-            margin-left: 11.5rem;
+            position: fixed;
+            left: 48%;
         }
 
         &__menu--closeicon {
@@ -157,10 +159,10 @@ body.no-scroll {
             &.active {
                 transform: translateX(0%);
             }
+        }
 
-            ul {
-                margin-left: 5rem;
-            }
+        &__list {
+            margin-left: 5rem;
         }
 
         &__btns {
@@ -211,12 +213,12 @@ body.no-scroll {
             margin: 0;
             transform: none;
             border: none;
+        }
 
-            ul {
-                flex-direction: row;
-                flex: 1;
-                font-size: 1em;
-            }
+        &__list {
+            flex-direction: row;
+            flex: 1;
+            font-size: 1em;
         }
 
         &__btns {

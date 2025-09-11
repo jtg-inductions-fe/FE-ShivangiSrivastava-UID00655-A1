@@ -4,70 +4,71 @@
         <title>Travel!</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Travel Booking Site" />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
         <div class="wrapper">
             <!-- NAVIGATION BAR -->
-            <nav>
-                <div class="navbar" aria-label="Primary">
-                    <div class="navbar__logo" tabindex="0">
-                        <a href="/" aria-label="Home">
-                            <img
-                                src="src/assets/logo.png"
-                                alt="Travel logo"
-                                aria-label="logo"
-                            />
-                        </a>
-                    </div>
+            <nav class="navbar" aria-label="Primary">
+                <div class="navbar__logo" tabindex="0">
+                    <a href="/" aria-label="Home">
+                        <img
+                            src="src/assets/logo.png"
+                            alt="Travel logo"
+                            aria-label="logo"
+                        />
+                    </a>
+                </div>
 
-                    <div class="navbar__menu" id="nav-menu">
-                        <button
-                            class="icomoon-button"
-                            type="button"
-                            aria-label="open menu"
-                            aria-expanded="false"
-                            aria-controls="nav-links nav-btns"
-                            id="menu-open"
+                <div class="navbar__menu" id="nav-menu">
+                    <button
+                        class="icomoon-button"
+                        type="button"
+                        aria-label="open menu"
+                        aria-expanded="false"
+                        aria-controls="nav-links nav-btns"
+                        id="menu-open"
+                    >
+                        <span
+                            class="icon-ham-menu navbar__menu--openicon"
+                            alt="open menu"
+                            aria-hidden="true"
+                        ></span>
+                    </button>
+
+                    <button
+                        class="icomoon-button"
+                        type="button"
+                        aria-label="Close menu"
+                        aria-expanded="true"
+                        aria-controls="nav-links nav-btns"
+                    >
+                        <span
+                            class="icon-cross navbar__menu--closeicon"
+                            src="src/navbar/cross-cropped.svg"
+                            alt="close menu"
+                            aria-hidden="true"
+                            id="menu-close"
                         >
-                            <span
-                                class="icon-ham-menu navbar__menu--openicon"
-                                alt="open menu"
-                                aria-hidden="true"
-                            ></span>
-                        </button>
+                        </span>
+                    </button>
+                </div>
 
-                        <button
-                            class="icomoon-button"
-                            type="button"
-                            aria-label="Close menu"
-                            aria-expanded="true"
-                            aria-controls="nav-links nav-btns"
-                        >
-                            <span
-                                class="icon-cross navbar__menu--closeicon"
-                                src="src/navbar/cross-cropped.svg"
-                                alt="close menu"
-                                aria-hidden="true"
-                                id="menu-close"
-                            >
-                            </span>
-                        </button>
-                    </div>
+                <div class="navbar__links" id="navbar-list">
+                    <ul class="navbar__list">
+                        <li><a href="#" class="navbar__item">Home</a></li>
+                        <li><a href="#" class="navbar__item">Discover</a></li>
+                        <li>
+                            <a href="#" class="navbar__item">Special Deals</a>
+                        </li>
+                        <li><a href="#" class="navbar__item">Contact</a></li>
+                    </ul>
+                </div>
 
-                    <div class="navbar__links">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Discover</a></li>
-                            <li><a href="#">Special Deals</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="navbar__btns">
-                        <button class="navbar__btns--white">Log In</button>
-                        <button class="navbar__btns--purple">Sign Up</button>
-                    </div>
+                <div class="navbar__btns" id="nav-btns">
+                    <button class="navbar__btns--white">Log In</button>
+                    <button class="navbar__btns--purple">Sign Up</button>
                 </div>
             </nav>
         </div>

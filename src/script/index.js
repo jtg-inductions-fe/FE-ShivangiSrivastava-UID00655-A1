@@ -1,7 +1,7 @@
 const hamOpen = document.querySelector('#menu-open');
 const hamClose = document.querySelector('#menu-close');
-const navLinks = document.querySelector('.navbar__links');
-const navBtns = document.querySelector('.navbar__btns');
+const navLinks = document.querySelector('#navbar-list');
+const navBtns = document.querySelector('#nav-btns');
 const navMenu = document.querySelector('#nav-menu');
 const ready = hamOpen && hamClose && navLinks && navBtns && navMenu;
 
@@ -32,10 +32,10 @@ if (ready) {
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
 
-//
-hamOpen.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleMenu(true);
-    }
-});
+//Open Navigation SideBar with Enter or Space
+// hamOpen.addEventListener('keydown', (e) => {
+//     if (e.key === 'Enter' || e.key === ' ') {
+//         e.preventDefault();
+//         toggleMenu(true);
+//     }
+// });
