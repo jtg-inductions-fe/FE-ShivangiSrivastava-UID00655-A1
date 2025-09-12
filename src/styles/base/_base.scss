@@ -2,11 +2,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-
-    &.no-scroll {
-        overflow: hidden;
-        height: 100vh;
-    }
 }
 img {
     display: block;

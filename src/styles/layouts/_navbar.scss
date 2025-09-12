@@ -76,14 +76,14 @@
     }
 
     &__item {
-        color: rgb(78, 78, 78);
+        color: $color-text-secondary;
         transition: color 0.5s ease;
         font-weight: $font-weight-bold;
         text-decoration: none;
         overflow-y: auto;
 
         &:hover {
-            color: black;
+            color: $color-text-primary;
         }
         &:focus-visible {
             outline: 2px solid black;
@@ -96,7 +96,7 @@
         position: fixed;
         @include flex-center;
         flex-direction: column;
-        gap: 2rem;
+        gap: px-to-rem(32);
         width: 100%;
         bottom: 10%;
         z-index: 1000;
@@ -148,7 +148,7 @@
         }
 
         &__list {
-            margin-left: 5rem;
+            margin-left: px-to-rem(80);
         }
 
         &__actions {
@@ -156,7 +156,7 @@
             transform: none;
             flex-direction: row;
             margin: 0;
-            gap: 0.5rem;
+            gap: px-to-rem(8);
             width: px-to-rem(250);
             height: px-to-rem(50);
             z-index: 0;
@@ -171,7 +171,7 @@
 
 @include responsive-desktop {
     .navbar {
-        height: 10rem;
+        height: px-to-rem(160);
         padding: px-to-rem(10 80 0 150);
 
         &__logo {
@@ -198,19 +198,18 @@
         &__list {
             flex-direction: row;
             flex: 1;
-            font-size: 1rem;
+            font-size: px-to-rem(16);
             margin-top: px-to-rem(35);
             margin-left: 0;
         }
 
         &__actions {
             padding-top: px-to-rem(15);
-            margin-left: px-to-rem(200);
             flex-direction: row;
             position: static;
             margin: 0;
             transform: none;
-            gap: 0.5rem;
+            gap: px-to-rem(8);
             width: px-to-rem(250);
             height: px-to-rem(50);
             z-index: 0;

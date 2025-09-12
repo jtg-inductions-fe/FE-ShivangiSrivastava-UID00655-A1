@@ -2,12 +2,12 @@
 
 .button {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
-    height: 3em;
-    width: 8rem;
+    padding: px-to-rem(10 19);
+    height: px-to-rem(48);
+    width: px-to-rem(128);
     border: none;
-    border-radius: 4rem;
-    font-size: px-to-rem(15);
+    border-radius: px-to-rem(64);
+    font-size: px-to-rem(14);
     font-weight: $font-weight-bold;
     text-align: center;
     cursor: pointer;
@@ -17,13 +17,12 @@
     transform: 0.3s ease;
 
     &--white {
-        background-color: white;
-        color: black;
+        background-color: $color-white;
     }
 
     &--purple {
         background-color: $color-btn;
-        color: white;
+        color: $color-white;
     }
 
     &:hover {
