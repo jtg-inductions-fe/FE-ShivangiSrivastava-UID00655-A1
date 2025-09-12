@@ -1,99 +1,56 @@
-@use '../abstract/colors';
-@use '../abstract/variables';
-@use '../abstract/mixins';
+@use '../abstract' as *;
+@use '../base' as *;
 
 .services {
-    font-family: 'Roboto', sans-serif;
     text-align: center;
-    margin: 3.2rem 1rem 0;
-    font-size: 16px;
-
-    &__heading {
-        @include mixins.section__heading(1rem, 3px);
-    }
-
-    &__description {
-        @include mixins.section__description(2rem);
-    }
+    margin: px-to-rem(40 20 0);
 
     &__cardcontainer {
         display: flex;
         flex-direction: column;
-        margin-top: 1.2rem;
+        margin-top: px-to-rem(18);
     }
 
     &__card {
-        border: 1px solid rgba(colors.$gray, 0.2);
-        margin: 1em 0 0;
-        border-radius: 3em;
-        height: 17.5rem;
+        border: 2px solid $color-shadow;
+        box-sizing: border-box;
+        @include flex-center;
+        flex-direction: column;
+        margin-top: px-to-rem(16);
+        padding: px-to-rem(30 35);
+        border-radius: px-to-rem(30);
+        height: px-to-rem(280);
         transition:
             box-shadow 0.3s ease,
             transform 0.3s ease;
 
-        & > p {
-            margin: 1.8rem 2rem;
-            line-height: 2rem;
-            font-size: 1.2rem;
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            transform: scale(1.01);
         }
-    }
-
-    &__card:hover {
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-        transform: scale(1.01);
-    }
-
-    &__img {
-        height: 4rem;
-        width: 4rem;
-        margin: 2rem auto;
     }
 }
 
-@media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
+@include responsive-tab {
     .services {
-        margin-top: 7.5rem;
-
-        &__heading {
-            @include mixins.section__heading(1.3rem, 6px);
-        }
-
-        &__description {
-            @include mixins.section__description(2.6rem);
-        }
+        margin-top: px-to-rem(120);
 
         &__cardcontainer {
             flex-direction: row;
             justify-content: center;
-            gap: 1rem;
-            margin-top: 2.5em;
+            gap: px-to-rem(16);
+            margin-top: px-to-rem(50);
         }
 
         &__card {
-            width: 18em;
-            height: 28em;
-
-            box-sizing: border-box;
-
-            & > h2 {
-                font-size: 2em;
-                margin: 3.5rem 0 1rem;
-                padding: 0 3rem;
-            }
-
-            & > p {
-                padding: 0 2rem;
-                margin-top: 1rem;
-            }
-        }
-
-        &__img {
-            margin-top: 4rem;
+            width: px-to-rem(288);
+            height: px-to-rem(450);
+            padding: px-to-rem(65);
         }
     }
 }
 
-@media (min-width: variables.$breakpoint-lg) {
+@include responsive-desktop {
     .services {
         display: grid;
         height: 30rem;
@@ -103,22 +60,6 @@
             'subh card';
         grid-template-rows: 0.7fr 1fr;
         grid-template-columns: 0.5fr 1fr;
-
-        &__heading {
-            grid-area: head;
-            align-self: end;
-            justify-self: start;
-            vertical-align: bottom;
-            padding-left: 2rem;
-            @include mixins.section__heading(1.3rem, 6px);
-        }
-
-        &__description {
-            grid-area: subh;
-            @include mixins.section__description(2.6rem);
-            text-align: left;
-            padding-left: 2rem;
-        }
 
         &__cardcontainer {
             grid-area: card;
