@@ -1,41 +1,45 @@
-@use '../abstract/variables';
+@use '../abstract' as *;
 
 //Roboto Black
 @font-face {
     font-family: 'Roboto';
     src:
-        url(variables.$font-path + 'Black.woff') format('woff2'),
-        url(variables.$font-path + 'Black.woff') format('woff');
-    font-weight: variables.$font-weight-black;
-    font-size: normal;
+        url($font-path + 'Black.woff2') format('woff2'),
+        url($font-path + 'Black.woff') format('woff');
+    font-weight: $font-weight-black;
+    font-style: normal;
+    font-display: swap;
 }
 
 //Roboto Bold
 @font-face {
     font-family: 'Roboto';
     src:
-        url(variables.$font-path + 'Bold.woff2') format('woff2'),
-        url(variables.$font-path + 'Bold.woff') format('woff');
-    font-weight: variables.$font-weight-bold;
-    font-size: normal;
+        url('#{$font-path}Bold.woff2') format('woff2'),
+        url('#{$font-path}Bold.woff') format('woff');
+    font-weight: $font-weight-bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 //Roboto Regular
 @font-face {
     font-family: 'Roboto';
     src:
-        url(variables.$font-path + 'Regular.woff2') format('woff2'),
-        url(variables.$font-path + 'Regular.woff') format('woff');
-    font-weight: variables.$font-weight-normal;
-    font-size: normal;
+        url('#{$font-path}Regular.woff2') format('woff2'),
+        url('#{$font-path}Regular.woff') format('woff');
+    font-weight: $font-weight-normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 //Roboto Medium
 @font-face {
     font-family: 'Roboto';
     src:
-        url(variables.$font-path + 'Medium.woff2') format('woff2'),
-        url(variables.$font-path + 'Medium.woff') format('woff');
-    font-weight: variables.$font-weight-medium;
-    font-size: normal;
+        url('#{$font-path}Medium.woff2') format('woff2'),
+        url('#{$font-path}Medium.woff2') format('woff');
+    font-weight: $font-weight-medium;
+    font-style: normal;
+    font-display: swap;
 }

@@ -1,0 +1,12 @@
+@use 'sass:math';
+
+@function px-to-rem($px, $root: 16) {
+    $result: ();
+    @if type-of($px) == 'list' {
+        @each $value in $px {
+            $result: append($result, math.div($value, $root) * 1rem);
+        }
+        @return $result;
+    }
+    @return math.div($px, $root) * 1rem;
+}

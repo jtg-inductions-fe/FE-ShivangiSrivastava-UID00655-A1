@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+//media query for tablet
+@mixin responsive-tab {
+    @media (min-width: ($breakpoint-md)) and (max-width: ($breakpoint-lg - 1)) {
+        @content;
+    }
+}
+
+//media query for desktop
+@mixin responsive-desktop {
+    @media (min-width: ($breakpoint-lg)) {
+        @content;
+    }
+}
+
+//flex center
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}

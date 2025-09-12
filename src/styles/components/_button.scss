@@ -1,0 +1,38 @@
+@use '../abstract' as *;
+
+.button {
+    display: inline-block;
+    padding: px-to-rem(10 19);
+    height: px-to-rem(48);
+    width: px-to-rem(128);
+    border: none;
+    border-radius: px-to-rem(64);
+    font-size: px-to-rem(14);
+    font-weight: $font-weight-bold;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+    transform: 0.3s ease;
+
+    &--white {
+        background-color: $color-white;
+    }
+
+    &--purple {
+        background-color: $color-btn;
+        color: $color-white;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+        transform: scale(1.01);
+    }
+
+    &:focus-visible {
+        outline: 2px solid black;
+        outline-offset: 2px;
+    }
+}

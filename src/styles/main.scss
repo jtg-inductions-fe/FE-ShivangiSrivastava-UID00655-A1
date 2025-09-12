@@ -1,3 +1,5 @@
-@use './base/normalize';
-@use './vendors/icomoon';
-@use './base/fonts';
+@use 'abstract';
+@use 'base';
+@use 'components';
+@use 'layouts';
+@use 'vendors';
