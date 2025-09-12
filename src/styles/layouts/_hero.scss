@@ -1,11 +1,10 @@
-@use '../components/button';
-@use '../abstract/colors';
-@use '../abstract/variables';
-@use '../abstract/mixins';
+@use '../components' as *;
+@use '../abstract' as *;
+@use '../base' as *;
 
 .hero {
     text-align: center;
-    margin-top: 120px;
+    margin-top: px-to-rem(120);
 
     &__arrows {
         display: none;
@@ -13,131 +12,133 @@
 
     &__bg {
         position: relative;
-        padding: 1.56em 1em;
+        padding: px-to-rem(28 12 0 17);
         width: 100%;
         box-sizing: border-box;
     }
 
-    &__explorebtn {
-        margin-top: 5px;
-        @include button.button-setup(white, colors.$secondary, 16px, 250px);
-
-        span {
-            margin-left: 15px;
-            font-size: 1.2em;
-        }
-        @include mixins.focus;
-    }
     &__content {
-        h1 {
-            margin: 1rem 1.5rem;
-            font-size: 2.5em;
-            font-family: 'Roboto', sans-serif;
-            font-weight: variables.$font-weight-bold;
-        }
-        span {
-            color: colors.$secondary;
-        }
+        margin-top: px-to-rem(30);
+    }
 
-        p {
-            line-height: 1.5em;
-            padding: 0 25px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: variables.$font-weight-normal;
-            color: colors.$gray;
+    &__explorebtn {
+        color: $color-primary;
+        width: px-to-rem(250);
+        margin-bottom: px-to-rem(18);
+        font-size: px-to-rem(16);
+    }
+
+    &__exploreicon {
+        margin-left: px-to-rem(15);
+        font-size: 1.2rem;
+    }
+
+    &__heading {
+        margin: 0;
+        padding: px-to-rem(0 20);
+        &--primary {
+            color: $color-primary;
         }
+    }
+
+    &__para {
+        margin: px-to-rem(15 24);
+    }
+
+    &__actions {
+        @include flex-center;
+        flex-direction: column;
+        height: px-to-rem(200);
+        width: auto;
+        margin-top: px-to-rem(36);
+        flex: 1;
+        gap: 2rem;
     }
 
     &__buttons {
-        font-family: 'Roboto', sans-serif;
-        font-weight: variables.$font-weight-bold;
+        width: px-to-rem(400);
+        height: px-to-rem(65);
 
-        &--purple {
-            margin: 15px 20px;
-            @include button.button-setup(colors.$primary, white, 15px, 90vw);
-            height: 70px;
-        }
         &--white {
-            margin: 15px 20px;
-            @include button.button-setup(white, black, 15px, 90vw);
-            height: 70px;
-            display: flex;
+            @include flex-center;
             justify-content: center;
-            align-items: center;
         }
 
-        span {
-            margin-right: 15px;
-            font-size: 1.5em;
+        &--icon {
+            margin-right: px-to-rem(15);
+            font-size: 1.5rem;
         }
     }
 
     &__logos {
-        margin-top: 55px;
-        display: flex;
+        margin: px-to-rem(25 15 0);
+        @include flex-center;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5em;
+        gap: 1.8rem;
     }
 
     &__partnerlogo {
         height: 1.3rem;
         margin-bottom: 10px;
+    }
 
-        & a {
-            @include mixins.focus(10px);
-        }
+    &__logolink {
+        @include focus(10px);
     }
 }
 
-@media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1)) {
+@include responsive-tab {
     .hero {
         &__arrows {
             display: block;
             position: absolute;
-            height: 180px;
-            left: 2rem;
-            top: 79rem;
+            height: px-to-rem(175);
+            left: px-to-rem(35);
+            top: px-to-rem(1265);
         }
 
         &__bg {
-            padding: 4em 8em;
-            height: 850px;
-            width: 1050px;
-        }
-
-        &__explorebtn {
-            margin-top: 0;
+            padding: 4rem 8rem 0;
+            height: px-to-rem(800);
         }
 
         &__content {
-            h1 {
-                margin: 1.8rem 4em;
-                font-size: 3.5em;
-            }
+            width: px-to-rem(700);
+            margin: px-to-rem(2) auto;
+        }
 
-            p {
-                margin: 1.4em 13.5em;
-                font-size: 1.2em;
-            }
+        &__explorebtn {
+            margin-top: px-to-rem(36);
+            margin-bottom: px-to-rem(36);
+        }
+
+        &__heading {
+            padding: px-to-rem(5 45 0);
+        }
+
+        &__para {
+            padding: px-to-rem(20 110);
+        }
+
+        &__actions {
+            height: px-to-rem(60);
+            max-width: px-to-rem(400);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            padding: px-to-rem(0 30);
+            margin: px-to-rem(10) auto 0;
+            gap: 1rem;
         }
 
         &__buttons {
-            max-width: 400px;
-            margin: 35px auto;
-            display: flex;
-            justify-content: center;
-            &--purple {
-                height: 50px;
-            }
-            &--white {
-                height: 50px;
-            }
+            height: px-to-rem(55);
         }
 
         &__logos {
-            margin: 9.5rem auto 0;
-            height: 100px;
+            margin: px-to-rem(160) auto 0;
+            height: px-to-rem(100);
             width: 60%;
             display: flex;
             justify-content: center;
@@ -150,16 +151,16 @@
     }
 }
 
-@media (min-width: variables.$breakpoint-lg) {
+@include responsive-desktop {
     .hero {
-        max-width: variables.$breakpoint-lg;
-        margin-top: 10em;
+        max-width: $breakpoint-lg;
+        margin-top: 10rem;
 
         &__arrows {
             display: block;
             position: absolute;
-            left: 3rem;
-            top: 54rem;
+            left: 2.5rem;
+            top: px-to-rem(870);
         }
 
         &__main {
@@ -169,47 +170,39 @@
         }
 
         &__bg {
-            height: 50rem;
-            width: 50rem;
-            margin: 1rem;
-        }
-
-        &__explorebtn {
-            background-color: colors.$pink-300;
+            height: px-to-rem(780);
+            width: px-to-rem(800);
+            margin: 1rem 2rem 0 0;
         }
 
         &__content {
             width: 30%;
             text-align: start;
-            margin: 7rem 0;
-            margin-left: 3rem;
+            margin-top: px-to-rem(115);
+            margin-left: px-to-rem(50);
+        }
 
-            h1 {
-                margin-top: 3rem;
-                font-size: 4rem;
-            }
+        &__explorebtn {
+            background-color: $color-secondary-lighter;
+        }
 
-            p {
-                margin-top: 3rem;
-                line-height: 2rem;
-                font-size: 1.2rem;
-                padding-right: 2rem;
-            }
+        &__heading {
+            margin-top: px-to-rem(20);
+        }
+        &__para {
+            margin-top: px-to-rem(30);
+        }
+
+        &__actions {
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+            margin: px-to-rem(66 80 0 15);
+            gap: 1rem;
         }
 
         &__buttons {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            margin-top: 2.5rem;
-            &--purple {
-                width: 32%;
-                height: 3rem;
-            }
-            &--white {
-                width: 32%;
-                height: 3rem;
-            }
+            height: px-to-rem(50);
         }
 
         &__logos {

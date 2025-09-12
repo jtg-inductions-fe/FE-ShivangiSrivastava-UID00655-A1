@@ -1,0 +1,24 @@
+@use '../abstract' as *;
+
+.heading {
+    font-weight: $font-weight-bold;
+    font-size: px-to-rem(40);
+
+    @include responsive-tab {
+        font-size: px-to-rem(56);
+    }
+
+    @include responsive-desktop {
+        font-size: px-to-rem(69);
+    }
+}
+
+.para {
+    font-weight: $font-weight-normal;
+    font-size: px-to-rem(16);
+
+    @include responsive-tab-desktop {
+        font-size: px-to-rem(18);
+        line-height: px-to-rem(30);
+    }
+}
