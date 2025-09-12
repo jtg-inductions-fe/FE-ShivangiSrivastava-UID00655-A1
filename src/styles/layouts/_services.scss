@@ -52,38 +52,40 @@
 
 @include responsive-desktop {
     .services {
-        display: grid;
-        height: 30rem;
-        margin: 4rem 6rem;
-        grid-template-areas:
-            'head card'
-            'subh card';
-        grid-template-rows: 0.7fr 1fr;
-        grid-template-columns: 0.5fr 1fr;
+        display: flex;
+        height: px-to-rem(460);
+        margin: px-to-rem(90 90 0 128);
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            padding-top: px-to-rem(145);
+        }
+        &__heading {
+            margin-top: px-to-rem(0);
+        }
+
+        &__description {
+            margin-top: px-to-rem(0);
+        }
 
         &__cardcontainer {
-            grid-area: card;
             flex-direction: row;
-            padding: 0 1rem;
+            padding: px-to-rem(0 16);
             gap: 1rem;
             margin-top: 0;
         }
 
         &__card {
             margin: 0;
-            height: 28rem;
-            padding: 2rem 1rem 0;
-            margin-bottom: 5rem;
-            box-sizing: border-box;
-            width: 24rem;
-
-            & > h2 {
-                margin-top: 4rem;
-                font-size: 1.8rem;
-            }
+            height: px-to-rem(450);
+            width: px-to-rem(386);
+            margin-left: px-to-rem(15);
+            padding: px-to-rem(62 0 0);
 
             & > p {
-                padding: 0 0.7rem;
+                padding: px-to-rem(0 65);
             }
         }
 
