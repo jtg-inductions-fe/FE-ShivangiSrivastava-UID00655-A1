@@ -16,6 +16,7 @@
 .para {
     font-weight: $font-weight-normal;
     font-size: px-to-rem(16);
+    color: $color-text-secondary;
 
     @include responsive-tab-desktop {
         font-size: px-to-rem(18);

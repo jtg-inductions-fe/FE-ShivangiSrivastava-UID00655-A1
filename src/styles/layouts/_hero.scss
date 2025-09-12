@@ -30,7 +30,7 @@
 
     &__exploreicon {
         margin-left: px-to-rem(15);
-        font-size: 1.2rem;
+        font-size: px-to-rem(19);
     }
 
     &__heading {
@@ -52,7 +52,7 @@
         width: auto;
         margin-top: px-to-rem(36);
         flex: 1;
-        gap: 2rem;
+        gap: px-to-rem(32);
     }
 
     &__buttons {
@@ -75,12 +75,12 @@
         @include flex-center;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.8rem;
+        gap: px-to-rem(29);
     }
 
     &__partnerlogo {
-        height: 1.3rem;
-        margin-bottom: 10px;
+        height: px-to-rem(21);
+        margin-bottom: px-to-rem(10);
     }
 
     &__logolink {
@@ -99,7 +99,7 @@
         }
 
         &__bg {
-            padding: 4rem 8rem 0;
+            padding: px-to-rem(64 128 0);
             height: px-to-rem(800);
         }
 
@@ -109,8 +109,7 @@
         }
 
         &__explorebtn {
-            margin-top: px-to-rem(36);
-            margin-bottom: px-to-rem(36);
+            margin: px-to-rem(36 0);
         }
 
         &__heading {
@@ -129,7 +128,7 @@
             flex-direction: row;
             padding: px-to-rem(0 30);
             margin: px-to-rem(10) auto 0;
-            gap: 1rem;
+            gap: px-to-rem(16);
         }
 
         &__buttons {
@@ -146,7 +145,7 @@
         }
 
         &__partnerlogo {
-            height: 2rem;
+            height: px-to-rem(32);
         }
     }
 }
@@ -154,12 +153,12 @@
 @include responsive-desktop {
     .hero {
         max-width: $breakpoint-lg;
-        margin-top: 10rem;
+        margin-top: px-to-rem(160);
 
         &__arrows {
             display: block;
             position: absolute;
-            left: 2.5rem;
+            left: px-to-rem(40);
             top: px-to-rem(870);
         }
 
@@ -172,7 +171,7 @@
         &__bg {
             height: px-to-rem(780);
             width: px-to-rem(800);
-            margin: 1rem 2rem 0 0;
+            margin: px-to-rem(16 32 0 0);
         }
 
         &__content {
@@ -198,7 +197,7 @@
             align-items: start;
             justify-content: start;
             margin: px-to-rem(66 80 0 15);
-            gap: 1rem;
+            gap: px-to-rem(16);
         }
 
         &__buttons {
@@ -208,12 +207,12 @@
         &__logos {
             width: 100%;
             display: flex;
-            gap: 6rem;
-            height: 5rem;
+            gap: px-to-rem(96);
+            height: px-to-rem(80);
         }
 
         &__partnerlogo {
-            height: 2rem;
+            height: px-to-rem(32);
         }
     }
 }
