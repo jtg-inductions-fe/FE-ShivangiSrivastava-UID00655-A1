@@ -1,0 +1,56 @@
+@use '../abstract/' as *;
+
+.features {
+    text-align: center;
+    margin-top: px-to-rem(90);
+
+    &__heading {
+        margin-top: px-to-rem(102);
+    }
+
+    &__text {
+        margin-top: px-to-rem(30);
+        padding: px-to-rem(0 60);
+    }
+
+    &__cardcontainer {
+        margin-top: px-to-rem(32);
+        height: px-to-rem(920);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: px-to-rem(8);
+    }
+
+    &__card {
+        text-align: start;
+        border: 1px solid $color-shadow;
+        border-radius: px-to-rem(32);
+        box-sizing: border-box;
+        height: px-to-rem(290);
+        margin: px-to-rem(0 48);
+        padding: px-to-rem(30);
+        transition:
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            transform: scale(1.01);
+        }
+
+        & > span {
+            font-size: px-to-rem(100);
+        }
+
+        & > h4 {
+            margin-top: px-to-rem(32);
+            margin-bottom: px-to-rem(0);
+            @include font-scale(23);
+        }
+
+        & > p {
+            margin-top: px-to-rem(10);
+        }
+    }
+}
