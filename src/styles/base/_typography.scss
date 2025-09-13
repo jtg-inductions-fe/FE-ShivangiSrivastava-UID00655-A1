@@ -3,16 +3,16 @@
 .heading {
     font-weight: $font-weight-bold;
     font-size: px-to-rem(40);
-    line-height: px-to-rem(48);
+    line-height: calc-line-height(40);
 
     @include responsive-tab {
         font-size: px-to-rem(56);
-        line-height: px-to-rem(67.2);
+        line-height: calc-line-height(56);
     }
 
     @include responsive-desktop {
         font-size: px-to-rem(69);
-        line-height: px-to-rem(82.8);
+        line-height: calc-line-height(69);
     }
 }
 
@@ -20,9 +20,10 @@
     font-weight: $font-weight-normal;
     font-size: px-to-rem(16);
     color: $color-text-secondary;
+    line-height: calc-line-height(16, 1.6);
 
     @include responsive-tab-desktop {
         font-size: px-to-rem(18);
-        line-height: px-to-rem(30);
+        line-height: calc-line-height(18, 1.6);
     }
 }
