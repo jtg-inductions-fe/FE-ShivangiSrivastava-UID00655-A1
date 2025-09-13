@@ -43,14 +43,105 @@
             font-size: px-to-rem(100);
         }
 
-        & > h4 {
-            margin-top: px-to-rem(32);
-            margin-bottom: px-to-rem(0);
-            @include font-scale(23);
+        &-content {
+            & > h4 {
+                margin-top: px-to-rem(32);
+                margin-bottom: px-to-rem(0);
+                @include font-scale(23);
+            }
+
+            & > p {
+                margin-top: px-to-rem(10);
+            }
+        }
+    }
+}
+
+@include responsive-tab {
+    .features {
+        margin-top: px-to-rem(136);
+
+        &__heading {
+            margin-top: px-to-rem(64);
+            margin-bottom: 0;
         }
 
-        & > p {
-            margin-top: px-to-rem(10);
+        &__subheading {
+            margin-top: px-to-rem(20);
+        }
+
+        &__text {
+            word-spacing: px-to-rem(2.5);
+            padding: px-to-rem(0 110);
+        }
+
+        &__cardcontainer {
+            margin-top: px-to-rem(64);
+            height: px-to-rem(500);
+            gap: px-to-rem(0);
+        }
+
+        &__card {
+            height: px-to-rem(164);
+            margin: px-to-rem(0 96);
+            @include flex-center;
+
+            &-content {
+                margin-left: px-to-rem(32);
+                margin-bottom: px-to-rem(12);
+            }
+        }
+    }
+}
+
+@include responsive-desktop {
+    .features {
+        text-align: start;
+        margin-top: px-to-rem(70);
+        padding: px-to-rem(16 0 16 124);
+        display: flex;
+        flex-direction: row-reverse;
+        height: px-to-rem(900);
+        justify-content: space-between;
+
+        &__content {
+            width: px-to-rem(550);
+            margin-top: px-to-rem(0);
+            padding: px-to-rem(0 20 0 16);
+        }
+
+        &__heading {
+            margin: 0;
+        }
+
+        &__subheading {
+            margin-top: px-to-rem(16);
+        }
+
+        &__text {
+            word-spacing: px-to-rem(2.5);
+            padding: 0;
+        }
+
+        &__cardcontainer {
+            width: px-to-rem(558);
+            margin-top: px-to-rem(66);
+            gap: 0;
+        }
+
+        &__card {
+            margin: 0;
+            height: px-to-rem(164);
+            display: flex;
+
+            &-content {
+                margin-left: px-to-rem(32);
+                margin-bottom: px-to-rem(20);
+
+                & > h4 {
+                    margin-top: px-to-rem(22);
+                }
+            }
         }
     }
 }
