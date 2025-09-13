@@ -2,28 +2,23 @@
 
 .heading {
     font-weight: $font-weight-bold;
-    font-size: px-to-rem(40);
-    line-height: calc-line-height(40);
+    @include font-scale(40);
 
     @include responsive-tab {
-        font-size: px-to-rem(56);
-        line-height: calc-line-height(56);
+        @include font-scale(56);
     }
 
     @include responsive-desktop {
-        font-size: px-to-rem(69);
-        line-height: calc-line-height(69);
+        @include font-scale(69);
     }
 }
 
 .para {
     font-weight: $font-weight-normal;
-    font-size: px-to-rem(16);
     color: $color-text-secondary;
-    line-height: calc-line-height(16, 1.6);
+    @include font-scale(16, $base: 1.6);
 
     @include responsive-tab-desktop {
-        font-size: px-to-rem(18);
-        line-height: calc-line-height(18, 1.6);
+        @include font-scale(18, $base: 1.6);
     }
 }

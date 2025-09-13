@@ -17,7 +17,7 @@
     }
 
     &__content {
-        margin-top: px-to-rem(30);
+        margin-top: px-to-rem(28);
     }
 
     &__explorebtn {
@@ -79,7 +79,6 @@
 
     &__partnerlogo {
         height: px-to-rem(20);
-        margin-bottom: px-to-rem(10);
     }
 
     &__logolink {
@@ -117,7 +116,7 @@
         }
 
         &__para {
-            padding: px-to-rem(20 110);
+            padding: px-to-rem(20 110 15);
         }
 
         &__actions {
@@ -127,7 +126,7 @@
             display: flex;
             flex-direction: row;
             padding: px-to-rem(0 30);
-            margin: px-to-rem(10) auto 0;
+            margin: 0 auto;
             gap: px-to-rem(16);
         }
 
@@ -136,7 +135,7 @@
         }
 
         &__logos {
-            margin: px-to-rem(156) auto 0;
+            margin: px-to-rem(160) auto 0;
             height: px-to-rem(100);
             width: 60%;
             display: flex;

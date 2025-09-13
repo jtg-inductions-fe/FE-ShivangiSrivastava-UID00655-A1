@@ -77,133 +77,146 @@
             </nav>
 
             <!-- HERO SECTION -->
-
-            <section aria-label="Introduction Section">
-                <div class="hero">
-                    <div class="hero__main">
-                        <div class="hero__bg" aria-hidden="true">
-                            <picture>
-                                <source
-                                    srcset="./src/assets/hero-img-desktop.png"
-                                    media="(width >=1440px)"
-                                />
-                                <source
-                                    srcset="./src/assets/hero-img-tablet.png"
-                                    media="(width >=1024px)"
-                                />
-                                <img
-                                    src="./src/assets/hero-img-mobile.png"
-                                    alt="people traveling"
-                                />
-                            </picture>
-                        </div>
-                        <div class="hero__arrows" alt="" aria-hidden="true">
-                            <img src="./src/assets/arrow.png" />
-                        </div>
-
-                        <div class="hero__content">
-                            <button
-                                class="button button--white hero__explorebtn"
-                            >
-                                Explore the world!<span
-                                    class="icon-work-bag hero__exploreicon"
-                                ></span>
-                            </button>
-                            <h1 class="heading hero__heading">
-                                Travel
-                                <span class="heading hero__heading--primary"
-                                    >top destination
-                                </span>
-                                of the world
-                            </h1>
-                            <p class="para hero__para">
-                                We always make our customers happy by providing
-                                as many choices as possible
-                            </p>
+            <main>
+                <section aria-label="Introduction Section">
+                    <div class="hero">
+                        <div class="hero__main">
                             <div
-                                class="hero__actions"
-                                role="group"
-                                aria-label="Startup Actions"
+                                class="hero__bg"
+                                alt="Collage of Travel Images"
                             >
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ./src/assets/hero-img-desktop.png
+                                        "
+                                        media="(width >=1440px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            ./src/assets/hero-img-tablet.png
+                                        "
+                                        media="(width >=1024px)"
+                                    />
+                                    <img
+                                        src="./src/assets/hero-img-mobile.png"
+                                        alt="people traveling"
+                                    />
+                                </picture>
+                            </div>
+                            <div
+                                class="hero__arrows"
+                                alt=""
+                                aria-hidden="true"
+                                role="presentation"
+                            >
+                                <img src="./src/assets/arrow.png" />
+                            </div>
+
+                            <div class="hero__content">
                                 <button
-                                    class="button button--purple hero__buttons"
+                                    class="button button--white hero__explorebtn"
                                 >
-                                    Get Started
+                                    Explore the world!<span
+                                        class="icon-work-bag hero__exploreicon"
+                                    ></span>
                                 </button>
-                                <button
-                                    class="button button--white hero__buttons hero__buttons--white"
+                                <h1 class="heading hero__heading">
+                                    Travel
+                                    <span class="heading hero__heading--primary"
+                                        >top destination
+                                    </span>
+                                    of the world
+                                </h1>
+                                <p class="para hero__para">
+                                    We always make our customers happy by
+                                    providing as many choices as possible
+                                </p>
+                                <div
+                                    class="hero__actions"
+                                    role="group"
+                                    aria-label="Startup Actions"
                                 >
-                                    <span
-                                        class="icon-play-circle hero__buttons--icon"
-                                    ></span
-                                    >Watch Demo
-                                </button>
+                                    <button
+                                        class="button button--purple hero__buttons"
+                                    >
+                                        Get Started
+                                    </button>
+                                    <button
+                                        class="button button--white hero__buttons hero__buttons--white"
+                                    >
+                                        <span
+                                            class="icon-play-circle hero__buttons--icon"
+                                        ></span
+                                        >Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero__logos">
+                            <div
+                                class="hero__partnerlogo"
+                                aria-label="Trusted by leading companies"
+                            >
+                                <a
+                                    class="hero__logolink"
+                                    href="https://www.tripadvisor.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    ><img
+                                        src="./src/assets/trip-ad-logo.png"
+                                        alt="TripAdvisor"
+                                /></a>
+                            </div>
+                            <div class="hero__partnerlogo">
+                                <a
+                                    class="hero__logolink"
+                                    href="https://www.expedia.co.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    ><img
+                                        src="./src/assets/expedia-logo.png"
+                                        alt="Expedia"
+                                /></a>
+                            </div>
+                            <div class="hero__partnerlogo">
+                                <a
+                                    class="hero__logolink"
+                                    href="https://www.booking.com/in"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    ><img
+                                        src="./src/assets/booking-logo.png"
+                                        alt="Booking.com"
+                                /></a>
+                            </div>
+                            <div class="hero__partnerlogo">
+                                <a
+                                    class="hero__logolink"
+                                    href="https://www.airbnb.co.in/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    ><img
+                                        src="./src/assets/airbnb-logo.png"
+                                        alt="Airbnb"
+                                /></a>
+                            </div>
+                            <div class="hero__partnerlogo">
+                                <a
+                                    class="hero__logolink"
+                                    href="https://www.orbitz.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    ><img
+                                        src="./src/assets/orbitz-logo.png"
+                                        alt="Orbitz"
+                                /></a>
                             </div>
                         </div>
                     </div>
-
-                    <div class="hero__logos">
-                        <div
-                            class="hero__partnerlogo"
-                            aria-label="Trusted by leading companies"
-                        >
-                            <a
-                                class="hero__logolink"
-                                href="https://www.tripadvisor.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="./src/assets/trip-ad-logo.png"
-                                    alt="TripAdvisor"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.expedia.co.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="./src/assets/expedia-logo.png"
-                                    alt="Expedia"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.booking.com/in"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="./src/assets/booking-logo.png"
-                                    alt="Booking.com"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.airbnb.co.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="./src/assets/airbnb-logo.png"
-                                    alt="Airbnb"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.orbitz.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="./src/assets/orbitz-logo.png"
-                                    alt="Orbitz"
-                            /></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </main>
         </div>
         <script type="module" src="./src/script/index.js"></script>
     </body>
