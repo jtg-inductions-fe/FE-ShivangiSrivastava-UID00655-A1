@@ -3,13 +3,16 @@
 .heading {
     font-weight: $font-weight-bold;
     font-size: px-to-rem(40);
+    line-height: px-to-rem(48);
 
     @include responsive-tab {
         font-size: px-to-rem(56);
+        line-height: px-to-rem(67.2);
     }
 
     @include responsive-desktop {
         font-size: px-to-rem(69);
+        line-height: px-to-rem(82.8);
     }
 }
 

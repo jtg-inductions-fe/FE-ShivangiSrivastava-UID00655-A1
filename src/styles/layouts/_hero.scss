@@ -24,7 +24,7 @@
     &__explorebtn {
         color: $color-primary;
         width: px-to-rem(250);
-        margin-bottom: px-to-rem(18);
+        margin-bottom: px-to-rem(20);
         font-size: px-to-rem(16);
     }
 
@@ -42,7 +42,7 @@
     }
 
     &__para {
-        margin: px-to-rem(15 24);
+        margin: px-to-rem(28 24);
     }
 
     &__actions {
@@ -75,11 +75,11 @@
         @include flex-center;
         flex-wrap: wrap;
         justify-content: center;
-        gap: px-to-rem(29);
+        gap: px-to-rem(30);
     }
 
     &__partnerlogo {
-        height: px-to-rem(21);
+        height: px-to-rem(20);
         margin-bottom: px-to-rem(10);
     }
 
