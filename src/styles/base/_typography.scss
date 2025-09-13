@@ -28,47 +28,39 @@
 
 .section-heading {
     font-weight: $font-weight-bold;
-    font-size: px-to-rem(16);
+    @include font-scale(16);
     color: $color-primary;
     letter-spacing: px-to-rem(3.5);
 
     @include responsive-tab-desktop {
-        font-size: px-to-rem(23);
+        @include font-scale(23);
         letter-spacing: px-to-rem(5);
     }
 }
 
 .section-subheading {
     font-family: $font-weight-bold;
-    font-size: px-to-rem(32);
-    line-height: px-to-rem(32);
+    @include font-scale(32);
 
     @include responsive-tab {
-        font-size: px-to-rem(40);
+        @include font-scale(40);
     }
-    @include responsive-tab-desktop {
-        font-size: px-to-rem(44);
-        line-height: px-to-rem(40);
+    @include responsive-desktop {
+        @include font-scale(44);
     }
 }
 
 .card-heading {
     font-family: $font-weight-bold;
-    font-size: px-to-rem(24);
-    margin-top: px-to-rem(32);
+    @include font-scale(24);
 
     @include responsive-tab-desktop {
-        margin-top: px-to-rem(60);
-        font-size: px-to-rem(28);
+        @include font-scale(28);
     }
 }
 
 .card-text {
     font-weight: $font-weight-normal;
-    font-size: px-to-rem(18);
+    @include font-scale(18, $base: 1.6);
     color: $color-text-secondary;
-
-    @include responsive-tab-desktop {
-        line-height: px-to-rem(24);
-    }
 }

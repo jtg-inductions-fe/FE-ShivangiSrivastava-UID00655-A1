@@ -3,12 +3,13 @@
 
 .services {
     text-align: center;
-    margin: px-to-rem(40 20 0);
+    margin: px-to-rem(62 20 0);
 
     &__cardcontainer {
         display: flex;
         flex-direction: column;
-        margin-top: px-to-rem(18);
+        margin-top: px-to-rem(28);
+        gap: px-to-rem(16);
     }
 
     &__card {
@@ -16,7 +17,6 @@
         box-sizing: border-box;
         @include flex-center;
         flex-direction: column;
-        margin-top: px-to-rem(16);
         padding: px-to-rem(30 35);
         border-radius: px-to-rem(30);
         height: px-to-rem(280);
@@ -28,24 +28,40 @@
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
             transform: scale(1.01);
         }
+
+        & > h2 {
+            margin: px-to-rem(28 0 14);
+        }
     }
 }
 
 @include responsive-tab {
     .services {
-        margin-top: px-to-rem(120);
+        margin-top: px-to-rem(124);
+
+        &__heading {
+            margin-bottom: 0;
+        }
+
+        &__description {
+            margin-top: px-to-rem(18);
+        }
 
         &__cardcontainer {
             flex-direction: row;
             justify-content: center;
             gap: px-to-rem(16);
-            margin-top: px-to-rem(50);
+            margin-top: px-to-rem(60);
         }
 
         &__card {
             width: px-to-rem(288);
             height: px-to-rem(450);
             padding: px-to-rem(65);
+
+            & > h2 {
+                margin: px-to-rem(60 0 14);
+            }
         }
     }
 }
@@ -60,10 +76,11 @@
             display: flex;
             flex-direction: column;
             text-align: start;
-            padding-top: px-to-rem(145);
+            padding-top: px-to-rem(120);
+            max-width: px-to-rem(400);
         }
         &__heading {
-            margin-top: px-to-rem(0);
+            margin-bottom: px-to-rem(16);
         }
 
         &__description {
@@ -72,8 +89,7 @@
 
         &__cardcontainer {
             flex-direction: row;
-            padding: px-to-rem(0 16);
-            gap: 1rem;
+            gap: px-to-rem(20);
             margin-top: 0;
         }
 
@@ -81,8 +97,10 @@
             margin: 0;
             height: px-to-rem(450);
             width: px-to-rem(386);
-            margin-left: px-to-rem(15);
-            padding: px-to-rem(62 0 0);
+            padding: px-to-rem(64 0 0 0);
+            & > h2 {
+                padding-top: px-to-rem(36);
+            }
 
             & > p {
                 padding: px-to-rem(0 65);
