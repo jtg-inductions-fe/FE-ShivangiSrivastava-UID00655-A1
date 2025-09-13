@@ -81,10 +81,10 @@
         }
 
         &__cardscontainer {
-            margin: px-to-rem(56) auto 0;
+            margin: px-to-rem(60) auto 0;
             flex-direction: row;
             flex-wrap: wrap;
-            margin-top: px-to-rem(56);
+            justify-content: center;
             gap: px-to-rem(28);
             width: px-to-rem(900);
         }
@@ -97,7 +97,7 @@
 
 @include responsive-desktop {
     .travel {
-        margin-top: px-to-rem(102);
+        margin-top: px-to-rem(104);
         margin-right: px-to-rem(90);
         display: flex;
         height: px-to-rem(740);
@@ -115,7 +115,8 @@
         }
 
         &__content {
-            width: px-to-rem(500);
+            margin-top: px-to-rem(28);
+            width: px-to-rem(480);
 
             & > h4 {
                 text-align: start;
@@ -128,6 +129,7 @@
 
             & > p {
                 text-align: start;
+                padding: 0;
             }
         }
 
