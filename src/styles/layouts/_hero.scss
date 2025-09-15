@@ -80,6 +80,10 @@
 
     &__partnerlogo {
         height: px-to-rem(20);
+
+        & img {
+            max-height: 100%;
+        }
     }
 
     &__logolink {
