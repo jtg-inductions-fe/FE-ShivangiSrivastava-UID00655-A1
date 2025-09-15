@@ -10,3 +10,8 @@
     }
     @return math.div($px, $root) * 1rem;
 }
+
+@function calc-line-height($px, $base) {
+    $rem: px-to-rem($px);
+    @return ($rem * $base);
+}

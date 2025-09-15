@@ -1,0 +1,27 @@
+@use '../abstract' as *;
+
+.heading {
+    font-weight: $font-weight-bold;
+    @include font-scale(40);
+
+    @include responsive-tab {
+        @include font-scale(56);
+    }
+
+    @include responsive-desktop {
+        @include font-scale(69);
+    }
+}
+
+.para {
+    font-weight: $font-weight-normal;
+    color: $color-text-secondary;
+    @include font-scale(16, $base: 1.6);
+
+    @include responsive-tab {
+        @include font-scale(18, $base: 1.6);
+    }
+    @include responsive-desktop {
+        @include font-scale(18, $base: 1.6);
+    }
+}

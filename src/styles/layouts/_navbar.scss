@@ -18,11 +18,11 @@
     &__logo {
         z-index: 200;
         padding-left: px-to-rem(2);
+        @include focus;
+    }
 
-        &:focus-visible {
-            outline: 2px solid black;
-            outline-offset: 2px;
-        }
+    &__home {
+        @include focus;
     }
 
     &__menu {
