@@ -66,7 +66,7 @@
 
         &--icon {
             margin-right: px-to-rem(15);
-            font-size: 1.5rem;
+            font-size: px-to-rem(24);
         }
     }
 
@@ -114,6 +114,10 @@
 
         &__heading {
             padding: px-to-rem(10 44 0);
+
+            &--primary {
+                padding: 0;
+            }
         }
 
         &__para {

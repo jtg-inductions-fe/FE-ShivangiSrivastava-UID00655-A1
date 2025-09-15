@@ -18,7 +18,10 @@
     color: $color-text-secondary;
     @include font-scale(16, $base: 1.6);
 
-    @include responsive-tab-desktop {
+    @include responsive-tab {
+        @include font-scale(18, $base: 1.6);
+    }
+    @include responsive-desktop {
         @include font-scale(18, $base: 1.6);
     }
 }

@@ -15,13 +15,6 @@
     }
 }
 
-//media query for tablet and desktop
-@mixin responsive-tab-desktop {
-    @media (min-width: ($breakpoint-md)) {
-        @content;
-    }
-}
-
 //flex center
 @mixin flex-center {
     display: flex;
