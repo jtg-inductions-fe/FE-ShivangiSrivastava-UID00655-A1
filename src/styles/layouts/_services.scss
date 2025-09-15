@@ -5,6 +5,11 @@
     text-align: center;
     margin: px-to-rem(62 20 0);
 
+    &__description {
+        margin-top: px-to-rem(10);
+        margin-bottom: 0;
+    }
+
     &__cardcontainer {
         display: flex;
         flex-direction: column;
@@ -13,23 +18,25 @@
     }
 
     &__card {
-        border: 2px solid $color-shadow;
+        border: 2px solid $color-border;
         box-sizing: border-box;
         @include flex-center;
         flex-direction: column;
-        padding: px-to-rem(30 35);
+        padding: px-to-rem(30 35 0);
         border-radius: px-to-rem(30);
-        height: px-to-rem(280);
+        min-height: px-to-rem(280);
         transition:
             box-shadow 0.3s ease,
             transform 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 25px $color-shadow;
             transform: scale(1.01);
         }
+    }
 
-        & > h2 {
+    &-card {
+        &__heading {
             margin: px-to-rem(28 0 14);
         }
     }
@@ -56,10 +63,12 @@
 
         &__card {
             width: px-to-rem(288);
-            height: px-to-rem(450);
+            min-height: px-to-rem(450);
             padding: px-to-rem(65);
+        }
 
-            & > h2 {
+        &-card {
+            &__heading {
                 margin: px-to-rem(60 0 14);
             }
         }
@@ -95,14 +104,17 @@
 
         &__card {
             margin: 0;
-            height: px-to-rem(450);
+            min-height: px-to-rem(450);
             width: px-to-rem(386);
             padding: px-to-rem(64 0 0 0);
-            & > h2 {
+        }
+
+        &-card {
+            &__heading {
                 padding-top: px-to-rem(36);
             }
 
-            & > p {
+            &__text {
                 padding: px-to-rem(0 65);
             }
         }

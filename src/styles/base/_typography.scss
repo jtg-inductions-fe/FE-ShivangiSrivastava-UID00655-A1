@@ -44,7 +44,7 @@
 }
 
 .section-subheading {
-    font-family: $font-weight-bold;
+    font-weight: $font-weight-bold;
     @include font-scale(32);
 
     @include responsive-tab {
@@ -56,7 +56,7 @@
 }
 
 .card-heading {
-    font-family: $font-weight-bold;
+    font-weight: $font-weight-bold;
     @include font-scale(24);
 
     @include responsive-tab {
