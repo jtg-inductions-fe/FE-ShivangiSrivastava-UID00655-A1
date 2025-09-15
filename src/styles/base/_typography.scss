@@ -32,7 +32,12 @@
     color: $color-primary;
     letter-spacing: px-to-rem(3.5);
 
-    @include responsive-tab-desktop {
+    @include responsive-tab {
+        @include font-scale(23);
+        letter-spacing: px-to-rem(5);
+    }
+
+    @include responsive-desktop {
         @include font-scale(23);
         letter-spacing: px-to-rem(5);
     }
@@ -54,7 +59,11 @@
     font-family: $font-weight-bold;
     @include font-scale(24);
 
-    @include responsive-tab-desktop {
+    @include responsive-tab {
+        @include font-scale(28);
+    }
+
+    @include responsive-desktop {
         @include font-scale(28);
     }
 }
