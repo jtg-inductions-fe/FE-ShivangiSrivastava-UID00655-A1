@@ -25,3 +25,51 @@
         @include font-scale(18, $base: 1.6);
     }
 }
+
+.section-heading {
+    font-weight: $font-weight-bold;
+    @include font-scale(16);
+    color: $color-primary;
+    letter-spacing: px-to-rem(3.5);
+
+    @include responsive-tab {
+        @include font-scale(23);
+        letter-spacing: px-to-rem(5);
+    }
+
+    @include responsive-desktop {
+        @include font-scale(23);
+        letter-spacing: px-to-rem(5);
+    }
+}
+
+.section-subheading {
+    font-weight: $font-weight-bold;
+    @include font-scale(32);
+
+    @include responsive-tab {
+        @include font-scale(40);
+    }
+    @include responsive-desktop {
+        @include font-scale(44);
+    }
+}
+
+.card-heading {
+    font-weight: $font-weight-bold;
+    @include font-scale(24);
+
+    @include responsive-tab {
+        @include font-scale(28);
+    }
+
+    @include responsive-desktop {
+        @include font-scale(28);
+    }
+}
+
+.card-text {
+    font-weight: $font-weight-normal;
+    @include font-scale(18, $base: 1.6);
+    color: $color-text-secondary;
+}
