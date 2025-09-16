@@ -1,0 +1,164 @@
+@use '../abstract' as *;
+
+.travel {
+    text-align: center;
+    margin-top: px-to-rem(66);
+
+    &__ticket {
+        display: none;
+    }
+
+    &__img {
+        margin-bottom: px-to-rem(32);
+    }
+
+    &__heading {
+        margin: 0;
+    }
+
+    &__subheading {
+        margin-top: px-to-rem(16);
+        margin-bottom: px-to-rem(30);
+    }
+
+    &__text {
+        padding: px-to-rem(0 26);
+    }
+
+    &__cardscontainer {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-rem(16);
+        margin: px-to-rem(32 16);
+        box-sizing: border-box;
+    }
+
+    &__card {
+        border: 1px solid $color-border;
+        min-height: px-to-rem(150);
+        border-radius: px-to-rem(30);
+        transition:
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 0 25px $color-shadow;
+            transform: scale(1.01);
+        }
+    }
+}
+
+.travel-card {
+    &__heading {
+        margin-top: px-to-rem(28);
+        color: $color-secondary;
+        font-size: px-to-rem(35);
+        margin-bottom: px-to-rem(18);
+    }
+
+    &__text {
+        margin-top: px-to-rem(0);
+        color: $color-text-secondary;
+        font-size: px-to-rem(19);
+        font-weight: $font-weight-normal;
+    }
+}
+
+@include responsive-tab {
+    .travel {
+        margin: px-to-rem(124 60 0);
+
+        &__img {
+            margin-left: px-to-rem(34);
+            margin-bottom: px-to-rem(59);
+        }
+
+        &__subheading {
+            margin-top: px-to-rem(20);
+            word-spacing: px-to-rem(4);
+        }
+
+        &__text {
+            padding: px-to-rem(0 48);
+            word-spacing: px-to-rem(2);
+        }
+
+        &__cardscontainer {
+            margin: px-to-rem(64) auto 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: px-to-rem(28);
+            width: px-to-rem(900);
+        }
+
+        &__card {
+            width: px-to-rem(400);
+        }
+    }
+
+    .travel-card {
+        &__heading {
+            margin-top: px-to-rem(30);
+        }
+    }
+}
+
+@include responsive-desktop {
+    .travel {
+        margin-top: px-to-rem(104);
+        margin-right: px-to-rem(90);
+        display: flex;
+        min-height: px-to-rem(740);
+        flex: 1;
+
+        &__ticket {
+            display: block;
+            position: absolute;
+            right: px-to-rem(48);
+            top: px-to-rem(2024);
+        }
+
+        &__img {
+            margin-left: px-to-rem(0);
+        }
+
+        &__content {
+            margin-top: px-to-rem(28);
+            width: px-to-rem(480);
+            text-align: start;
+        }
+
+        &__heading {
+            text-align: start;
+            margin-bottom: 0;
+        }
+
+        &__subheading {
+            letter-spacing: px-to-rem(1);
+        }
+
+        &__text {
+            padding: 0;
+        }
+
+        &__cardscontainer {
+            margin: px-to-rem(68 20 20 0);
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-height: px-to-rem(340);
+            gap: px-to-rem(24);
+        }
+
+        &__card {
+            text-align: center;
+            width: px-to-rem(210);
+        }
+    }
+
+    .travel-card {
+        &__heading {
+            margin-top: px-to-rem(30);
+        }
+    }
+}
