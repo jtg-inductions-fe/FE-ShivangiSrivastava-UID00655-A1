@@ -1,5 +1,6 @@
 @use '../abstract' as *;
 @use '../components/' as *;
+@use '../vendors/' as *;
 
 .testimonials {
     position: relative;
@@ -66,22 +67,22 @@
             background-color: $color-primary;
         }
 
-        div.swiper-button-prev,
-        div.swiper-button-next {
+        div.swiper-button-prev::after,
+        div.swiper-button-next:after {
             content: '';
             top: px-to-rem(620);
             margin: px-to-rem(0 20);
         }
 
-        div.swiper-button-prev::after {
-            font-family: 'icomoon';
-            display: inline;
-            content: '\e912';
-            font-size: px-to-rem(64);
-            color: $color-text-primary;
-            border: 1px solid $color-text-primary;
-            border-radius: 50%;
-        }
+        // div.swiper-button-prev::after {
+        //     font-family: 'icomoon';
+        //     display: inline;
+        //     content: '\e912';
+        //     font-size: px-to-rem(64);
+        //     color: $color-text-primary;
+        //     border: 1px solid $color-text-primary;
+        //     border-radius: 50%;
+        // }
 
         div.swiper-button-next::after {
             font-family: 'icomoon';

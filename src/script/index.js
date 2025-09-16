@@ -1,7 +1,4 @@
-import Swiper from 'swiper/bundle';
-
-// import styles bundle
-import 'swiper/css/bundle';
+import './swiperInit';
 
 const hamOpen = document.querySelector('#menu-open');
 const hamClose = document.querySelector('#menu-close');
@@ -27,19 +24,3 @@ if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
-
-/* eslint-disable no-unused-vars */
-const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
-    loop: true,
-
-    pagination: {
-        el: '.swiper-pagination',
-    },
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
-/* eslint-enable no-unused-vars */

@@ -29,17 +29,30 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-button-icoprev .path3:before {
+.icon-button-prev .path1:before {
+    content: '\e910';
+    color: rgb(255, 255, 255);
+}
+.icon-button-prev .path2:before {
+    content: '\e911';
+    margin-left: -1em;
+    color: none;
+}
+.icon-button-prev .path3:before {
     content: '\e912';
     margin-left: -1em;
     color: rgb(25, 24, 37);
 }
-
+.icon-button-next .path1:before {
+    content: '\e913';
+    color: $color-btn;
+}
 .icon-button-next .path2:before {
     content: '\e914';
     margin-left: -1em;
     color: rgb(255, 255, 255);
 }
+
 .icon-star:before {
     content: '\e90b';
 }
