@@ -1,0 +1,53 @@
+@use '../abstract/' as *;
+
+.swiper-slide {
+    text-align: center;
+    margin-top: px-to-rem(34);
+    height: px-to-rem(660);
+
+    &__name {
+        font-weight: $font-weight-bold;
+        font-size: px-to-rem(28);
+        margin-top: px-to-rem(56);
+        color: $color-secondary;
+    }
+
+    &__profession {
+        font-size: px-to-rem(24);
+        color: $color-text-secondary;
+    }
+
+    &__stars {
+        margin-top: px-to-rem(32);
+        font-size: px-to-rem(32);
+        @include flex-center;
+        justify-content: center;
+        gap: px-to-rem(14);
+        color: $color-text-secondary;
+
+        &--filled {
+            color: $color-icon;
+        }
+    }
+
+    &__description {
+        margin-top: px-to-rem(64);
+        padding: px-to-rem(0 20);
+    }
+}
+
+@include responsive-tab {
+    .swiper-slide {
+        margin-top: px-to-rem(14);
+
+        &__name {
+            margin-top: px-to-rem(50);
+        }
+
+        &__description {
+            margin-top: px-to-rem(56);
+            @include font-scale(23, $base: 1.6);
+            padding: px-to-rem(0 200);
+        }
+    }
+}

@@ -1,4 +1,5 @@
 @use '../abstract' as *;
+@use '../components/' as *;
 
 .testimonials {
     position: relative;
@@ -99,4 +100,90 @@
     justify-content: center;
     gap: px-to-rem(16);
     margin: px-to-rem(0 0 126);
+}
+
+@include responsive-tab {
+    .testimonials {
+        margin-top: px-to-rem(120);
+
+        &__bg {
+            height: px-to-rem(200);
+            display: block;
+            position: absolute;
+            top: px-to-rem(0);
+        }
+
+        &__swiper {
+            .swiper-slide {
+                margin-top: px-to-rem(14);
+
+                &__name {
+                    margin-top: px-to-rem(50);
+                }
+
+                &__description {
+                    margin-top: px-to-rem(56);
+                    @include font-scale(23, $base: 1.6);
+                    padding: px-to-rem(0 200);
+                }
+            }
+        }
+
+        div.swiper-button-prev,
+        div.swiper-button-next {
+            content: '';
+            top: px-to-rem(180);
+            margin: px-to-rem(0 90);
+        }
+
+        div.swiper-button-prev::after,
+        div.swiper-button-next::after {
+            font-size: px-to-rem(96);
+        }
+    }
+}
+
+@include responsive-desktop {
+    .testimonials {
+        margin-top: px-to-rem(24);
+
+        &__bg {
+            height: px-to-rem(200);
+            display: block;
+            position: absolute;
+            top: px-to-rem(-80);
+        }
+
+        &__swiper {
+            .swiper-slide {
+                margin-top: px-to-rem(10);
+
+                &__name {
+                    margin-top: px-to-rem(50);
+                }
+
+                &__description {
+                    margin-top: px-to-rem(54);
+                    @include font-scale(23, $base: 1.6);
+                    padding: px-to-rem(0 310);
+                }
+            }
+        }
+
+        div.swiper-button-prev,
+        div.swiper-button-next {
+            content: '';
+            top: px-to-rem(156);
+            margin: px-to-rem(0 140);
+        }
+
+        div.swiper-button-prev::after,
+        div.swiper-button-next::after {
+            font-size: px-to-rem(100);
+        }
+    }
+
+    #swiperPagination {
+        margin-bottom: px-to-rem(160);
+    }
 }
