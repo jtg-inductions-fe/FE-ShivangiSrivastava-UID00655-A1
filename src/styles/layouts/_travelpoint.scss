@@ -35,7 +35,7 @@
 
     &__card {
         border: 1px solid $color-border;
-        height: 150px;
+        min-height: px-to-rem(150);
         border-radius: px-to-rem(30);
         transition:
             box-shadow 0.3s ease,
@@ -109,7 +109,7 @@
         margin-top: px-to-rem(104);
         margin-right: px-to-rem(90);
         display: flex;
-        height: px-to-rem(740);
+        min-height: px-to-rem(740);
         flex: 1;
 
         &__ticket {
@@ -146,7 +146,7 @@
             margin: px-to-rem(68 20 20 0);
             flex-direction: row;
             flex-wrap: wrap;
-            height: px-to-rem(340);
+            min-height: px-to-rem(340);
             gap: px-to-rem(24);
         }
 
