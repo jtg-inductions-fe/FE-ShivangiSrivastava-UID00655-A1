@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'icomoon';
-    src: url('#{$icomoon-path}.eot?wl83df');
+    src: url('#{$icomoon-path}.eot?1h2x74');
     src:
-        url('#{$icomoon-path}.eot?wl83df#iefix') format('embedded-opentype'),
-        url('#{$icomoon-path}.ttf?wl83df') format('truetype'),
-        url('#{$icomoon-path}.woff?wl83df') format('woff'),
-        url('#{$icomoon-path}.svg?wl83df#icomoon') format('svg');
+        url('#{$icomoon-path}.eot?1h2x74#iefix') format('embedded-opentype'),
+        url('#{$icomoon-path}.ttf?1h2x74') format('truetype'),
+        url('#{$icomoon-path}.woff?1h2x74') format('woff'),
+        url('#{$icomoon-path}.svg?1h2x74#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,9 +29,23 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-button-icoprev .path3:before {
+    content: '\e912';
+    margin-left: -1em;
+    color: rgb(25, 24, 37);
+}
+
+.icon-button-next .path2:before {
+    content: '\e914';
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+}
+.icon-star:before {
+    content: '\e90b';
+}
 .icon-locationpin .path1:before {
     content: '\e900';
-    color: $color-secondary;
+    color: rgb(255, 87, 34);
 }
 .icon-locationpin .path2:before {
     content: '\e901';
@@ -40,7 +54,7 @@
 }
 .icon-calendar .path1:before {
     content: '\e904';
-    color: $color-icon;
+    color: rgb(250, 205, 73);
 }
 .icon-calendar .path2:before {
     content: '\e905';
@@ -49,7 +63,7 @@
 }
 .icon-coupon .path1:before {
     content: '\e906';
-    color: $color-primary;
+    color: rgb(248, 94, 159);
 }
 .icon-coupon .path2:before {
     content: '\e907';
@@ -58,26 +72,26 @@
 }
 .icon-ham-menu:before {
     content: '\e908';
-    color: $color-btn;
+    color: #5d50c6;
 }
 .icon-play-circle:before {
     content: '\e909';
-    color: $color-btn;
+    color: #5d50c6;
 }
 .icon-work-bag:before {
     content: '\e90a';
-    color: $color-primary;
+    color: #f85e9f;
 }
 .icon-mail-icon:before {
     content: '\e90c';
 }
 .icon-fb-logo:before {
     content: '\e90d';
-    color: $color-btn;
+    color: #5d50c6;
 }
 .icon-insta-logo .path1:before {
     content: '\e90e';
-    color: $color-btn;
+    color: rgb(93, 80, 198);
 }
 .icon-insta-logo .path2:before {
     content: '\e90f';
@@ -86,7 +100,7 @@
 }
 .icon-twt-logo .path1:before {
     content: '\e902';
-    color: $color-btn;
+    color: rgb(93, 80, 198);
 }
 .icon-twt-logo .path2:before {
     content: '\e903';
@@ -95,5 +109,4 @@
 }
 .icon-cross:before {
     content: '\ea0f';
-    color: $color-btn;
 }

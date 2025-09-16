@@ -1,0 +1,102 @@
+@use '../abstract' as *;
+
+.testimonials {
+    position: relative;
+    text-align: center;
+    margin-top: px-to-rem(34);
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: px-to-rem(20);
+    }
+
+    &__description {
+        margin-top: 0;
+    }
+
+    &__bg {
+        display: none;
+    }
+
+    &__swiper {
+        .swiper-slide {
+            text-align: center;
+            margin-top: px-to-rem(34);
+            height: px-to-rem(660);
+
+            &__name {
+                font-weight: $font-weight-bold;
+                font-size: px-to-rem(28);
+                margin-top: px-to-rem(56);
+                color: $color-secondary;
+            }
+
+            &__profession {
+                font-size: px-to-rem(24);
+                color: $color-text-secondary;
+            }
+
+            &__stars {
+                margin-top: px-to-rem(32);
+                font-size: px-to-rem(32);
+                @include flex-center;
+                justify-content: center;
+                gap: px-to-rem(14);
+                color: $color-text-secondary;
+
+                &--filled {
+                    color: $color-icon;
+                }
+            }
+
+            &__description {
+                margin-top: px-to-rem(64);
+                padding: px-to-rem(0 20);
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: px-to-rem(24);
+            height: px-to-rem(24);
+            margin-bottom: px-to-rem(100);
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $color-primary;
+        }
+
+        div.swiper-button-prev,
+        div.swiper-button-next {
+            content: '';
+            top: px-to-rem(620);
+            margin: px-to-rem(0 20);
+        }
+
+        div.swiper-button-prev::after {
+            font-family: 'icomoon';
+            display: inline;
+            content: '\e912';
+            font-size: px-to-rem(64);
+            color: $color-text-primary;
+            border: 1px solid $color-text-primary;
+            border-radius: 50%;
+        }
+
+        div.swiper-button-next::after {
+            font-family: 'icomoon';
+            display: inline;
+            content: '\e914';
+            font-size: px-to-rem(64);
+            color: $bg-color;
+            background-color: $color-btn;
+            border-radius: 50%;
+        }
+    }
+}
+
+#swiperPagination {
+    display: flex;
+    justify-content: center;
+    gap: px-to-rem(16);
+    margin: px-to-rem(0 0 126);
+}
