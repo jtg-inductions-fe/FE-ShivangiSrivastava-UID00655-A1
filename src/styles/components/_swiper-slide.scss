@@ -59,6 +59,7 @@
     margin-bottom: px-to-rem(100);
     background-color: $color-shadow;
     border-radius: 50%;
+    @include focus;
 }
 
 .swiper-pagination-bullet-active {
