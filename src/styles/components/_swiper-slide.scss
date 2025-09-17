@@ -2,13 +2,13 @@
 
 .swiper-slide {
     text-align: center;
-    margin-top: px-to-rem(34);
-    height: px-to-rem(660);
+    margin-top: px-to-rem(30);
+    min-height: px-to-rem(480);
 
-    &__name {
+    &__user-info {
         font-weight: $font-weight-bold;
         font-size: px-to-rem(28);
-        margin-top: px-to-rem(56);
+        margin-top: px-to-rem(60);
         color: $color-secondary;
     }
 
@@ -19,10 +19,10 @@
 
     &__stars {
         margin-top: px-to-rem(32);
-        font-size: px-to-rem(32);
+        font-size: px-to-rem(28);
         @include flex-center;
         justify-content: center;
-        gap: px-to-rem(14);
+        gap: px-to-rem(18);
         color: $color-text-secondary;
 
         &--filled {
@@ -36,11 +36,40 @@
     }
 }
 
+.swiper-buttons {
+    font-size: px-to-rem(64);
+    display: flex;
+    justify-content: space-between;
+    padding: px-to-rem(0 16);
+    margin-top: px-to-rem(42);
+}
+
+.swiper-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: px-to-rem(24);
+    margin-top: px-to-rem(24);
+    height: px-to-rem(24);
+}
+
+.swiper-pagination-bullet {
+    width: px-to-rem(24);
+    height: px-to-rem(24);
+    margin-bottom: px-to-rem(100);
+    background-color: $color-shadow;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $color-primary;
+}
+
 @include responsive-tab {
     .swiper-slide {
         margin-top: px-to-rem(14);
 
-        &__name {
+        &__user-info {
             margin-top: px-to-rem(50);
         }
 
@@ -49,5 +78,51 @@
             @include font-scale(23, $base: 1.6);
             padding: px-to-rem(0 200);
         }
+    }
+
+    .swiper-buttons {
+        position: absolute;
+        top: px-to-rem(100);
+        box-sizing: border-box;
+        width: 100%;
+        font-size: px-to-rem(100);
+        display: flex;
+        justify-content: space-between;
+        padding: px-to-rem(0 64);
+        z-index: 2;
+    }
+}
+
+@include responsive-desktop {
+    .swiper-slide {
+        margin-top: px-to-rem(10);
+        min-height: px-to-rem(100);
+
+        &__user-info {
+            margin-top: px-to-rem(50);
+        }
+
+        &__description {
+            margin-top: px-to-rem(56);
+            @include font-scale(23, $base: 1.6);
+            padding: px-to-rem(0 310);
+        }
+    }
+
+    .swiper-pagination {
+        margin-top: px-to-rem(36);
+        height: px-to-rem(24);
+    }
+
+    .swiper-buttons {
+        position: absolute;
+        top: px-to-rem(76);
+        box-sizing: border-box;
+        width: 100%;
+        font-size: px-to-rem(100);
+        display: flex;
+        justify-content: space-between;
+        padding: px-to-rem(0 124);
+        z-index: 2;
     }
 }
