@@ -1,0 +1,39 @@
+@use '../abstract/' as *;
+
+.subscribe {
+    margin-top: px-to-rem(56);
+    text-align: center;
+
+    &__heading {
+        padding: px-to-rem(0 100);
+        margin-bottom: 0;
+    }
+
+    &__subheading {
+        margin-top: px-to-rem(32);
+        padding: px-to-rem(0 70);
+    }
+
+    &__input-field {
+        margin-top: px-to-rem(63);
+        min-height: px-to-rem(72);
+        min-width: px-to-rem(334);
+        @include flex-center;
+        padding-left: px-to-rem(82);
+        gap: px-to-rem(16);
+    }
+
+    &__mailicon {
+        font-size: px-to-rem(18);
+    }
+
+    &__input {
+        border: none;
+        @include font-scale(14);
+        font-weight: $font-weight-bold;
+        color: $color-text-secondary;
+    }
+
+    &__button {
+    }
+}
