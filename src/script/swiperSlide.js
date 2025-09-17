@@ -1,11 +1,9 @@
 // Provides Carousel functionality using Swiper
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
 export function initializeSwiper() {
     return new Swiper('.swiper', {
-        modules: [Navigation, Pagination],
         direction: 'horizontal',
         loop: true,
 
