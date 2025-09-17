@@ -606,55 +606,180 @@
             <!-- DETAILS SECTION (FOOTER) -->
             <footer class="footer">
                 <div class="footer__content">
-                    <button class="icomoon-button">
-                        <img
-                            src="src/assets/logo.png"
-                            alt="Travel logo"
-                            aria-label="logo"
-                        />
-                    </button>
-                    <h4>Travlog</h4>
-                    <p>
+                    <div class="footer__travlog">
+                        <button class="icomoon-button footer__logobtn">
+                            <img
+                                src="src/assets/logo.png"
+                                alt="Travel logo"
+                                aria-label="logo"
+                            />
+                        </button>
+                        <h4 class="footer__heading">Travlog</h4>
+                    </div>
+
+                    <p class="footer__text">
                         Contrary to popular belief, Lorem Ipsum is not simply
                         random text. It has roots in a piece of classical Latin
                         literature from 45 BC.
                     </p>
                     <div class="footer__socialcontainer">
-                        <span class="icon-fb-logo footer_social-icon"></span>
+                        <span class="icon-fb-logo footer__social-icon"></span>
 
-                        <span class="icon-twt-logo footer_social-icon"
+                        <span class="icon-twt-logo footer__social-icon"
                             ><span class="path1"></span
                             ><span class="path2"></span
                         ></span>
 
-                        <span class="icon-insta-logo footer_social-icon"
+                        <span class="icon-insta-logo footer__social-icon"
                             ><span class="path1"></span
                             ><span class="path2"></span
                         ></span>
                     </div>
                 </div>
 
-                <div class="footer__detailscontainer">
-                    <div class="footer__details">
-                        <h5 class="footer__detail-heading">Company</h5>
-                        <p class="footer__detail-text">About</p>
-                        <p class="footer__detail-text">Career</p>
-                        <p class="footer__detail-text">Mobile</p>
+                <!-- <div class="details">
+                    <div class="details__container" id="company-heading">
+                        <div class="details__dropdown">
+                            <h5 class="details__heading">Company</h5>
+                            <span
+                                class="icomoon-button icon-circle-down details__icon details__icon--down"
+                                id="company-down-icon"
+                            ></span>
+                            <span
+                                class="icon-circle-up details__icon details__icon--up"
+                                id="company-up-icon"
+                            ></span>
+                        </div>
+                        <ul id="company-list" class="details__list" inert>
+                            <li>
+                                <a class="details__text" href="#">About</a>
+                            </li>
+                            <li>
+                                <a class="details__text">Career</a>
+                            </li>
+                            <li>
+                                <a class="details__text">Mobile</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="footer__details">
-                        <h5 class="footer__detail-heading">Contact</h5>
-                        <p class="footer__detail-text">Why Travlog?</p>
-                        <p class="footer__detail-text">Partner with us</p>
-                        <p class="footer__detail-text">FAQ's</p>
-                        <p class="footer__detail-text">Blog</p>
+                    <div class="details__container" id="contact-container">
+                        <div class="details__dropdown">
+                            <h5 class="details__heading">Contact Us</h5>
+                            <span
+                                class="icomoon-button icon-circle-down details__icon details__icon--down"
+                                id="contact-down-icon"
+                            ></span>
+                            <span
+                                class="icon-circle-up details__icon details__icon--up"
+                                id="contact-up-icon"
+                            ></span>
+                        </div>
+
+                        <ul id="contact-list" class="details__list" inert>
+                            <li>
+                                <a class="details__text">Why Travlog?</a>
+                            </li>
+                            <li>
+                                <a class="details__text">Partner with us</a>
+                            </li>
+                            <li><a class="details__text">FAQ's</a></li>
+                            <li><a class="details__text">Blog</a></li>
+                        </ul>
                     </div>
-                    <div class="footer__details">
-                        <h5 class="footer__detail-heading">Meet Us</h5>
-                        <p class="footer__detail-text">+00 92 1234 56789</p>
-                        <p class="footer__detail-text">info@travlog.com</p>
-                        <p class="footer__detail-text">
-                            205. R Street, New York BD23200
-                        </p>
+                    <div class="details__container" id="meet-container">
+                        <div class="details__dropdown">
+                            <h5 class="details__heading">Meet Us</h5>
+                            <span
+                                class="icomoon-button icon-circle-down details__icon details__icon--down"
+                                id="meet-down-icon"
+                            ></span>
+                            <span
+                                class="icon-circle-up details__icon details__icon--up"
+                                id="meet-up-icon"
+                            ></span>
+                        </div>
+
+                        <ul id="meet-list" class="details__list" inert>
+                            <li>
+                                <a class="details__text">+00 92 1234 56789</a>
+                            </li>
+
+                            <li>
+                                <a class="details__text">info@travlog.com</a>
+                            </li>
+                            <li>
+                                <a class="details__text">
+                                    205. R Street, New York BD23200
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <div class="details">
+                    <div class="details__container" id="company-heading">
+                        <div class="details__dropdown">
+                            <h5 class="details__heading">Company</h5>
+                            <span
+                                class="icomoon-button icon-circle-down details__icon"
+                                id="down-icon"
+                            ></span>
+                        </div>
+                        <ul id="company-list" class="details__list" inert>
+                            <li>
+                                <a class="details__text" href="#">About</a>
+                            </li>
+                            <li>
+                                <a class="details__text">Career</a>
+                            </li>
+                            <li>
+                                <a class="details__text">Mobile</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="details__container" id="contact-container">
+                        <div class="details__dropdown">
+                            <h5 class="details__heading">Contact Us</h5>
+                            <span
+                                class="icomoon-button icon-circle-down details__icon"
+                                id="contact-down-icon"
+                            ></span>
+                        </div>
+
+                        <ul id="contact-list" class="details__list" inert>
+                            <li>
+                                <a class="details__text">Why Travlog?</a>
+                            </li>
+                            <li>
+                                <a class="details__text">Partner with us</a>
+                            </li>
+                            <li><a class="details__text">FAQ's</a></li>
+                            <li><a class="details__text">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="details__container" id="meet-container">
+                        <div class="details__dropdown">
+                            <h5 class="details__heading">Meet Us</h5>
+                            <span
+                                class="icomoon-button icon-circle-down details__icon"
+                                id="meet-down-icon"
+                            ></span>
+                        </div>
+
+                        <ul id="meet-list" class="details__list" inert>
+                            <li>
+                                <a class="details__text">+00 92 1234 56789</a>
+                            </li>
+
+                            <li>
+                                <a class="details__text">info@travlog.com</a>
+                            </li>
+                            <li>
+                                <a class="details__text">
+                                    205. R Street, New York BD23200
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </footer>
