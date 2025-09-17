@@ -26,7 +26,7 @@
         margin-top: px-to-rem(120);
 
         &__bg {
-            height: px-to-rem(200);
+            min-height: px-to-rem(200);
             display: block;
             position: absolute;
             top: px-to-rem(0);
@@ -39,7 +39,7 @@
         margin-top: px-to-rem(24);
 
         &__bg {
-            height: px-to-rem(200);
+            min-height: px-to-rem(200);
             display: block;
             position: absolute;
             top: px-to-rem(-80);
