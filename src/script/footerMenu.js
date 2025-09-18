@@ -1,5 +1,5 @@
 document.querySelectorAll('#dropdown').forEach((dropdown) => {
-    const container = dropdown.closest('#container');
+    const container = dropdown.parentElement;
     const list = container.querySelector('#details-list');
     const icon = dropdown.querySelector('#dropdown-icon');
     dropdown.addEventListener('click', () => {
