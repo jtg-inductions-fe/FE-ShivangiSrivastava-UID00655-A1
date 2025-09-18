@@ -39,16 +39,7 @@
     margin-top: px-to-rem(94);
 
     &__container {
-        margin-top: px-to-rem(70);
-        transition: margin-top 0.5s ease;
-
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &.active {
-            margin-top: px-to-rem(120);
-        }
+        min-height: px-to-rem(100);
     }
 
     &__dropdown {
@@ -67,7 +58,7 @@
         font-size: px-to-rem(24);
         transition: transform 0.3s ease;
         &--expanded {
-            transform: rotate(-180deg);
+            transform: rotate(180deg);
         }
     }
 
@@ -118,6 +109,7 @@
 
         &__container {
             margin: 0;
+            min-width: px-to-rem(277);
         }
 
         &__heading {
@@ -125,6 +117,7 @@
         }
 
         &__list {
+            overflow: visible;
             padding: 0;
             max-height: px-to-rem(500);
             display: flex;
@@ -170,6 +163,8 @@
         }
 
         &__list {
+            overflow: visible;
+            min-width: px-to-rem(200);
             padding: 0;
             max-height: px-to-rem(500);
             display: flex;

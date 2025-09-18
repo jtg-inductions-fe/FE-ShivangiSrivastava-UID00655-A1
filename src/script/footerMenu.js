@@ -1,10 +1,12 @@
-document.querySelectorAll('.details__dropdown').forEach((dropdown) => {
-    const container = dropdown.closest('.details__container');
-    const list = container.querySelector('.details__list');
-    const icon = dropdown.querySelector('.details__icon');
+document.querySelectorAll('#dropdown').forEach((dropdown) => {
+    const container = dropdown.closest('#container');
+    const list = container.querySelector('#details-list');
+    const icon = dropdown.querySelector('#dropdown-icon');
     dropdown.addEventListener('click', () => {
-        list.classList.toggle('active');
-        container.classList.toggle('is-open');
-        icon.classList.toggle('details__icon--expanded');
+        const isOpen = !container.classList.contains('is-open');
+        list.classList.toggle('active', isOpen);
+        container.classList.toggle('is-open', isOpen);
+        container.setAttribute('aria-expanded', isOpen);
+        icon.classList.toggle('details__icon--expanded', isOpen);
     });
 });
