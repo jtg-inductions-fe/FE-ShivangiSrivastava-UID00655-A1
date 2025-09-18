@@ -5,11 +5,11 @@
     z-index: 0;
     position: relative;
     text-align: center;
-    margin-top: px-to-rem(34);
+    margin-top: px-to-rem(36);
 
     &__heading {
         margin-top: 0;
-        margin-bottom: px-to-rem(20);
+        margin-bottom: px-to-rem(24);
     }
 
     &__description {
@@ -29,7 +29,10 @@
             min-height: px-to-rem(200);
             display: block;
             position: absolute;
-            top: px-to-rem(0);
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
         }
     }
 }
