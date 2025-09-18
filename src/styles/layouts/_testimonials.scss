@@ -2,7 +2,7 @@
 @use '../components/' as *;
 
 .testimonials {
-    z-index: 0;
+    z-index: $z-index-base;
     position: relative;
     text-align: center;
     margin-top: px-to-rem(36);

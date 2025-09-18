@@ -425,7 +425,7 @@
                         <picture aria-hidden="true" role="presentation">
                             <source
                                 srcset="src/assets/Testimonials-bg-desktop.png"
-                                media="(min-width:1440px)"
+                                media="(width>=1440px)"
                             />
                             <img
                                 src="src/assets/testimonials-bg-tab.png"
@@ -440,6 +440,7 @@
                                 <div class="swiper-slide__avatar">
                                     <img
                                         src="src/assets/testimonials-user.png"
+                                        alt="User Avatar"
                                     />
                                 </div>
                                 <p class="swiper-slide__user-info">
@@ -448,18 +449,22 @@
                                         >/ Travel Blogger</span
                                     >
                                 </p>
-                                <div class="swiper-slide__stars">
+                                <div class="swiper-slide__starscontainer">
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
-                                    <span class="icon-star"></span>
-                                    <span class="icon-star"></span>
+                                    <span
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                    ></span>
+                                    <span
+                                        class="icon-star swiper-slide__star"
+                                    ></span>
                                 </div>
                                 <p class="swiper-slide__description card-text">
                                     Contrary to popular belief, Lorem Ipsum is
@@ -480,21 +485,21 @@
                                         >/ Travel Enthusiast</span
                                     >
                                 </p>
-                                <div class="swiper-slide__stars">
+                                <div class="swiper-slide__starscontainer">
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                 </div>
                                 <p class="swiper-slide__description card-text">
@@ -516,20 +521,22 @@
                                         >/ Travel Enthusiast</span
                                     >
                                 </p>
-                                <div class="swiper-slide__stars">
+                                <div class="swiper-slide__starscontainer">
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
                                     ></span>
                                     <span
-                                        class="icon-star swiper-slide__stars--filled"
+                                        class="icon-star swiper-slide__star"
                                     ></span>
-                                    <span class="icon-star"></span>
+                                    <span
+                                        class="icon-star swiper-slide__star"
+                                    ></span>
                                 </div>
                                 <p class="swiper-slide__description card-text">
                                     Contrary to popular belief, Lorem Ipsum is
@@ -542,20 +549,20 @@
                         <div class="swiper-pagination"></div>
 
                         <div class="swiper-buttons">
-                            <div class="button-prev">
+                            <button class="button-prev icomoon-button">
                                 <span class="icon-button-prev"
                                     ><span class="path1"></span
                                     ><span class="path2"></span
                                     ><span class="path3"></span
                                 ></span>
-                            </div>
+                            </button>
 
-                            <div class="button-next">
+                            <button class="button-next icomoon-button">
                                 <span class="icon-button-next"
                                     ><span class="path1"></span
                                     ><span class="path2"></span
                                 ></span>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </section>

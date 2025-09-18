@@ -17,14 +17,16 @@
         color: $color-text-secondary;
     }
 
-    &__stars {
+    &__starscontainer {
         margin-top: px-to-rem(32);
-        font-size: px-to-rem(28);
         @include flex-center;
         justify-content: center;
         gap: px-to-rem(18);
-        color: $color-text-secondary;
+    }
 
+    &__star {
+        font-size: px-to-rem(28);
+        color: $color-text-secondary;
         &--filled {
             color: $color-icon;
         }
@@ -90,7 +92,7 @@
         display: flex;
         justify-content: space-between;
         padding: px-to-rem(0 64);
-        z-index: 2;
+        z-index: $z-index-overlay;
     }
 }
 
@@ -124,6 +126,6 @@
         display: flex;
         justify-content: space-between;
         padding: px-to-rem(0 124);
-        z-index: 2;
+        z-index: $z-index-overlay;
     }
 }

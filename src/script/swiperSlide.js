@@ -2,7 +2,7 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
-export function initializeSwiper() {
+function initializeSwiper() {
     return new Swiper('.swiper', {
         direction: 'horizontal',
         loop: true,
@@ -17,3 +17,5 @@ export function initializeSwiper() {
         },
     });
 }
+
+initializeSwiper();

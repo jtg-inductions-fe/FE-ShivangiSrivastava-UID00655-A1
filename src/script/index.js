@@ -1,4 +1,2 @@
-import { initializeSwiper } from './swiperSlide';
+import './swiperSlide';
 import './navbarMenu';
-
-initializeSwiper();
