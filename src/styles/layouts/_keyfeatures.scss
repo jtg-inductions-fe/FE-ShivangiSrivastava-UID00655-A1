@@ -33,9 +33,9 @@
     border: 1px solid $color-border;
     border-radius: px-to-rem(32);
     box-sizing: border-box;
-    min-height: px-to-rem(290);
+    min-height: px-to-rem(280);
     margin: px-to-rem(0 48);
-    padding: px-to-rem(32 32 0);
+    padding: px-to-rem(32);
     transition:
         box-shadow 0.3s ease,
         transform 0.3s ease;
@@ -48,14 +48,21 @@
         font-size: px-to-rem(100);
     }
 
+    &__content {
+        margin-top: px-to-rem(34);
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        gap: px-to-rem(8);
+    }
+
     &__heading {
-        margin-top: px-to-rem(36);
-        margin-bottom: px-to-rem(0);
+        margin: 0;
         @include font-scale(23);
     }
 
     &__text {
-        margin-top: px-to-rem(8);
+        margin: 0;
     }
 }
 
@@ -79,21 +86,22 @@
         }
 
         &__cardcontainer {
-            margin-top: px-to-rem(64);
+            margin-top: px-to-rem(56);
             gap: px-to-rem(0);
             min-height: px-to-rem(492);
         }
     }
 
     .features-card {
+        padding: px-to-rem(36 32 28);
         margin: px-to-rem(0 96);
         @include flex-center;
-        flex-wrap: wrap;
-        padding-top: 0;
         min-height: px-to-rem(164);
+        display: flex;
+        gap: px-to-rem(32);
+
         &__content {
-            margin-left: px-to-rem(32);
-            margin-bottom: px-to-rem(12);
+            margin: 0;
         }
     }
 }
@@ -130,7 +138,7 @@
 
         &__cardcontainer {
             width: px-to-rem(558);
-            margin-top: px-to-rem(66);
+            margin-top: px-to-rem(56);
             gap: 0;
             min-height: px-to-rem(560);
         }
@@ -138,15 +146,12 @@
 
     .features-card {
         margin: 0;
-        display: flex;
+        @include flex-center;
+        gap: px-to-rem(32);
         min-height: px-to-rem(164);
+        padding: px-to-rem(36 32 28);
         &__content {
-            margin-left: px-to-rem(32);
-            margin-bottom: px-to-rem(20);
-        }
-
-        &__heading {
-            margin-top: px-to-rem(14);
+            margin: 0;
         }
     }
 }
