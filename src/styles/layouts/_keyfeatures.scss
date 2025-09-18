@@ -1,0 +1,157 @@
+@use '../abstract/' as *;
+
+.features {
+    text-align: center;
+    margin-top: px-to-rem(90);
+
+    &__heading {
+        margin-top: px-to-rem(102);
+        margin-bottom: px-to-rem(16);
+    }
+
+    &__subheading {
+        margin-top: 0;
+    }
+
+    &__text {
+        margin-top: px-to-rem(32);
+        padding: px-to-rem(0 60);
+    }
+
+    &__cardcontainer {
+        margin-top: px-to-rem(32);
+        min-height: px-to-rem(920);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: px-to-rem(8);
+    }
+}
+
+.features-card {
+    text-align: start;
+    border: 1px solid $color-border;
+    border-radius: px-to-rem(32);
+    box-sizing: border-box;
+    min-height: px-to-rem(280);
+    margin: px-to-rem(0 48);
+    padding: px-to-rem(32);
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 25px $color-shadow;
+        transform: scale(1.01);
+    }
+    &__icon {
+        font-size: px-to-rem(100);
+    }
+
+    &__content {
+        margin-top: px-to-rem(34);
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        gap: px-to-rem(8);
+    }
+
+    &__heading {
+        margin: 0;
+        @include font-scale(23);
+    }
+
+    &__text {
+        margin: 0;
+    }
+}
+
+@include responsive-tab {
+    .features {
+        margin-top: px-to-rem(130);
+
+        &__heading {
+            margin-top: px-to-rem(64);
+            margin-bottom: 0;
+        }
+
+        &__subheading {
+            margin-top: px-to-rem(20);
+            margin-bottom: px-to-rem(10);
+        }
+
+        &__text {
+            word-spacing: px-to-rem(2.5);
+            padding: px-to-rem(0 110);
+        }
+
+        &__cardcontainer {
+            margin-top: px-to-rem(56);
+            gap: px-to-rem(0);
+            min-height: px-to-rem(492);
+        }
+    }
+
+    .features-card {
+        padding: px-to-rem(36 32 28);
+        margin: px-to-rem(0 96);
+        @include flex-center;
+        min-height: px-to-rem(164);
+        display: flex;
+        gap: px-to-rem(32);
+
+        &__content {
+            margin: 0;
+        }
+    }
+}
+
+@include responsive-desktop {
+    .features {
+        text-align: start;
+        margin-top: px-to-rem(70);
+        padding: px-to-rem(16 0 16 124);
+        display: flex;
+        flex-direction: row-reverse;
+        min-height: px-to-rem(900);
+        justify-content: space-between;
+
+        &__content {
+            width: px-to-rem(550);
+            margin-top: px-to-rem(0);
+            padding: px-to-rem(0 20 0 16);
+        }
+
+        &__heading {
+            margin: 0;
+        }
+
+        &__subheading {
+            margin-top: px-to-rem(16);
+            margin-bottom: px-to-rem(10);
+        }
+
+        &__text {
+            word-spacing: px-to-rem(2.5);
+            padding: 0;
+        }
+
+        &__cardcontainer {
+            width: px-to-rem(558);
+            margin-top: px-to-rem(56);
+            gap: 0;
+            min-height: px-to-rem(560);
+        }
+    }
+
+    .features-card {
+        margin: 0;
+        @include flex-center;
+        gap: px-to-rem(32);
+        min-height: px-to-rem(164);
+        padding: px-to-rem(36 32 28);
+        &__content {
+            margin: 0;
+        }
+    }
+}
