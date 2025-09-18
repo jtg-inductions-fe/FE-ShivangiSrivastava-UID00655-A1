@@ -75,6 +75,7 @@
         text-decoration: none;
         color: $color-text-secondary;
         @include font-scale(18, $base: 2);
+        @include focus;
     }
 
     &__list {
@@ -82,6 +83,7 @@
         max-height: px-to-rem(0);
         box-sizing: border-box;
         margin: 0;
+        visibility: hidden;
         overflow: hidden;
         transition:
             max-height 0.3s ease-in,
@@ -89,7 +91,92 @@
 
         &.active {
             max-height: px-to-rem(180);
-            padding-top: px-to-rem(30);
+            padding: px-to-rem(12 28 20);
+            visibility: visible;
+        }
+    }
+}
+
+@include responsive-tab {
+    .footer {
+        margin: px-to-rem(38 90 0 64);
+
+        &__text {
+            @include font-scale(23, $base: 1.6);
+        }
+    }
+
+    .details {
+        margin: px-to-rem(64 0);
+        display: flex;
+        min-width: px-to-rem(900);
+        justify-content: space-between;
+
+        &__icon {
+            display: none;
+        }
+
+        &__container {
+            margin: 0;
+        }
+
+        &__heading {
+            margin-bottom: px-to-rem(28);
+        }
+
+        &__list {
+            padding: 0;
+            max-height: px-to-rem(500);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: px-to-rem(26);
+            visibility: visible;
+        }
+    }
+}
+
+@include responsive-desktop {
+    .footer {
+        margin: px-to-rem(172 100 0 130);
+        display: flex;
+        min-height: px-to-rem(400);
+
+        &__text {
+            @include font-scale(23, $base: 1.6);
+        }
+
+        &__socialcontainer {
+            margin-top: px-to-rem(68);
+        }
+    }
+
+    .details {
+        margin-top: px-to-rem(30);
+        display: flex;
+        min-width: px-to-rem(580);
+        justify-content: space-between;
+
+        &__icon {
+            display: none;
+        }
+
+        &__container {
+            margin: 0;
+        }
+
+        &__heading {
+            margin-bottom: px-to-rem(28);
+        }
+
+        &__list {
+            padding: 0;
+            max-height: px-to-rem(500);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: px-to-rem(26);
+            visibility: visible;
         }
     }
 }
