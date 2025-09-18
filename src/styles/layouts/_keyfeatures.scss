@@ -26,27 +26,24 @@
         flex-direction: column;
         gap: px-to-rem(8);
     }
-
-    &__card {
-        text-align: start;
-        border: 1px solid $color-border;
-        border-radius: px-to-rem(32);
-        box-sizing: border-box;
-        min-height: px-to-rem(290);
-        margin: px-to-rem(0 48);
-        padding: px-to-rem(32 32 0);
-        transition:
-            box-shadow 0.3s ease,
-            transform 0.3s ease;
-
-        &:hover {
-            box-shadow: 0 0 25px $color-shadow;
-            transform: scale(1.01);
-        }
-    }
 }
 
 .features-card {
+    text-align: start;
+    border: 1px solid $color-border;
+    border-radius: px-to-rem(32);
+    box-sizing: border-box;
+    min-height: px-to-rem(290);
+    margin: px-to-rem(0 48);
+    padding: px-to-rem(32 32 0);
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 25px $color-shadow;
+        transform: scale(1.01);
+    }
     &__icon {
         font-size: px-to-rem(100);
     }
@@ -83,22 +80,17 @@
 
         &__cardcontainer {
             margin-top: px-to-rem(64);
-            height: px-to-rem(500);
             gap: px-to-rem(0);
             min-height: px-to-rem(492);
-        }
-
-        &__card {
-            height: px-to-rem(164);
-            margin: px-to-rem(0 96);
-            @include flex-center;
-            flex-wrap: wrap;
-            padding-top: 0;
-            min-height: px-to-rem(164);
         }
     }
 
     .features-card {
+        margin: px-to-rem(0 96);
+        @include flex-center;
+        flex-wrap: wrap;
+        padding-top: 0;
+        min-height: px-to-rem(164);
         &__content {
             margin-left: px-to-rem(32);
             margin-bottom: px-to-rem(12);
@@ -113,7 +105,7 @@
         padding: px-to-rem(16 0 16 124);
         display: flex;
         flex-direction: row-reverse;
-        height: px-to-rem(900);
+        min-height: px-to-rem(900);
         justify-content: space-between;
 
         &__content {
@@ -142,15 +134,12 @@
             gap: 0;
             min-height: px-to-rem(560);
         }
-
-        &__card {
-            margin: 0;
-            display: flex;
-            min-height: px-to-rem(164);
-        }
     }
 
     .features-card {
+        margin: 0;
+        display: flex;
+        min-height: px-to-rem(164);
         &__content {
             margin-left: px-to-rem(32);
             margin-bottom: px-to-rem(20);
