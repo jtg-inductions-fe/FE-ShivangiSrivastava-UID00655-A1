@@ -39,7 +39,7 @@ function reorderForTab() {
     }
 }
 
-reorderForTab();
+window.addEventListener('resize', reorderForTab());
 
 if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));

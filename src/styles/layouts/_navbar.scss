@@ -23,7 +23,7 @@
     }
 
     &__menu {
-        z-index: 200;
+        z-index: $z-index-overlay;
         font-size: px-to-rem(40);
         @include focus;
     }
@@ -43,16 +43,11 @@
     &__menu--closeicon {
         position: relative;
         display: none;
-        z-index: 200;
         opacity: 0;
         transition: opacity 0.5s ease-in;
         transition-behavior: allow-discrete;
         font-size: px-to-rem(40);
-        position: fixed;
-        top: px-to-rem(40);
-        right: px-to-rem(20);
         z-index: $z-index-overlay;
-
         &.active {
             display: block;
             opacity: 1;
@@ -142,6 +137,7 @@
         }
 
         &__actions {
+            transition: none;
             position: static;
             flex-direction: row;
             margin: 0;
@@ -168,6 +164,7 @@
     .navbar {
         height: px-to-rem(160);
         padding: px-to-rem(5 112 0 150);
+        max-width: $breakpoint-lg;
         &__logo {
             padding: 0;
             padding-top: px-to-rem(16);
@@ -199,6 +196,7 @@
         }
 
         &__actions {
+            transition: none;
             padding-top: px-to-rem(15);
             flex-direction: row;
             position: static;
@@ -213,6 +211,7 @@
         }
 
         &__btns {
+            transition: none;
             @include font-scale(14);
             width: px-to-rem(105);
             &:last-child {
