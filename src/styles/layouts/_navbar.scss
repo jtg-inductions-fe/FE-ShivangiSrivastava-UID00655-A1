@@ -8,17 +8,14 @@
     height: px-to-rem(120);
     width: 100%;
     box-sizing: border-box;
-    padding: px-to-rem(0 15);
+    padding: px-to-rem(0 20 0 17);
     @include flex-center;
     justify-content: space-between;
-    max-width: $breakpoint-lg;
     z-index: $z-index-nav;
     background: $bg-color;
 
     &__logo {
         z-index: $z-index-overlay;
-        padding-left: px-to-rem(2);
-        @include focus;
     }
 
     &__home {
@@ -27,16 +24,19 @@
 
     &__menu {
         z-index: 200;
-        @include flex-center;
-        height: fit-content;
         font-size: px-to-rem(40);
+        @include focus;
     }
 
     &__menu--openicon {
         display: block;
-        transition: visibility 0.5 linear;
+        transition:
+            visibility 0.5 linear,
+            opacity 0.5s linear;
+        opacity: 1;
         &.closed {
             display: none;
+            opacity: 0;
         }
     }
 
@@ -45,9 +45,7 @@
         display: none;
         z-index: 200;
         opacity: 0;
-        transition:
-            opacity 0.5s ease-in,
-            visibility 0.5s linear;
+        transition: opacity 0.5s ease-in;
         transition-behavior: allow-discrete;
         font-size: px-to-rem(40);
         position: fixed;
@@ -70,10 +68,11 @@
         background-color: $color-secondary-lighter;
         z-index: $z-index-nav;
         opacity: 0;
+        overflow-y: auto;
         visibility: hidden;
         transition:
-            opacity 0.5s ease-in,
-            visibility 0.3s ease-in;
+            opacity 0.5s linear,
+            visibility 0.3s linear;
 
         &.active {
             opacity: 1;
@@ -97,7 +96,6 @@
         transition: color 0.5s ease;
         font-weight: $font-weight-bold;
         text-decoration: none;
-        overflow-y: auto;
         @include focus;
         &:hover {
             color: $color-text-primary;
@@ -106,12 +104,12 @@
 
     &__actions {
         left: 0;
-        position: fixed;
+        position: absolute;
         @include flex-center;
         flex-direction: column;
         gap: px-to-rem(32);
         width: 100%;
-        bottom: 10%;
+        top: px-to-rem(600);
         z-index: $z-index-overlay;
         visibility: hidden;
         opacity: 0;
@@ -131,14 +129,14 @@
 
 @include responsive-tab {
     .navbar {
-        padding: px-to-rem(0 45 0 65);
+        height: px-to-rem(113);
+        padding: px-to-rem(0 64 0 68);
         align-items: center;
 
         &__logo {
             order: 2;
-            padding-left: px-to-rem(190);
+            padding-left: px-to-rem(180);
         }
-
         &__list {
             margin-left: px-to-rem(80);
         }
@@ -148,8 +146,8 @@
             flex-direction: row;
             margin: 0;
             gap: px-to-rem(8);
-            width: px-to-rem(250);
-            height: px-to-rem(50);
+            width: px-to-rem(220);
+            height: px-to-rem(49);
             z-index: $z-index-base;
             order: 3;
             opacity: 1;
@@ -157,7 +155,11 @@
         }
 
         &__btns {
-            font-size: px-to-rem(18);
+            @include font-scale(14);
+            width: px-to-rem(105);
+            &:last-child {
+                width: px-to-rem(115);
+            }
         }
     }
 }
@@ -165,10 +167,10 @@
 @include responsive-desktop {
     .navbar {
         height: px-to-rem(160);
-        padding: px-to-rem(10 80 0 150);
-
+        padding: px-to-rem(5 112 0 150);
         &__logo {
-            padding-top: px-to-rem(10);
+            padding: 0;
+            padding-top: px-to-rem(16);
         }
 
         &__menu {
@@ -176,15 +178,13 @@
         }
 
         &__links {
+            padding-top: px-to-rem(14);
+            padding-right: px-to-rem(150);
+            height: px-to-rem(17);
             position: static;
-            @include flex-center;
-            height: inherit;
-            width: px-to-rem(480);
-            font-size: px-to-rem(16);
+            width: px-to-rem(460);
             background-color: transparent;
-            padding-bottom: px-to-rem(10);
             margin: 0;
-            transform: none;
             border: none;
             visibility: visible;
             opacity: 1;
@@ -192,10 +192,10 @@
 
         &__list {
             flex-direction: row;
-            flex: 1;
-            font-size: px-to-rem(16);
-            margin-top: px-to-rem(35);
-            margin-left: 0;
+            align-items: center;
+            justify-content: space-between;
+            @include font-scale(14);
+            margin: 0;
         }
 
         &__actions {
@@ -204,8 +204,8 @@
             position: static;
             margin: 0;
             transform: none;
-            gap: px-to-rem(8);
-            width: px-to-rem(250);
+            gap: 0;
+            width: px-to-rem(220);
             height: px-to-rem(50);
             z-index: $z-index-base;
             visibility: visible;
@@ -213,7 +213,11 @@
         }
 
         &__btns {
-            font-size: px-to-rem(15);
+            @include font-scale(14);
+            width: px-to-rem(105);
+            &:last-child {
+                width: px-to-rem(115);
+            }
         }
     }
 }
