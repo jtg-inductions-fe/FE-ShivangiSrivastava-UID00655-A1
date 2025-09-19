@@ -1,0 +1,51 @@
+@use '../abstract' as *;
+@use '../components/' as *;
+
+.testimonials {
+    z-index: $z-index-base;
+    position: relative;
+    text-align: center;
+    margin-top: px-to-rem(36);
+
+    &__heading {
+        margin-top: 0;
+        margin-bottom: px-to-rem(24);
+    }
+
+    &__description {
+        margin-top: 0;
+    }
+
+    &__bg {
+        display: none;
+    }
+}
+
+@include responsive-tab {
+    .testimonials {
+        margin-top: px-to-rem(120);
+
+        &__bg {
+            min-height: px-to-rem(200);
+            display: block;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+@include responsive-desktop {
+    .testimonials {
+        margin-top: px-to-rem(24);
+
+        &__bg {
+            min-height: px-to-rem(200);
+            display: block;
+            position: absolute;
+            top: px-to-rem(-80);
+        }
+    }
+}
