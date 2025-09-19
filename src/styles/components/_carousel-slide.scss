@@ -39,19 +39,21 @@
 }
 
 .swiper-buttons {
-    font-size: px-to-rem(64);
     display: flex;
     justify-content: space-between;
     padding: px-to-rem(0 16);
-    margin-top: px-to-rem(42);
+    margin-top: px-to-rem(96);
 }
-
 .swiper-pagination {
+    position: absolute;
+    bottom: px-to-rem(112);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: px-to-rem(24);
-    margin-top: px-to-rem(24);
     height: px-to-rem(24);
 }
 
@@ -64,6 +66,21 @@
     @include focus;
 }
 
+.button-prev,
+.button-next {
+    font-size: px-to-rem(16);
+    height: px-to-rem(64);
+    width: px-to-rem(64);
+    background-color: $color-btn;
+    border-radius: 50%;
+    color: $color-white;
+}
+.button-prev:disabled,
+.button-next:disabled {
+    color: black;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+}
 .swiper-pagination-bullet-active {
     background-color: $color-primary;
 }
@@ -85,14 +102,28 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(100);
+        top: px-to-rem(60);
         box-sizing: border-box;
         width: 100%;
-        font-size: px-to-rem(100);
         display: flex;
         justify-content: space-between;
         padding: px-to-rem(0 64);
         z-index: $z-index-overlay;
+    }
+
+    .button-prev,
+    .button-next {
+        font-size: px-to-rem(24);
+        height: px-to-rem(100);
+        width: px-to-rem(100);
+        background-color: $color-btn;
+        border-radius: 50%;
+        color: $color-white;
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin-top: px-to-rem(28);
     }
 }
 
@@ -119,13 +150,27 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(76);
+        top: px-to-rem(28);
         box-sizing: border-box;
         width: 100%;
-        font-size: px-to-rem(100);
         display: flex;
         justify-content: space-between;
-        padding: px-to-rem(0 124);
+        padding: px-to-rem(0 118);
         z-index: $z-index-overlay;
+    }
+
+    .button-prev,
+    .button-next {
+        font-size: px-to-rem(24);
+        height: px-to-rem(100);
+        width: px-to-rem(100);
+        background-color: $color-btn;
+        border-radius: 50%;
+        color: $color-white;
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin-top: px-to-rem(30);
     }
 }

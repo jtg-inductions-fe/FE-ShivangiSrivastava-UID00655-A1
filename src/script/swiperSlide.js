@@ -5,7 +5,7 @@ import 'swiper/css';
 function initializeSwiper() {
     return new Swiper('.swiper', {
         direction: 'horizontal',
-        loop: true,
+        loop: false,
 
         pagination: {
             el: '.swiper-pagination',
