@@ -165,6 +165,9 @@
         height: px-to-rem(160);
         padding: px-to-rem(5 112 0 150);
         max-width: $breakpoint-lg;
+        right: 0;
+        left: 0;
+
         &__logo {
             padding: 0;
             padding-top: px-to-rem(16);

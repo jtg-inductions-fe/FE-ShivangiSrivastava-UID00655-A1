@@ -31,6 +31,12 @@ function toggleMenu(isOpen) {
     }
 }
 
+if (ready) {
+    hamOpen.addEventListener('click', () => toggleMenu(true));
+    hamClose.addEventListener('click', () => toggleMenu(false));
+}
+
+//Reorder Tab for tablet view
 function reorderForTab() {
     if (isTablet) {
         navBar.insertBefore(navMenu, navLogo);
@@ -41,7 +47,12 @@ function reorderForTab() {
 
 window.addEventListener('resize', reorderForTab());
 
-if (ready) {
-    hamOpen.addEventListener('click', () => toggleMenu(true));
-    hamClose.addEventListener('click', () => toggleMenu(false));
-}
+//Add box shadow on scroll
+
+window.addEventListener('scroll', () => {
+    if (scrollY > 0) {
+        navBar.classList.add('scrolled');
+    } else {
+        navBar.classList.remove('scrolled');
+    }
+});
