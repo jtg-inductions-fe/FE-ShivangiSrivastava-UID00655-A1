@@ -163,7 +163,7 @@
 @include responsive-desktop {
     .navbar {
         height: px-to-rem(160);
-        padding: px-to-rem(5 112 0 150);
+        padding: px-to-rem(5 100 0 150);
         max-width: $breakpoint-lg;
         right: 0;
         left: 0;
@@ -178,6 +178,7 @@
         }
 
         &__links {
+            overflow: visible;
             padding-top: px-to-rem(14);
             padding-right: px-to-rem(150);
             height: px-to-rem(17);
