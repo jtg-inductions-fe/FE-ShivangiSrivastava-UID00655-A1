@@ -1,0 +1,179 @@
+@use '../abstract/' as *;
+
+.subscribe {
+    position: relative;
+    margin-top: px-to-rem(66);
+    text-align: center;
+
+    &__star,
+    &__triangle {
+        display: none;
+    }
+
+    &__heading {
+        padding: px-to-rem(0 100);
+        margin-bottom: 0;
+    }
+
+    &__subheading {
+        margin-top: px-to-rem(32);
+        padding: px-to-rem(0 70);
+    }
+
+    &__input-field {
+        margin-top: px-to-rem(64);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: px-to-rem(32);
+    }
+
+    &__email-input {
+        min-height: px-to-rem(72);
+        min-width: px-to-rem(334);
+        @include flex-center;
+        padding-left: px-to-rem(64);
+        gap: px-to-rem(16);
+    }
+
+    &__emailicon {
+        font-size: px-to-rem(18);
+    }
+
+    &__input {
+        border: none;
+        @include font-scale(14);
+        font-weight: $font-weight-bold;
+        color: $color-text-secondary;
+    }
+
+    &__button {
+        min-width: px-to-rem(334);
+        min-height: px-to-rem(67);
+        border-radius: px-to-rem(16);
+        @include font-scale(16);
+    }
+}
+
+@include responsive-tab {
+    .subscribe {
+        margin: px-to-rem(112 64 0);
+        background-color: #{$color-icon}14;
+        min-height: px-to-rem(572);
+        border-radius: px-to-rem(32);
+
+        &__star {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-330);
+            right: px-to-rem(-64);
+        }
+
+        &__triangle {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-50);
+            left: px-to-rem(-36);
+        }
+
+        &__heading {
+            padding-top: px-to-rem(132);
+        }
+
+        &__subheading {
+            padding: px-to-rem(0 100);
+            letter-spacing: px-to-rem(0.6);
+        }
+
+        &__input-field {
+            flex-wrap: nowrap;
+        }
+
+        &__email-input {
+            box-sizing: border-box;
+            background-color: $color-white;
+            width: px-to-rem(502);
+            min-height: px-to-rem(96);
+            border-radius: px-to-rem(32);
+            padding-left: px-to-rem(34);
+        }
+
+        &__emailicon {
+            font-size: px-to-rem(24);
+        }
+
+        &__input {
+            @include font-scale(23);
+        }
+
+        &__button {
+            min-width: px-to-rem(235);
+            min-height: px-to-rem(96);
+            border-radius: px-to-rem(32);
+            @include font-scale(23);
+        }
+    }
+}
+
+@include responsive-desktop {
+    .subscribe {
+        margin: px-to-rem(174) auto 0;
+        background-color: #{$color-icon}14;
+        min-height: px-to-rem(602);
+        max-width: px-to-rem(1193);
+        border-radius: px-to-rem(32);
+
+        &__star {
+            display: block;
+            position: absolute;
+            top: px-to-rem(500);
+            right: px-to-rem(-120);
+        }
+
+        &__triangle {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-50);
+            left: px-to-rem(-28);
+        }
+
+        &__heading {
+            padding-top: px-to-rem(128);
+            padding-left: px-to-rem(120);
+        }
+
+        &__subheading {
+            @include font-scale(55);
+            letter-spacing: px-to-rem(1);
+        }
+
+        &__input-field {
+            flex-wrap: nowrap;
+            margin-top: px-to-rem(66);
+        }
+
+        &__email-input {
+            box-sizing: border-box;
+            background-color: $color-white;
+            min-width: px-to-rem(766);
+            border-radius: px-to-rem(32);
+            padding-left: px-to-rem(48);
+        }
+
+        &__emailicon {
+            font-size: px-to-rem(24);
+        }
+
+        &__input {
+            @include font-scale(23);
+        }
+
+        &__button {
+            min-width: px-to-rem(235);
+            min-height: px-to-rem(96);
+            border-radius: px-to-rem(32);
+            @include font-scale(23);
+            margin-left: px-to-rem(44);
+        }
+    }
+}
