@@ -13,10 +13,6 @@
         font-weight: $font-weight-black;
     }
 
-    &__details {
-        margin-top: 0;
-    }
-
     &__text {
         @include font-scale(16, $base: 1.6);
         color: $color-text-secondary;
@@ -74,16 +70,18 @@
         max-height: px-to-rem(0);
         box-sizing: border-box;
         margin: 0;
-        visibility: hidden;
+        visibility: visible;
         overflow: hidden;
+        padding: px-to-rem(0 28);
         transition:
-            max-height 0.3s ease-in,
-            padding-top 0.3s ease-in;
+            max-height 0.3s linear,
+            visibility 0.3s linear,
+            padding 0.3s ease;
 
         &.active {
             max-height: px-to-rem(180);
-            padding: px-to-rem(12 28 20);
             visibility: visible;
+            padding: px-to-rem(10 28 20);
         }
     }
 }
@@ -131,7 +129,7 @@
 
 @include responsive-desktop {
     .footer {
-        margin: px-to-rem(172 100 0 130);
+        margin: px-to-rem(175 100 0 130);
         display: flex;
         min-height: px-to-rem(400);
 
