@@ -2,7 +2,7 @@
 
 .subscribe {
     position: relative;
-    margin-top: px-to-rem(58);
+    margin-top: px-to-rem(66);
     text-align: center;
 
     &__star,
@@ -77,12 +77,12 @@
         }
 
         &__heading {
-            padding-top: px-to-rem(130);
+            padding-top: px-to-rem(132);
         }
 
         &__subheading {
             padding: px-to-rem(0 100);
-            letter-spacing: px-to-rem(1);
+            letter-spacing: px-to-rem(0.6);
         }
 
         &__input-field {
@@ -149,6 +149,7 @@
 
         &__input-field {
             flex-wrap: nowrap;
+            margin-top: px-to-rem(66);
         }
 
         &__email-input {
