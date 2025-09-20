@@ -1,0 +1,190 @@
+@use '../abstract/' as *;
+
+.footer {
+    margin: px-to-rem(69 16 0);
+
+    &__logo {
+        @include focus;
+    }
+
+    &__travlog {
+        @include flex-center;
+        gap: px-to-rem(16);
+    }
+
+    &__heading {
+        font-size: px-to-rem(24);
+        font-weight: $font-weight-black;
+    }
+
+    &__text {
+        @include font-scale(16, $base: 1.6);
+        color: $color-text-secondary;
+        margin-top: px-to-rem(2);
+    }
+
+    &__socialcontainer {
+        margin-top: px-to-rem(34);
+        min-height: px-to-rem(32);
+        display: flex;
+        gap: px-to-rem(32);
+    }
+
+    &__social {
+        text-decoration: none;
+        @include focus;
+    }
+
+    &__social-icon {
+        font-size: px-to-rem(32);
+    }
+}
+
+.company-details {
+    margin-top: px-to-rem(94);
+
+    &__container {
+        min-height: px-to-rem(100);
+    }
+
+    &__dropdown {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        min-height: px-to-rem(28);
+    }
+
+    &__heading {
+        margin: 0;
+        @include font-scale(23);
+    }
+
+    &__icon {
+        font-size: px-to-rem(24);
+        transition: transform 0.3s ease;
+        &--expanded {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__text {
+        text-decoration: none;
+        color: $color-text-secondary;
+        margin: 0;
+        transition: color 0.3s ease;
+        @include font-scale(18, $base: 2);
+        @include focus;
+
+        &:hover {
+            color: $color-text-primary;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        max-height: px-to-rem(0);
+        box-sizing: border-box;
+        margin: 0;
+        visibility: hidden;
+        overflow: hidden;
+        padding: px-to-rem(0 28);
+        transition:
+            max-height 0.3s linear,
+            visibility 0.3s linear,
+            padding 0.3s ease;
+
+        &.active {
+            max-height: px-to-rem(180);
+            visibility: visible;
+            padding: px-to-rem(10 28 20);
+        }
+    }
+}
+
+@include responsive-tab {
+    .footer {
+        margin: px-to-rem(38 90 0 64);
+
+        &__text {
+            @include font-scale(23, $base: 1.6);
+        }
+    }
+
+    .company-details {
+        margin: px-to-rem(64 0);
+        display: flex;
+        min-width: px-to-rem(900);
+        justify-content: space-between;
+
+        &__icon {
+            display: none;
+        }
+
+        &__container {
+            margin: 0;
+            min-width: px-to-rem(277);
+        }
+
+        &__heading {
+            margin-bottom: px-to-rem(28);
+        }
+
+        &__list {
+            overflow: visible;
+            padding: 0;
+            max-height: px-to-rem(500);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: px-to-rem(26);
+            visibility: visible;
+        }
+    }
+}
+
+@include responsive-desktop {
+    .footer {
+        margin: px-to-rem(175 100 0 130);
+        display: flex;
+        min-height: px-to-rem(400);
+
+        &__text {
+            @include font-scale(23, $base: 1.6);
+        }
+
+        &__socialcontainer {
+            margin-top: px-to-rem(68);
+        }
+    }
+
+    .company-details {
+        margin-top: px-to-rem(30);
+        display: flex;
+        min-width: px-to-rem(580);
+        justify-content: space-between;
+
+        &__icon {
+            display: none;
+        }
+
+        &__container {
+            margin: 0;
+        }
+
+        &__heading {
+            margin-bottom: px-to-rem(28);
+        }
+
+        &__list {
+            overflow: visible;
+            min-width: px-to-rem(200);
+            padding: 0;
+            max-height: px-to-rem(500);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: px-to-rem(26);
+            visibility: visible;
+        }
+    }
+}
