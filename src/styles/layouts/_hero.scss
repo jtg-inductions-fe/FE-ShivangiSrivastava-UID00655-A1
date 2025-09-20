@@ -44,6 +44,7 @@
 
     &__para {
         margin: px-to-rem(24);
+        @include text-overflow;
     }
 
     &__actions {
