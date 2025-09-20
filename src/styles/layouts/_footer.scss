@@ -3,8 +3,12 @@
 .footer {
     margin: px-to-rem(69 16 0);
 
+    &__logo {
+        @include focus;
+    }
+
     &__travlog {
-        display: flex;
+        @include flex-center;
         gap: px-to-rem(16);
     }
 
@@ -26,12 +30,17 @@
         gap: px-to-rem(32);
     }
 
+    &__social {
+        text-decoration: none;
+        @include focus;
+    }
+
     &__social-icon {
         font-size: px-to-rem(32);
     }
 }
 
-.details {
+.company-details {
     margin-top: px-to-rem(94);
 
     &__container {
@@ -61,6 +70,7 @@
     &__text {
         text-decoration: none;
         color: $color-text-secondary;
+        margin: 0;
         @include font-scale(18, $base: 2);
         @include focus;
     }
@@ -95,7 +105,7 @@
         }
     }
 
-    .details {
+    .company-details {
         margin: px-to-rem(64 0);
         display: flex;
         min-width: px-to-rem(900);
@@ -142,7 +152,7 @@
         }
     }
 
-    .details {
+    .company-details {
         margin-top: px-to-rem(30);
         display: flex;
         min-width: px-to-rem(580);
