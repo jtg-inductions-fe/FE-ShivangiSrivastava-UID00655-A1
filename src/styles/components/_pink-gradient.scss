@@ -7,16 +7,15 @@
     background: $color-secondary;
     filter: blur(px-to-rem(335));
     z-index: $z-index-background;
+    left: px-to-rem(-33);
 
     &--nav {
         border: 1px solid green;
         top: px-to-rem(-36);
-        left: px-to-rem(-33);
     }
 
     &--hero {
         top: px-to-rem(-154);
-        left: px-to-rem(-33);
     }
 }
 
@@ -25,15 +24,14 @@
         width: px-to-rem(500);
         height: px-to-rem(500);
         filter: blur(px-to-rem(500));
+        left: px-to-rem(-163);
 
         &--nav {
             top: px-to-rem(-174);
-            left: px-to-rem(-163);
         }
 
         &--hero {
             top: px-to-rem(-292);
-            left: px-to-rem(-163);
         }
     }
 }
@@ -42,15 +40,14 @@
     .pink-gradient {
         width: px-to-rem(504);
         height: px-to-rem(494);
+        left: px-to-rem(-60);
 
         &--nav {
             top: px-to-rem(9);
-            left: px-to-rem(-60);
         }
 
         &--hero {
             top: px-to-rem(-150);
-            left: px-to-rem(-60);
         }
     }
 }
