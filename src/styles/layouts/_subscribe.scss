@@ -2,7 +2,7 @@
 
 .subscribe {
     position: relative;
-    margin-top: px-to-rem(66);
+    margin-top: px-to-rem(68);
     text-align: center;
 
     &__star,
@@ -18,6 +18,7 @@
     &__subheading {
         margin-top: px-to-rem(32);
         padding: px-to-rem(0 70);
+        letter-spacing: px-to-rem(0.4);
     }
 
     &__input-field {
@@ -65,14 +66,14 @@
         &__star {
             display: block;
             position: absolute;
-            top: px-to-rem(-330);
+            top: px-to-rem(-324);
             right: px-to-rem(-64);
         }
 
         &__triangle {
             display: block;
             position: absolute;
-            top: px-to-rem(-50);
+            top: px-to-rem(-48);
             left: px-to-rem(-36);
         }
 
@@ -117,7 +118,7 @@
 
 @include responsive-desktop {
     .subscribe {
-        margin: px-to-rem(174) auto 0;
+        margin: px-to-rem(178) auto 0;
         background-color: #{$color-icon}14;
         min-height: px-to-rem(602);
         max-width: px-to-rem(1193);
@@ -127,14 +128,14 @@
             display: block;
             position: absolute;
             top: px-to-rem(500);
-            right: px-to-rem(-120);
+            right: px-to-rem(-140);
         }
 
         &__triangle {
             display: block;
             position: absolute;
             top: px-to-rem(-50);
-            left: px-to-rem(-28);
+            left: px-to-rem(-2);
         }
 
         &__heading {

@@ -7,8 +7,8 @@
 
     &__user-info {
         font-weight: $font-weight-bold;
-        font-size: px-to-rem(28);
-        margin-top: px-to-rem(60);
+        @include font-scale(28);
+        margin-top: px-to-rem(62);
         color: $color-secondary;
     }
 
@@ -33,8 +33,9 @@
     }
 
     &__description {
-        margin-top: px-to-rem(64);
+        margin-top: px-to-rem(66);
         padding: px-to-rem(0 20);
+        @include text-overflow(3);
     }
 }
 
@@ -42,7 +43,7 @@
     display: flex;
     justify-content: space-between;
     padding: px-to-rem(0 16);
-    margin-top: px-to-rem(96);
+    margin-top: px-to-rem(98);
 }
 .swiper-pagination {
     position: absolute;
@@ -90,7 +91,7 @@
         margin-top: px-to-rem(14);
 
         &__user-info {
-            margin-top: px-to-rem(50);
+            margin-top: px-to-rem(52);
         }
 
         &__description {
@@ -102,7 +103,7 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(60);
+        top: px-to-rem(56);
         box-sizing: border-box;
         width: 100%;
         display: flex;
@@ -123,7 +124,7 @@
 
     .swiper-pagination {
         position: static;
-        margin-top: px-to-rem(28);
+        margin-top: px-to-rem(24);
     }
 }
 
@@ -137,9 +138,10 @@
         }
 
         &__description {
-            margin-top: px-to-rem(56);
+            margin-top: px-to-rem(60);
             @include font-scale(23, $base: 1.6);
             padding: px-to-rem(0 310);
+            @include text-overflow(2);
         }
     }
 
@@ -150,7 +152,7 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(28);
+        top: px-to-rem(32);
         box-sizing: border-box;
         width: 100%;
         display: flex;

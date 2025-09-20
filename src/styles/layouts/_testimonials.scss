@@ -5,11 +5,11 @@
     z-index: $z-index-base;
     position: relative;
     text-align: center;
-    margin-top: px-to-rem(36);
+    margin-top: px-to-rem(42);
 
     &__heading {
         margin-top: 0;
-        margin-bottom: px-to-rem(24);
+        margin-bottom: px-to-rem(16);
     }
 
     &__description {
@@ -23,7 +23,7 @@
 
 @include responsive-tab {
     .testimonials {
-        margin-top: px-to-rem(120);
+        margin-top: px-to-rem(136);
 
         &__bg {
             min-height: px-to-rem(200);
@@ -39,7 +39,7 @@
 
 @include responsive-desktop {
     .testimonials {
-        margin-top: px-to-rem(24);
+        margin-top: px-to-rem(48);
 
         &__bg {
             min-height: px-to-rem(200);
