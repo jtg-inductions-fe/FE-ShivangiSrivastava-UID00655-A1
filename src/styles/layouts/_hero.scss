@@ -3,6 +3,7 @@
 @use '../base' as *;
 
 .hero {
+    position: relative;
     text-align: center;
     margin-top: px-to-rem(120);
 

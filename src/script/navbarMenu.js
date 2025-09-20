@@ -17,6 +17,7 @@ function toggleMenu(isOpen) {
     if (!ready) {
         return;
     }
+    navBar.style.overflow = isOpen ? 'visible' : 'hidden';
     navLinks.classList.toggle('active', isOpen);
     navMenu.setAttribute('aria-expanded', isOpen);
     hamOpen.classList.toggle('closed', isOpen);
@@ -25,6 +26,11 @@ function toggleMenu(isOpen) {
     mainSection.toggleAttribute('inert', isOpen);
     footerSection.toggleAttribute('inert', isOpen);
     navBtns.classList.toggle('active', isOpen);
+    setTimeout(() => {
+        if (!isOpen) {
+            navLinks.style.visibility = 'hidden';
+        }
+    }, 10000);
 
     if (isTablet) {
         navBtns.toggleAttribute('inert', isOpen);
@@ -38,7 +44,7 @@ if (ready) {
 
 //Reorder Tab for tablet view
 function reorderForTab() {
-    if (isTablet) {
+    if (window.innerWidth >= 1024 && window.innerWidth < 1440) {
         navBar.insertBefore(navMenu, navLogo);
     } else {
         navBar.insertBefore(navLogo, navMenu);

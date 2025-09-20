@@ -1,0 +1,56 @@
+@use '../abstract' as *;
+.pink-gradient {
+    position: absolute;
+    border-radius: 50%;
+    width: px-to-rem(272);
+    height: px-to-rem(348);
+    background: $color-secondary;
+    filter: blur(px-to-rem(335));
+    z-index: $z-index-background;
+
+    &--nav {
+        border: 1px solid green;
+        top: px-to-rem(-36);
+        left: px-to-rem(-33);
+    }
+
+    &--hero {
+        top: px-to-rem(-154);
+        left: px-to-rem(-33);
+    }
+}
+
+@include responsive-tab {
+    .pink-gradient {
+        width: px-to-rem(500);
+        height: px-to-rem(500);
+        filter: blur(px-to-rem(500));
+
+        &--nav {
+            top: px-to-rem(-174);
+            left: px-to-rem(-163);
+        }
+
+        &--hero {
+            top: px-to-rem(-292);
+            left: px-to-rem(-163);
+        }
+    }
+}
+
+@include responsive-desktop {
+    .pink-gradient {
+        width: px-to-rem(504);
+        height: px-to-rem(494);
+
+        &--nav {
+            top: px-to-rem(9);
+            left: px-to-rem(-60);
+        }
+
+        &--hero {
+            top: px-to-rem(-150);
+            left: px-to-rem(-60);
+        }
+    }
+}
