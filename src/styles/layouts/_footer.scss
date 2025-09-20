@@ -71,8 +71,13 @@
         text-decoration: none;
         color: $color-text-secondary;
         margin: 0;
+        transition: color 0.3s ease;
         @include font-scale(18, $base: 2);
         @include focus;
+
+        &:hover {
+            color: $color-text-primary;
+        }
     }
 
     &__list {
@@ -80,7 +85,7 @@
         max-height: px-to-rem(0);
         box-sizing: border-box;
         margin: 0;
-        visibility: visible;
+        visibility: hidden;
         overflow: hidden;
         padding: px-to-rem(0 28);
         transition:
