@@ -7,7 +7,7 @@
     width: px-to-rem(128);
     border: none;
     border-radius: px-to-rem(64);
-    font-size: px-to-rem(14);
+    @include font-scale(14);
     font-weight: $font-weight-bold;
     text-align: center;
     cursor: pointer;

@@ -1,0 +1,53 @@
+@use '../abstract' as *;
+.pink-gradient {
+    position: absolute;
+    border-radius: 50%;
+    width: px-to-rem(272);
+    height: px-to-rem(348);
+    background: $color-secondary;
+    filter: blur(px-to-rem(335));
+    z-index: $z-index-background;
+    left: px-to-rem(-33);
+
+    &--nav {
+        border: 1px solid green;
+        top: px-to-rem(-36);
+    }
+
+    &--hero {
+        top: px-to-rem(-154);
+    }
+}
+
+@include responsive-tab {
+    .pink-gradient {
+        width: px-to-rem(500);
+        height: px-to-rem(500);
+        filter: blur(px-to-rem(500));
+        left: px-to-rem(-163);
+
+        &--nav {
+            top: px-to-rem(-174);
+        }
+
+        &--hero {
+            top: px-to-rem(-292);
+        }
+    }
+}
+
+@include responsive-desktop {
+    .pink-gradient {
+        width: px-to-rem(504);
+        height: px-to-rem(494);
+        left: px-to-rem(-60);
+
+        &--nav {
+            top: px-to-rem(9);
+        }
+
+        &--hero {
+            top: px-to-rem(-150);
+        }
+    }
+}
