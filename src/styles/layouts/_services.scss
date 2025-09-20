@@ -75,7 +75,8 @@
     .services-card {
         width: px-to-rem(288);
         min-height: px-to-rem(450);
-        padding: px-to-rem(64 60);
+        padding: px-to-rem(64 60 32);
+
         &__heading {
             margin: px-to-rem(60 0 14);
             margin-bottom: px-to-rem(32);

@@ -45,7 +45,7 @@ function reorderForTab() {
     }
 }
 
-window.addEventListener('resize', reorderForTab());
+window.addEventListener('resize', reorderForTab);
 
 //Add box shadow on scroll
 
