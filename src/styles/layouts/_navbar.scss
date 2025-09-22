@@ -9,7 +9,7 @@
     z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    background-color: $bg-color;
+    background-color: $color-background;
 
     &__content {
         position: relative;
@@ -31,6 +31,7 @@
     }
 
     &__menu {
+        @include button-reset;
         z-index: $z-index-overlay;
         font-size: px-to-rem(40);
         @include focus;
@@ -50,7 +51,7 @@
         position: relative;
         display: none;
         transform: translateX(100%);
-        transition: opacity 0.5s ease-in;
+        transition: transform 0.5s ease-in;
         transition-behavior: allow-discrete;
         font-size: px-to-rem(40);
         z-index: $z-index-overlay;
@@ -71,11 +72,16 @@
         transform: translateX(100%);
         overflow-y: auto;
         visibility: hidden;
-        transition: transform 0.5s ease-in;
+        transition:
+            transform 0.5s ease-in,
+            visibility 0s linear 0.5s;
 
         &.active {
             transform: translateX(0);
             visibility: visible;
+            transition:
+                transform 0.5s ease-in,
+                visibility 0s linear;
         }
     }
 
@@ -110,12 +116,17 @@
         width: 100%;
         top: px-to-rem(600);
         z-index: $z-index-overlay;
-        visibility: hidden;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        visibility: hidden;
+        transition:
+            transform 0.5s ease-in,
+            visibility 0s linear 0.5s;
         &.active {
             transform: translateX(0);
             visibility: visible;
+            transition:
+                transform 0.5s ease-in,
+                visibility 0s linear;
         }
     }
 
@@ -141,15 +152,13 @@
 
         &__links {
             transform: translateX(-100%);
-            &.active {
-                transition: transform 0.5s ease-in;
-            }
         }
         &__list {
             margin-left: px-to-rem(80);
         }
 
         &__actions {
+            visibility: visible;
             transform: none;
             transition: none;
             position: static;
@@ -161,7 +170,6 @@
             z-index: $z-index-base;
             order: 3;
             opacity: 1;
-            visibility: visible;
         }
 
         &__btns {

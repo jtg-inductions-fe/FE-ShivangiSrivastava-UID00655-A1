@@ -70,6 +70,7 @@
 
 .button-prev,
 .button-next {
+    @include button-reset;
     font-size: px-to-rem(16);
     height: px-to-rem(64);
     width: px-to-rem(64);

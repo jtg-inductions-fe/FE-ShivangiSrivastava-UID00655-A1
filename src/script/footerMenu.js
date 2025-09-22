@@ -1,3 +1,4 @@
+// Provides footer dropdown menu functionality on mobile
 document.querySelectorAll('.company-details__dropdown').forEach((dropdown) => {
     const container = dropdown.parentElement;
     const list = container.querySelector('.company-details__list');

@@ -61,11 +61,13 @@
     }
 
     &__icon {
+        @include button-reset;
         font-size: px-to-rem(24);
         transition: transform 0.3s ease;
         &--expanded {
             transform: rotate(180deg);
         }
+        @include focus;
     }
 
     &__text {

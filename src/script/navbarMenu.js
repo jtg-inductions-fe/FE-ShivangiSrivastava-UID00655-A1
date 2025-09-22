@@ -46,10 +46,25 @@ function reorderForTab() {
     }
 }
 
-window.addEventListener('resize', reorderForTab);
+//Prevent translate transitions during resize
+let resizeTime;
+function noTransition() {
+    navLinks.classList.add('no-transition');
+    navBtns.classList.add('no-transition');
+
+    clearTimeout(resizeTime);
+    resizeTime = setTimeout(() => {
+        navLinks.classList.remove('no-transition');
+        navBtns.classList.remove('no-transition');
+    }, 250);
+}
+
+window.addEventListener('resize', () => {
+    noTransition();
+    reorderForTab();
+});
 
 //Add box shadow on scroll
-
 window.addEventListener('scroll', () => {
     if (scrollY > 0) {
         navBar.classList.add('scrolled');

@@ -52,14 +52,16 @@
         @include flex-center;
         flex-direction: column;
         height: px-to-rem(200);
-        width: auto;
+        width: 100%;
         margin-top: px-to-rem(32);
+        padding: px-to-rem(0 16);
         flex: 1;
         gap: px-to-rem(28);
+        box-sizing: border-box;
     }
 
     &__buttons {
-        min-width: px-to-rem(370);
+        width: inherit;
         height: px-to-rem(65);
 
         &--white {
@@ -94,6 +96,20 @@
     &__logolink {
         @include focus(10px);
     }
+}
+
+.pink-gradient {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 50%;
+    width: px-to-rem(272);
+    height: px-to-rem(348);
+    background: $color-secondary;
+    filter: blur(px-to-rem(335));
+    overflow: hidden;
+    left: px-to-rem(-33);
+    z-index: $z-index-nav;
+    top: px-to-rem(-154);
 }
 
 @include responsive-tab {
@@ -168,6 +184,14 @@
         &__partnerlogo {
             height: px-to-rem(32);
         }
+    }
+
+    .pink-gradient {
+        width: px-to-rem(500);
+        height: px-to-rem(500);
+        filter: blur(px-to-rem(500));
+        left: px-to-rem(-163);
+        top: px-to-rem(-292);
     }
 }
 
@@ -247,5 +271,12 @@
         &__partnerlogo {
             height: px-to-rem(32);
         }
+    }
+
+    .pink-gradient {
+        width: px-to-rem(504);
+        height: px-to-rem(494);
+        left: px-to-rem(-60);
+        top: px-to-rem(-150);
     }
 }
