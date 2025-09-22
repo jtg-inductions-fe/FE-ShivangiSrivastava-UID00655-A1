@@ -2,7 +2,7 @@
 
 .subscribe {
     position: relative;
-    margin-top: px-to-rem(68);
+    margin-top: px-to-rem(56);
     text-align: center;
 
     &__star,
@@ -30,22 +30,26 @@
     }
 
     &__email-input {
-        min-height: px-to-rem(72);
-        min-width: px-to-rem(334);
-        @include flex-center;
-        padding-left: px-to-rem(64);
-        gap: px-to-rem(16);
+        position: relative;
     }
 
     &__emailicon {
+        position: absolute;
+        left: px-to-rem(34);
+        top: px-to-rem(28);
         font-size: px-to-rem(18);
     }
 
     &__input {
+        box-sizing: border-box;
+        min-height: px-to-rem(72);
+        min-width: px-to-rem(334);
         border: none;
+        padding-left: px-to-rem(72);
         @include font-scale(14);
         font-weight: $font-weight-bold;
-        color: $color-text-secondary;
+        border-radius: px-to-rem(16);
+        @include focus;
     }
 
     &__button {
@@ -58,7 +62,7 @@
 
 @include responsive-tab {
     .subscribe {
-        margin: px-to-rem(112 64 0);
+        margin: px-to-rem(95 64 0);
         background-color: #{$color-icon}14;
         min-height: px-to-rem(572);
         border-radius: px-to-rem(32);
@@ -86,25 +90,17 @@
             letter-spacing: px-to-rem(0.6);
         }
 
-        &__input-field {
-            flex-wrap: nowrap;
-        }
-
-        &__email-input {
-            box-sizing: border-box;
-            background-color: $color-white;
-            width: px-to-rem(502);
-            min-height: px-to-rem(96);
-            border-radius: px-to-rem(32);
-            padding-left: px-to-rem(34);
-        }
-
         &__emailicon {
             font-size: px-to-rem(24);
+            top: px-to-rem(36);
         }
 
         &__input {
+            border-radius: px-to-rem(32);
+            width: px-to-rem(502);
+            min-height: px-to-rem(96);
             @include font-scale(23);
+            padding-left: px-to-rem(80);
         }
 
         &__button {
@@ -118,7 +114,7 @@
 
 @include responsive-desktop {
     .subscribe {
-        margin: px-to-rem(178) auto 0;
+        margin: px-to-rem(116) auto 0;
         background-color: #{$color-icon}14;
         min-height: px-to-rem(602);
         max-width: px-to-rem(1193);
@@ -151,30 +147,31 @@
         &__input-field {
             flex-wrap: nowrap;
             margin-top: px-to-rem(66);
-        }
-
-        &__email-input {
-            box-sizing: border-box;
-            background-color: $color-white;
-            min-width: px-to-rem(766);
-            border-radius: px-to-rem(32);
-            padding-left: px-to-rem(48);
+            gap: px-to-rem(50);
         }
 
         &__emailicon {
             font-size: px-to-rem(24);
+            top: px-to-rem(36);
+            left: px-to-rem(48);
         }
 
         &__input {
+            background-color: $color-white;
+            width: px-to-rem(766);
+            border-radius: px-to-rem(32);
+            padding-left: px-to-rem(96);
+            min-height: px-to-rem(96);
             @include font-scale(23);
         }
 
         &__button {
+            border: 1px solid black;
             min-width: px-to-rem(235);
             min-height: px-to-rem(96);
             border-radius: px-to-rem(32);
             @include font-scale(23);
-            margin-left: px-to-rem(44);
+            margin-left: px-to-rem(24);
         }
     }
 }

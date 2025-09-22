@@ -44,10 +44,11 @@
     justify-content: space-between;
     padding: px-to-rem(0 16);
     margin-top: px-to-rem(98);
+    margin-bottom: px-to-rem(12);
 }
 .swiper-pagination {
     position: absolute;
-    bottom: px-to-rem(112);
+    bottom: px-to-rem(128);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -75,6 +76,7 @@
     background-color: $color-btn;
     border-radius: 50%;
     color: $color-white;
+    @include focus;
 }
 .button-prev:disabled,
 .button-next:disabled {
@@ -87,6 +89,9 @@
 }
 
 @include responsive-tab {
+    .swiper {
+        min-height: px-to-rem(560);
+    }
     .swiper-slide {
         margin-top: px-to-rem(14);
 
@@ -129,10 +134,12 @@
 }
 
 @include responsive-desktop {
+    .swiper {
+        min-height: px-to-rem(560);
+    }
     .swiper-slide {
+        min-height: px-to-rem(470);
         margin-top: px-to-rem(10);
-        min-height: px-to-rem(100);
-
         &__user-info {
             margin-top: px-to-rem(50);
         }
@@ -173,6 +180,6 @@
 
     .swiper-pagination {
         position: static;
-        margin-top: px-to-rem(30);
+        margin-top: 0;
     }
 }

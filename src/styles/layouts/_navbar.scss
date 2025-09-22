@@ -222,7 +222,7 @@
             position: static;
             margin: 0;
             transform: none;
-            gap: 0;
+            gap: px-to-rem(10);
             width: px-to-rem(220);
             height: px-to-rem(50);
             z-index: $z-index-base;
