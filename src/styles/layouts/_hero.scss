@@ -59,7 +59,7 @@
     }
 
     &__buttons {
-        width: px-to-rem(398);
+        min-width: px-to-rem(370);
         height: px-to-rem(65);
 
         &--white {
@@ -74,6 +74,7 @@
     }
 
     &__logos {
+        box-sizing: border-box;
         min-height: px-to-rem(72);
         margin: px-to-rem(24 36 0 15);
         @include flex-center;
