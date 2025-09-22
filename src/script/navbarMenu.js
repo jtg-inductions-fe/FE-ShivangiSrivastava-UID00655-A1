@@ -4,12 +4,12 @@ const hamClose = document.querySelector('#menu-close');
 const navLinks = document.querySelector('#navbar-list');
 const navBtns = document.querySelector('#nav-btns');
 const navMenu = document.querySelector('#nav-menu');
+const navContent = navLinks.parentElement;
 const mainSection = document.querySelector('#main-section');
 const footerSection = document.querySelector('#footer-section');
 const navBar = document.querySelector('.navbar');
 const ready = hamOpen && hamClose && navLinks && navBtns && navMenu;
 const navLogo = document.querySelector('#nav-logo');
-
 const isTablet = window.innerWidth >= 1024 && window.innerWidth < 1440;
 
 //Open/Close Navigation Sidebar
@@ -26,11 +26,6 @@ function toggleMenu(isOpen) {
     mainSection.toggleAttribute('inert', isOpen);
     footerSection.toggleAttribute('inert', isOpen);
     navBtns.classList.toggle('active', isOpen);
-    setTimeout(() => {
-        if (!isOpen) {
-            navLinks.style.visibility = 'hidden';
-        }
-    }, 10000);
 
     if (isTablet) {
         navBtns.toggleAttribute('inert', isOpen);
@@ -45,9 +40,9 @@ if (ready) {
 //Reorder Tab for tablet view
 function reorderForTab() {
     if (window.innerWidth >= 1024 && window.innerWidth < 1440) {
-        navBar.insertBefore(navMenu, navLogo);
+        navContent.insertBefore(navMenu, navLogo);
     } else {
-        navBar.insertBefore(navLogo, navMenu);
+        navContent.insertBefore(navLogo, navMenu);
     }
 }
 

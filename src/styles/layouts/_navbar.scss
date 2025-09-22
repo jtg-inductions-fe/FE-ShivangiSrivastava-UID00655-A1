@@ -6,18 +6,26 @@
     position: fixed;
     margin: 0 auto;
     top: 0;
+    z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    box-sizing: border-box;
-    padding: px-to-rem(0 20 0 17);
-    @include flex-center;
-    justify-content: space-between;
-    z-index: $z-index-nav;
-    background: $bg-color;
     overflow: hidden;
 
-    &__logo {
+    background-color: $bg-color;
+
+    &__content {
+        position: relative;
         z-index: $z-index-overlay;
+        height: inherit;
+        width: inherit;
+        box-sizing: border-box;
+        padding: px-to-rem(0 20 0 17);
+        @include flex-center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        z-index: inherit;
     }
 
     &__home {
@@ -125,8 +133,11 @@
 @include responsive-tab {
     .navbar {
         height: px-to-rem(113);
-        padding: px-to-rem(0 64 0 68);
-        align-items: center;
+
+        &__content {
+            padding: px-to-rem(0 64 0 68);
+            align-items: center;
+        }
 
         &__logo {
             order: 2;
@@ -163,10 +174,15 @@
 @include responsive-desktop {
     .navbar {
         height: px-to-rem(160);
-        padding: px-to-rem(5 100 0 150);
-        max-width: $breakpoint-lg;
-        right: 0;
-        left: 0;
+        width: 100%;
+
+        &__content {
+            margin: 0 auto;
+            padding: px-to-rem(5 100 0 150);
+            max-width: $breakpoint-lg;
+            right: 0;
+            left: 0;
+        }
 
         &__logo {
             padding: 0;
