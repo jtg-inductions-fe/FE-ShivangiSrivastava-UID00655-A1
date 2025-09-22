@@ -17,7 +17,7 @@ function toggleMenu(isOpen) {
     if (!ready) {
         return;
     }
-    navBar.style.overflow = isOpen ? 'visible' : 'hidden';
+    navBar.classList.toggle('active', isOpen);
     navLinks.classList.toggle('active', isOpen);
     navMenu.setAttribute('aria-expanded', isOpen);
     hamOpen.classList.toggle('closed', isOpen);

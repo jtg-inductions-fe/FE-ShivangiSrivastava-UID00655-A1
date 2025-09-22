@@ -9,15 +9,8 @@
     filter: blur(px-to-rem(335));
     overflow: hidden;
     left: px-to-rem(-33);
-    z-index: $z-index-background;
-
-    &--nav {
-        top: px-to-rem(-36);
-    }
-
-    &--hero {
-        top: px-to-rem(-154);
-    }
+    z-index: $z-index-nav;
+    top: px-to-rem(-154);
 }
 
 @include responsive-tab {
@@ -26,14 +19,7 @@
         height: px-to-rem(500);
         filter: blur(px-to-rem(500));
         left: px-to-rem(-163);
-
-        &--nav {
-            top: px-to-rem(-174);
-        }
-
-        &--hero {
-            top: px-to-rem(-292);
-        }
+        top: px-to-rem(-292);
     }
 }
 
@@ -42,13 +28,6 @@
         width: px-to-rem(504);
         height: px-to-rem(494);
         left: px-to-rem(-60);
-
-        &--nav {
-            top: px-to-rem(9);
-        }
-
-        &--hero {
-            top: px-to-rem(-150);
-        }
+        top: px-to-rem(-150);
     }
 }

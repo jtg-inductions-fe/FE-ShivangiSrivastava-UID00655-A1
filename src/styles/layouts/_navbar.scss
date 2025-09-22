@@ -9,8 +9,6 @@
     z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    overflow: hidden;
-
     background-color: $bg-color;
 
     &__content {
@@ -51,14 +49,14 @@
     &__menu--closeicon {
         position: relative;
         display: none;
-        opacity: 0;
+        transform: translateX(100%);
         transition: opacity 0.5s ease-in;
         transition-behavior: allow-discrete;
         font-size: px-to-rem(40);
         z-index: $z-index-overlay;
         &.active {
             display: block;
-            opacity: 1;
+            transform: translateX(0);
         }
     }
 
@@ -70,15 +68,13 @@
         left: 0;
         background-color: $color-secondary-lighter;
         z-index: $z-index-nav;
-        opacity: 0;
+        transform: translateX(100%);
         overflow-y: auto;
         visibility: hidden;
-        transition:
-            opacity 0.5s linear,
-            visibility 0.3s linear;
+        transition: transform 0.5s ease-in;
 
         &.active {
-            opacity: 1;
+            transform: translateX(0);
             visibility: visible;
         }
     }
@@ -115,12 +111,11 @@
         top: px-to-rem(600);
         z-index: $z-index-overlay;
         visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.5s linear;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
         &.active {
-            opacity: 1;
+            transform: translateX(0);
             visibility: visible;
-            transition-delay: visibility 1s;
         }
     }
 
@@ -143,11 +138,19 @@
             order: 2;
             padding-left: px-to-rem(180);
         }
+
+        &__links {
+            transform: translateX(-100%);
+            &.active {
+                transition: transform 0.5s ease-in;
+            }
+        }
         &__list {
             margin-left: px-to-rem(80);
         }
 
         &__actions {
+            transform: none;
             transition: none;
             position: static;
             flex-direction: row;
@@ -194,6 +197,8 @@
         }
 
         &__links {
+            transition: none;
+            transform: none;
             overflow: visible;
             padding-top: px-to-rem(14);
             padding-right: px-to-rem(150);
@@ -216,7 +221,6 @@
         }
 
         &__actions {
-            transition: none;
             padding-top: px-to-rem(15);
             flex-direction: row;
             position: static;
