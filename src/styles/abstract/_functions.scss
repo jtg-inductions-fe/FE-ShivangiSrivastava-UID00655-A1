@@ -1,5 +1,6 @@
 @use 'sass:math';
 
+//Converts pixels to rem values
 @function px-to-rem($px, $root: 16) {
     $result: ();
     @if type-of($px) == 'list' {
@@ -11,6 +12,7 @@
     @return math.div($px, $root) * 1rem;
 }
 
+//Calculates line height based on font-size
 @function calc-line-height($px, $base) {
     $rem: px-to-rem($px);
     @return ($rem * $base);

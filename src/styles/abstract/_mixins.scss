@@ -35,6 +35,7 @@
     line-height: calc-line-height($font-size, $base);
 }
 
+//ensures text overflow is handled by ellipses
 @mixin text-overflow($line: 2) {
     display: -webkit-box;
     -webkit-line-clamp: $line;
@@ -43,6 +44,7 @@
     text-overflow: ellipsis;
 }
 
+//resets button appearance
 @mixin button-reset {
     appearance: none;
     -webkit-appearance: none;
