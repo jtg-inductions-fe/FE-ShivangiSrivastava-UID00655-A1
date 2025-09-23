@@ -25,8 +25,10 @@
         margin-top: px-to-rem(64);
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         gap: px-to-rem(32);
+        padding: px-to-rem(0 48);
     }
 
     &__email-input {
@@ -43,7 +45,7 @@
     &__input {
         box-sizing: border-box;
         min-height: px-to-rem(72);
-        min-width: px-to-rem(334);
+        width: 100%;
         border: none;
         padding-left: px-to-rem(72);
         @include font-scale(14);
@@ -53,7 +55,7 @@
     }
 
     &__button {
-        min-width: px-to-rem(334);
+        width: 100%;
         min-height: px-to-rem(67);
         border-radius: px-to-rem(16);
         @include font-scale(16);
@@ -95,6 +97,11 @@
             top: px-to-rem(36);
         }
 
+        &__input-field {
+            flex-direction: row;
+            padding: 0;
+        }
+
         &__input {
             border-radius: px-to-rem(32);
             width: px-to-rem(502);
@@ -104,7 +111,7 @@
         }
 
         &__button {
-            min-width: px-to-rem(235);
+            width: px-to-rem(235);
             min-height: px-to-rem(96);
             border-radius: px-to-rem(32);
             @include font-scale(23);
@@ -145,6 +152,7 @@
         }
 
         &__input-field {
+            flex-direction: row;
             flex-wrap: nowrap;
             margin-top: px-to-rem(66);
             gap: px-to-rem(50);
@@ -166,7 +174,7 @@
         }
 
         &__button {
-            min-width: px-to-rem(235);
+            width: px-to-rem(235);
             min-height: px-to-rem(96);
             border-radius: px-to-rem(32);
             @include font-scale(23);

@@ -106,6 +106,7 @@
     height: px-to-rem(348);
     background: $color-secondary;
     filter: blur(px-to-rem(335));
+    // background: radial-gradient($color-secondary-light 0%, $color-secondary-lighter 40%, $color-white 70%);
     overflow: hidden;
     left: px-to-rem(-33);
     z-index: $z-index-nav;
