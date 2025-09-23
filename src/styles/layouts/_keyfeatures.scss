@@ -5,21 +5,24 @@
     margin-top: px-to-rem(90);
 
     &__heading {
-        margin-top: px-to-rem(102);
+        margin-top: px-to-rem(104);
         margin-bottom: px-to-rem(16);
     }
 
     &__subheading {
         margin-top: 0;
+        @include text-overflow(4);
     }
 
     &__text {
         margin-top: px-to-rem(32);
-        padding: px-to-rem(0 60);
+        padding: px-to-rem(0 50);
+        letter-spacing: px-to-rem(0.4);
+        @include text-overflow(4);
     }
 
     &__cardcontainer {
-        margin-top: px-to-rem(32);
+        margin-top: px-to-rem(28);
         min-height: px-to-rem(920);
         display: flex;
         flex-wrap: wrap;
@@ -63,6 +66,7 @@
 
     &__text {
         margin: 0;
+        @include text-overflow;
     }
 }
 
@@ -71,29 +75,30 @@
         margin-top: px-to-rem(130);
 
         &__heading {
-            margin-top: px-to-rem(64);
+            margin-top: px-to-rem(66);
             margin-bottom: 0;
         }
 
         &__subheading {
-            margin-top: px-to-rem(20);
-            margin-bottom: px-to-rem(10);
+            margin-top: px-to-rem(18);
+            margin-bottom: px-to-rem(30);
         }
 
         &__text {
-            word-spacing: px-to-rem(2.5);
-            padding: px-to-rem(0 110);
+            margin-top: 0;
+            padding: px-to-rem(0 100);
+            @include text-overflow(2);
         }
 
         &__cardcontainer {
-            margin-top: px-to-rem(56);
+            margin-top: px-to-rem(60);
             gap: px-to-rem(0);
             min-height: px-to-rem(492);
         }
     }
 
     .features-card {
-        padding: px-to-rem(36 32 28);
+        padding: px-to-rem(36 32 26);
         margin: px-to-rem(0 96);
         @include flex-center;
         min-height: px-to-rem(164);
@@ -109,16 +114,20 @@
 @include responsive-desktop {
     .features {
         text-align: start;
-        margin-top: px-to-rem(70);
-        padding: px-to-rem(16 0 16 124);
+        margin-top: px-to-rem(80);
+        margin-left: px-to-rem(124);
         display: flex;
         flex-direction: row-reverse;
         min-height: px-to-rem(900);
         justify-content: space-between;
 
+        &__bg {
+            margin-left: px-to-rem(20);
+        }
+
         &__content {
             width: px-to-rem(550);
-            margin-top: px-to-rem(0);
+            margin-top: px-to-rem(8);
             padding: px-to-rem(0 20 0 16);
         }
 

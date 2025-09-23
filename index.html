@@ -8,55 +8,41 @@
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <div class="wrapper">
-            <!-- NAVIGATION BAR -->
-            <header>
-                <nav class="navbar" aria-label="Primary">
-                    <div class="navbar__logo">
+        <!-- NAVIGATION BAR -->
+        <header>
+            <nav class="navbar" aria-label="Primary">
+                <div class="navbar__content">
+                    <div class="navbar__logo" id="nav-logo">
                         <a href="/" aria-label="Home" class="navbar__home">
                             <img
-                                src="src/assets/logo.png"
+                                src="src/assets/images/logo.png"
                                 alt="Travel logo"
                                 aria-label="logo"
                             />
                         </a>
                     </div>
 
-                    <div class="navbar__menu" id="nav-menu">
+                    <div id="nav-menu">
                         <button
-                            class="icomoon-button"
+                            class="icon-ham-menu navbar__menu navbar__menu--openicon"
                             type="button"
                             aria-label="open menu"
                             aria-expanded="false"
                             aria-controls="nav-links nav-btns"
                             id="menu-open"
-                        >
-                            <span
-                                class="icon-ham-menu navbar__menu--openicon"
-                                alt="open menu"
-                                aria-hidden="true"
-                            ></span>
-                        </button>
+                        ></button>
 
                         <button
-                            class="icomoon-button"
+                            class="icon-cross navbar__menu navbar__menu--closeicon"
                             type="button"
                             aria-label="Close menu"
                             aria-expanded="true"
                             aria-controls="nav-links nav-btns"
-                        >
-                            <span
-                                class="icon-cross navbar__menu--closeicon"
-                                src="src/navbar/cross-cropped.svg"
-                                alt="close menu"
-                                aria-hidden="true"
-                                id="menu-close"
-                            >
-                            </span>
-                        </button>
+                            id="menu-close"
+                        ></button>
                     </div>
 
-                    <div class="navbar__links" id="navbar-list">
+                    <div class="navbar__links no-transition" id="navbar-list">
                         <ul class="navbar__list">
                             <li><a href="#" class="navbar__item">Home</a></li>
                             <li>
@@ -73,7 +59,7 @@
                         </ul>
                     </div>
 
-                    <div class="navbar__actions" id="nav-btns">
+                    <div class="navbar__actions no-transition" id="nav-btns">
                         <button class="button button--white navbar__btns">
                             Log In
                         </button>
@@ -81,26 +67,33 @@
                             Sign Up
                         </button>
                     </div>
-                </nav>
-            </header>
+                </div>
+            </nav>
+        </header>
 
+        <div class="wrapper">
             <!-- HERO SECTION -->
-            <main>
+            <main id="main-section">
                 <section aria-label="Introduction Section" class="hero">
+                    <div class="pink-gradient"></div>
                     <div class="hero__main">
-                        <div class="hero__bg" alt="Collage of Travel Images">
+                        <div class="hero__bg">
                             <picture>
                                 <source
-                                    srcset="./src/assets/hero-img-desktop.png"
+                                    srcset="
+                                        src/assets/images/hero-img-desktop.png
+                                    "
                                     media="(width >=1440px)"
                                 />
                                 <source
-                                    srcset="./src/assets/hero-img-tablet.png"
+                                    srcset="
+                                        src/assets/images/hero-img-tablet.png
+                                    "
                                     media="(width >=1024px)"
                                 />
                                 <img
-                                    src="./src/assets/hero-img-mobile.png"
-                                    alt="people traveling"
+                                    src="src/assets/images/hero-img-mobile.png"
+                                    alt="Collage of Travel Images"
                                 />
                             </picture>
                         </div>
@@ -110,7 +103,7 @@
                             aria-hidden="true"
                             role="presentation"
                         >
-                            <img src="./src/assets/arrow.png" />
+                            <img src="src/assets/images/arrow.png" />
                         </div>
 
                         <div class="hero__content">
@@ -166,7 +159,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 ><img
-                                    src="./src/assets/trip-ad-logo.png"
+                                    src="src/assets/images/trip-ad-logo.png"
                                     alt="TripAdvisor"
                             /></a>
                         </div>
@@ -177,7 +170,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 ><img
-                                    src="./src/assets/expedia-logo.png"
+                                    src="src/assets/images/expedia-logo.png"
                                     alt="Expedia"
                             /></a>
                         </div>
@@ -188,7 +181,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 ><img
-                                    src="./src/assets/booking-logo.png"
+                                    src="src/assets/images/booking-logo.png"
                                     alt="Booking.com"
                             /></a>
                         </div>
@@ -199,7 +192,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 ><img
-                                    src="./src/assets/airbnb-logo.png"
+                                    src="src/assets/images/airbnb-logo.png"
                                     alt="Airbnb"
                             /></a>
                         </div>
@@ -210,7 +203,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 ><img
-                                    src="./src/assets/orbitz-logo.png"
+                                    src="src/assets/images/orbitz-logo.png"
                                     alt="Orbitz"
                             /></a>
                         </div>
@@ -218,62 +211,60 @@
                 </section>
 
                 <!-- SERVICES SECTION -->
-                <section aria-label="Services Provided">
-                    <div class="services">
-                        <div class="services__content">
-                            <h4 class="section-heading services__heading">
-                                SERVICES
-                            </h4>
-                            <p class="section-subheading services__description">
-                                Our top value categories for you
+                <section aria-label="Services Provided" class="services">
+                    <div class="services__content">
+                        <h4 class="section-heading services__heading">
+                            SERVICES
+                        </h4>
+                        <p class="section-subheading services__description">
+                            Our top value categories for you
+                        </p>
+                    </div>
+                    <div class="services__cardcontainer">
+                        <div class="services-card">
+                            <div class="services-card__img">
+                                <img
+                                    src="src/assets/images/services-1.png"
+                                    alt="Globe Image"
+                                />
+                            </div>
+                            <h5 class="services-card__heading card-heading">
+                                Best Tour Guide
+                            </h5>
+                            <p class="services-card__text card-text">
+                                What looked like a small patch of purple grass,
+                                above five feet.
                             </p>
                         </div>
-                        <div class="services__cardcontainer">
-                            <div class="services__card">
-                                <div class="services-card__img">
-                                    <img
-                                        src="./src/assets/services-1.png"
-                                        alt="Globe Image"
-                                    />
-                                </div>
-                                <h5 class="services-card__heading card-heading">
-                                    Best Tour Guide
-                                </h5>
-                                <p class="services-card__text card-text">
-                                    What looked like a small patch of purple
-                                    grass, above five feet.
-                                </p>
+                        <div class="services-card">
+                            <div class="services-card__img">
+                                <img
+                                    src="src/assets/images/services-2.png"
+                                    alt="Calendar Image"
+                                />
                             </div>
-                            <div class="services__card">
-                                <div class="services-card__img">
-                                    <img
-                                        src="./src/assets/services-2.png"
-                                        alt="Calendar Image"
-                                    />
-                                </div>
-                                <h5 class="services-card__heading card-heading">
-                                    Easy Booking
-                                </h5>
-                                <p class="services-card__text card-text">
-                                    Square, was moving across the sand in their
-                                    direction.
-                                </p>
+                            <h5 class="services-card__heading card-heading">
+                                Easy Booking
+                            </h5>
+                            <p class="services-card__text card-text">
+                                Square, was moving across the sand in their
+                                direction.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <div class="services-card__img">
+                                <img
+                                    src="src/assets/images/services-3.png"
+                                    alt="Weather Image"
+                                />
                             </div>
-                            <div class="services__card">
-                                <div class="services-card__img">
-                                    <img
-                                        src="./src/assets/services-3.png"
-                                        alt="Weather Image"
-                                    />
-                                </div>
-                                <h5 class="services-card__heading card-heading">
-                                    Weather Forecast
-                                </h5>
-                                <p class="services-card__text card-text">
-                                    What looked like a small patch of purple
-                                    grass, above five feet.
-                                </p>
-                            </div>
+                            <h5 class="services-card__heading card-heading">
+                                Weather Forecast
+                            </h5>
+                            <p class="services-card__text card-text">
+                                What looked like a small patch of purple grass,
+                                above five feet.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -282,7 +273,7 @@
                 <section aria-label="Travel points" class="travel">
                     <div class="travel__ticket">
                         <img
-                            src="src/assets/travel-object.png"
+                            src="src/assets/images/travel-object.png"
                             alt=""
                             aria-hidden="true"
                             role="presentation"
@@ -291,11 +282,11 @@
                     <div class="travel__img">
                         <picture>
                             <source
-                                srcset="/src/assets/travelpoint-bg.png"
+                                srcset="src/assets/images/travelpoint-bg.png"
                                 media="(width >=1024px)"
                             />
                             <img
-                                src="/src/assets/travelpoint-bg-mobile.png"
+                                src="src/assets/images/travelpoint-bg-mobile.png"
                                 alt="Image of a woman on a suitcase"
                             />
                         </picture>
@@ -314,21 +305,21 @@
                             classical Latin literature from 45 BC.
                         </p>
                         <div class="travel__cardscontainer">
-                            <div class="travel__card">
+                            <div class="travel-card">
                                 <h5 class="travel-card__heading">500+</h5>
                                 <p class="travel-card__text">Holiday Package</p>
                             </div>
-                            <div class="travel__card">
+                            <div class="travel-card">
                                 <h5 class="travel-card__heading">100</h5>
                                 <p class="travel-card__text">Luxury Hotel</p>
                             </div>
-                            <div class="travel__card">
+                            <div class="travel-card">
                                 <h5 class="travel-card__heading">7</h5>
                                 <p class="travel-card__text">
                                     Premium Airlines
                                 </p>
                             </div>
-                            <div class="travel__card">
+                            <div class="travel-card">
                                 <h5 class="travel-card__heading">2k+</h5>
                                 <p class="travel-card__text">Happy Customers</p>
                             </div>
@@ -342,11 +333,13 @@
                     <div class="features__bg">
                         <picture>
                             <source
-                                srcset="src/assets/keyfeatures-bg-tab.png"
+                                srcset="
+                                    src/assets/images/keyfeatures-bg-tab.png
+                                "
                                 media="(width>=1024px)"
                             />
                             <img
-                                src="src/assets/keyfeatures-bg-mobile.png"
+                                src="src/assets/images/keyfeatures-bg-mobile.png"
                                 alt="Collage of popular destinations"
                             />
                         </picture>
@@ -424,11 +417,13 @@
                     <div class="testimonials__bg">
                         <picture aria-hidden="true" role="presentation">
                             <source
-                                srcset="src/assets/Testimonials-bg-desktop.png"
+                                srcset="
+                                    src/assets/images/Testimonials-bg-desktop.png
+                                "
                                 media="(width>=1440px)"
                             />
                             <img
-                                src="src/assets/testimonials-bg-tab.png"
+                                src="src/assets/images/testimonials-bg-tab.png"
                                 alt=""
                             />
                         </picture>
@@ -439,7 +434,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-slide__avatar">
                                     <img
-                                        src="src/assets/testimonials-user.png"
+                                        src="src/assets/images/testimonials-user.png"
                                         alt="User Avatar"
                                     />
                                 </div>
@@ -476,7 +471,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-slide__avatar">
                                     <img
-                                        src="src/assets/testimonials-user.png"
+                                        src="src/assets/images/testimonials-user.png"
                                         alt="User Avatar"
                                     />
                                 </div>
@@ -513,7 +508,7 @@
                             <div class="swiper-slide">
                                 <div class="swiper-slide__avatar">
                                     <img
-                                        src="src/assets/testimonials-user.png"
+                                        src="src/assets/images/testimonials-user.png"
                                         alt="User Avatar"
                                     />
                                 </div>
@@ -551,11 +546,11 @@
 
                         <div class="swiper-buttons">
                             <button
-                                class="button-prev icomoon-button icon-arrow-left-1"
+                                class="button-prev icon-arrow-left-1"
                             ></button>
 
                             <button
-                                class="button-next icomoon-button icon-arrow-left-2"
+                                class="button-next icon-arrow-left-2"
                             ></button>
                         </div>
                         <div class="swiper-pagination"></div>
@@ -569,18 +564,18 @@
                         SUBSCRIBE TO OUR NEWSLETTER
                     </h4>
                     <p class="section-subheading subscribe__subheading">
-                        Prepare yourself & lets explore the beauty of the world
+                        Prepare yourself & let's explore the beauty of the world
                     </p>
 
                     <img
-                        src="src/assets/subscribe-star.png"
+                        src="src/assets/images/subscribe-star.png"
                         class="subscribe__star"
                         alt=""
                         aria-hidden="true"
                         role="presentation"
                     />
                     <img
-                        src="src/assets/subscribe-triangle.png"
+                        src="src/assets/images/subscribe-triangle.png"
                         class="subscribe__triangle"
                         alt=""
                         aria-hidden="true"
@@ -592,6 +587,7 @@
                                 class="icon-mail-icon subscribe__emailicon"
                             ></span>
                             <input
+                                type="email"
                                 class="subscribe__input"
                                 placeholder="Your Email"
                             />
@@ -604,12 +600,12 @@
             </main>
 
             <!-- DETAILS SECTION (FOOTER) -->
-            <footer class="footer">
+            <footer class="footer" id="footer-section">
                 <div class="footer__content">
                     <div class="footer__travlog">
                         <a href="/" class="footer__logo">
                             <img
-                                src="src/assets/logo.png"
+                                src="src/assets/images/logo.png"
                                 alt="Travel logo"
                                 aria-label="logo"
                             />
@@ -668,7 +664,7 @@
                         <div class="company-details__dropdown">
                             <h5 class="company-details__heading">Company</h5>
                             <button
-                                class="icomoon-button company-details__icon icon-circle-down"
+                                class="company-details__icon icon-circle-down"
                                 aria-label="Dropdown Button"
                             ></button>
                         </div>
@@ -694,7 +690,7 @@
                         <div class="company-details__dropdown">
                             <h5 class="company-details__heading">Contact Us</h5>
                             <button
-                                class="icomoon-button company-details__icon icon-circle-down"
+                                class="company-details__icon icon-circle-down"
                                 aria-label="Dropdown Button"
                             ></button>
                         </div>
@@ -726,7 +722,7 @@
                         <div class="company-details__dropdown">
                             <h5 class="company-details__heading">Meet Us</h5>
                             <button
-                                class="icomoon-button company-details__icon icon-circle-down"
+                                class="company-details__icon icon-circle-down"
                                 aria-label="Dropdown Button"
                             ></button>
                         </div>

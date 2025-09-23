@@ -1,3 +1,18 @@
+@use './colors' as *;
+@use './variables' as *;
+
+//prevents scrolling when navbar is expanded
 .no-scroll {
     overflow: hidden;
+}
+
+//containerizes page beyond max viewport width
+.wrapper {
+    max-width: $breakpoint-lg;
+    margin: 0 auto;
+}
+
+//prevents transitions during resizing window
+nav .no-transition {
+    transition: none;
 }

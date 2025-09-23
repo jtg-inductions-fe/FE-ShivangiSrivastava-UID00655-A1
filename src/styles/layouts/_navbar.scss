@@ -4,21 +4,27 @@
 
 .navbar {
     position: fixed;
+    margin: 0 auto;
     top: 0;
+    z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    box-sizing: border-box;
-    padding: px-to-rem(0 15);
-    @include flex-center;
-    justify-content: space-between;
-    max-width: $breakpoint-lg;
-    z-index: $z-index-nav;
-    background: $bg-color;
+    background-color: $color-background;
+    box-shadow: 0 0 px-to-rem(25) $color-shadow;
+
+    &__content {
+        position: relative;
+        z-index: $z-index-overlay;
+        height: inherit;
+        width: inherit;
+        box-sizing: border-box;
+        padding: px-to-rem(0 20 0 17);
+        @include flex-center;
+        justify-content: space-between;
+    }
 
     &__logo {
-        z-index: $z-index-overlay;
-        padding-left: px-to-rem(2);
-        @include focus;
+        z-index: inherit;
     }
 
     &__home {
@@ -26,25 +32,33 @@
     }
 
     &__menu {
-        @include flex-center;
-        height: fit-content;
+        @include button-reset;
+        z-index: $z-index-overlay;
+        font-size: px-to-rem(40);
+        @include focus;
     }
 
     &__menu--openicon {
-        font-size: px-to-rem(40);
+        display: block;
+        transition: opacity 0.5s linear;
+        opacity: 1;
+        &.closed {
+            display: none;
+            opacity: 0;
+        }
     }
 
     &__menu--closeicon {
-        font-size: px-to-rem(40);
-        position: fixed;
-        top: px-to-rem(40);
-        right: px-to-rem(20);
-        z-index: $z-index-overlay;
-        transform: translateX(200%);
+        position: relative;
+        display: none;
+        transform: translateX(100%);
         transition: transform 0.5s ease-in;
-
+        transition-behavior: allow-discrete;
+        font-size: px-to-rem(40);
+        z-index: $z-index-overlay;
         &.active {
-            transform: translateX(0%);
+            display: block;
+            transform: translateX(0);
         }
     }
 
@@ -57,10 +71,18 @@
         background-color: $color-secondary-lighter;
         z-index: $z-index-nav;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        overflow-y: auto;
+        visibility: hidden;
+        transition:
+            transform 0.5s ease-in,
+            visibility 0s linear 0.5s;
 
         &.active {
-            transform: translateX(0%);
+            transform: translateX(0);
+            visibility: visible;
+            transition:
+                transform 0.5s ease-in,
+                visibility 0s linear;
         }
     }
 
@@ -80,30 +102,32 @@
         transition: color 0.5s ease;
         font-weight: $font-weight-bold;
         text-decoration: none;
-        overflow-y: auto;
-
+        @include focus;
         &:hover {
             color: $color-text-primary;
-        }
-        &:focus-visible {
-            outline: 2px solid black;
-            outline-offset: 20px;
         }
     }
 
     &__actions {
         left: 0;
-        position: fixed;
+        position: absolute;
         @include flex-center;
         flex-direction: column;
         gap: px-to-rem(32);
         width: 100%;
-        bottom: 10%;
+        top: px-to-rem(600);
         z-index: $z-index-overlay;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        visibility: hidden;
+        transition:
+            transform 0.5s ease-in,
+            visibility 0s linear 0.5s;
         &.active {
-            transform: translateX(0%);
+            transform: translateX(0);
+            visibility: visible;
+            transition:
+                transform 0.5s ease-in,
+                visibility 0s linear;
         }
     }
 
@@ -115,56 +139,50 @@
 
 @include responsive-tab {
     .navbar {
-        padding: px-to-rem(0 45 0 65);
-        align-items: center;
+        height: px-to-rem(113);
 
-        &__logo {
-            position: fixed;
-            left: 48%;
+        &__content {
+            padding: px-to-rem(0 64 0 68);
+            align-items: center;
         }
 
-        &__menu--closeicon {
-            position: fixed;
-            font-size: px-to-rem(40);
-            top: px-to-rem(40);
-            left: 0;
-            z-index: $z-index-overlay;
-            transform: translateX(-200%);
-            transition: transform 0.5s ease-in;
-
-            &.active {
-                transform: translateX(-40%);
-            }
+        &__logo {
+            order: 2;
+            padding-left: px-to-rem(180);
         }
 
         &__links {
             transform: translateX(-100%);
-            left: 0;
-            transition: transform 0.5s ease-in;
-
-            &.active {
-                transform: translateX(0%);
-            }
         }
-
         &__list {
             margin-left: px-to-rem(80);
         }
 
         &__actions {
-            position: static;
+            visibility: visible;
             transform: none;
+            transition: none;
+            position: static;
             flex-direction: row;
             margin: 0;
             gap: px-to-rem(8);
-            width: px-to-rem(250);
-            height: px-to-rem(50);
+            width: px-to-rem(220);
+            height: px-to-rem(49);
             z-index: $z-index-base;
             order: 3;
+            opacity: 1;
+
+            &.active {
+                visibility: hidden;
+            }
         }
 
         &__btns {
-            font-size: px-to-rem(18);
+            @include font-scale(14);
+            width: px-to-rem(105);
+            &:last-child {
+                width: px-to-rem(115);
+            }
         }
     }
 }
@@ -172,35 +190,53 @@
 @include responsive-desktop {
     .navbar {
         height: px-to-rem(160);
-        padding: px-to-rem(10 80 0 150);
+        width: 100%;
+
+        &__content {
+            margin: 0 auto;
+            padding: px-to-rem(5 100 0 150);
+            max-width: $breakpoint-lg;
+            right: 0;
+            left: 0;
+        }
 
         &__logo {
-            padding-top: px-to-rem(10);
+            padding: 0;
+            padding-top: px-to-rem(16);
         }
 
         &__menu {
             display: none;
         }
 
+        &__menu--closeicon {
+            &.active {
+                display: none;
+            }
+        }
+
         &__links {
-            position: static;
-            @include flex-center;
-            height: inherit;
-            width: px-to-rem(480);
-            font-size: px-to-rem(16);
-            background-color: transparent;
-            padding-bottom: px-to-rem(10);
-            margin: 0;
+            transition: none;
             transform: none;
+            overflow: visible;
+            padding-top: px-to-rem(14);
+            padding-right: px-to-rem(150);
+            height: px-to-rem(17);
+            position: static;
+            width: px-to-rem(460);
+            background-color: transparent;
+            margin: 0;
             border: none;
+            visibility: visible;
+            opacity: 1;
         }
 
         &__list {
             flex-direction: row;
-            flex: 1;
-            font-size: px-to-rem(16);
-            margin-top: px-to-rem(35);
-            margin-left: 0;
+            align-items: center;
+            justify-content: space-between;
+            @include font-scale(14);
+            margin: 0;
         }
 
         &__actions {
@@ -209,14 +245,21 @@
             position: static;
             margin: 0;
             transform: none;
-            gap: px-to-rem(8);
-            width: px-to-rem(250);
+            gap: px-to-rem(10);
+            width: px-to-rem(220);
             height: px-to-rem(50);
             z-index: $z-index-base;
+            visibility: visible;
+            opacity: 1;
         }
 
         &__btns {
-            font-size: px-to-rem(15);
+            transition: none;
+            @include font-scale(14);
+            width: px-to-rem(105);
+            &:last-child {
+                width: px-to-rem(115);
+            }
         }
     }
 }

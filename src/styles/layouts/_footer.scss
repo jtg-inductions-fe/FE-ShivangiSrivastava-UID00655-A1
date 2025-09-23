@@ -21,6 +21,7 @@
         @include font-scale(16, $base: 1.6);
         color: $color-text-secondary;
         margin-top: px-to-rem(2);
+        @include text-overflow(3);
     }
 
     &__socialcontainer {
@@ -41,7 +42,7 @@
 }
 
 .company-details {
-    margin-top: px-to-rem(94);
+    margin-top: px-to-rem(92);
 
     &__container {
         min-height: px-to-rem(100);
@@ -60,11 +61,13 @@
     }
 
     &__icon {
+        @include button-reset;
         font-size: px-to-rem(24);
         transition: transform 0.3s ease;
         &--expanded {
             transform: rotate(180deg);
         }
+        @include focus;
     }
 
     &__text {
@@ -72,6 +75,7 @@
         color: $color-text-secondary;
         margin: 0;
         transition: color 0.3s ease;
+        @include text-overflow(2);
         @include font-scale(18, $base: 2);
         @include focus;
 
@@ -107,11 +111,12 @@
 
         &__text {
             @include font-scale(23, $base: 1.6);
+            margin-top: px-to-rem(6);
         }
     }
 
     .company-details {
-        margin: px-to-rem(64 0);
+        margin: px-to-rem(62 0);
         display: flex;
         min-width: px-to-rem(900);
         justify-content: space-between;
