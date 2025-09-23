@@ -102,14 +102,14 @@
     pointer-events: none;
     position: absolute;
     border-radius: 50%;
-    width: px-to-rem(272);
-    height: px-to-rem(348);
-    background: $color-secondary;
-    filter: blur(px-to-rem(335));
+    width: px-to-rem(300);
+    height: px-to-rem(500);
+    background: $color-secondary-light;
+    filter: blur(px-to-rem(100));
     // background: radial-gradient($color-secondary-light 0%, $color-secondary-lighter 40%, $color-white 70%);
     overflow: hidden;
     left: px-to-rem(-33);
-    z-index: $z-index-nav;
+    z-index: $z-index-background;
     top: px-to-rem(-154);
 }
 
@@ -189,8 +189,7 @@
 
     .pink-gradient {
         width: px-to-rem(500);
-        height: px-to-rem(500);
-        filter: blur(px-to-rem(500));
+        height: px-to-rem(700);
         left: px-to-rem(-163);
         top: px-to-rem(-292);
     }
@@ -275,8 +274,8 @@
     }
 
     .pink-gradient {
-        width: px-to-rem(504);
-        height: px-to-rem(494);
+        width: px-to-rem(600);
+        height: px-to-rem(600);
         left: px-to-rem(-60);
         top: px-to-rem(-150);
     }

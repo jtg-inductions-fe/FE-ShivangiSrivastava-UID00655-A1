@@ -10,6 +10,7 @@
     height: px-to-rem(120);
     width: 100%;
     background-color: $color-background;
+    box-shadow: 0 0 px-to-rem(25) $color-shadow;
 
     &__content {
         position: relative;
@@ -170,6 +171,10 @@
             z-index: $z-index-base;
             order: 3;
             opacity: 1;
+
+            &.active {
+                visibility: hidden;
+            }
         }
 
         &__btns {
@@ -202,6 +207,12 @@
 
         &__menu {
             display: none;
+        }
+
+        &__menu--closeicon {
+            &.active {
+                display: none;
+            }
         }
 
         &__links {

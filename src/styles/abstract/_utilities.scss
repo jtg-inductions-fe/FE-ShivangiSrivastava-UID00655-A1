@@ -6,11 +6,6 @@
     overflow: hidden;
 }
 
-//adds box shadow to navbar on scrolling
-.scrolled {
-    box-shadow: 0 0 25px $color-shadow;
-}
-
 //containerizes page beyond max viewport width
 .wrapper {
     max-width: $breakpoint-lg;
