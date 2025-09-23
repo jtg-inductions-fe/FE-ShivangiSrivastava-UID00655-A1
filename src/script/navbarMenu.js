@@ -11,7 +11,7 @@ const ready = hamOpen && hamClose && navLinks && navBtns && navMenu;
 
 /**
  * Toggles the visibility of navigation bar menu
- * @param {boolean} isOpen - indicates where the menu should be open (true) or closed (false)
+ * @param {boolean} isOpen - indicates whether the menu should be open (true) or closed (false)
  */
 function toggleMenu(isOpen) {
     if (!ready) {
