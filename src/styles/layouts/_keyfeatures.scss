@@ -11,13 +11,15 @@
 
     &__subheading {
         margin-top: 0;
+        margin-bottom: px-to-rem(26);
         @include text-overflow(4);
     }
 
     &__text {
-        margin-top: px-to-rem(32);
-        padding: px-to-rem(0 50);
+        margin-top: 0;
+        padding: px-to-rem(0 30);
         letter-spacing: px-to-rem(0.4);
+        @include font-scale(18, $base: 1.6);
         @include text-overflow(4);
     }
 
@@ -33,19 +35,14 @@
 
 .features-card {
     text-align: start;
-    border: 1px solid $color-border;
     border-radius: px-to-rem(32);
     box-sizing: border-box;
     min-height: px-to-rem(280);
     margin: px-to-rem(0 48);
     padding: px-to-rem(32);
-    transition:
-        box-shadow 0.3s ease,
-        transform 0.3s ease;
 
     &:hover {
-        box-shadow: 0 0 25px $color-shadow;
-        transform: scale(1.01);
+        border: 1px solid $color-border;
     }
     &__icon {
         font-size: px-to-rem(100);
@@ -120,9 +117,11 @@
         flex-direction: row-reverse;
         min-height: px-to-rem(900);
         justify-content: space-between;
+        overflow: hidden;
 
         &__bg {
-            margin-left: px-to-rem(20);
+            position: relative;
+            right: px-to-rem(-22);
         }
 
         &__content {
@@ -137,11 +136,10 @@
 
         &__subheading {
             margin-top: px-to-rem(16);
-            margin-bottom: px-to-rem(10);
+            margin-bottom: px-to-rem(32);
         }
 
         &__text {
-            word-spacing: px-to-rem(2.5);
             padding: 0;
         }
 

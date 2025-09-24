@@ -36,3 +36,14 @@ if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
+
+window.addEventListener('scroll', () => {
+    const heroSection = document.getElementById('hero');
+    if (window.scrollY > 0) {
+        if (!navBar.classList.contains('scrolled')) {
+            navBar.classList.add('scrolled');
+        }
+    } else {
+        navBar.classList.remove('scrolled');
+    }
+});

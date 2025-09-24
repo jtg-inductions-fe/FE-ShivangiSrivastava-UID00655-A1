@@ -35,11 +35,14 @@
         transform 0.3s ease;
 
     &:hover {
-        box-shadow: 0 0 25px $color-shadow;
+        border: none;
+        box-shadow: 0 41px 59px $color-shadow;
         transform: scale(1.01);
     }
 
     &__heading {
+        font-weight: $font-weight-bold;
+        @include font-scale(24);
         padding: 0;
         margin: px-to-rem(28 0 32);
     }
@@ -47,6 +50,7 @@
     &__text {
         letter-spacing: px-to-rem(0.6);
         margin: 0;
+        @include font-scale(18, $base: 1.6);
         @include text-overflow;
     }
 }
@@ -55,8 +59,21 @@
     .services {
         margin-top: px-to-rem(128);
 
+        &__gradient {
+            width: px-to-rem(500);
+            height: px-to-rem(500);
+            border-radius: 50%;
+            position: absolute;
+            background: $color-accent-secondary;
+            right: px-to-rem(-350);
+            top: px-to-rem(1500);
+            filter: blur(px-to-rem(85));
+            z-index: $z-index-background;
+        }
+
         &__heading {
             margin-bottom: 0;
+            @include font-scale(28);
         }
 
         &__description {
@@ -93,11 +110,23 @@
         min-height: px-to-rem(400);
         margin: px-to-rem(98 90 0 128);
 
+        &__gradient {
+            width: px-to-rem(500);
+            height: px-to-rem(570);
+            border-radius: 50%;
+            position: absolute;
+            background: $color-accent-secondary;
+            right: px-to-rem(-390);
+            top: px-to-rem(840);
+            filter: blur(px-to-rem(85));
+            z-index: $z-index-background;
+        }
+
         &__content {
             display: flex;
             flex-direction: column;
             text-align: start;
-            margin-top: px-to-rem(116);
+            margin-top: px-to-rem(130);
             max-width: px-to-rem(400);
         }
 
@@ -122,6 +151,7 @@
         }
         &__heading {
             margin-top: px-to-rem(58);
+            @include font-scale(28);
         }
         &__text {
             @include text-overflow(4);

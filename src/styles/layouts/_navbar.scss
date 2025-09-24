@@ -9,8 +9,8 @@
     z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    background-color: $color-background;
-    box-shadow: 0 0 px-to-rem(25) $color-shadow;
+    // background-color: $color-background;
+    // box-shadow: 0 0 px-to-rem(25) $color-shadow;
 
     &__content {
         position: relative;
@@ -68,7 +68,7 @@
         height: 100vh;
         top: 0;
         left: 0;
-        background-color: $color-secondary-lighter;
+        background-color: $color-accent-primary;
         z-index: $z-index-nav;
         transform: translateX(100%);
         overflow-y: auto;

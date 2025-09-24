@@ -35,6 +35,7 @@
     &__description {
         margin-top: px-to-rem(66);
         padding: px-to-rem(0 20);
+        @include font-scale(18, $base: 1.6);
         @include text-overflow(3);
     }
 }
@@ -74,7 +75,7 @@
     font-size: px-to-rem(16);
     height: px-to-rem(64);
     width: px-to-rem(64);
-    background-color: $color-btn;
+    background-color: $color-button;
     border-radius: 50%;
     color: $color-white;
     @include focus;
@@ -123,7 +124,7 @@
         font-size: px-to-rem(24);
         height: px-to-rem(100);
         width: px-to-rem(100);
-        background-color: $color-btn;
+        background-color: $color-button;
         border-radius: 50%;
         color: $color-white;
     }
@@ -174,7 +175,7 @@
         font-size: px-to-rem(24);
         height: px-to-rem(100);
         width: px-to-rem(100);
-        background-color: $color-btn;
+        background-color: $color-button;
         border-radius: 50%;
         color: $color-white;
     }
