@@ -4,6 +4,7 @@
 
 .hero {
     text-align: center;
+    margin: 0 auto;
 
     &__arrows {
         display: none;
@@ -194,7 +195,6 @@
 @include responsive-desktop {
     .hero {
         position: relative;
-        max-width: $breakpoint-lg;
         overflow: visible;
 
         &__arrows {

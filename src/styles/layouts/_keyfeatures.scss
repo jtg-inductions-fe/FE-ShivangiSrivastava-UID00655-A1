@@ -37,7 +37,7 @@
     text-align: start;
     border-radius: px-to-rem(32);
     box-sizing: border-box;
-    min-height: px-to-rem(280);
+    min-height: px-to-rem(290);
     margin: px-to-rem(0 48);
     padding: px-to-rem(32);
 
@@ -49,7 +49,7 @@
     }
 
     &__content {
-        margin-top: px-to-rem(34);
+        margin-top: px-to-rem(30);
         display: flex;
         flex-direction: column;
         flex-shrink: 1;
@@ -63,6 +63,7 @@
 
     &__text {
         margin: 0;
+        @include font-scale(18, $base: 1.6);
         @include text-overflow;
     }
 }

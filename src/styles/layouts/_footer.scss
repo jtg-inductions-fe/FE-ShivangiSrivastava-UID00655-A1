@@ -1,11 +1,16 @@
 @use '../abstract/' as *;
 
 .footer {
+    position: relative;
     padding: px-to-rem(69 16 0);
     box-sizing: border-box;
 
     &__logo {
         @include focus;
+    }
+
+    &__star {
+        display: none;
     }
 
     &__travlog {
@@ -110,6 +115,13 @@
     .footer {
         padding: px-to-rem(38 90 0 64);
 
+        &__star {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-900);
+            right: 0;
+        }
+
         &__text {
             @include font-scale(23, $base: 1.6);
             margin-top: px-to-rem(6);
@@ -153,6 +165,13 @@
         padding: px-to-rem(175 100 0 130);
         display: flex;
         min-height: px-to-rem(400);
+
+        &__star {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-100);
+            right: 0;
+        }
 
         &__text {
             @include font-scale(23, $base: 1.6);

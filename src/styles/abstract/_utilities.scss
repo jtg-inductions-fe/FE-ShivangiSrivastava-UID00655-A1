@@ -8,7 +8,7 @@
 
 //containerizes page beyond max viewport width
 .wrapper {
-    max-width: $breakpoint-lg;
+    max-width: $max-width;
     margin: 0 auto;
 }
 
@@ -17,10 +17,8 @@ nav .no-transition {
     transition: none;
 }
 
+//adds bg color and shadow on scroll
 .scrolled {
     background-color: $color-white;
     box-shadow: 0 0 25px $color-shadow;
-    transition:
-        background-color 0.5s ease,
-        box-shadow 0.5s ease;
 }

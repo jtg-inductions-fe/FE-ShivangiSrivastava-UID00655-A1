@@ -5,7 +5,6 @@
     margin-top: px-to-rem(56);
     text-align: center;
 
-    &__star,
     &__triangle {
         display: none;
     }
@@ -69,13 +68,6 @@
         min-height: px-to-rem(572);
         border-radius: px-to-rem(32);
 
-        &__star {
-            display: block;
-            position: absolute;
-            top: px-to-rem(-324);
-            right: px-to-rem(-64);
-        }
-
         &__triangle {
             display: block;
             position: absolute;
@@ -126,13 +118,6 @@
         min-height: px-to-rem(602);
         max-width: px-to-rem(1193);
         border-radius: px-to-rem(32);
-
-        &__star {
-            display: block;
-            position: absolute;
-            top: px-to-rem(500);
-            right: px-to-rem(-120);
-        }
 
         &__triangle {
             display: block;
