@@ -200,7 +200,7 @@
         &__content {
             margin: 0 auto;
             padding: px-to-rem(5 100 0 150);
-            max-width: $max-width;
+            max-width: $breakpoint-container;
             right: 0;
             left: 0;
         }

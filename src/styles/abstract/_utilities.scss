@@ -8,7 +8,7 @@
 
 //containerizes page beyond max viewport width
 .wrapper {
-    max-width: $max-width;
+    max-width: $breakpoint-container;
     margin: 0 auto;
 }
 
