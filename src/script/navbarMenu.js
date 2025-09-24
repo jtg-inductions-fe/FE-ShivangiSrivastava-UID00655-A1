@@ -37,8 +37,8 @@ if (ready) {
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
 
+//adds background to navbar on scrolling
 window.addEventListener('scroll', () => {
-    const heroSection = document.getElementById('hero');
     if (window.scrollY > 0) {
         if (!navBar.classList.contains('scrolled')) {
             navBar.classList.add('scrolled');
@@ -46,4 +46,19 @@ window.addEventListener('scroll', () => {
     } else {
         navBar.classList.remove('scrolled');
     }
+});
+
+//Sets Scroll Position on clicking nav link
+navLinks.querySelectorAll('a').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        toggleMenu(false);
+        const fixedHeaderHeight = navBar.offsetHeight;
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        const targetPosition = targetElement.offsetTop - fixedHeaderHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+        });
+    });
 });

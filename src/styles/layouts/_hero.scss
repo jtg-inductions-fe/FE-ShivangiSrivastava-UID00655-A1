@@ -4,7 +4,6 @@
 
 .hero {
     text-align: center;
-    margin-top: px-to-rem(120);
 
     &__arrows {
         display: none;
@@ -196,7 +195,6 @@
     .hero {
         position: relative;
         max-width: $breakpoint-lg;
-        margin-top: px-to-rem(160);
         overflow: visible;
 
         &__arrows {

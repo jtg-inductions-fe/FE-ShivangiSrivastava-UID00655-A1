@@ -1,7 +1,8 @@
 @use '../abstract/' as *;
 
 .footer {
-    margin: px-to-rem(69 16 0);
+    padding: px-to-rem(69 16 0);
+    box-sizing: border-box;
 
     &__logo {
         @include focus;
@@ -107,7 +108,7 @@
 
 @include responsive-tab {
     .footer {
-        margin: px-to-rem(38 90 0 64);
+        padding: px-to-rem(38 90 0 64);
 
         &__text {
             @include font-scale(23, $base: 1.6);
@@ -149,7 +150,7 @@
 
 @include responsive-desktop {
     .footer {
-        margin: px-to-rem(175 100 0 130);
+        padding: px-to-rem(175 100 0 130);
         display: flex;
         min-height: px-to-rem(400);
 
@@ -158,7 +159,7 @@
         }
 
         &__socialcontainer {
-            margin-top: px-to-rem(68);
+            margin-top: px-to-rem(60);
         }
     }
 

@@ -1,6 +1,10 @@
 @use './fonts' as *;
 @use '../abstract' as *;
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: px-to-rem(120);
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -11,5 +15,11 @@ img {
 
 main {
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding-top: px-to-rem(120);
+
+    @include responsive-desktop {
+        padding-top: px-to-rem(160);
+    }
 }

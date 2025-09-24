@@ -1,15 +1,18 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Travel!</title>
+        <title>Travlog.Co - Your Travel Booking Site</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Travel Booking Site" />
+        <meta
+            name="description"
+            content="Search and book travel deals, hotels, and flights. Find your next adventure with Travelog.co, your premier booking site."
+        />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
         <!-- NAVIGATION BAR -->
-        <header>
+        <header class="header" id="home">
             <nav class="navbar" aria-label="Primary">
                 <div class="navbar__content">
                     <div class="navbar__logo" id="nav-logo">
@@ -44,17 +47,23 @@
 
                     <div class="navbar__links no-transition" id="navbar-list">
                         <ul class="navbar__list">
-                            <li><a href="#" class="navbar__item">Home</a></li>
                             <li>
-                                <a href="#" class="navbar__item">Discover</a>
+                                <a href="#home" class="navbar__item">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="navbar__item"
+                                <a href="#discover" class="navbar__item"
+                                    >Discover</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#special-deals" class="navbar__item"
                                     >Special Deals</a
                                 >
                             </li>
                             <li>
-                                <a href="#" class="navbar__item">Contact</a>
+                                <a href="#footer-section" class="navbar__item"
+                                    >Contact</a
+                                >
                             </li>
                         </ul>
                     </div>
@@ -71,9 +80,9 @@
             </nav>
         </header>
 
-        <div class="wrapper">
+        <div>
             <!-- HERO SECTION -->
-            <main id="main-section">
+            <main class="wrapper" id="main-section">
                 <section
                     aria-label="Introduction Section"
                     class="hero"
@@ -215,7 +224,11 @@
                 </section>
 
                 <!-- SERVICES SECTION -->
-                <section aria-label="Services Provided" class="services">
+                <section
+                    aria-label="Services Provided"
+                    class="services"
+                    id="discover"
+                >
                     <div class="services__gradient"></div>
                     <div class="services__content">
                         <h2 class="services__heading">SERVICES</h2>
@@ -271,7 +284,11 @@
                 </section>
 
                 <!-- TRAVEL POINT SECTION -->
-                <section aria-label="Travel points" class="travel">
+                <section
+                    aria-label="Travel points"
+                    class="travel"
+                    id="special-deals"
+                >
                     <div class="travel__ticket">
                         <img
                             src="src/assets/images/travel-object.png"
@@ -595,7 +612,7 @@
             </main>
 
             <!-- DETAILS SECTION (FOOTER) -->
-            <footer class="footer" id="footer-section">
+            <footer class="wrapper footer" id="footer-section">
                 <div class="footer__content">
                     <div class="footer__travlog">
                         <a href="/" class="footer__logo">

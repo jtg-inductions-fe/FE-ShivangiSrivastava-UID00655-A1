@@ -2,15 +2,16 @@
 @use '../components' as *;
 @use '../base' as *;
 
-.navbar {
+.header {
     position: fixed;
     margin: 0 auto;
     top: 0;
     z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    // background-color: $color-background;
-    // box-shadow: 0 0 px-to-rem(25) $color-shadow;
+}
+.navbar {
+    height: inherit;
 
     &__content {
         position: relative;
@@ -138,9 +139,10 @@
 }
 
 @include responsive-tab {
-    .navbar {
+    .header {
         height: px-to-rem(113);
-
+    }
+    .navbar {
         &__content {
             padding: px-to-rem(0 64 0 68);
             align-items: center;
@@ -188,10 +190,10 @@
 }
 
 @include responsive-desktop {
-    .navbar {
+    .header {
         height: px-to-rem(160);
-        width: 100%;
-
+    }
+    .navbar {
         &__content {
             margin: 0 auto;
             padding: px-to-rem(5 100 0 150);
