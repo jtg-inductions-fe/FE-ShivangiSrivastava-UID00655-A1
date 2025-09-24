@@ -31,6 +31,7 @@
     padding: px-to-rem(30 26);
     border-radius: px-to-rem(30);
     min-height: px-to-rem(280);
+    background-color: $color-white;
     transition:
         box-shadow 0.3s ease,
         transform 0.3s ease;
