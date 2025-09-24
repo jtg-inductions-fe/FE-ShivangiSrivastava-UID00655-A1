@@ -9,23 +9,18 @@
     z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
+    transition:
+        background-color 0.2s linear,
+        box-shadow 0.2s linear;
 }
 .navbar {
     height: inherit;
-    transition:
-        background-color 0.5s ease,
-        box-shadow 0.5s ease;
-
-    &__content {
-        position: relative;
-        z-index: $z-index-overlay;
-        height: inherit;
-        width: inherit;
-        box-sizing: border-box;
-        padding: px-to-rem(0 20 0 17);
-        @include flex-center;
-        justify-content: space-between;
-    }
+    position: relative;
+    z-index: $z-index-overlay;
+    box-sizing: border-box;
+    padding: px-to-rem(0 20 0 17);
+    @include flex-center;
+    justify-content: space-between;
 
     &__logo {
         z-index: inherit;
@@ -119,7 +114,7 @@
         flex-direction: column;
         gap: px-to-rem(32);
         width: 100%;
-        top: px-to-rem(600);
+        top: 75vh;
         z-index: $z-index-overlay;
         transform: translateX(100%);
         visibility: hidden;
@@ -135,7 +130,7 @@
         }
     }
 
-    &__btns {
+    &__buttons {
         font-size: px-to-rem(20);
         width: 90vw;
     }
@@ -146,10 +141,7 @@
         height: px-to-rem(113);
     }
     .navbar {
-        &__content {
-            padding: px-to-rem(0 64 0 68);
-            align-items: center;
-        }
+        padding: px-to-rem(0 64 0 68);
 
         &__logo {
             order: 2;
@@ -182,7 +174,7 @@
             }
         }
 
-        &__btns {
+        &__buttons {
             @include font-scale(14);
             width: px-to-rem(105);
             &:last-child {
@@ -197,20 +189,17 @@
         height: px-to-rem(160);
     }
     .navbar {
-        &__content {
-            margin: 0 auto;
-            padding: px-to-rem(5 100 0 150);
-            max-width: $breakpoint-container;
-            right: 0;
-            left: 0;
-        }
+        margin: 0 auto;
+        padding: px-to-rem(25 100 0 150);
+        max-width: $breakpoint-container;
+        right: 0;
+        left: 0;
 
         &__logo {
             padding: 0;
-            padding-top: px-to-rem(16);
         }
 
-        &__menu {
+        &__menu-icons {
             display: none;
         }
 
@@ -224,11 +213,9 @@
             transition: none;
             transform: none;
             overflow: visible;
-            padding-top: px-to-rem(14);
-            padding-right: px-to-rem(150);
             height: px-to-rem(17);
             position: static;
-            width: px-to-rem(460);
+            width: px-to-rem(420);
             background-color: transparent;
             margin: 0;
             border: none;
@@ -242,10 +229,10 @@
             justify-content: space-between;
             @include font-scale(14);
             margin: 0;
+            padding: 0;
         }
 
         &__actions {
-            padding-top: px-to-rem(15);
             flex-direction: row;
             position: static;
             margin: 0;
@@ -258,7 +245,7 @@
             opacity: 1;
         }
 
-        &__btns {
+        &__buttons {
             transition: none;
             @include font-scale(14);
             width: px-to-rem(105);
@@ -271,7 +258,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .navbar__links,
-    .navbar__btns {
+    .navbar__buttons {
         transition: none;
     }
 }

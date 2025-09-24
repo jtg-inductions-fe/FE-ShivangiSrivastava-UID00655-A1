@@ -13,69 +13,67 @@
     <body>
         <!-- NAVIGATION BAR -->
         <header class="header" id="home">
-            <nav class="navbar" aria-label="Primary">
-                <div class="navbar__content">
-                    <div class="navbar__logo" id="nav-logo">
-                        <a href="/" aria-label="Home" class="navbar__home">
-                            <img
-                                src="src/assets/images/logo.png"
-                                alt="Travel logo"
-                                aria-label="logo"
-                            />
-                        </a>
-                    </div>
+            <nav class="navbar" aria-label="Primary Navigation">
+                <div class="navbar__logo" id="nav-logo">
+                    <a href="/" aria-label="Home" class="navbar__home">
+                        <img
+                            src="src/assets/images/logo.png"
+                            alt="Travlog logo"
+                            aria-label="logo"
+                        />
+                    </a>
+                </div>
 
-                    <div id="nav-menu">
-                        <button
-                            class="icon-ham-menu navbar__menu navbar__menu--openicon"
-                            type="button"
-                            aria-label="open menu"
-                            aria-expanded="false"
-                            aria-controls="nav-links nav-btns"
-                            id="menu-open"
-                        ></button>
+                <div class="navbar__menu-icons" id="nav-menu">
+                    <button
+                        class="icon-ham-menu navbar__menu navbar__menu--openicon"
+                        type="button"
+                        aria-label="open menu"
+                        aria-expanded="false"
+                        aria-controls="nav-links nav-btns"
+                        id="menu-open"
+                    ></button>
 
-                        <button
-                            class="icon-cross navbar__menu navbar__menu--closeicon"
-                            type="button"
-                            aria-label="Close menu"
-                            aria-expanded="true"
-                            aria-controls="nav-links nav-btns"
-                            id="menu-close"
-                        ></button>
-                    </div>
+                    <button
+                        class="icon-cross navbar__menu navbar__menu--closeicon"
+                        type="button"
+                        aria-label="Close menu"
+                        aria-expanded="true"
+                        aria-controls="nav-links nav-btns"
+                        id="menu-close"
+                    ></button>
+                </div>
 
-                    <div class="navbar__links no-transition" id="navbar-list">
-                        <ul class="navbar__list">
-                            <li>
-                                <a href="#home" class="navbar__item">Home</a>
-                            </li>
-                            <li>
-                                <a href="#discover" class="navbar__item"
-                                    >Discover</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#special-deals" class="navbar__item"
-                                    >Special Deals</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#footer-section" class="navbar__item"
-                                    >Contact</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+                <div class="navbar__links no-transition" id="navbar-list">
+                    <ul class="navbar__list">
+                        <li>
+                            <a href="#home" class="navbar__item">Home</a>
+                        </li>
+                        <li>
+                            <a href="#discover" class="navbar__item"
+                                >Discover</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#special-deals" class="navbar__item"
+                                >Special Deals</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#footer-section" class="navbar__item"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="navbar__actions no-transition" id="nav-btns">
-                        <button class="button button--secondary navbar__btns">
-                            Log In
-                        </button>
-                        <button class="button button--primary navbar__btns">
-                            Sign Up
-                        </button>
-                    </div>
+                <div class="navbar__actions no-transition" id="nav-btns">
+                    <button class="button button--secondary navbar__buttons">
+                        Log In
+                    </button>
+                    <button class="button button--primary navbar__buttons">
+                        Sign Up
+                    </button>
                 </div>
             </nav>
         </header>
@@ -90,24 +88,29 @@
                             <source
                                 srcset="src/assets/images/hero-img-desktop.png"
                                 media="(width >=1440px)"
+                                width="790px"
+                                height="737px"
                             />
                             <source
                                 srcset="src/assets/images/hero-img-tablet.png"
                                 media="(width >=1024px)"
+                                width="789px"
+                                height="748px"
                             />
                             <img
                                 src="src/assets/images/hero-img-mobile.png"
                                 alt="Collage of Travel Images"
+                                width="406px"
+                                height="376px"
                             />
                         </picture>
                     </div>
                     <div
                         class="hero__arrows"
-                        alt=""
                         aria-hidden="true"
                         role="presentation"
                     >
-                        <img src="src/assets/images/arrow.png" />
+                        <img src="src/assets/images/arrow.png" alt="" />
                     </div>
 
                     <div class="hero__content">
@@ -118,15 +121,14 @@
                                 class="icon-work-bag hero__exploreicon"
                             ></span>
                         </button>
-                        <h1 class="heading hero__heading">
+                        <h1 class="hero__heading">
                             Travel
-                            <span
-                                class="heading hero__heading hero__heading--primary"
+                            <span class="hero__heading hero__heading--primary"
                                 >top destination
                             </span>
                             of the world
                         </h1>
-                        <p class="para hero__para">
+                        <p class="hero__para">
                             We always make our customers happy by providing as
                             many choices as possible
                         </p>
@@ -216,14 +218,16 @@
 
             <!-- SERVICES SECTION -->
             <section
-                aria-label="Services Provided"
                 class="services"
                 id="discover"
+                aria-labelledby="services-heading"
             >
                 <div class="services__gradient"></div>
                 <div class="services__content">
-                    <h2 class="services__heading">SERVICES</h2>
-                    <h3 class="section-subheading services__description">
+                    <h2 class="services__heading" id="services-heading">
+                        SERVICES
+                    </h2>
+                    <h3 class="services__description">
                         Our top value categories for you
                     </h3>
                 </div>
@@ -272,7 +276,7 @@
 
             <!-- TRAVEL POINT SECTION -->
             <section
-                aria-label="Travel points"
+                aria-labelledby="travel-heading"
                 class="travel"
                 id="special-deals"
             >
@@ -289,20 +293,26 @@
                         <source
                             srcset="src/assets/images/travelpoint-bg.png"
                             media="(width >=1024px)"
+                            width="870px"
+                            height="697px"
                         />
                         <img
                             src="src/assets/images/travelpoint-bg-mobile.png"
                             alt="Image of a woman on a suitcase"
+                            width="398px"
+                            height="319px"
                         />
                     </picture>
                 </div>
 
                 <div class="travel__content">
-                    <h2 class="travel__heading">TRAVEL POINT</h2>
+                    <h2 class="travel__heading" id="travel-heading">
+                        TRAVEL POINT
+                    </h2>
                     <h3 class="travel__subheading">
                         We helping you find your dream location
                     </h3>
-                    <p class="para travel__text">
+                    <p class="travel__text">
                         Contrary to popular belief, Lorem Ipsum is not simply
                         random text. It has roots in a piece of classical Latin
                         literature from 45 BC.
@@ -330,24 +340,30 @@
 
             <!-- Key Features -->
 
-            <section aria-label="Key Features" class="features">
+            <section aria-labelledby="features-heading" class="features">
                 <div class="features__bg">
                     <picture>
                         <source
                             srcset="src/assets/images/keyfeatures-bg-tab.png"
                             media="(width>=1024px)"
+                            width="694px"
+                            height="869px"
                         />
                         <img
                             src="src/assets/images/keyfeatures-bg-mobile.png"
                             alt="Collage of popular destinations"
+                            width="350px"
+                            height="439px"
                         />
                     </picture>
                 </div>
 
                 <div class="features__content">
-                    <h2 class="features__heading">KEY FEATURES</h2>
+                    <h2 class="features__heading" id="features-heading">
+                        KEY FEATURES
+                    </h2>
                     <h3 class="features__subheading">We offer best services</h3>
-                    <p class="para features__text">
+                    <p class="features__text">
                         Contrary to popular belief, Lorem Ipsum is not simply
                         random text. It has roots in a piece of classical Latin
                         literature from 45 BC.
@@ -401,8 +417,13 @@
             </section>
 
             <!-- TESTIMONIALS SECTION -->
-            <section class="testimonials">
-                <h2 class="testimonials__heading">TESTIMONIALS</h2>
+            <section
+                class="testimonials"
+                aria-labelledby="testimonials-heading"
+            >
+                <h2 class="testimonials__heading" id="testimonials-heading">
+                    TESTIMONIALS
+                </h2>
                 <h3 class="testimonials__description">Trust our clients</h3>
                 <div class="testimonials__bg">
                     <picture aria-hidden="true" role="presentation">
@@ -542,9 +563,9 @@
 
             <!-- SUBSCRIPTION FORM -->
 
-            <section class="subscribe" aria-label="Subscription Form">
+            <section class="subscribe" aria-labelledby="subscribe-heading">
                 <h2 class="subscribe__heading">SUBSCRIBE TO OUR NEWSLETTER</h2>
-                <h3 class="subscribe__subheading">
+                <h3 class="subscribe__subheading" id="subscribe-heading">
                     Prepare yourself & let's explore the beauty of the world
                 </h3>
 
@@ -566,6 +587,8 @@
                             type="email"
                             class="subscribe__input"
                             placeholder="Your Email"
+                            id="email"
+                            aria-label="Enter your email"
                         />
                     </div>
                     <button class="button button--primary subscribe__button">
@@ -591,7 +614,7 @@
                     <a href="/" class="footer__logo">
                         <img
                             src="src/assets/images/logo.png"
-                            alt="Travel logo"
+                            alt="Travlog logo"
                             aria-label="logo"
                         />
                     </a>

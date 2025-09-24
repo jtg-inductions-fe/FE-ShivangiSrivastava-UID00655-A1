@@ -4,7 +4,7 @@
 .services {
     position: relative;
     text-align: center;
-    margin: px-to-rem(64 16 0);
+    margin: px-to-rem(68 16 0);
 
     &__heading {
         margin-bottom: 0;
@@ -46,7 +46,7 @@
         font-weight: $font-weight-bold;
         @include font-scale(24);
         padding: 0;
-        margin: px-to-rem(28 0 32);
+        margin: px-to-rem(28 0 30);
     }
 
     &__text {

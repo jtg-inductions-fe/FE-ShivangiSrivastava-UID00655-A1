@@ -2,6 +2,7 @@
 
 h1 {
     font-weight: $font-weight-bold;
+    margin-block: px-to-rem(8);
     @include font-scale(40);
 
     @include responsive-tab {

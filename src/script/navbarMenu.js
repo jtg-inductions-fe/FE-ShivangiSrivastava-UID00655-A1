@@ -7,6 +7,7 @@ const navMenu = document.querySelector('#nav-menu');
 const mainSection = document.querySelector('#main-section');
 const footerSection = document.querySelector('#footer-section');
 const navBar = document.querySelector('.navbar');
+const header = document.querySelector('#home');
 const ready = hamOpen && hamClose && navLinks && navBtns && navMenu;
 
 /**
@@ -41,10 +42,10 @@ if (ready) {
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         if (!navBar.classList.contains('scrolled')) {
-            navBar.classList.add('scrolled');
+            header.classList.add('scrolled');
         }
     } else {
-        navBar.classList.remove('scrolled');
+        header.classList.remove('scrolled');
     }
 });
 
