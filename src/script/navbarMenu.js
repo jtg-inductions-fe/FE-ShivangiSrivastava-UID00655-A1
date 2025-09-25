@@ -7,6 +7,7 @@ const navMenu = document.querySelector('#nav-menu');
 const mainSection = document.querySelector('#main-section');
 const footerSection = document.querySelector('#footer-section');
 const navBar = document.querySelector('.navbar');
+const header = document.querySelector('#home');
 const ready = hamOpen && hamClose && navLinks && navBtns && navMenu;
 
 /**
@@ -36,3 +37,29 @@ if (ready) {
     hamOpen.addEventListener('click', () => toggleMenu(true));
     hamClose.addEventListener('click', () => toggleMenu(false));
 }
+
+//adds background to navbar on scrolling
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        if (!navBar.classList.contains('scrolled')) {
+            header.classList.add('scrolled');
+        }
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+//Sets Scroll Position on clicking nav link
+navLinks.querySelectorAll('a').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        toggleMenu(false);
+        const fixedHeaderHeight = navBar.offsetHeight;
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        const targetPosition = targetElement.offsetTop - fixedHeaderHeight;
+
+        window.scrollTo({
+            top: targetPosition,
+        });
+    });
+});

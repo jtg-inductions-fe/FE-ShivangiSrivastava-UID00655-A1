@@ -1,7 +1,8 @@
 @use '../abstract' as *;
 
-.heading {
+h1 {
     font-weight: $font-weight-bold;
+    margin-block: px-to-rem(8);
     @include font-scale(40);
 
     @include responsive-tab {
@@ -13,8 +14,8 @@
     }
 }
 
-.para {
-    font-weight: $font-weight-normal;
+p {
+    font-weight: $font-weight-regular;
     color: $color-text-secondary;
     @include font-scale(16, $base: 1.6);
 
@@ -26,7 +27,7 @@
     }
 }
 
-.section-heading {
+h2 {
     font-weight: $font-weight-bold;
     @include font-scale(16);
     color: $color-primary;
@@ -43,7 +44,7 @@
     }
 }
 
-.section-subheading {
+h3 {
     font-weight: $font-weight-bold;
     @include font-scale(32);
 
@@ -53,23 +54,4 @@
     @include responsive-desktop {
         @include font-scale(44);
     }
-}
-
-.card-heading {
-    font-weight: $font-weight-bold;
-    @include font-scale(24);
-
-    @include responsive-tab {
-        @include font-scale(28);
-    }
-
-    @include responsive-desktop {
-        @include font-scale(28);
-    }
-}
-
-.card-text {
-    font-weight: $font-weight-normal;
-    @include font-scale(18, $base: 1.6);
-    color: $color-text-secondary;
 }

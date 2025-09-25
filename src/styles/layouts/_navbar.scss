@@ -2,26 +2,25 @@
 @use '../components' as *;
 @use '../base' as *;
 
-.navbar {
+.header {
     position: fixed;
     margin: 0 auto;
     top: 0;
     z-index: $z-index-nav;
     height: px-to-rem(120);
     width: 100%;
-    background-color: $color-background;
-    box-shadow: 0 0 px-to-rem(25) $color-shadow;
-
-    &__content {
-        position: relative;
-        z-index: $z-index-overlay;
-        height: inherit;
-        width: inherit;
-        box-sizing: border-box;
-        padding: px-to-rem(0 20 0 17);
-        @include flex-center;
-        justify-content: space-between;
-    }
+    transition:
+        background-color 0.2s linear,
+        box-shadow 0.2s linear;
+}
+.navbar {
+    height: inherit;
+    position: relative;
+    z-index: $z-index-overlay;
+    box-sizing: border-box;
+    padding: px-to-rem(0 20 0 17);
+    @include flex-center;
+    justify-content: space-between;
 
     &__logo {
         z-index: inherit;
@@ -68,7 +67,7 @@
         height: 100vh;
         top: 0;
         left: 0;
-        background-color: $color-secondary-lighter;
+        background-color: $color-accent-primary;
         z-index: $z-index-nav;
         transform: translateX(100%);
         overflow-y: auto;
@@ -115,7 +114,7 @@
         flex-direction: column;
         gap: px-to-rem(32);
         width: 100%;
-        top: px-to-rem(600);
+        top: 75vh;
         z-index: $z-index-overlay;
         transform: translateX(100%);
         visibility: hidden;
@@ -131,20 +130,18 @@
         }
     }
 
-    &__btns {
+    &__buttons {
         font-size: px-to-rem(20);
         width: 90vw;
     }
 }
 
 @include responsive-tab {
-    .navbar {
+    .header {
         height: px-to-rem(113);
-
-        &__content {
-            padding: px-to-rem(0 64 0 68);
-            align-items: center;
-        }
+    }
+    .navbar {
+        padding: px-to-rem(0 64 0 68);
 
         &__logo {
             order: 2;
@@ -177,7 +174,7 @@
             }
         }
 
-        &__btns {
+        &__buttons {
             @include font-scale(14);
             width: px-to-rem(105);
             &:last-child {
@@ -188,24 +185,21 @@
 }
 
 @include responsive-desktop {
-    .navbar {
+    .header {
         height: px-to-rem(160);
-        width: 100%;
-
-        &__content {
-            margin: 0 auto;
-            padding: px-to-rem(5 100 0 150);
-            max-width: $breakpoint-lg;
-            right: 0;
-            left: 0;
-        }
+    }
+    .navbar {
+        margin: 0 auto;
+        padding: px-to-rem(25 100 0 150);
+        max-width: $breakpoint-container;
+        right: 0;
+        left: 0;
 
         &__logo {
             padding: 0;
-            padding-top: px-to-rem(16);
         }
 
-        &__menu {
+        &__menu-icons {
             display: none;
         }
 
@@ -219,11 +213,9 @@
             transition: none;
             transform: none;
             overflow: visible;
-            padding-top: px-to-rem(14);
-            padding-right: px-to-rem(150);
             height: px-to-rem(17);
             position: static;
-            width: px-to-rem(460);
+            width: px-to-rem(420);
             background-color: transparent;
             margin: 0;
             border: none;
@@ -237,10 +229,10 @@
             justify-content: space-between;
             @include font-scale(14);
             margin: 0;
+            padding: 0;
         }
 
         &__actions {
-            padding-top: px-to-rem(15);
             flex-direction: row;
             position: static;
             margin: 0;
@@ -253,7 +245,7 @@
             opacity: 1;
         }
 
-        &__btns {
+        &__buttons {
             transition: none;
             @include font-scale(14);
             width: px-to-rem(105);
@@ -266,7 +258,7 @@
 
 @media (prefers-reduced-motion: reduce) {
     .navbar__links,
-    .navbar__btns {
+    .navbar__buttons {
         transition: none;
     }
 }

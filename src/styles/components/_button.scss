@@ -17,13 +17,13 @@
         box-shadow 0.2s ease;
     transform: 0.3s ease;
 
-    &--white {
-        background-color: $color-white;
+    &--primary {
+        background-color: $color-button;
+        color: $color-white;
     }
 
-    &--purple {
-        background-color: $color-btn;
-        color: $color-white;
+    &--secondary {
+        background-color: $color-white;
     }
 
     &:hover {

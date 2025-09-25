@@ -28,18 +28,7 @@
     src:
         url('#{$font-path}Regular.woff2') format('woff2'),
         url('#{$font-path}Regular.woff') format('woff');
-    font-weight: $font-weight-normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-//Roboto Medium
-@font-face {
-    font-family: 'Roboto';
-    src:
-        url('#{$font-path}Medium.woff2') format('woff2'),
-        url('#{$font-path}Medium.woff2') format('woff');
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-regular;
     font-style: normal;
     font-display: swap;
 }

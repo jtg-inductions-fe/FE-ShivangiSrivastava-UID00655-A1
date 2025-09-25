@@ -1,758 +1,753 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Travel!</title>
+        <title>Travlog.Co - Your Travel Booking Site</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Travel Booking Site" />
+        <meta
+            name="description"
+            content="Search and book travel deals, hotels, and flights. Find your next adventure with Travelog.co, your premier booking site."
+        />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
         <!-- NAVIGATION BAR -->
-        <header>
-            <nav class="navbar" aria-label="Primary">
-                <div class="navbar__content">
-                    <div class="navbar__logo" id="nav-logo">
-                        <a href="/" aria-label="Home" class="navbar__home">
-                            <img
-                                src="src/assets/images/logo.png"
-                                alt="Travel logo"
-                                aria-label="logo"
-                            />
-                        </a>
-                    </div>
+        <header class="header" id="home">
+            <nav class="navbar" aria-label="Primary Navigation">
+                <div class="navbar__logo" id="nav-logo">
+                    <a href="/" aria-label="Home" class="navbar__home">
+                        <img
+                            src="src/assets/images/logo.png"
+                            alt="Travlog logo"
+                            aria-label="logo"
+                        />
+                    </a>
+                </div>
 
-                    <div id="nav-menu">
-                        <button
-                            class="icon-ham-menu navbar__menu navbar__menu--openicon"
-                            type="button"
-                            aria-label="open menu"
-                            aria-expanded="false"
-                            aria-controls="nav-links nav-btns"
-                            id="menu-open"
-                        ></button>
+                <div class="navbar__menu-icons" id="nav-menu">
+                    <button
+                        class="icon-ham-menu navbar__menu navbar__menu--openicon"
+                        type="button"
+                        aria-label="open menu"
+                        aria-expanded="false"
+                        aria-controls="nav-links nav-btns"
+                        id="menu-open"
+                    ></button>
 
-                        <button
-                            class="icon-cross navbar__menu navbar__menu--closeicon"
-                            type="button"
-                            aria-label="Close menu"
-                            aria-expanded="true"
-                            aria-controls="nav-links nav-btns"
-                            id="menu-close"
-                        ></button>
-                    </div>
+                    <button
+                        class="icon-cross navbar__menu navbar__menu--closeicon"
+                        type="button"
+                        aria-label="Close menu"
+                        aria-expanded="true"
+                        aria-controls="nav-links nav-btns"
+                        id="menu-close"
+                    ></button>
+                </div>
 
-                    <div class="navbar__links no-transition" id="navbar-list">
-                        <ul class="navbar__list">
-                            <li><a href="#" class="navbar__item">Home</a></li>
-                            <li>
-                                <a href="#" class="navbar__item">Discover</a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar__item"
-                                    >Special Deals</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" class="navbar__item">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="navbar__links no-transition" id="navbar-list">
+                    <ul class="navbar__list">
+                        <li>
+                            <a href="#home" class="navbar__item">Home</a>
+                        </li>
+                        <li>
+                            <a href="#discover" class="navbar__item"
+                                >Discover</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#special-deals" class="navbar__item"
+                                >Special Deals</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#footer-section" class="navbar__item"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
 
-                    <div class="navbar__actions no-transition" id="nav-btns">
-                        <button class="button button--white navbar__btns">
-                            Log In
-                        </button>
-                        <button class="button button--purple navbar__btns">
-                            Sign Up
-                        </button>
-                    </div>
+                <div class="navbar__actions no-transition" id="nav-btns">
+                    <button class="button button--secondary navbar__buttons">
+                        Log In
+                    </button>
+                    <button class="button button--primary navbar__buttons">
+                        Sign Up
+                    </button>
                 </div>
             </nav>
         </header>
 
-        <div class="wrapper">
-            <!-- HERO SECTION -->
-            <main id="main-section">
-                <section aria-label="Introduction Section" class="hero">
-                    <div class="pink-gradient"></div>
-                    <div class="hero__main">
-                        <div class="hero__bg">
-                            <picture>
-                                <source
-                                    srcset="
-                                        src/assets/images/hero-img-desktop.png
-                                    "
-                                    media="(width >=1440px)"
-                                />
-                                <source
-                                    srcset="
-                                        src/assets/images/hero-img-tablet.png
-                                    "
-                                    media="(width >=1024px)"
-                                />
-                                <img
-                                    src="src/assets/images/hero-img-mobile.png"
-                                    alt="Collage of Travel Images"
-                                />
-                            </picture>
-                        </div>
-                        <div
-                            class="hero__arrows"
-                            alt=""
-                            aria-hidden="true"
-                            role="presentation"
-                        >
-                            <img src="src/assets/images/arrow.png" />
-                        </div>
-
-                        <div class="hero__content">
-                            <button
-                                class="button button--white hero__explorebtn"
-                            >
-                                Explore the world!<span
-                                    class="icon-work-bag hero__exploreicon"
-                                ></span>
-                            </button>
-                            <h1 class="heading hero__heading">
-                                Travel
-                                <span
-                                    class="heading hero__heading hero__heading--primary"
-                                    >top destination
-                                </span>
-                                of the world
-                            </h1>
-                            <p class="para hero__para">
-                                We always make our customers happy by providing
-                                as many choices as possible
-                            </p>
-                            <div
-                                class="hero__actions"
-                                role="group"
-                                aria-label="Startup Actions"
-                            >
-                                <button
-                                    class="button button--purple hero__buttons"
-                                >
-                                    Get Started
-                                </button>
-                                <button
-                                    class="button button--white hero__buttons hero__buttons--white"
-                                >
-                                    <span
-                                        class="icon-play-circle hero__buttons--icon"
-                                    ></span
-                                    >Watch Demo
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero__logos">
-                        <div
-                            class="hero__partnerlogo"
-                            aria-label="Trusted by leading companies"
-                        >
-                            <a
-                                class="hero__logolink"
-                                href="https://www.tripadvisor.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="src/assets/images/trip-ad-logo.png"
-                                    alt="TripAdvisor"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.expedia.co.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="src/assets/images/expedia-logo.png"
-                                    alt="Expedia"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.booking.com/in"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="src/assets/images/booking-logo.png"
-                                    alt="Booking.com"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.airbnb.co.in/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="src/assets/images/airbnb-logo.png"
-                                    alt="Airbnb"
-                            /></a>
-                        </div>
-                        <div class="hero__partnerlogo">
-                            <a
-                                class="hero__logolink"
-                                href="https://www.orbitz.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                ><img
-                                    src="src/assets/images/orbitz-logo.png"
-                                    alt="Orbitz"
-                            /></a>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- SERVICES SECTION -->
-                <section aria-label="Services Provided" class="services">
-                    <div class="services__content">
-                        <h4 class="section-heading services__heading">
-                            SERVICES
-                        </h4>
-                        <p class="section-subheading services__description">
-                            Our top value categories for you
-                        </p>
-                    </div>
-                    <div class="services__cardcontainer">
-                        <div class="services-card">
-                            <div class="services-card__img">
-                                <img
-                                    src="src/assets/images/services-1.png"
-                                    alt="Globe Image"
-                                />
-                            </div>
-                            <h5 class="services-card__heading card-heading">
-                                Best Tour Guide
-                            </h5>
-                            <p class="services-card__text card-text">
-                                What looked like a small patch of purple grass,
-                                above five feet.
-                            </p>
-                        </div>
-                        <div class="services-card">
-                            <div class="services-card__img">
-                                <img
-                                    src="src/assets/images/services-2.png"
-                                    alt="Calendar Image"
-                                />
-                            </div>
-                            <h5 class="services-card__heading card-heading">
-                                Easy Booking
-                            </h5>
-                            <p class="services-card__text card-text">
-                                Square, was moving across the sand in their
-                                direction.
-                            </p>
-                        </div>
-                        <div class="services-card">
-                            <div class="services-card__img">
-                                <img
-                                    src="src/assets/images/services-3.png"
-                                    alt="Weather Image"
-                                />
-                            </div>
-                            <h5 class="services-card__heading card-heading">
-                                Weather Forecast
-                            </h5>
-                            <p class="services-card__text card-text">
-                                What looked like a small patch of purple grass,
-                                above five feet.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- TRAVEL POINT SECTION -->
-                <section aria-label="Travel points" class="travel">
-                    <div class="travel__ticket">
-                        <img
-                            src="src/assets/images/travel-object.png"
-                            alt=""
-                            aria-hidden="true"
-                            role="presentation"
-                        />
-                    </div>
-                    <div class="travel__img">
+        <!-- HERO SECTION -->
+        <main class="wrapper" id="main-section">
+            <section aria-label="Introduction Section" class="hero" id="hero">
+                <div class="hero__gradient"></div>
+                <div class="hero__main">
+                    <div class="hero__bg">
                         <picture>
                             <source
-                                srcset="src/assets/images/travelpoint-bg.png"
+                                srcset="src/assets/images/hero-img-desktop.png"
+                                media="(width >=1440px)"
+                                width="790px"
+                                height="737px"
+                            />
+                            <source
+                                srcset="src/assets/images/hero-img-tablet.png"
                                 media="(width >=1024px)"
+                                width="789px"
+                                height="748px"
                             />
                             <img
-                                src="src/assets/images/travelpoint-bg-mobile.png"
-                                alt="Image of a woman on a suitcase"
+                                src="src/assets/images/hero-img-mobile.png"
+                                alt="Collage of Travel Images"
+                                width="406px"
+                                height="366px"
                             />
                         </picture>
                     </div>
-
-                    <div class="travel__content">
-                        <h4 class="section-heading travel__heading">
-                            TRAVEL POINT
-                        </h4>
-                        <p class="section-subheading travel__subheading">
-                            We helping you find your dream location
-                        </p>
-                        <p class="para travel__text">
-                            Contrary to popular belief, Lorem Ipsum is not
-                            simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC.
-                        </p>
-                        <div class="travel__cardscontainer">
-                            <div class="travel-card">
-                                <h5 class="travel-card__heading">500+</h5>
-                                <p class="travel-card__text">Holiday Package</p>
-                            </div>
-                            <div class="travel-card">
-                                <h5 class="travel-card__heading">100</h5>
-                                <p class="travel-card__text">Luxury Hotel</p>
-                            </div>
-                            <div class="travel-card">
-                                <h5 class="travel-card__heading">7</h5>
-                                <p class="travel-card__text">
-                                    Premium Airlines
-                                </p>
-                            </div>
-                            <div class="travel-card">
-                                <h5 class="travel-card__heading">2k+</h5>
-                                <p class="travel-card__text">Happy Customers</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Key Features -->
-
-                <section aria-label="Key Features" class="features">
-                    <div class="features__bg">
-                        <picture>
-                            <source
-                                srcset="
-                                    src/assets/images/keyfeatures-bg-tab.png
-                                "
-                                media="(width>=1024px)"
-                            />
-                            <img
-                                src="src/assets/images/keyfeatures-bg-mobile.png"
-                                alt="Collage of popular destinations"
-                            />
-                        </picture>
-                    </div>
-
-                    <div class="features__content">
-                        <h4 class="section-heading features__heading">
-                            KEY FEATURES
-                        </h4>
-                        <p class="section-subheading features__subheading">
-                            We offer best services
-                        </p>
-                        <p class="para features__text">
-                            Contrary to popular belief, Lorem Ipsum is not
-                            simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC.
-                        </p>
-
-                        <div class="features__cardcontainer">
-                            <div class="features-card">
-                                <span
-                                    class="icon-locationpin features-card__icon"
-                                    ><span class="path1"></span
-                                    ><span class="path2"></span
-                                ></span>
-                                <div class="features-card__content">
-                                    <h5 class="features-card__heading">
-                                        We offer best services
-                                    </h5>
-                                    <p class="card-text features-card__text">
-                                        Lorem Ipsum is not simply random text
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="features-card">
-                                <span class="icon-calendar features-card__icon"
-                                    ><span class="path1"></span
-                                    ><span class="path2"></span
-                                ></span>
-                                <div class="features-card__content">
-                                    <h5 class="features-card__heading">
-                                        Schedule your trip
-                                    </h5>
-                                    <p class="card-text features-card__text">
-                                        It has roots in a piece of classical
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="features-card">
-                                <span class="icon-coupon features-card__icon"
-                                    ><span class="path1"></span
-                                    ><span class="path2"></span
-                                ></span>
-                                <div class="features-card__content">
-                                    <h5 class="features-card__heading">
-                                        Get discounted Coupons
-                                    </h5>
-                                    <p class="card-text features-card__text">
-                                        Lorem Ipsum is not simply random text
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- TESTIMONIALS SECTION -->
-                <section class="testimonials">
-                    <h4 class="section-heading testimonials__heading">
-                        TESTIMONIALS
-                    </h4>
-                    <p class="section-subheading testimonials__description">
-                        Trust our clients
-                    </p>
-                    <div class="testimonials__bg">
-                        <picture aria-hidden="true" role="presentation">
-                            <source
-                                srcset="
-                                    src/assets/images/Testimonials-bg-desktop.png
-                                "
-                                media="(width>=1440px)"
-                            />
-                            <img
-                                src="src/assets/images/testimonials-bg-tab.png"
-                                alt=""
-                            />
-                        </picture>
-                    </div>
-
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__avatar">
-                                    <img
-                                        src="src/assets/images/testimonials-user.png"
-                                        alt="User Avatar"
-                                    />
-                                </div>
-                                <p class="swiper-slide__user-info">
-                                    Shania Twain
-                                    <span class="swiper-slide__profession"
-                                        >/ Travel Blogger</span
-                                    >
-                                </p>
-                                <div class="swiper-slide__starscontainer">
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star"
-                                    ></span>
-                                </div>
-                                <p class="swiper-slide__description card-text">
-                                    Contrary to popular belief, Lorem Ipsum is
-                                    not simply random text. It has roots in a
-                                    piece of classical Latin literature from 45
-                                    BC.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__avatar">
-                                    <img
-                                        src="src/assets/images/testimonials-user.png"
-                                        alt="User Avatar"
-                                    />
-                                </div>
-                                <p class="swiper-slide__user-info">
-                                    Mark Smith
-                                    <span class="swiper-slide__profession"
-                                        >/ Travel Enthusiast</span
-                                    >
-                                </p>
-                                <div class="swiper-slide__starscontainer">
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                </div>
-                                <p class="swiper-slide__description card-text">
-                                    Contrary to popular belief, Lorem Ipsum is
-                                    not simply random text. It has roots in a
-                                    piece of classical Latin literature from 45
-                                    BC.
-                                </p>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-slide__avatar">
-                                    <img
-                                        src="src/assets/images/testimonials-user.png"
-                                        alt="User Avatar"
-                                    />
-                                </div>
-                                <p class="swiper-slide__user-info">
-                                    John Smith
-                                    <span class="swiper-slide__profession"
-                                        >/ Travel Enthusiast</span
-                                    >
-                                </p>
-                                <div class="swiper-slide__starscontainer">
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star swiper-slide__star--filled"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star"
-                                    ></span>
-                                    <span
-                                        class="icon-star swiper-slide__star"
-                                    ></span>
-                                </div>
-                                <p class="swiper-slide__description card-text">
-                                    Contrary to popular belief, Lorem Ipsum is
-                                    not simply random text. It has roots in a
-                                    piece of classical Latin literature from 45
-                                    BC.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-buttons">
-                            <button
-                                class="button-prev icon-arrow-left-1"
-                            ></button>
-
-                            <button
-                                class="button-next icon-arrow-left-2"
-                            ></button>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </section>
-
-                <!-- SUBSCRIPTION FORM -->
-
-                <section class="subscribe" aria-label="Subscription Form">
-                    <h4 class="section-heading subscribe__heading">
-                        SUBSCRIBE TO OUR NEWSLETTER
-                    </h4>
-                    <p class="section-subheading subscribe__subheading">
-                        Prepare yourself & let's explore the beauty of the world
-                    </p>
-
-                    <img
-                        src="src/assets/images/subscribe-star.png"
-                        class="subscribe__star"
-                        alt=""
+                    <div
+                        class="hero__arrows"
                         aria-hidden="true"
                         role="presentation"
-                    />
-                    <img
-                        src="src/assets/images/subscribe-triangle.png"
-                        class="subscribe__triangle"
-                        alt=""
-                        aria-hidden="true"
-                        role="presentation"
-                    />
-                    <div class="subscribe__input-field">
-                        <div class="subscribe__email-input">
-                            <span
-                                class="icon-mail-icon subscribe__emailicon"
+                    >
+                        <img src="src/assets/images/arrow.png" alt="" />
+                    </div>
+
+                    <div class="hero__content">
+                        <button
+                            class="button button--secondary hero__explorebtn"
+                        >
+                            Explore the world!<span
+                                class="icon-work-bag hero__exploreicon"
                             ></span>
-                            <input
-                                type="email"
-                                class="subscribe__input"
-                                placeholder="Your Email"
+                        </button>
+                        <h1 class="hero__heading">
+                            Travel
+                            <span class="hero__heading hero__heading--primary"
+                                >top destination
+                            </span>
+                            of the world
+                        </h1>
+                        <p class="hero__para">
+                            We always make our customers happy by providing as
+                            many choices as possible
+                        </p>
+                        <div
+                            class="hero__actions"
+                            role="group"
+                            aria-label="Startup Actions"
+                        >
+                            <button
+                                class="button button--primary hero__buttons"
+                            >
+                                Get Started
+                            </button>
+                            <button
+                                class="button button--secondary hero__buttons hero__buttons--secondary"
+                            >
+                                <span
+                                    class="icon-play-circle hero__buttons--icon"
+                                ></span
+                                >Watch Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__logos">
+                    <div
+                        class="hero__partnerlogo"
+                        aria-label="Trusted by leading companies"
+                    >
+                        <a
+                            class="hero__logolink"
+                            href="https://www.tripadvisor.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><img
+                                src="src/assets/images/trip-ad-logo.png"
+                                alt="TripAdvisor"
+                        /></a>
+                    </div>
+                    <div class="hero__partnerlogo">
+                        <a
+                            class="hero__logolink"
+                            href="https://www.expedia.co.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><img
+                                src="src/assets/images/expedia-logo.png"
+                                alt="Expedia"
+                        /></a>
+                    </div>
+                    <div class="hero__partnerlogo">
+                        <a
+                            class="hero__logolink"
+                            href="https://www.booking.com/in"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><img
+                                src="src/assets/images/booking-logo.png"
+                                alt="Booking.com"
+                        /></a>
+                    </div>
+                    <div class="hero__partnerlogo">
+                        <a
+                            class="hero__logolink"
+                            href="https://www.airbnb.co.in/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><img
+                                src="src/assets/images/airbnb-logo.png"
+                                alt="Airbnb"
+                        /></a>
+                    </div>
+                    <div class="hero__partnerlogo">
+                        <a
+                            class="hero__logolink"
+                            href="https://www.orbitz.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><img
+                                src="src/assets/images/orbitz-logo.png"
+                                alt="Orbitz"
+                        /></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION -->
+            <section
+                class="services"
+                id="discover"
+                aria-labelledby="services-heading"
+            >
+                <div class="services__gradient"></div>
+                <div class="services__content">
+                    <h2 class="services__heading" id="services-heading">
+                        SERVICES
+                    </h2>
+                    <h3 class="services__description">
+                        Our top value categories for you
+                    </h3>
+                </div>
+                <div class="services__cardcontainer">
+                    <div class="services-card">
+                        <div class="services-card__img">
+                            <img
+                                src="src/assets/images/services-1.png"
+                                alt="Globe Image"
                             />
                         </div>
-                        <button class="button button--purple subscribe__button">
-                            Subscribe
-                        </button>
+                        <h4 class="services-card__heading">Best Tour Guide</h4>
+                        <p class="services-card__text">
+                            What looked like a small patch of purple grass,
+                            above five feet.
+                        </p>
                     </div>
-                </section>
-            </main>
-
-            <!-- DETAILS SECTION (FOOTER) -->
-            <footer class="footer" id="footer-section">
-                <div class="footer__content">
-                    <div class="footer__travlog">
-                        <a href="/" class="footer__logo">
+                    <div class="services-card">
+                        <div class="services-card__img">
                             <img
-                                src="src/assets/images/logo.png"
-                                alt="Travel logo"
-                                aria-label="logo"
+                                src="src/assets/images/services-2.png"
+                                alt="Calendar Image"
                             />
-                        </a>
-                        <h4 class="footer__heading">Travlog</h4>
+                        </div>
+                        <h4 class="services-card__heading">Easy Booking</h4>
+                        <p class="services-card__text">
+                            Square, was moving across the sand in their
+                            direction.
+                        </p>
                     </div>
+                    <div class="services-card">
+                        <div class="services-card__img">
+                            <img
+                                src="src/assets/images/services-3.png"
+                                alt="Weather Image"
+                            />
+                        </div>
+                        <h4 class="services-card__heading">Weather Forecast</h4>
+                        <p class="services-card__text">
+                            What looked like a small patch of purple grass,
+                            above five feet.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-                    <p class="footer__text">
+            <!-- TRAVEL POINT SECTION -->
+            <section
+                aria-labelledby="travel-heading"
+                class="travel"
+                id="special-deals"
+            >
+                <div class="travel__ticket">
+                    <img
+                        src="src/assets/images/travel-object.png"
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                    />
+                </div>
+                <div class="travel__img">
+                    <picture>
+                        <source
+                            srcset="src/assets/images/travelpoint-bg.png"
+                            media="(width >=1024px)"
+                            width="870px"
+                            height="697px"
+                        />
+                        <img
+                            src="src/assets/images/travelpoint-bg-mobile.png"
+                            alt="Image of a woman on a suitcase"
+                            width="398px"
+                            height="319px"
+                        />
+                    </picture>
+                </div>
+
+                <div class="travel__content">
+                    <h2 class="travel__heading" id="travel-heading">
+                        TRAVEL POINT
+                    </h2>
+                    <h3 class="travel__subheading">
+                        We helping you find your dream location
+                    </h3>
+                    <p class="travel__text">
                         Contrary to popular belief, Lorem Ipsum is not simply
                         random text. It has roots in a piece of classical Latin
                         literature from 45 BC.
                     </p>
-                    <div class="footer__socialcontainer">
-                        <a
-                            class="footer__social"
-                            aria-label="Facebook Link"
-                            href="https://www.facebook.com/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <span
-                                class="icon-fb-logo footer__social-icon"
-                            ></span>
-                        </a>
-
-                        <a
-                            class="footer__social"
-                            aria-label="Twitter Link"
-                            href="https://x.com/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <span class="icon-twt-logo footer__social-icon"
-                                ><span class="path1"></span
-                                ><span class="path2"></span
-                            ></span>
-                        </a>
-
-                        <a
-                            class="footer__social"
-                            aria-label="Instagram Link"
-                            href="https://www.instagram.com/"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            <span class="icon-insta-logo footer__social-icon"
-                                ><span class="path1"></span
-                                ><span class="path2"></span
-                            ></span>
-                        </a>
+                    <div class="travel__cardscontainer">
+                        <div class="travel-card">
+                            <h4 class="travel-card__heading">500+</h4>
+                            <p class="travel-card__text">Holiday Package</p>
+                        </div>
+                        <div class="travel-card">
+                            <h4 class="travel-card__heading">100</h4>
+                            <p class="travel-card__text">Luxury Hotel</p>
+                        </div>
+                        <div class="travel-card">
+                            <h4 class="travel-card__heading">7</h4>
+                            <p class="travel-card__text">Premium Airlines</p>
+                        </div>
+                        <div class="travel-card">
+                            <h4 class="travel-card__heading">2k+</h4>
+                            <p class="travel-card__text">Happy Customers</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="company-details">
-                    <div class="company-details__container">
-                        <div class="company-details__dropdown">
-                            <h5 class="company-details__heading">Company</h5>
-                            <button
-                                class="company-details__icon icon-circle-down"
-                                aria-label="Dropdown Button"
-                            ></button>
-                        </div>
-                        <ul class="company-details__list">
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >About</a
-                                >
-                            </li>
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >Career</a
-                                >
-                            </li>
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >Mobile</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="company-details__container">
-                        <div class="company-details__dropdown">
-                            <h5 class="company-details__heading">Contact Us</h5>
-                            <button
-                                class="company-details__icon icon-circle-down"
-                                aria-label="Dropdown Button"
-                            ></button>
-                        </div>
+            <!-- Key Features -->
 
-                        <ul class="company-details__list">
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >Why Travlog?</a
-                                >
-                            </li>
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >Partner with us</a
-                                >
-                            </li>
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >FAQ's</a
-                                >
-                            </li>
-                            <li>
-                                <a class="company-details__text" href="#"
-                                    >Blog</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="company-details__container">
-                        <div class="company-details__dropdown">
-                            <h5 class="company-details__heading">Meet Us</h5>
-                            <button
-                                class="company-details__icon icon-circle-down"
-                                aria-label="Dropdown Button"
-                            ></button>
-                        </div>
+            <section aria-labelledby="features-heading" class="features">
+                <div class="features__bg">
+                    <picture>
+                        <source
+                            srcset="src/assets/images/keyfeatures-bg-tab.png"
+                            media="(width>=1024px)"
+                            width="694px"
+                            height="869px"
+                        />
+                        <img
+                            src="src/assets/images/keyfeatures-bg-mobile.png"
+                            alt="Collage of popular destinations"
+                            width="350px"
+                            height="439px"
+                        />
+                    </picture>
+                </div>
 
-                        <ul class="company-details__list">
-                            <li>
-                                <a
-                                    class="company-details__text"
-                                    href="tel:+0092123456789"
-                                    >+00 92 1234 56789</a
-                                >
-                            </li>
+                <div class="features__content">
+                    <h2 class="features__heading" id="features-heading">
+                        KEY FEATURES
+                    </h2>
+                    <h3 class="features__subheading">We offer best services</h3>
+                    <p class="features__text">
+                        Contrary to popular belief, Lorem Ipsum is not simply
+                        random text. It has roots in a piece of classical Latin
+                        literature from 45 BC.
+                    </p>
 
-                            <li>
-                                <a
-                                    class="company-details__text"
-                                    href="mailto:info@travlog.com"
-                                    >info@travlog.com</a
-                                >
-                            </li>
-                            <li>
-                                <p class="company-details__text">
-                                    205. R Street, New York BD23200
+                    <div class="features__cardcontainer">
+                        <div class="features-card">
+                            <span class="icon-locationpin features-card__icon"
+                                ><span class="path1"></span
+                                ><span class="path2"></span
+                            ></span>
+                            <div class="features-card__content">
+                                <h4 class="features-card__heading">
+                                    We offer best services
+                                </h4>
+                                <p class="features-card__text">
+                                    Lorem Ipsum is not simply random text
                                 </p>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <div class="features-card">
+                            <span class="icon-calendar features-card__icon"
+                                ><span class="path1"></span
+                                ><span class="path2"></span
+                            ></span>
+                            <div class="features-card__content">
+                                <h4 class="features-card__heading">
+                                    Schedule your trip
+                                </h4>
+                                <p class="features-card__text">
+                                    It has roots in a piece of classical
+                                </p>
+                            </div>
+                        </div>
+                        <div class="features-card">
+                            <span class="icon-coupon features-card__icon"
+                                ><span class="path1"></span
+                                ><span class="path2"></span
+                            ></span>
+                            <div class="features-card__content">
+                                <h4 class="features-card__heading">
+                                    Get discounted Coupons
+                                </h4>
+                                <p class="features-card__text">
+                                    Lorem Ipsum is not simply random text
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </footer>
-        </div>
+            </section>
+
+            <!-- TESTIMONIALS SECTION -->
+            <section
+                class="testimonials"
+                aria-labelledby="testimonials-heading"
+            >
+                <h2 class="testimonials__heading" id="testimonials-heading">
+                    TESTIMONIALS
+                </h2>
+                <h3 class="testimonials__description">Trust our clients</h3>
+                <div class="testimonials__bg">
+                    <picture aria-hidden="true" role="presentation">
+                        <source
+                            srcset="
+                                src/assets/images/Testimonials-bg-desktop.png
+                            "
+                            media="(width>=1440px)"
+                        />
+                        <img
+                            src="src/assets/images/testimonials-bg-tab.png"
+                            alt=""
+                        />
+                    </picture>
+                </div>
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__avatar">
+                                <img
+                                    src="src/assets/images/testimonials-user.png"
+                                    alt="User Avatar"
+                                />
+                            </div>
+                            <p class="swiper-slide__user-info">
+                                Shania Twain
+                                <span class="swiper-slide__profession"
+                                    >/ Travel Blogger</span
+                                >
+                            </p>
+                            <div class="swiper-slide__starscontainer">
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star"
+                                ></span>
+                            </div>
+                            <p class="swiper-slide__description">
+                                Contrary to popular belief, Lorem Ipsum is not
+                                simply random text. It has roots in a piece of
+                                classical Latin literature from 45 BC.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__avatar">
+                                <img
+                                    src="src/assets/images/testimonials-user.png"
+                                    alt="User Avatar"
+                                />
+                            </div>
+                            <p class="swiper-slide__user-info">
+                                Mark Smith
+                                <span class="swiper-slide__profession"
+                                    >/ Travel Enthusiast</span
+                                >
+                            </p>
+                            <div class="swiper-slide__starscontainer">
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                            </div>
+                            <p class="swiper-slide__description">
+                                Contrary to popular belief, Lorem Ipsum is not
+                                simply random text. It has roots in a piece of
+                                classical Latin literature from 45 BC.
+                            </p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-slide__avatar">
+                                <img
+                                    src="src/assets/images/testimonials-user.png"
+                                    alt="User Avatar"
+                                />
+                            </div>
+                            <p class="swiper-slide__user-info">
+                                John Smith
+                                <span class="swiper-slide__profession"
+                                    >/ Travel Enthusiast</span
+                                >
+                            </p>
+                            <div class="swiper-slide__starscontainer">
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star swiper-slide__star--filled"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star"
+                                ></span>
+                                <span
+                                    class="icon-star swiper-slide__star"
+                                ></span>
+                            </div>
+                            <p class="swiper-slide__description">
+                                Contrary to popular belief, Lorem Ipsum is not
+                                simply random text. It has roots in a piece of
+                                classical Latin literature from 45 BC.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-buttons">
+                        <button class="button-prev icon-arrow-left-1"></button>
+
+                        <button class="button-next icon-arrow-left-2"></button>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- SUBSCRIPTION FORM -->
+
+            <section class="subscribe" aria-labelledby="subscribe-heading">
+                <h2 class="subscribe__heading">SUBSCRIBE TO OUR NEWSLETTER</h2>
+                <h3 class="subscribe__subheading" id="subscribe-heading">
+                    Prepare yourself & let's explore the beauty of the world
+                </h3>
+
+                <div class="subscribe__triangle">
+                    <img
+                        src="src/assets/images/subscribe-triangle.png"
+                        alt=""
+                        aria-hidden="true"
+                        role="presentation"
+                    />
+                </div>
+
+                <div class="subscribe__input-field">
+                    <div class="subscribe__email-input">
+                        <span
+                            class="icon-mail-icon subscribe__emailicon"
+                        ></span>
+                        <input
+                            type="email"
+                            class="subscribe__input"
+                            placeholder="Your Email"
+                            id="email"
+                            aria-label="Enter your email"
+                        />
+                    </div>
+                    <button class="button button--primary subscribe__button">
+                        Subscribe
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- DETAILS SECTION (FOOTER) -->
+        <footer class="wrapper footer" id="footer-section">
+            <div class="footer__star">
+                <img
+                    src="src/assets/images/subscribe-star.png"
+                    alt=""
+                    aria-hidden="true"
+                    role="presentation"
+                />
+            </div>
+
+            <div class="footer__content">
+                <div class="footer__travlog">
+                    <a href="/" class="footer__logo">
+                        <img
+                            src="src/assets/images/logo.png"
+                            alt="Travlog logo"
+                            aria-label="logo"
+                        />
+                    </a>
+                    <h3 class="footer__heading">Travlog</h3>
+                </div>
+
+                <p class="footer__text">
+                    Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature
+                    from 45 BC.
+                </p>
+                <div class="footer__socialcontainer">
+                    <a
+                        class="footer__social"
+                        aria-label="Facebook Link"
+                        href="https://www.facebook.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <span class="icon-fb-logo footer__social-icon"></span>
+                    </a>
+
+                    <a
+                        class="footer__social"
+                        aria-label="Twitter Link"
+                        href="https://x.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <span class="icon-twt-logo footer__social-icon"
+                            ><span class="path1"></span
+                            ><span class="path2"></span
+                        ></span>
+                    </a>
+
+                    <a
+                        class="footer__social"
+                        aria-label="Instagram Link"
+                        href="https://www.instagram.com/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <span class="icon-insta-logo footer__social-icon"
+                            ><span class="path1"></span
+                            ><span class="path2"></span
+                        ></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="company-details">
+                <div class="company-details__container">
+                    <div class="company-details__dropdown">
+                        <h4 class="company-details__heading">Company</h4>
+                        <button
+                            class="company-details__icon icon-circle-down"
+                            aria-label="Dropdown Button"
+                        ></button>
+                    </div>
+                    <ul class="company-details__list">
+                        <li>
+                            <a class="company-details__text" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="company-details__text" href="#">Career</a>
+                        </li>
+                        <li>
+                            <a class="company-details__text" href="#">Mobile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="company-details__container">
+                    <div class="company-details__dropdown">
+                        <h5 class="company-details__heading">Contact Us</h5>
+                        <button
+                            class="company-details__icon icon-circle-down"
+                            aria-label="Dropdown Button"
+                        ></button>
+                    </div>
+
+                    <ul class="company-details__list">
+                        <li>
+                            <a class="company-details__text" href="#"
+                                >Why Travlog?</a
+                            >
+                        </li>
+                        <li>
+                            <a class="company-details__text" href="#"
+                                >Partner with us</a
+                            >
+                        </li>
+                        <li>
+                            <a class="company-details__text" href="#">FAQ's</a>
+                        </li>
+                        <li>
+                            <a class="company-details__text" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="company-details__container">
+                    <div class="company-details__dropdown">
+                        <h5 class="company-details__heading">Meet Us</h5>
+                        <button
+                            class="company-details__icon icon-circle-down"
+                            aria-label="Dropdown Button"
+                        ></button>
+                    </div>
+
+                    <ul class="company-details__list">
+                        <li>
+                            <a
+                                class="company-details__text"
+                                href="tel:+0092123456789"
+                                >+00 92 1234 56789</a
+                            >
+                        </li>
+
+                        <li>
+                            <a
+                                class="company-details__text"
+                                href="mailto:info@travlog.com"
+                                >info@travlog.com</a
+                            >
+                        </li>
+                        <li>
+                            <p class="company-details__text">
+                                205. R Street, New York BD23200
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>

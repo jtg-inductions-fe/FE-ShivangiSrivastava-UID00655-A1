@@ -1,10 +1,16 @@
 @use '../abstract/' as *;
 
 .footer {
-    margin: px-to-rem(69 16 0);
+    position: relative;
+    padding: px-to-rem(70 16 0);
+    box-sizing: border-box;
 
     &__logo {
         @include focus;
+    }
+
+    &__star {
+        display: none;
     }
 
     &__travlog {
@@ -20,12 +26,12 @@
     &__text {
         @include font-scale(16, $base: 1.6);
         color: $color-text-secondary;
-        margin-top: px-to-rem(2);
+        margin-top: px-to-rem(8);
         @include text-overflow(3);
     }
 
     &__socialcontainer {
-        margin-top: px-to-rem(34);
+        margin-top: px-to-rem(32);
         min-height: px-to-rem(32);
         display: flex;
         gap: px-to-rem(32);
@@ -42,7 +48,7 @@
 }
 
 .company-details {
-    margin-top: px-to-rem(92);
+    margin-top: px-to-rem(94);
 
     &__container {
         min-height: px-to-rem(100);
@@ -107,7 +113,14 @@
 
 @include responsive-tab {
     .footer {
-        margin: px-to-rem(38 90 0 64);
+        padding: px-to-rem(38 90 0 64);
+
+        &__star {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-900);
+            right: 0;
+        }
 
         &__text {
             @include font-scale(23, $base: 1.6);
@@ -149,16 +162,24 @@
 
 @include responsive-desktop {
     .footer {
-        margin: px-to-rem(175 100 0 130);
+        padding: px-to-rem(175 100 100 130);
         display: flex;
         min-height: px-to-rem(400);
 
+        &__star {
+            display: block;
+            position: absolute;
+            top: px-to-rem(-100);
+            right: 0;
+        }
+
         &__text {
+            margin-top: 0;
             @include font-scale(23, $base: 1.6);
         }
 
         &__socialcontainer {
-            margin-top: px-to-rem(68);
+            margin-top: px-to-rem(64);
         }
     }
 

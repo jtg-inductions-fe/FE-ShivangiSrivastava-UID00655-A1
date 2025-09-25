@@ -1,9 +1,23 @@
 @use './fonts' as *;
+@use '../abstract' as *;
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
 img {
     max-width: 100%;
     overflow: hidden;
+}
+
+main {
+    position: relative;
+    padding-top: px-to-rem(120);
+    overflow: hidden;
+
+    @include responsive-desktop {
+        padding-top: px-to-rem(160);
+    }
 }

@@ -5,14 +5,13 @@
     margin-top: px-to-rem(56);
     text-align: center;
 
-    &__star,
     &__triangle {
         display: none;
     }
 
     &__heading {
         padding: px-to-rem(0 100);
-        margin-bottom: 0;
+        margin: 0;
     }
 
     &__subheading {
@@ -69,13 +68,6 @@
         min-height: px-to-rem(572);
         border-radius: px-to-rem(32);
 
-        &__star {
-            display: block;
-            position: absolute;
-            top: px-to-rem(-324);
-            right: px-to-rem(-64);
-        }
-
         &__triangle {
             display: block;
             position: absolute;
@@ -127,18 +119,12 @@
         max-width: px-to-rem(1193);
         border-radius: px-to-rem(32);
 
-        &__star {
-            display: block;
-            position: absolute;
-            top: px-to-rem(500);
-            right: px-to-rem(-120);
-        }
-
         &__triangle {
             display: block;
             position: absolute;
             top: px-to-rem(-50);
             left: px-to-rem(-2);
+            opacity: 0.1;
         }
 
         &__heading {

@@ -3,9 +3,8 @@
 @use '../base' as *;
 
 .hero {
-    position: relative;
     text-align: center;
-    margin-top: px-to-rem(120);
+    margin: 0 auto;
 
     &__arrows {
         display: none;
@@ -13,12 +12,26 @@
 
     &__bg {
         position: relative;
-        padding: px-to-rem(26 8 0 14);
+        margin-top: px-to-rem(26);
+        margin-left: px-to-rem(10);
         box-sizing: border-box;
     }
 
+    &__gradient {
+        pointer-events: none;
+        position: absolute;
+        border-radius: 50%;
+        width: px-to-rem(400);
+        height: px-to-rem(400);
+        background: $color-accent-primary;
+        filter: blur(px-to-rem(85));
+        left: px-to-rem(-100);
+        z-index: $z-index-background;
+        top: px-to-rem(-50);
+    }
+
     &__content {
-        margin-top: px-to-rem(18);
+        margin-top: px-to-rem(27);
     }
 
     &__explorebtn {
@@ -51,9 +64,10 @@
     &__actions {
         @include flex-center;
         flex-direction: column;
-        height: px-to-rem(200);
+        height: px-to-rem(158);
         width: 100%;
         margin-top: px-to-rem(32);
+        margin-bottom: px-to-rem(64);
         padding: px-to-rem(0 16);
         flex: 1;
         gap: px-to-rem(28);
@@ -64,7 +78,7 @@
         width: inherit;
         height: px-to-rem(65);
 
-        &--white {
+        &--secondary {
             @include flex-center;
             justify-content: center;
         }
@@ -98,21 +112,6 @@
     }
 }
 
-.pink-gradient {
-    pointer-events: none;
-    position: absolute;
-    border-radius: 50%;
-    width: px-to-rem(300);
-    height: px-to-rem(500);
-    background: $color-secondary-light;
-    filter: blur(px-to-rem(100));
-    // background: radial-gradient($color-secondary-light 0%, $color-secondary-lighter 40%, $color-white 70%);
-    overflow: hidden;
-    left: px-to-rem(-33);
-    z-index: $z-index-background;
-    top: px-to-rem(-154);
-}
-
 @include responsive-tab {
     .hero {
         position: relative;
@@ -129,6 +128,13 @@
             padding-top: px-to-rem(56);
             padding-right: 0;
             height: px-to-rem(800);
+        }
+
+        &__gradient {
+            width: px-to-rem(642);
+            height: px-to-rem(552);
+            left: px-to-rem(-200);
+            top: px-to-rem(-270);
         }
 
         &__content {
@@ -159,7 +165,7 @@
             display: flex;
             flex-direction: row;
             padding: px-to-rem(0 30);
-            margin: px-to-rem(42) auto 0;
+            margin: px-to-rem(38) auto 0;
             gap: px-to-rem(16);
         }
 
@@ -174,7 +180,7 @@
         }
 
         &__logos {
-            margin: px-to-rem(154) auto 0;
+            margin: px-to-rem(158) auto 0;
             height: px-to-rem(100);
             width: 60%;
             display: flex;
@@ -186,20 +192,12 @@
             height: px-to-rem(32);
         }
     }
-
-    .pink-gradient {
-        width: px-to-rem(500);
-        height: px-to-rem(700);
-        left: px-to-rem(-163);
-        top: px-to-rem(-292);
-    }
 }
 
 @include responsive-desktop {
     .hero {
         position: relative;
-        max-width: $breakpoint-lg;
-        margin-top: px-to-rem(160);
+        overflow: visible;
 
         &__arrows {
             display: block;
@@ -219,6 +217,14 @@
             margin: px-to-rem(18 0 0 0);
         }
 
+        &__gradient {
+            width: px-to-rem(720);
+            height: px-to-rem(720);
+            left: px-to-rem(-180);
+            top: px-to-rem(-180);
+            filter: blur(px-to-rem(70));
+        }
+
         &__content {
             max-width: px-to-rem(410);
             text-align: start;
@@ -227,8 +233,12 @@
         }
 
         &__explorebtn {
-            background-color: $color-secondary-lighter;
+            background-color: transparent;
             margin-left: px-to-rem(4);
+
+            &:hover {
+                box-shadow: 1px 1px 3px 2px #00000012;
+            }
         }
 
         &__heading {
@@ -248,6 +258,7 @@
             padding: px-to-rem(0 64 0 8);
             gap: px-to-rem(10);
             min-height: px-to-rem(56);
+            height: px-to-rem(50);
         }
 
         &__buttons {
@@ -265,18 +276,11 @@
             display: flex;
             justify-content: space-between;
             height: px-to-rem(80);
-            margin: px-to-rem(24 118 0 130);
+            margin: px-to-rem(60 118 0 130);
         }
 
         &__partnerlogo {
             height: px-to-rem(32);
         }
-    }
-
-    .pink-gradient {
-        width: px-to-rem(600);
-        height: px-to-rem(600);
-        left: px-to-rem(-60);
-        top: px-to-rem(-150);
     }
 }
