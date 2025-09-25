@@ -11,7 +11,8 @@
     width: 100%;
     transition:
         background-color 0.2s linear,
-        box-shadow 0.2s linear;
+        box-shadow 0.2s linear,
+        height 0.2s linear;
 }
 .navbar {
     height: inherit;
@@ -183,8 +184,8 @@
         height: px-to-rem(145);
     }
     .navbar {
-        margin: 0 auto;
-        padding: px-to-rem(32 98 0 150);
+        margin: px-to-rem(16) auto 0;
+        padding: px-to-rem(0 98 0 150);
         max-width: $breakpoint-container;
 
         &__menu-icons {

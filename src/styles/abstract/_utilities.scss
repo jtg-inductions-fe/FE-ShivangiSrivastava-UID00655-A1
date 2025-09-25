@@ -20,7 +20,10 @@ nav .no-transition {
 }
 
 //adds bg color and shadow on scroll
-.scrolled {
+header.scrolled {
+    height: fit-content;
+    padding: px-to-rem(16 0);
+    box-sizing: border-box;
     background-color: $color-white;
     box-shadow: 0 0 25px $color-shadow;
 }
