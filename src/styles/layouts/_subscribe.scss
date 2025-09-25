@@ -78,21 +78,24 @@
         }
 
         &__input-field {
+            width: 100%;
             flex-direction: row;
             padding: 0;
             gap: px-to-rem(32);
         }
 
         &__input {
+            flex-grow: 1;
             border-radius: px-to-rem(32);
-            width: px-to-rem(502);
+            max-width: px-to-rem(502);
             min-height: px-to-rem(96);
             @include font-scale(23);
             padding-left: px-to-rem(80);
         }
 
         &__button {
-            width: px-to-rem(235);
+            flex-shrink: 0;
+            max-width: px-to-rem(235);
             min-height: px-to-rem(96);
             border-radius: px-to-rem(32);
             @include font-scale(23);
