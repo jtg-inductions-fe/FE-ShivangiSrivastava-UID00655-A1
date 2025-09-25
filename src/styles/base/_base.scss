@@ -10,6 +10,7 @@ body {
 img {
     max-width: 100%;
     overflow: hidden;
+    object-fit: contain;
 }
 
 main {
@@ -17,7 +18,50 @@ main {
     padding-top: px-to-rem(120);
     overflow: hidden;
 
+    @include responsive-tab {
+        padding-top: px-to-rem(113);
+    }
+
     @include responsive-desktop {
-        padding-top: px-to-rem(160);
+        padding-top: px-to-rem(145);
+    }
+}
+
+a {
+    display: inline-block;
+    height: inherit;
+}
+
+.section-header {
+    margin-bottom: px-to-rem(32);
+    & > h1 {
+        margin: 0;
+    }
+    & > h2 {
+        margin: 0;
+    }
+    & > h3 {
+        margin-top: px-to-rem(16);
+        margin-bottom: 0;
+    }
+    & > p {
+        margin-top: px-to-rem(32);
+        margin-bottom: 0;
+    }
+
+    @include responsive-tab {
+        margin-bottom: px-to-rem(64);
+
+        & > h1 {
+            margin-bottom: px-to-rem(43);
+        }
+    }
+
+    @include responsive-desktop {
+        margin-bottom: px-to-rem(64);
+
+        & > h1 {
+            margin-bottom: px-to-rem(43);
+        }
     }
 }

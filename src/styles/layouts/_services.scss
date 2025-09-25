@@ -3,22 +3,11 @@
 
 .services {
     position: relative;
-    text-align: center;
-    margin: px-to-rem(68 16 0);
-
-    &__heading {
-        margin-bottom: 0;
-    }
-
-    &__description {
-        margin-top: px-to-rem(16);
-        margin-bottom: 0;
-    }
+    margin-top: px-to-rem(64);
 
     &__cardcontainer {
         display: flex;
         flex-direction: column;
-        margin-top: px-to-rem(32);
         gap: px-to-rem(16);
     }
 }
@@ -59,7 +48,7 @@
 
 @include responsive-tab {
     .services {
-        margin-top: px-to-rem(128);
+        margin-top: px-to-rem(68);
 
         &__gradient {
             width: px-to-rem(500);
@@ -73,20 +62,8 @@
             z-index: $z-index-background;
         }
 
-        &__heading {
-            margin-bottom: 0;
-        }
-
-        &__description {
-            margin-top: px-to-rem(18);
-            letter-spacing: px-to-rem(0.6);
-        }
-
         &__cardcontainer {
             flex-direction: row;
-            justify-content: center;
-            gap: px-to-rem(16);
-            margin-top: px-to-rem(60);
         }
     }
 
@@ -108,9 +85,11 @@
 
 @include responsive-desktop {
     .services {
+        padding: px-to-rem(61 0);
         display: flex;
-        min-height: px-to-rem(400);
-        margin: px-to-rem(98 90 0 128);
+        text-align: start;
+        align-items: center;
+        margin-top: 0;
 
         &__gradient {
             width: px-to-rem(500);
@@ -125,22 +104,12 @@
         }
 
         &__content {
-            display: flex;
-            flex-direction: column;
-            text-align: start;
-            margin-top: px-to-rem(130);
-            max-width: px-to-rem(400);
-        }
-
-        &__description {
-            margin-top: px-to-rem(18);
-            letter-spacing: px-to-rem(1);
+            margin-bottom: 0;
         }
 
         &__cardcontainer {
             flex-direction: row;
             gap: px-to-rem(20);
-            margin-top: 0;
         }
     }
 

@@ -80,22 +80,26 @@
 
         <!-- HERO SECTION -->
         <main class="wrapper" id="main-section">
-            <section aria-label="Introduction Section" class="hero" id="hero">
+            <section
+                aria-label="Introduction Section"
+                class="hero section-wrapper"
+                id="hero"
+            >
                 <div class="hero__gradient"></div>
                 <div class="hero__main">
                     <div class="hero__bg">
                         <picture>
                             <source
                                 srcset="src/assets/images/hero-img-desktop.png"
-                                media="(width >=1440px)"
-                                width="790px"
-                                height="737px"
+                                media="(width >=1280px)"
+                                width="772px"
+                                height="713px"
                             />
                             <source
                                 srcset="src/assets/images/hero-img-tablet.png"
-                                media="(width >=1024px)"
-                                width="789px"
-                                height="748px"
+                                media="(width >=786px)"
+                                width="772px"
+                                height="713px"
                             />
                             <img
                                 src="src/assets/images/hero-img-mobile.png"
@@ -115,23 +119,27 @@
 
                     <div class="hero__content">
                         <button
-                            class="button button--secondary hero__explorebtn"
+                            class="button button--secondary button--icon-right hero__explorebtn"
                         >
                             Explore the world!<span
                                 class="icon-work-bag hero__exploreicon"
                             ></span>
                         </button>
-                        <h1 class="hero__heading">
-                            Travel
-                            <span class="hero__heading hero__heading--primary"
-                                >top destination
-                            </span>
-                            of the world
-                        </h1>
-                        <p class="hero__para">
-                            We always make our customers happy by providing as
-                            many choices as possible
-                        </p>
+
+                        <div class="hero__header section-header">
+                            <h1 class="hero__heading">
+                                Travel
+                                <span
+                                    class="hero__heading hero__heading--primary"
+                                    >top destination
+                                </span>
+                                of the world
+                            </h1>
+                            <p class="hero__para">
+                                We always make our customers happy by providing
+                                as many choices as possible
+                            </p>
+                        </div>
                         <div
                             class="hero__actions"
                             role="group"
@@ -143,7 +151,7 @@
                                 Get Started
                             </button>
                             <button
-                                class="button button--secondary hero__buttons hero__buttons--secondary"
+                                class="button button--secondary button--icon-left hero__buttons"
                             >
                                 <span
                                     class="icon-play-circle hero__buttons--icon"
@@ -156,7 +164,7 @@
 
                 <div class="hero__logos">
                     <div
-                        class="hero__partnerlogo"
+                        class="hero__partner-logo"
                         aria-label="Trusted by leading companies"
                     >
                         <a
@@ -169,7 +177,7 @@
                                 alt="TripAdvisor"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.expedia.co.in/"
@@ -180,7 +188,7 @@
                                 alt="Expedia"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.booking.com/in"
@@ -191,7 +199,7 @@
                                 alt="Booking.com"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.airbnb.co.in/"
@@ -202,7 +210,7 @@
                                 alt="Airbnb"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.orbitz.com/"
@@ -218,12 +226,12 @@
 
             <!-- SERVICES SECTION -->
             <section
-                class="services"
+                class="services section-wrapper"
                 id="discover"
                 aria-labelledby="services-heading"
             >
                 <div class="services__gradient"></div>
-                <div class="services__content">
+                <div class="section-header services__content">
                     <h2 class="services__heading" id="services-heading">
                         SERVICES
                     </h2>
@@ -231,6 +239,7 @@
                         Our top value categories for you
                     </h3>
                 </div>
+
                 <div class="services__cardcontainer">
                     <div class="services-card">
                         <div class="services-card__img">
@@ -277,7 +286,7 @@
             <!-- TRAVEL POINT SECTION -->
             <section
                 aria-labelledby="travel-heading"
-                class="travel"
+                class="travel section-wrapper"
                 id="special-deals"
             >
                 <div class="travel__ticket">
@@ -306,17 +315,19 @@
                 </div>
 
                 <div class="travel__content">
-                    <h2 class="travel__heading" id="travel-heading">
-                        TRAVEL POINT
-                    </h2>
-                    <h3 class="travel__subheading">
-                        We helping you find your dream location
-                    </h3>
-                    <p class="travel__text">
-                        Contrary to popular belief, Lorem Ipsum is not simply
-                        random text. It has roots in a piece of classical Latin
-                        literature from 45 BC.
-                    </p>
+                    <div class="section-header">
+                        <h2 class="travel__heading" id="travel-heading">
+                            TRAVEL POINT
+                        </h2>
+                        <h3 class="travel__subheading">
+                            We helping you find your dream location
+                        </h3>
+                        <p class="travel__text">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC.
+                        </p>
+                    </div>
                     <div class="travel__cardscontainer">
                         <div class="travel-card">
                             <h4 class="travel-card__heading">500+</h4>
@@ -340,7 +351,10 @@
 
             <!-- Key Features -->
 
-            <section aria-labelledby="features-heading" class="features">
+            <section
+                aria-labelledby="features-heading"
+                class="features section-wrapper"
+            >
                 <div class="features__bg">
                     <picture>
                         <source
@@ -359,15 +373,19 @@
                 </div>
 
                 <div class="features__content">
-                    <h2 class="features__heading" id="features-heading">
-                        KEY FEATURES
-                    </h2>
-                    <h3 class="features__subheading">We offer best services</h3>
-                    <p class="features__text">
-                        Contrary to popular belief, Lorem Ipsum is not simply
-                        random text. It has roots in a piece of classical Latin
-                        literature from 45 BC.
-                    </p>
+                    <div class="section-header">
+                        <h2 class="features__heading" id="features-heading">
+                            KEY FEATURES
+                        </h2>
+                        <h3 class="features__subheading">
+                            We offer best services
+                        </h3>
+                        <p class="features__text">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC.
+                        </p>
+                    </div>
 
                     <div class="features__cardcontainer">
                         <div class="features-card">
@@ -418,13 +436,15 @@
 
             <!-- TESTIMONIALS SECTION -->
             <section
-                class="testimonials"
+                class="testimonials section-wrapper"
                 aria-labelledby="testimonials-heading"
             >
-                <h2 class="testimonials__heading" id="testimonials-heading">
-                    TESTIMONIALS
-                </h2>
-                <h3 class="testimonials__description">Trust our clients</h3>
+                <div class="section-header">
+                    <h2 class="testimonials__heading" id="testimonials-heading">
+                        TESTIMONIALS
+                    </h2>
+                    <h3 class="testimonials__description">Trust our clients</h3>
+                </div>
                 <div class="testimonials__bg">
                     <picture aria-hidden="true" role="presentation">
                         <source
@@ -563,11 +583,18 @@
 
             <!-- SUBSCRIPTION FORM -->
 
-            <section class="subscribe" aria-labelledby="subscribe-heading">
-                <h2 class="subscribe__heading">SUBSCRIBE TO OUR NEWSLETTER</h2>
-                <h3 class="subscribe__subheading" id="subscribe-heading">
-                    Prepare yourself & let's explore the beauty of the world
-                </h3>
+            <section
+                class="subscribe section-wrapper"
+                aria-labelledby="subscribe-heading"
+            >
+                <div class="section-header subscribe__header">
+                    <h2 class="subscribe__heading">
+                        SUBSCRIBE TO OUR NEWSLETTER
+                    </h2>
+                    <h3 class="subscribe__subheading" id="subscribe-heading">
+                        Prepare yourself & let's explore the beauty of the world
+                    </h3>
+                </div>
 
                 <div class="subscribe__triangle">
                     <img
@@ -599,7 +626,7 @@
         </main>
 
         <!-- DETAILS SECTION (FOOTER) -->
-        <footer class="wrapper footer" id="footer-section">
+        <footer class="wrapper footer section-wrapper" id="footer-section">
             <div class="footer__star">
                 <img
                     src="src/assets/images/subscribe-star.png"

@@ -1,33 +1,21 @@
 @use '../abstract/' as *;
 
 .features {
-    text-align: center;
-    margin-top: px-to-rem(90);
+    margin-top: px-to-rem(86);
 
-    &__heading {
-        margin-top: px-to-rem(104);
-        margin-bottom: px-to-rem(16);
-    }
-
-    &__subheading {
-        margin-top: 0;
-        margin-bottom: px-to-rem(26);
-        @include text-overflow(4);
+    &__bg {
+        margin-bottom: px-to-rem(100);
     }
 
     &__text {
-        margin-top: 0;
-        padding: px-to-rem(0 30);
-        letter-spacing: px-to-rem(0.4);
-        @include font-scale(18, $base: 1.6);
+        padding: px-to-rem(0 44);
         @include text-overflow(4);
     }
 
     &__cardcontainer {
-        margin-top: px-to-rem(28);
-        min-height: px-to-rem(920);
+        min-height: px-to-rem(870);
+        padding: px-to-rem(0 32);
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         gap: px-to-rem(8);
     }
@@ -38,7 +26,6 @@
     border-radius: px-to-rem(32);
     box-sizing: border-box;
     min-height: px-to-rem(290);
-    margin: px-to-rem(0 48);
     padding: px-to-rem(32);
 
     &:hover {
@@ -52,7 +39,6 @@
         margin-top: px-to-rem(30);
         display: flex;
         flex-direction: column;
-        flex-shrink: 1;
         gap: px-to-rem(8);
     }
 
@@ -72,24 +58,15 @@
     .features {
         margin-top: px-to-rem(130);
 
-        &__heading {
-            margin-top: px-to-rem(66);
-            margin-bottom: 0;
-        }
-
-        &__subheading {
-            margin-top: px-to-rem(18);
-            margin-bottom: px-to-rem(30);
+        &__bg {
+            margin-bottom: px-to-rem(64);
         }
 
         &__text {
-            margin-top: 0;
-            padding: px-to-rem(0 100);
             @include text-overflow(2);
         }
 
         &__cardcontainer {
-            margin-top: px-to-rem(60);
             gap: px-to-rem(0);
             min-height: px-to-rem(492);
         }
@@ -97,7 +74,6 @@
 
     .features-card {
         padding: px-to-rem(36 32 26);
-        margin: px-to-rem(0 96);
         @include flex-center;
         min-height: px-to-rem(164);
         display: flex;
@@ -111,33 +87,20 @@
 
 @include responsive-desktop {
     .features {
+        margin-top: 0;
+        padding: px-to-rem(60 20 40);
         text-align: start;
-        margin-top: px-to-rem(80);
-        margin-left: px-to-rem(124);
-        display: flex;
-        flex-direction: row-reverse;
         min-height: px-to-rem(900);
         justify-content: space-between;
         overflow: hidden;
 
         &__bg {
-            position: relative;
+            position: absolute;
             right: px-to-rem(-22);
         }
 
         &__content {
-            width: px-to-rem(550);
-            margin-top: px-to-rem(8);
-            padding: px-to-rem(0 20 0 16);
-        }
-
-        &__heading {
-            margin: 0;
-        }
-
-        &__subheading {
-            margin-top: px-to-rem(16);
-            margin-bottom: px-to-rem(32);
+            width: px-to-rem(530);
         }
 
         &__text {
@@ -145,15 +108,13 @@
         }
 
         &__cardcontainer {
-            width: px-to-rem(558);
-            margin-top: px-to-rem(56);
+            padding: 0;
             gap: 0;
-            min-height: px-to-rem(560);
+            min-height: px-to-rem(492);
         }
     }
 
     .features-card {
-        margin: 0;
         @include flex-center;
         gap: px-to-rem(32);
         min-height: px-to-rem(164);

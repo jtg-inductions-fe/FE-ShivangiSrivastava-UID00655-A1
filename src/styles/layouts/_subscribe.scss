@@ -2,32 +2,29 @@
 
 .subscribe {
     position: relative;
-    margin-top: px-to-rem(56);
-    text-align: center;
+    margin-top: px-to-rem(58);
+    padding: px-to-rem(0 32);
 
     &__triangle {
         display: none;
     }
 
-    &__heading {
-        padding: px-to-rem(0 100);
-        margin: 0;
+    &__header {
+        & > h3 {
+            margin: px-to-rem(32 16);
+        }
     }
 
-    &__subheading {
-        margin-top: px-to-rem(32);
-        padding: px-to-rem(0 70);
-        letter-spacing: px-to-rem(0.4);
+    &__heading {
+        padding: px-to-rem(0 50);
     }
 
     &__input-field {
-        margin-top: px-to-rem(64);
+        margin: px-to-rem(64 0 0);
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         gap: px-to-rem(32);
-        padding: px-to-rem(0 48);
     }
 
     &__email-input {
@@ -63,25 +60,16 @@
 
 @include responsive-tab {
     .subscribe {
-        margin: px-to-rem(95 64 0);
+        margin-top: px-to-rem(78);
         background-color: #{$color-icon}14;
-        min-height: px-to-rem(572);
         border-radius: px-to-rem(32);
+        padding: px-to-rem(128 64);
 
         &__triangle {
             display: block;
             position: absolute;
-            top: px-to-rem(-48);
+            top: px-to-rem(-52);
             left: px-to-rem(-36);
-        }
-
-        &__heading {
-            padding-top: px-to-rem(132);
-        }
-
-        &__subheading {
-            padding: px-to-rem(0 100);
-            letter-spacing: px-to-rem(0.6);
         }
 
         &__emailicon {
@@ -92,6 +80,7 @@
         &__input-field {
             flex-direction: row;
             padding: 0;
+            gap: px-to-rem(32);
         }
 
         &__input {
@@ -113,11 +102,11 @@
 
 @include responsive-desktop {
     .subscribe {
-        margin: px-to-rem(116) auto 0;
+        margin-top: px-to-rem(102);
         background-color: #{$color-icon}14;
-        min-height: px-to-rem(602);
         max-width: px-to-rem(1193);
         border-radius: px-to-rem(32);
+        padding: px-to-rem(128 64 121);
 
         &__triangle {
             display: block;
@@ -127,19 +116,12 @@
             opacity: 0.1;
         }
 
-        &__heading {
-            padding-top: px-to-rem(128);
-            padding-left: px-to-rem(120);
-        }
-
         &__subheading {
             @include font-scale(55);
-            letter-spacing: px-to-rem(1);
         }
 
         &__input-field {
             flex-direction: row;
-            flex-wrap: nowrap;
             margin-top: px-to-rem(66);
             gap: px-to-rem(50);
         }

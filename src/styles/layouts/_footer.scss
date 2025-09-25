@@ -2,8 +2,9 @@
 
 .footer {
     position: relative;
-    padding: px-to-rem(70 16 0);
+    padding-top: px-to-rem(70);
     box-sizing: border-box;
+    text-align: start;
 
     &__logo {
         @include focus;
@@ -113,7 +114,7 @@
 
 @include responsive-tab {
     .footer {
-        padding: px-to-rem(38 90 0 64);
+        padding-top: px-to-rem(38);
 
         &__star {
             display: block;
@@ -162,7 +163,7 @@
 
 @include responsive-desktop {
     .footer {
-        padding: px-to-rem(175 100 100 130);
+        padding-top: px-to-rem(175);
         display: flex;
         min-height: px-to-rem(400);
 
@@ -170,7 +171,7 @@
             display: block;
             position: absolute;
             top: px-to-rem(-100);
-            right: 0;
+            right: px-to-rem(-130);
         }
 
         &__text {

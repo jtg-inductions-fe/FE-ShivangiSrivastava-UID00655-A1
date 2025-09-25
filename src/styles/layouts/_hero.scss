@@ -3,18 +3,10 @@
 @use '../base' as *;
 
 .hero {
-    text-align: center;
-    margin: 0 auto;
+    margin-top: px-to-rem(26);
 
     &__arrows {
         display: none;
-    }
-
-    &__bg {
-        position: relative;
-        margin-top: px-to-rem(26);
-        margin-left: px-to-rem(10);
-        box-sizing: border-box;
     }
 
     &__gradient {
@@ -31,24 +23,29 @@
     }
 
     &__content {
-        margin-top: px-to-rem(27);
+        @include flex-center;
+        flex-direction: column;
+        margin-top: px-to-rem(32);
+        margin-bottom: px-to-rem(68);
+        gap: px-to-rem(16);
+    }
+
+    &__header {
+        margin-bottom: px-to-rem(18);
+        & > p {
+            margin-top: px-to-rem(24);
+        }
     }
 
     &__explorebtn {
-        @include font-scale(14);
         color: $color-primary;
-        min-width: px-to-rem(224);
-        min-height: px-to-rem(56);
-        margin-bottom: px-to-rem(18);
     }
 
     &__exploreicon {
-        margin-left: px-to-rem(24);
         font-size: px-to-rem(20);
     }
 
     &__heading {
-        margin: 0;
         padding: px-to-rem(0 20);
         &--primary {
             color: $color-primary;
@@ -57,7 +54,6 @@
     }
 
     &__para {
-        margin: px-to-rem(24);
         @include text-overflow;
     }
 
@@ -66,9 +62,6 @@
         flex-direction: column;
         height: px-to-rem(158);
         width: 100%;
-        margin-top: px-to-rem(32);
-        margin-bottom: px-to-rem(64);
-        padding: px-to-rem(0 16);
         flex: 1;
         gap: px-to-rem(28);
         box-sizing: border-box;
@@ -78,13 +71,7 @@
         width: inherit;
         height: px-to-rem(65);
 
-        &--secondary {
-            @include flex-center;
-            justify-content: center;
-        }
-
         &--icon {
-            margin-right: px-to-rem(15);
             font-size: px-to-rem(24);
         }
     }
@@ -92,16 +79,14 @@
     &__logos {
         box-sizing: border-box;
         min-height: px-to-rem(72);
-        margin: px-to-rem(24 36 0 15);
-        @include flex-center;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: px-to-rem(26);
+        gap: px-to-rem(27);
     }
 
-    &__partnerlogo {
+    &__partner-logo {
         height: px-to-rem(20);
-
         & img {
             max-height: 100%;
         }
@@ -115,19 +100,18 @@
 @include responsive-tab {
     .hero {
         position: relative;
+        margin-top: 0;
 
         &__arrows {
             display: block;
             position: absolute;
             height: px-to-rem(175);
-            left: px-to-rem(37);
-            top: px-to-rem(1147);
+            left: px-to-rem(-28);
+            top: px-to-rem(1090);
         }
 
         &__bg {
-            padding-top: px-to-rem(56);
-            padding-right: 0;
-            height: px-to-rem(800);
+            margin: px-to-rem(64 62);
         }
 
         &__gradient {
@@ -138,57 +122,37 @@
         }
 
         &__content {
+            justify-content: center;
+            align-items: center;
             width: px-to-rem(600);
-            margin: px-to-rem(2) auto;
+            margin: 0 auto;
+            gap: px-to-rem(43);
         }
 
-        &__explorebtn {
-            margin: px-to-rem(30 0 44);
-        }
-
-        &__heading {
-            margin-right: px-to-rem(8);
-            letter-spacing: px-to-rem(0.9);
-            padding: 0;
+        &__header {
+            margin-bottom: 0;
         }
 
         &__para {
-            margin-top: px-to-rem(44);
             padding: px-to-rem(0 58);
-            letter-spacing: px-to-rem(0.2);
         }
 
         &__actions {
-            height: px-to-rem(60);
-            max-width: px-to-rem(400);
-            box-sizing: border-box;
-            display: flex;
+            width: auto;
             flex-direction: row;
-            padding: px-to-rem(0 30);
-            margin: px-to-rem(38) auto 0;
-            gap: px-to-rem(16);
         }
 
         &__buttons {
-            max-height: px-to-rem(56);
-            min-width: px-to-rem(181);
-
-            &:first-child {
-                max-height: px-to-rem(49);
-                min-width: px-to-rem(141);
-            }
+            height: auto;
         }
 
         &__logos {
-            margin: px-to-rem(158) auto 0;
-            height: px-to-rem(100);
-            width: 60%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            box-sizing: border-box;
+            padding: px-to-rem(64 160);
+            margin-top: px-to-rem(96);
         }
 
-        &__partnerlogo {
+        &__partner-logo {
             height: px-to-rem(32);
         }
     }
@@ -198,23 +162,23 @@
     .hero {
         position: relative;
         overflow: visible;
+        margin-top: 0;
 
         &__arrows {
             display: block;
             position: absolute;
-            left: px-to-rem(38);
-            top: px-to-rem(707);
+            left: px-to-rem(-86);
+            top: px-to-rem(722);
         }
 
         &__main {
             display: flex;
             flex-direction: row-reverse;
-            justify-content: center;
+            justify-content: start;
         }
 
         &__bg {
-            min-height: px-to-rem(780);
-            margin: px-to-rem(18 0 0 0);
+            margin: px-to-rem(57.9 0);
         }
 
         &__gradient {
@@ -226,19 +190,15 @@
         }
 
         &__content {
-            max-width: px-to-rem(410);
+            margin: px-to-rem(127.74 0);
+            max-width: px-to-rem(420);
+            align-items: start;
             text-align: start;
-            margin-top: px-to-rem(112);
-            margin-left: px-to-rem(30);
+            gap: px-to-rem(48);
         }
 
         &__explorebtn {
             background-color: transparent;
-            margin-left: px-to-rem(4);
-
-            &:hover {
-                box-shadow: 1px 1px 3px 2px #00000012;
-            }
         }
 
         &__heading {
@@ -252,34 +212,20 @@
 
         &__actions {
             flex-direction: row;
-            align-items: start;
-            justify-content: start;
-            margin-top: px-to-rem(72);
-            padding: px-to-rem(0 64 0 8);
-            gap: px-to-rem(10);
-            min-height: px-to-rem(56);
-            height: px-to-rem(50);
         }
 
         &__buttons {
-            max-height: px-to-rem(56);
-            max-width: px-to-rem(181);
-
-            &:first-child {
-                max-height: px-to-rem(49);
-                max-width: px-to-rem(141);
-            }
+            height: auto;
+            width: auto;
         }
 
         &__logos {
-            max-width: 100%;
-            display: flex;
-            justify-content: space-between;
-            height: px-to-rem(80);
-            margin: px-to-rem(60 118 0 130);
+            min-height: px-to-rem(159);
+            padding: px-to-rem(64 0 62.83);
+            gap: px-to-rem(101);
         }
 
-        &__partnerlogo {
+        &__partner-logo {
             height: px-to-rem(32);
         }
     }

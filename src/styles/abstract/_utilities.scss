@@ -1,5 +1,7 @@
 @use './colors' as *;
 @use './variables' as *;
+@use './functions' as *;
+@use './mixins' as *;
 
 //prevents scrolling when navbar is expanded
 .no-scroll {
@@ -21,4 +23,17 @@ nav .no-transition {
 .scrolled {
     background-color: $color-white;
     box-shadow: 0 0 25px $color-shadow;
+}
+
+.section-wrapper {
+    text-align: center;
+    margin: auto px-to-rem(16);
+
+    @include responsive-tab {
+        margin: auto px-to-rem(64);
+    }
+
+    @include responsive-desktop {
+        margin: auto px-to-rem(115 0 126);
+    }
 }
