@@ -8,6 +8,7 @@
     &__cardcontainer {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: px-to-rem(16);
     }
 }

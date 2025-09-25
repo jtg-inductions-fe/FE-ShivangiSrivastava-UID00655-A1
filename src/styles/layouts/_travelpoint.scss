@@ -66,6 +66,11 @@
             margin: px-to-rem(0 46);
         }
 
+        &__content {
+            @include flex-center;
+            flex-direction: column;
+        }
+
         &__cardscontainer {
             flex-direction: row;
             flex-wrap: wrap;
@@ -96,6 +101,10 @@
             top: px-to-rem(320);
         }
 
+        &__text {
+            margin: 0;
+        }
+
         &__img {
             position: absolute;
             left: px-to-rem(-130);
@@ -118,5 +127,6 @@
     .travel-card {
         text-align: center;
         width: px-to-rem(210);
+        padding: px-to-rem(34);
     }
 }
