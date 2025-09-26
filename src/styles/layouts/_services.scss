@@ -5,7 +5,7 @@
     position: relative;
     margin-top: px-to-rem(64);
 
-    &__cardcontainer {
+    &__card-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -62,7 +62,7 @@
             z-index: $z-index-background;
         }
 
-        &__cardcontainer {
+        &__card-container {
             flex-direction: row;
         }
     }
@@ -106,7 +106,7 @@
             margin-bottom: 0;
         }
 
-        &__cardcontainer {
+        &__card-container {
             flex-direction: row;
             gap: px-to-rem(20);
         }

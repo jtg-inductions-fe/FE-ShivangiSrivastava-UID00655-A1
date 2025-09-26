@@ -22,7 +22,7 @@
         @include text-overflow(3);
     }
 
-    &__cardscontainer {
+    &__cards-container {
         display: flex;
         flex-direction: column;
         gap: px-to-rem(16);
@@ -77,7 +77,7 @@
             flex-direction: column;
         }
 
-        &__cardscontainer {
+        &__cards-container {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
@@ -125,7 +125,7 @@
             text-align: start;
         }
 
-        &__cardscontainer {
+        &__cards-container {
             flex-direction: row;
             flex-wrap: wrap;
             gap: px-to-rem(24);

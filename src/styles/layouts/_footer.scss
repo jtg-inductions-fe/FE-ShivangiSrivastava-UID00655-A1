@@ -39,7 +39,7 @@
         @include text-overflow(3);
     }
 
-    &__socialcontainer {
+    &__social-container {
         min-height: px-to-rem(32);
         display: flex;
         gap: px-to-rem(32);
@@ -192,7 +192,7 @@
             @include font-scale(23, $base: 1.6);
         }
 
-        &__socialcontainer {
+        &__social-container {
             margin-top: px-to-rem(30);
         }
     }

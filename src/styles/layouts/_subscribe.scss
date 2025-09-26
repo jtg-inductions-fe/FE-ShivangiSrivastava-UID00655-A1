@@ -11,7 +11,7 @@
 
     &__header {
         & > h3 {
-            margin: px-to-rem(32 0);
+            margin-top: px-to-rem(32);
         }
     }
 
@@ -89,13 +89,18 @@
             gap: px-to-rem(32);
         }
 
-        &__input {
+        &__email-input {
             flex-grow: 1;
+            display: flex;
+        }
+
+        &__input {
             border-radius: px-to-rem(32);
-            min-width: px-to-rem(202);
             min-height: px-to-rem(96);
             @include font-scale(23);
             padding-left: px-to-rem(80);
+            flex: 1;
+            width: auto;
         }
 
         &__button {
@@ -131,18 +136,23 @@
         &__subheading {
             max-width: px-to-rem(900);
             @include font-scale(55);
+            margin-bottom: 0;
         }
 
         &__input-field {
             flex-direction: row;
             margin-top: px-to-rem(66);
-            gap: px-to-rem(50);
+            justify-content: space-between;
         }
 
         &__emailicon {
             font-size: px-to-rem(24);
             top: px-to-rem(36);
             left: px-to-rem(48);
+        }
+
+        &__email-input {
+            flex-grow: 1;
         }
 
         &__input {
@@ -155,6 +165,7 @@
         }
 
         &__button {
+            flex-shrink: 0;
             width: px-to-rem(235);
             min-height: px-to-rem(96);
             border-radius: px-to-rem(32);
