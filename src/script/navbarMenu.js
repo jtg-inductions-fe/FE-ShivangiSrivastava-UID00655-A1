@@ -40,7 +40,7 @@ if (ready) {
 
 //adds background to navbar on scrolling
 window.addEventListener('scroll', () => {
-    if (window.scrollY > navBar.offsetTop + navBar.offsetHeight) {
+    if (window.scrollY > navBar.offsetTop) {
         if (!navBar.classList.contains('scrolled')) {
             header.classList.add('scrolled');
             navBar.classList.add('scrolled');

@@ -19,6 +19,7 @@
     position: relative;
     box-sizing: border-box;
     padding: px-to-rem(38 20 38 17);
+    transition: padding 0.3s ease;
 
     display: flex;
     justify-content: space-between;
