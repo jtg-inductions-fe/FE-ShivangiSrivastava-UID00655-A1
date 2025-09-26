@@ -201,7 +201,6 @@
         margin: 0;
         display: flex;
         min-width: px-to-rem(564);
-        gap: px-to-rem(86);
 
         &__icon {
             display: none;
@@ -209,7 +208,6 @@
 
         &__container {
             margin: 0;
-            width: px-to-rem(100);
         }
 
         &__heading {

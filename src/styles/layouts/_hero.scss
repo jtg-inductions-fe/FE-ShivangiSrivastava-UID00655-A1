@@ -108,7 +108,7 @@
         }
 
         &__para {
-            margin-top: 0;
+            max-width: px-to-rem(430);
         }
 
         &__arrows {
@@ -143,10 +143,6 @@
             & > p {
                 margin-top: 0;
             }
-        }
-
-        &__para {
-            padding: px-to-rem(0 58);
         }
 
         &__actions {
@@ -223,8 +219,7 @@
             max-width: 100%;
         }
         &__para {
-            margin: 0;
-            padding: px-to-rem(0 10);
+            max-width: px-to-rem(400);
         }
 
         &__actions {

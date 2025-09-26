@@ -84,11 +84,11 @@
 
 @include responsive-desktop {
     .services {
-        padding: px-to-rem(61 0);
         display: flex;
         text-align: start;
         align-items: center;
-        margin-top: 0;
+        margin-top: px-to-rem(61);
+        margin-bottom: px-to-rem(61);
 
         &__gradient {
             width: px-to-rem(500);
