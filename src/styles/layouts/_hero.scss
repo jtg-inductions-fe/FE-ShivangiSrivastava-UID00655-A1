@@ -31,11 +31,9 @@
     }
 
     &__header {
-        @include flex-center;
-        flex-direction: column;
         margin-bottom: px-to-rem(18);
         & > p {
-            margin-top: px-to-rem(24);
+            margin-top: px-to-rem(8);
         }
     }
 
@@ -170,23 +168,23 @@
     .hero {
         position: relative;
         overflow: visible;
-        margin-top: 0;
+        margin-top: px-to-rem(62);
+        display: flex;
+        flex-direction: column;
+        gap: px-to-rem(56);
 
         &__arrows {
             display: block;
             position: absolute;
             left: px-to-rem(-86);
-            top: px-to-rem(722);
+            top: px-to-rem(660);
         }
 
         &__main {
             display: flex;
             flex-direction: row-reverse;
-            justify-content: start;
-        }
-
-        &__bg {
-            margin: px-to-rem(57.9 0);
+            justify-content: center;
+            align-items: center;
         }
 
         &__gradient {
@@ -198,7 +196,7 @@
         }
 
         &__content {
-            margin: px-to-rem(127.74 0);
+            margin: 0;
             max-width: px-to-rem(420);
             align-items: start;
             text-align: start;
@@ -233,7 +231,7 @@
 
         &__logos {
             min-height: px-to-rem(159);
-            padding: px-to-rem(64 0 62.83);
+            align-items: center;
             gap: px-to-rem(101);
         }
 

@@ -67,7 +67,7 @@
                     </ul>
                 </div>
 
-                <div class="navbar__actions no-transition" id="nav-butotns">
+                <div class="navbar__actions no-transition" id="nav-buttons">
                     <button class="button button--secondary navbar__buttons">
                         Log In
                     </button>
@@ -231,7 +231,8 @@
                 aria-labelledby="services-heading"
             >
                 <div class="services__gradient"></div>
-                <div class="section-header services__content">
+                <div class="section-content services__content">
+                <div class="section-header services__header">
                     <h2 class="services__heading" id="services-heading">
                         SERVICES
                     </h2>
@@ -248,11 +249,13 @@
                                 alt="Globe Image"
                             />
                         </div>
+                        <div class="services-card__content">
                         <h4 class="services-card__heading">Best Tour Guide</h4>
                         <p class="services-card__text">
                             What looked like a small patch of purple grass,
                             above five feet.
                         </p>
+                        </div>
                     </div>
                     <div class="services-card">
                         <div class="services-card__img">
@@ -261,11 +264,13 @@
                                 alt="Calendar Image"
                             />
                         </div>
+                        <div class="services-card__content">
                         <h4 class="services-card__heading">Easy Booking</h4>
                         <p class="services-card__text">
                             Square, was moving across the sand in their
                             direction.
                         </p>
+                        </div>
                     </div>
                     <div class="services-card">
                         <div class="services-card__img">
@@ -274,12 +279,15 @@
                                 alt="Weather Image"
                             />
                         </div>
+                        <div class="services-card__content">
                         <h4 class="services-card__heading">Weather Forecast</h4>
                         <p class="services-card__text">
                             What looked like a small patch of purple grass,
                             above five feet.
                         </p>
+                        </div>
                     </div>
+                </div>
                 </div>
             </section>
 
@@ -314,7 +322,7 @@
                     </picture>
                 </div>
 
-                <div class="travel__content">
+                <div class="travel__content section-content">
                     <div class="section-header travel__header">
                         <h2 class="travel__heading" id="travel-heading">
                             TRAVEL POINT
@@ -372,7 +380,7 @@
                     </picture>
                 </div>
 
-                <div class="features__content">
+                <div class="features__content section-content">
                     <div class="section-header features__header">
                         <h2 class="features__heading" id="features-heading">
                             KEY FEATURES
@@ -439,13 +447,7 @@
                 class="testimonials section-wrapper"
                 aria-labelledby="testimonials-heading"
             >
-                <div class="section-header">
-                    <h2 class="testimonials__heading" id="testimonials-heading">
-                        TESTIMONIALS
-                    </h2>
-                    <h3 class="testimonials__description">Trust our clients</h3>
-                </div>
-                <div class="testimonials__bg">
+            <div class="testimonials__bg">
                     <img
                         src="src/assets/images/testimonial-bg.png"
                         alt=""
@@ -453,6 +455,13 @@
                         role="presentation"
                     />
                 </div>
+                <div class="section-header">
+                    <h2 class="testimonials__heading" id="testimonials-heading">
+                        TESTIMONIALS
+                    </h2>
+                    <h3 class="testimonials__description">Trust our clients</h3>
+                </div>
+                
 
                 <div class="swiper">
                     <div class="swiper-wrapper">
@@ -573,6 +582,8 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
+
+                </section>
             </section>
 
             <!-- SUBSCRIPTION FORM -->

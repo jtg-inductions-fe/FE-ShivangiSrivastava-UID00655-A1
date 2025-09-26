@@ -76,6 +76,7 @@
         &__card-container {
             gap: px-to-rem(0);
             margin: 0;
+            align-self: start;
         }
     }
 
@@ -93,7 +94,7 @@
 
 @include responsive-desktop {
     .features {
-        margin-top: px-to-rem(64);
+        margin: px-to-rem(128 140 0);
         text-align: start;
         min-height: px-to-rem(900);
         overflow: hidden;
@@ -124,7 +125,7 @@
     .features-card {
         @include flex-center;
         gap: px-to-rem(32);
-        padding: px-to-rem(36 32 28 46);
+        padding: px-to-rem(36 32 28 20);
         &__content {
             margin: 0;
         }

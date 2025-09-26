@@ -2,7 +2,7 @@
 
 .swiper-slide {
     text-align: center;
-    margin-top: px-to-rem(30);
+    margin-top: px-to-rem(64);
     min-height: px-to-rem(480);
 
     &__user-info {
@@ -97,10 +97,10 @@
         flex-direction: column;
         align-items: center;
 
-        margin-top: px-to-rem(0);
+        margin-top: px-to-rem(56);
 
         &__user-info {
-            margin-top: px-to-rem(46);
+            margin-top: px-to-rem(56);
         }
 
         &__description {
@@ -111,7 +111,7 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(36);
+        top: px-to-rem(102);
         box-sizing: border-box;
         width: 100%;
         display: flex;
@@ -138,7 +138,6 @@
     }
     .swiper-slide {
         min-height: px-to-rem(470);
-        margin-top: 0;
         &__user-info {
             margin-top: px-to-rem(50);
         }
@@ -152,7 +151,7 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(16);
+        top: px-to-rem(76);
         box-sizing: border-box;
         width: 100%;
         display: flex;

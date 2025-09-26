@@ -17,7 +17,7 @@
         &__bg {
             position: absolute;
             display: block;
-            top: px-to-rem(32);
+            top: px-to-rem(-100);
         }
     }
 }
@@ -30,7 +30,7 @@
             display: block;
             margin: 0;
             position: absolute;
-            top: px-to-rem(0);
+            top: px-to-rem(-160);
         }
     }
 }

@@ -132,7 +132,7 @@
         &__star {
             display: block;
             position: absolute;
-            top: px-to-rem(-900);
+            top: px-to-rem(-950);
             right: px-to-rem(-60);
         }
 
@@ -175,7 +175,7 @@
 
 @include responsive-desktop {
     .footer {
-        margin-top: px-to-rem(134);
+        margin-top: px-to-rem(126);
         margin-bottom: px-to-rem(60);
         padding: px-to-rem(64 0);
         display: flex;

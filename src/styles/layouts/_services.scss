@@ -18,8 +18,9 @@
     box-sizing: border-box;
     @include flex-center;
     flex-direction: column;
-    padding: px-to-rem(31 26);
+    padding: px-to-rem(32 26);
     border-radius: px-to-rem(30);
+    gap: px-to-rem(26);
     background-color: $color-white;
     transition:
         box-shadow 0.3s ease,
@@ -35,7 +36,7 @@
         font-weight: $font-weight-bold;
         @include font-scale(24);
         padding: 0;
-        margin: px-to-rem(28 0 30);
+        margin: 0;
     }
 
     &__text {
@@ -43,6 +44,12 @@
         margin: 0;
         @include font-scale(18, $base: 1.6);
         @include text-overflow;
+    }
+
+    &__content {
+        @include flex-center;
+        flex-direction: column;
+        gap: px-to-rem(30);
     }
 }
 
@@ -70,10 +77,9 @@
     .services-card {
         width: px-to-rem(288);
         padding: px-to-rem(66 60 32);
+        gap: px-to-rem(59);
 
         &__heading {
-            margin: px-to-rem(60 0 14);
-            margin-bottom: px-to-rem(32);
             @include font-scale(28);
         }
         &__text {
@@ -90,6 +96,15 @@
         margin-top: px-to-rem(61);
         margin-bottom: px-to-rem(61);
 
+        &__content {
+            flex-direction: row;
+            gap: 0;
+        }
+
+        &__header {
+            align-items: start;
+        }
+
         &__gradient {
             width: px-to-rem(500);
             height: px-to-rem(570);
@@ -102,10 +117,6 @@
             z-index: $z-index-background;
         }
 
-        &__content {
-            margin-bottom: 0;
-        }
-
         &__card-container {
             flex-direction: row;
             gap: px-to-rem(20);
@@ -115,11 +126,11 @@
     .services-card {
         width: px-to-rem(386);
         padding: px-to-rem(64 64 100);
+        gap: px-to-rem(64);
         &:last-child {
             display: none;
         }
         &__heading {
-            margin-top: px-to-rem(58);
             @include font-scale(28);
         }
         &__text {

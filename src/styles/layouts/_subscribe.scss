@@ -11,7 +11,7 @@
 
     &__header {
         & > h3 {
-            margin-top: px-to-rem(32);
+            margin-top: px-to-rem(16);
         }
     }
 
@@ -56,7 +56,7 @@
 
 @include responsive-tab {
     .subscribe {
-        margin-top: px-to-rem(78);
+        margin-top: px-to-rem(114);
         background-color: #{$color-icon}14;
         border-radius: px-to-rem(32);
         padding: px-to-rem(128 64);
@@ -115,10 +115,10 @@
 
 @include responsive-desktop {
     .subscribe {
-        margin-top: px-to-rem(102);
+        margin-top: px-to-rem(164);
         background-color: #{$color-icon}14;
         border-radius: px-to-rem(32);
-        padding: px-to-rem(128 64 86);
+        padding: px-to-rem(128 64);
 
         &__triangle {
             display: block;

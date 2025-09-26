@@ -32,7 +32,7 @@
 
 .travel-card {
     border: 1px solid $color-border;
-    padding: px-to-rem(32 64 30);
+    padding: px-to-rem(32 120 30);
     box-sizing: border-box;
     border-radius: px-to-rem(30);
     display: flex;
@@ -93,17 +93,16 @@
 
 @include responsive-desktop {
     .travel {
-        margin-top: 0;
+        margin-top: px-to-rem(140);
         display: flex;
         justify-content: end;
-        padding: px-to-rem(85.64 0 64);
         box-sizing: border-box;
 
         &__ticket {
             display: block;
             position: absolute;
             right: px-to-rem(-70);
-            top: px-to-rem(320);
+            top: px-to-rem(236);
         }
 
         &__text {
@@ -117,7 +116,7 @@
         &__img {
             position: absolute;
             left: px-to-rem(-130);
-            top: px-to-rem(56);
+            top: px-to-rem(-30);
         }
 
         &__content {
