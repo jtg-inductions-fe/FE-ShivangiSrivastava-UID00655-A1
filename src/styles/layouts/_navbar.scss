@@ -8,6 +8,7 @@
     top: 0;
     z-index: $z-index-nav;
     height: px-to-rem(120);
+    box-sizing: border-box;
     width: 100%;
     transition:
         background-color 0.2s linear,
@@ -15,16 +16,15 @@
         height 0.2s linear;
 }
 .navbar {
-    height: inherit;
     position: relative;
-    z-index: $z-index-overlay;
     box-sizing: border-box;
-    padding: px-to-rem(0 20 0 17);
-    @include flex-center;
+    padding: px-to-rem(38 20 38 17);
+
+    display: flex;
     justify-content: space-between;
 
     &__logo {
-        z-index: inherit;
+        z-index: $z-index-overlay;
     }
 
     &__home {
@@ -145,7 +145,7 @@
         height: px-to-rem(113);
     }
     .navbar {
-        padding: px-to-rem(0 64 0 68);
+        padding: px-to-rem(36 64 36 68);
 
         &__logo {
             position: absolute;
@@ -184,8 +184,8 @@
         height: px-to-rem(145);
     }
     .navbar {
-        margin: px-to-rem(16) auto 0;
-        padding: px-to-rem(0 98 0 150);
+        margin: 0 auto;
+        padding: px-to-rem(68 98 32 150);
         max-width: $breakpoint-container;
 
         &__menu-icons {

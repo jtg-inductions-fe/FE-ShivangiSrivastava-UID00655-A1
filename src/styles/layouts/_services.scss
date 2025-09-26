@@ -18,9 +18,8 @@
     box-sizing: border-box;
     @include flex-center;
     flex-direction: column;
-    padding: px-to-rem(30 26);
+    padding: px-to-rem(31 26);
     border-radius: px-to-rem(30);
-    min-height: px-to-rem(280);
     background-color: $color-white;
     transition:
         box-shadow 0.3s ease,
@@ -70,8 +69,7 @@
 
     .services-card {
         width: px-to-rem(288);
-        min-height: px-to-rem(450);
-        padding: px-to-rem(64 60 32);
+        padding: px-to-rem(66 60 32);
 
         &__heading {
             margin: px-to-rem(60 0 14);
@@ -115,9 +113,8 @@
     }
 
     .services-card {
-        min-height: px-to-rem(443);
         width: px-to-rem(386);
-        padding: px-to-rem(64);
+        padding: px-to-rem(64 64 100);
         &:last-child {
             display: none;
         }

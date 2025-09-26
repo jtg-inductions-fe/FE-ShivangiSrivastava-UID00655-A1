@@ -24,7 +24,7 @@
 
 @include responsive-desktop {
     .testimonials {
-        margin-top: 0;
+        margin-top: px-to-rem(40);
 
         &__bg {
             display: block;

@@ -2,7 +2,8 @@
 
 .footer {
     position: relative;
-    padding-top: px-to-rem(70);
+    margin-top: px-to-rem(94);
+    margin-bottom: px-to-rem(30);
     box-sizing: border-box;
     text-align: start;
 
@@ -19,7 +20,14 @@
         gap: px-to-rem(16);
     }
 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: px-to-rem(30);
+    }
+
     &__heading {
+        margin: 0;
         font-size: px-to-rem(24);
         font-weight: $font-weight-black;
     }
@@ -27,12 +35,11 @@
     &__text {
         @include font-scale(16, $base: 1.6);
         color: $color-text-secondary;
-        margin-top: px-to-rem(8);
+        margin: 0;
         @include text-overflow(3);
     }
 
     &__socialcontainer {
-        margin-top: px-to-rem(32);
         min-height: px-to-rem(32);
         display: flex;
         gap: px-to-rem(32);
@@ -81,6 +88,7 @@
         text-decoration: none;
         color: $color-text-secondary;
         margin: 0;
+        padding: px-to-rem(4);
         transition: color 0.3s ease;
         @include text-overflow(2);
         @include font-scale(18, $base: 2);
@@ -105,27 +113,31 @@
             padding 0.3s ease;
 
         &.active {
-            max-height: px-to-rem(180);
+            max-height: px-to-rem(220);
             visibility: visible;
             padding: px-to-rem(10 28 20);
         }
+    }
+
+    &__list-item {
+        width: fit-content;
     }
 }
 
 @include responsive-tab {
     .footer {
-        padding-top: px-to-rem(38);
+        margin-top: px-to-rem(60);
+        margin-bottom: px-to-rem(60);
 
         &__star {
             display: block;
             position: absolute;
             top: px-to-rem(-900);
-            right: 0;
+            right: px-to-rem(-60);
         }
 
         &__text {
             @include font-scale(23, $base: 1.6);
-            margin-top: px-to-rem(6);
         }
     }
 
@@ -163,32 +175,33 @@
 
 @include responsive-desktop {
     .footer {
-        padding-top: px-to-rem(175);
+        margin-top: px-to-rem(134);
+        margin-bottom: px-to-rem(60);
+        padding: px-to-rem(64 0);
         display: flex;
-        min-height: px-to-rem(400);
+        gap: px-to-rem(60);
 
         &__star {
             display: block;
             position: absolute;
-            top: px-to-rem(-100);
+            top: px-to-rem(-230);
             right: px-to-rem(-113);
         }
 
         &__text {
-            margin-top: 0;
             @include font-scale(23, $base: 1.6);
         }
 
         &__socialcontainer {
-            margin-top: px-to-rem(64);
+            margin-top: px-to-rem(30);
         }
     }
 
     .company-details {
-        margin-top: px-to-rem(24);
+        margin: 0;
         display: flex;
-        min-width: px-to-rem(560);
-        gap: px-to-rem(80);
+        min-width: px-to-rem(564);
+        gap: px-to-rem(86);
 
         &__icon {
             display: none;
@@ -196,7 +209,7 @@
 
         &__container {
             margin: 0;
-            width: px-to-rem(120);
+            width: px-to-rem(100);
         }
 
         &__heading {

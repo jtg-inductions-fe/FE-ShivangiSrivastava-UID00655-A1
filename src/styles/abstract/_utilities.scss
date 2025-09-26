@@ -22,15 +22,24 @@ nav .no-transition {
 //adds bg color and shadow on scroll
 header.scrolled {
     height: fit-content;
-    padding: px-to-rem(16 0);
     box-sizing: border-box;
     background-color: $color-white;
     box-shadow: 0 0 25px $color-shadow;
 }
 
+nav.scrolled {
+    padding-top: px-to-rem(16);
+    padding-bottom: px-to-rem(16);
+}
+
 .section-wrapper {
     text-align: center;
     margin: auto px-to-rem(16);
+
+    @media (min-width: ($breakpoint-sm)) and (max-width: ($breakpoint-md - 1)) {
+        max-width: $breakpoint-sm;
+        margin: 0 auto;
+    }
 
     @include responsive-tab {
         margin: auto px-to-rem(64);

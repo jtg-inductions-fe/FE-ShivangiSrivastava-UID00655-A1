@@ -43,9 +43,11 @@ window.addEventListener('scroll', () => {
     if (window.scrollY > navBar.offsetTop + navBar.offsetHeight) {
         if (!navBar.classList.contains('scrolled')) {
             header.classList.add('scrolled');
+            navBar.classList.add('scrolled');
         }
     } else {
         header.classList.remove('scrolled');
+        navBar.classList.remove('scrolled');
     }
 });
 

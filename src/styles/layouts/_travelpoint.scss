@@ -2,18 +2,23 @@
 
 .travel {
     position: relative;
-    margin-top: px-to-rem(64);
+    margin-top: px-to-rem(68);
+
+    &__header {
+        @include flex-center;
+        flex-direction: column;
+    }
 
     &__ticket {
         display: none;
     }
 
     &__img {
-        margin-bottom: px-to-rem(34);
+        margin-bottom: px-to-rem(32);
     }
 
     &__text {
-        margin: px-to-rem(0 26);
+        max-width: px-to-rem(376);
         @include text-overflow(3);
     }
 
@@ -27,10 +32,12 @@
 
 .travel-card {
     border: 1px solid $color-border;
-    padding: px-to-rem(32 64);
+    padding: px-to-rem(32 64 30);
     box-sizing: border-box;
-    min-height: px-to-rem(151);
     border-radius: px-to-rem(30);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(16);
     transition:
         box-shadow 0.3s ease,
         transform 0.3s ease;
@@ -40,8 +47,7 @@
         transform: scale(1.01);
     }
     &__heading {
-        margin-top: 0;
-        margin-bottom: px-to-rem(16);
+        margin: 0;
         @include font-scale(35);
         color: $color-secondary;
     }
@@ -59,7 +65,7 @@
         margin-top: px-to-rem(64);
 
         &__img {
-            margin: px-to-rem(128 0 54 32);
+            margin: px-to-rem(128 0 60 32);
         }
 
         &__text {
@@ -69,6 +75,9 @@
         &__content {
             @include flex-center;
             flex-direction: column;
+        }
+        &__text {
+            max-width: 100%;
         }
 
         &__cardscontainer {
@@ -90,7 +99,6 @@
         margin-top: 0;
         display: flex;
         justify-content: end;
-        min-height: px-to-rem(740);
         padding: px-to-rem(85.64 0 64);
         box-sizing: border-box;
 
@@ -102,7 +110,11 @@
         }
 
         &__text {
-            margin: 0;
+            max-width: 100%;
+        }
+
+        &__header {
+            align-items: start;
         }
 
         &__img {
@@ -119,14 +131,13 @@
         &__cardscontainer {
             flex-direction: row;
             flex-wrap: wrap;
-            min-height: px-to-rem(340);
             gap: px-to-rem(24);
         }
     }
 
     .travel-card {
+        flex: 1;
         text-align: center;
-        width: px-to-rem(210);
-        padding: px-to-rem(34);
+        padding: px-to-rem(33);
     }
 }

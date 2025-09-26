@@ -1,20 +1,27 @@
 @use '../abstract/' as *;
 
 .features {
-    margin-top: px-to-rem(86);
+    margin-top: px-to-rem(98);
+
+    &__content {
+        margin: px-to-rem(0 32);
+    }
 
     &__bg {
         margin-bottom: px-to-rem(100);
     }
 
     &__text {
-        padding: px-to-rem(0 44);
+        max-width: px-to-rem(320);
         @include text-overflow(4);
     }
 
+    &__header {
+        @include flex-center;
+        flex-direction: column;
+    }
+
     &__cardcontainer {
-        min-height: px-to-rem(870);
-        padding: px-to-rem(0 32);
         display: flex;
         flex-direction: column;
         gap: px-to-rem(8);
@@ -25,8 +32,7 @@
     text-align: start;
     border-radius: px-to-rem(32);
     box-sizing: border-box;
-    min-height: px-to-rem(290);
-    padding: px-to-rem(32);
+    padding: px-to-rem(32 40 32 32);
 
     &:hover {
         border: 1px solid $color-border;
@@ -36,7 +42,7 @@
     }
 
     &__content {
-        margin-top: px-to-rem(30);
+        margin-top: px-to-rem(32);
         display: flex;
         flex-direction: column;
         gap: px-to-rem(8);
@@ -59,23 +65,23 @@
         margin-top: px-to-rem(130);
 
         &__bg {
-            margin-bottom: px-to-rem(64);
+            margin-bottom: px-to-rem(68);
         }
 
         &__text {
+            max-width: px-to-rem(800);
             @include text-overflow(2);
         }
 
         &__cardcontainer {
             gap: px-to-rem(0);
-            min-height: px-to-rem(492);
+            margin: 0;
         }
     }
 
     .features-card {
-        padding: px-to-rem(36 32 26);
+        padding: px-to-rem(32);
         @include flex-center;
-        min-height: px-to-rem(164);
         display: flex;
         gap: px-to-rem(32);
 
@@ -87,11 +93,9 @@
 
 @include responsive-desktop {
     .features {
-        margin-top: 0;
-        padding: px-to-rem(60 20 40);
+        margin-top: px-to-rem(64);
         text-align: start;
         min-height: px-to-rem(900);
-        justify-content: space-between;
         overflow: hidden;
 
         &__bg {
@@ -101,24 +105,26 @@
 
         &__content {
             width: px-to-rem(530);
+            margin: 0;
+        }
+
+        &__header {
+            align-items: start;
         }
 
         &__text {
-            padding: 0;
+            max-width: 100%;
         }
 
         &__cardcontainer {
-            padding: 0;
             gap: 0;
-            min-height: px-to-rem(492);
         }
     }
 
     .features-card {
         @include flex-center;
         gap: px-to-rem(32);
-        min-height: px-to-rem(164);
-        padding: px-to-rem(36 32 28);
+        padding: px-to-rem(36 32 28 46);
         &__content {
             margin: 0;
         }

@@ -31,6 +31,8 @@
     }
 
     &__header {
+        @include flex-center;
+        flex-direction: column;
         margin-bottom: px-to-rem(18);
         & > p {
             margin-top: px-to-rem(24);
@@ -46,10 +48,9 @@
     }
 
     &__heading {
-        padding: px-to-rem(0 20);
+        max-width: px-to-rem(340);
         &--primary {
             color: $color-primary;
-            padding: 0;
         }
     }
 
@@ -102,6 +103,14 @@
         position: relative;
         margin-top: 0;
 
+        &__heading {
+            max-width: 100%;
+        }
+
+        &__para {
+            margin-top: 0;
+        }
+
         &__arrows {
             display: block;
             position: absolute;
@@ -131,6 +140,9 @@
 
         &__header {
             margin-bottom: 0;
+            & > p {
+                margin-top: 0;
+            }
         }
 
         &__para {
@@ -201,9 +213,14 @@
             background-color: transparent;
         }
 
+        &__header {
+            & > p {
+                margin-top: 0;
+            }
+        }
+
         &__heading {
-            margin: px-to-rem(26 10 45);
-            padding: 0;
+            max-width: 100%;
         }
         &__para {
             margin: 0;
