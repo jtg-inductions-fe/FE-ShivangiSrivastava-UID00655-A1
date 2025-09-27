@@ -3,7 +3,8 @@
 .subscribe {
     position: relative;
     margin-top: px-to-rem(58);
-    padding: px-to-rem(0 34);
+    padding: px-to-rem(0 33);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: px-to-rem(64);

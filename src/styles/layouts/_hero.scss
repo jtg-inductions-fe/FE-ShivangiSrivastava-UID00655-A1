@@ -171,7 +171,7 @@
     .hero {
         position: relative;
         overflow: visible;
-        margin-top: px-to-rem(62);
+        margin-top: px-to-rem(59);
         gap: px-to-rem(56);
 
         &__arrows {
@@ -183,6 +183,7 @@
 
         &__main {
             flex-direction: row-reverse;
+            gap: px-to-rem(36);
         }
 
         &__gradient {
@@ -195,7 +196,7 @@
 
         &__content {
             margin: 0;
-            max-width: px-to-rem(420);
+            max-width: px-to-rem(390);
             align-items: start;
             text-align: start;
             gap: px-to-rem(48);
@@ -230,7 +231,8 @@
         &__logos {
             min-height: px-to-rem(159);
             align-items: center;
-            gap: px-to-rem(101);
+            width: 100%;
+            justify-content: space-between;
         }
 
         &__partner-logo {

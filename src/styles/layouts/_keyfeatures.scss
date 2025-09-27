@@ -2,13 +2,12 @@
 
 .features {
     margin-top: px-to-rem(98);
+    @include flex-center;
+    flex-direction: column;
+    gap: px-to-rem(100);
 
     &__content {
         margin: px-to-rem(0 32);
-    }
-
-    &__bg {
-        margin-bottom: px-to-rem(100);
     }
 
     &__text {
@@ -66,10 +65,7 @@
 @include responsive-tab {
     .features {
         margin-top: px-to-rem(130);
-
-        &__bg {
-            margin-bottom: px-to-rem(68);
-        }
+        gap: px-to-rem(68);
 
         &__text {
             max-width: px-to-rem(800);
@@ -81,10 +77,14 @@
             margin: 0;
             align-self: start;
         }
+
+        &__content {
+            margin: 0;
+        }
     }
 
     .features-card {
-        padding: px-to-rem(32);
+        padding: px-to-rem(32 16);
         flex-direction: row;
         align-items: center;
     }
@@ -104,6 +104,8 @@
 
         &__content {
             width: px-to-rem(530);
+            align-self: start;
+            margin: px-to-rem(0 16);
         }
 
         &__header {
@@ -123,7 +125,7 @@
         flex-direction: row;
         align-items: center;
         gap: px-to-rem(32);
-        padding: px-to-rem(36 32 28 20);
+        padding: px-to-rem(36 32 28);
         &__content {
             margin: 0;
         }

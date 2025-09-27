@@ -79,7 +79,7 @@
         </header>
 
         <!-- HERO SECTION -->
-        <main class="wrapper" id="main-section">
+        <main id="main-section">
             <section
                 aria-label="Introduction Section"
                 class="hero section-wrapper"
@@ -91,13 +91,13 @@
                         <picture>
                             <source
                                 srcset="src/assets/images/hero-img-desktop.png"
-                                media="(width >=1280px)"
+                                media="(width >=1440px)"
                                 width="772"
                                 height="713"
                             />
                             <source
                                 srcset="src/assets/images/hero-img-tablet.png"
-                                media="(width >=880px)"
+                                media="(width >=1024px)"
                                 width="772"
                                 height="713"
                             />
@@ -315,7 +315,7 @@
                     <picture>
                         <source
                             srcset="src/assets/images/travelpoint-bg.png"
-                            media="(width >=880px)"
+                            media="(width >=1024px)"
                             width="870"
                             height="697"
                         />
@@ -373,7 +373,7 @@
                     <picture>
                         <source
                             srcset="src/assets/images/keyfeatures-bg-tab.png"
-                            media="(width>=880px)"
+                            media="(width>=1024px)"
                             width="694"
                             height="869"
                         />
@@ -454,12 +454,20 @@
                 aria-labelledby="testimonials-heading"
             >
                 <div class="testimonials__bg">
-                    <img
-                        src="src/assets/images/testimonial-bg.png"
-                        alt=""
-                        aria-hidden="true"
-                        role="presentation"
-                    />
+                    <picture>
+                        <source
+                            srcset="
+                                src/assets/images/testimonials-bg-desktop.png
+                            "
+                            media="(width>=1440px)"
+                        />
+                        <img
+                            src="src/assets/images/testimonials-bg-tab.png"
+                            alt=""
+                            aria-hidden="true"
+                            role="presentation"
+                        />
+                    </picture>
                 </div>
                 <div class="section-header">
                     <h2 class="testimonials__heading" id="testimonials-heading">
@@ -634,7 +642,7 @@
         </main>
 
         <!-- DETAILS SECTION (FOOTER) -->
-        <footer class="wrapper" id="footer-section">
+        <footer id="footer-section">
             <div class="section-wrapper footer">
                 <div class="footer__star">
                     <img

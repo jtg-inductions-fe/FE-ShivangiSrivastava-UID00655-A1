@@ -8,12 +8,6 @@
     overflow: hidden;
 }
 
-//containerizes page beyond max viewport width
-.wrapper {
-    max-width: $breakpoint-container;
-    margin: 0 auto;
-}
-
 //prevents transitions during resizing window
 nav .no-transition {
     transition: none;
@@ -34,18 +28,16 @@ nav.scrolled {
 
 .section-wrapper {
     text-align: center;
-    margin: auto px-to-rem(16);
-
-    @media (min-width: ($breakpoint-sm)) and (max-width: ($breakpoint-md - 1)) {
-        max-width: $breakpoint-sm;
-        margin: 0 auto;
-    }
+    max-width: px-to-rem(396.28);
+    margin: auto;
 
     @include responsive-tab {
-        margin: auto px-to-rem(64);
+        max-width: px-to-rem(896);
+        margin: auto;
     }
 
     @include responsive-desktop {
-        margin: auto px-to-rem(115 0 126);
+        max-width: px-to-rem(1192);
+        margin: auto;
     }
 }
