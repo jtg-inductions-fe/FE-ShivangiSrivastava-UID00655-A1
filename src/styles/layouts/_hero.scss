@@ -4,6 +4,9 @@
 
 .hero {
     margin-top: px-to-rem(26);
+    @include flex-center;
+    flex-direction: column;
+    gap: px-to-rem(68);
 
     &__arrows {
         display: none;
@@ -22,11 +25,15 @@
         top: px-to-rem(-50);
     }
 
+    &__main {
+        @include flex-center;
+        flex-direction: column;
+        gap: px-to-rem(32);
+    }
+
     &__content {
         @include flex-center;
         flex-direction: column;
-        margin-top: px-to-rem(32);
-        margin-bottom: px-to-rem(68);
         gap: px-to-rem(16);
     }
 
@@ -99,7 +106,12 @@
 @include responsive-tab {
     .hero {
         position: relative;
-        margin-top: 0;
+        margin-top: px-to-rem(64);
+        gap: px-to-rem(160);
+
+        &__main {
+            gap: px-to-rem(64);
+        }
 
         &__heading {
             max-width: 100%;
@@ -117,10 +129,6 @@
             top: px-to-rem(1090);
         }
 
-        &__bg {
-            margin: px-to-rem(64 62);
-        }
-
         &__gradient {
             width: px-to-rem(642);
             height: px-to-rem(552);
@@ -129,10 +137,7 @@
         }
 
         &__content {
-            justify-content: center;
-            align-items: center;
             width: px-to-rem(600);
-            margin: 0 auto;
             gap: px-to-rem(43);
         }
 
@@ -153,9 +158,7 @@
         }
 
         &__logos {
-            box-sizing: border-box;
-            padding: px-to-rem(64 160);
-            margin-top: px-to-rem(96);
+            max-width: px-to-rem(600);
         }
 
         &__partner-logo {
@@ -169,8 +172,6 @@
         position: relative;
         overflow: visible;
         margin-top: px-to-rem(62);
-        display: flex;
-        flex-direction: column;
         gap: px-to-rem(56);
 
         &__arrows {
@@ -181,10 +182,7 @@
         }
 
         &__main {
-            display: flex;
             flex-direction: row-reverse;
-            justify-content: center;
-            align-items: center;
         }
 
         &__gradient {

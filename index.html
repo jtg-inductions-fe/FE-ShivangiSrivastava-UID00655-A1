@@ -30,7 +30,7 @@
                         type="button"
                         aria-label="open menu"
                         aria-expanded="false"
-                        aria-controls="nav-links nav-btns"
+                        aria-controls="nav-list nav-buttons"
                         id="menu-open"
                     ></button>
 
@@ -44,7 +44,7 @@
                     ></button>
                 </div>
 
-                <div class="navbar__links no-transition" id="navbar-list">
+                <div class="navbar__links no-transition" id="nav-list">
                     <ul class="navbar__list">
                         <li>
                             <a href="#home" class="navbar__item">Home</a>
@@ -92,20 +92,20 @@
                             <source
                                 srcset="src/assets/images/hero-img-desktop.png"
                                 media="(width >=1280px)"
-                                width="772px"
-                                height="713px"
+                                width="772"
+                                height="713"
                             />
                             <source
                                 srcset="src/assets/images/hero-img-tablet.png"
-                                media="(width >=786px)"
-                                width="772px"
-                                height="713px"
+                                media="(width >=880px)"
+                                width="772"
+                                height="713"
                             />
                             <img
                                 src="src/assets/images/hero-img-mobile.png"
                                 alt="Collage of Travel Images"
-                                width="406px"
-                                height="366px"
+                                width="406"
+                                height="366"
                             />
                         </picture>
                     </div>
@@ -232,62 +232,68 @@
             >
                 <div class="services__gradient"></div>
                 <div class="section-content services__content">
-                <div class="section-header services__header">
-                    <h2 class="services__heading" id="services-heading">
-                        SERVICES
-                    </h2>
-                    <h3 class="services__description">
-                        Our top value categories for you
-                    </h3>
-                </div>
+                    <div class="section-header services__header">
+                        <h2 class="services__heading" id="services-heading">
+                            SERVICES
+                        </h2>
+                        <h3 class="services__description">
+                            Our top value categories for you
+                        </h3>
+                    </div>
 
-                <div class="services__card-container">
-                    <div class="services-card">
-                        <div class="services-card__img">
-                            <img
-                                src="src/assets/images/services-1.png"
-                                alt="Globe Image"
-                            />
+                    <div class="services__card-container">
+                        <div class="services-card">
+                            <div class="services-card__img">
+                                <img
+                                    src="src/assets/images/services-1.png"
+                                    alt="Globe Image"
+                                />
+                            </div>
+                            <div class="services-card__content">
+                                <h4 class="services-card__heading">
+                                    Best Tour Guide
+                                </h4>
+                                <p class="services-card__text">
+                                    What looked like a small patch of purple
+                                    grass, above five feet.
+                                </p>
+                            </div>
                         </div>
-                        <div class="services-card__content">
-                        <h4 class="services-card__heading">Best Tour Guide</h4>
-                        <p class="services-card__text">
-                            What looked like a small patch of purple grass,
-                            above five feet.
-                        </p>
+                        <div class="services-card">
+                            <div class="services-card__img">
+                                <img
+                                    src="src/assets/images/services-2.png"
+                                    alt="Calendar Image"
+                                />
+                            </div>
+                            <div class="services-card__content">
+                                <h4 class="services-card__heading">
+                                    Easy Booking
+                                </h4>
+                                <p class="services-card__text">
+                                    Square, was moving across the sand in their
+                                    direction.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="services-card">
+                            <div class="services-card__img">
+                                <img
+                                    src="src/assets/images/services-3.png"
+                                    alt="Weather Image"
+                                />
+                            </div>
+                            <div class="services-card__content">
+                                <h4 class="services-card__heading">
+                                    Weather Forecast
+                                </h4>
+                                <p class="services-card__text">
+                                    What looked like a small patch of purple
+                                    grass, above five feet.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="services-card">
-                        <div class="services-card__img">
-                            <img
-                                src="src/assets/images/services-2.png"
-                                alt="Calendar Image"
-                            />
-                        </div>
-                        <div class="services-card__content">
-                        <h4 class="services-card__heading">Easy Booking</h4>
-                        <p class="services-card__text">
-                            Square, was moving across the sand in their
-                            direction.
-                        </p>
-                        </div>
-                    </div>
-                    <div class="services-card">
-                        <div class="services-card__img">
-                            <img
-                                src="src/assets/images/services-3.png"
-                                alt="Weather Image"
-                            />
-                        </div>
-                        <div class="services-card__content">
-                        <h4 class="services-card__heading">Weather Forecast</h4>
-                        <p class="services-card__text">
-                            What looked like a small patch of purple grass,
-                            above five feet.
-                        </p>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </section>
 
@@ -309,15 +315,15 @@
                     <picture>
                         <source
                             srcset="src/assets/images/travelpoint-bg.png"
-                            media="(width >=1024px)"
-                            width="870px"
-                            height="697px"
+                            media="(width >=880px)"
+                            width="870"
+                            height="697"
                         />
                         <img
                             src="src/assets/images/travelpoint-bg-mobile.png"
                             alt="Image of a woman on a suitcase"
-                            width="398px"
-                            height="319px"
+                            width="398"
+                            height="319"
                         />
                     </picture>
                 </div>
@@ -367,15 +373,15 @@
                     <picture>
                         <source
                             srcset="src/assets/images/keyfeatures-bg-tab.png"
-                            media="(width>=1024px)"
-                            width="694px"
-                            height="869px"
+                            media="(width>=880px)"
+                            width="694"
+                            height="869"
                         />
                         <img
                             src="src/assets/images/keyfeatures-bg-mobile.png"
                             alt="Collage of popular destinations"
-                            width="350px"
-                            height="439px"
+                            width="350"
+                            height="439"
                         />
                     </picture>
                 </div>
@@ -447,7 +453,7 @@
                 class="testimonials section-wrapper"
                 aria-labelledby="testimonials-heading"
             >
-            <div class="testimonials__bg">
+                <div class="testimonials__bg">
                     <img
                         src="src/assets/images/testimonial-bg.png"
                         alt=""
@@ -461,7 +467,6 @@
                     </h2>
                     <h3 class="testimonials__description">Trust our clients</h3>
                 </div>
-                
 
                 <div class="swiper">
                     <div class="swiper-wrapper">
@@ -582,8 +587,6 @@
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-
-                </section>
             </section>
 
             <!-- SUBSCRIPTION FORM -->

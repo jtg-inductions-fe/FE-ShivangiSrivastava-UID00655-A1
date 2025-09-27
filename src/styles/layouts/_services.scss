@@ -55,7 +55,7 @@
 
 @include responsive-tab {
     .services {
-        margin-top: px-to-rem(68);
+        margin-top: px-to-rem(136);
 
         &__gradient {
             width: px-to-rem(500);
@@ -71,11 +71,11 @@
 
         &__card-container {
             flex-direction: row;
+            gap: px-to-rem(16);
         }
     }
 
     .services-card {
-        width: px-to-rem(288);
         padding: px-to-rem(66 60 32);
         gap: px-to-rem(59);
 
@@ -83,7 +83,7 @@
             @include font-scale(28);
         }
         &__text {
-            @include text-overflow(4);
+            @include text-overflow(6);
         }
     }
 }
@@ -135,6 +135,7 @@
         }
         &__text {
             @include text-overflow(4);
+            text-align: center;
         }
     }
 }

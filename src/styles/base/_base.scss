@@ -33,7 +33,6 @@ a {
 }
 
 .section-header {
-    // margin-bottom: px-to-rem(32);
     display: flex;
     flex-direction: column;
     gap: px-to-rem(16);
@@ -53,16 +52,12 @@ a {
     }
 
     @include responsive-tab {
-        // margin-bottom: px-to-rem(64);
-
         & > h1 {
             margin-bottom: px-to-rem(26);
         }
     }
 
     @include responsive-desktop {
-        // margin-bottom: px-to-rem(64);
-
         & > h1 {
             margin-bottom: px-to-rem(28);
         }

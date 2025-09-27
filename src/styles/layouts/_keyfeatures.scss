@@ -25,6 +25,7 @@
         display: flex;
         flex-direction: column;
         gap: px-to-rem(8);
+        width: 100%;
     }
 }
 
@@ -33,6 +34,9 @@
     border-radius: px-to-rem(32);
     box-sizing: border-box;
     padding: px-to-rem(32 40 32 32);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(32);
 
     &:hover {
         border: 1px solid $color-border;
@@ -42,7 +46,6 @@
     }
 
     &__content {
-        margin-top: px-to-rem(32);
         display: flex;
         flex-direction: column;
         gap: px-to-rem(8);
@@ -82,19 +85,14 @@
 
     .features-card {
         padding: px-to-rem(32);
-        @include flex-center;
-        display: flex;
-        gap: px-to-rem(32);
-
-        &__content {
-            margin: 0;
-        }
+        flex-direction: row;
+        align-items: center;
     }
 }
 
 @include responsive-desktop {
     .features {
-        margin: px-to-rem(128 140 0);
+        margin-top: px-to-rem(128);
         text-align: start;
         min-height: px-to-rem(900);
         overflow: hidden;
@@ -106,7 +104,6 @@
 
         &__content {
             width: px-to-rem(530);
-            margin: 0;
         }
 
         &__header {
@@ -123,7 +120,8 @@
     }
 
     .features-card {
-        @include flex-center;
+        flex-direction: row;
+        align-items: center;
         gap: px-to-rem(32);
         padding: px-to-rem(36 32 28 20);
         &__content {
