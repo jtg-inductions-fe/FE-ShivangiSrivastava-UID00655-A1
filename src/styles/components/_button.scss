@@ -2,16 +2,16 @@
 
 .button {
     display: inline-block;
-    padding: px-to-rem(10 19);
-    height: px-to-rem(48);
-    width: px-to-rem(128);
+    padding: px-to-rem(16 32);
+    min-height: px-to-rem(49);
+    min-width: px-to-rem(105);
     border: none;
     border-radius: px-to-rem(64);
     @include font-scale(14);
     font-weight: $font-weight-bold;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(150, 148, 148, 0.2);
+    box-shadow: 0 8px 16px 0 $color-shadow;
     transition:
         background-color 0.2s ease,
         box-shadow 0.2s ease;
@@ -24,6 +24,26 @@
 
     &--secondary {
         background-color: $color-white;
+    }
+
+    &--icon-right {
+        @include flex-center;
+        justify-content: center;
+        gap: px-to-rem(24);
+    }
+
+    &--icon-left {
+        @include flex-center;
+        justify-content: center;
+        gap: px-to-rem(16);
+        padding: px-to-rem(16 32);
+
+        @include responsive-tab {
+            gap: px-to-rem(8);
+        }
+        @include responsive-desktop {
+            gap: px-to-rem(8);
+        }
     }
 
     &:hover {
