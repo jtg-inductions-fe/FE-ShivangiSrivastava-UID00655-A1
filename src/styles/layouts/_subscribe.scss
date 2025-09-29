@@ -60,7 +60,7 @@
 
 @include responsive-tab {
     .subscribe {
-        margin-top: px-to-rem(114);
+        margin-top: px-to-rem(84);
         background-color: #{$color-icon}14;
         border-radius: px-to-rem(32);
         padding: px-to-rem(128 64);
@@ -114,10 +114,14 @@
 
 @include responsive-desktop {
     .subscribe {
-        margin-top: px-to-rem(164);
+        margin-top: px-to-rem(104);
         background-color: #{$color-icon}14;
         border-radius: px-to-rem(32);
         padding: px-to-rem(128 64);
+
+        &__header {
+            align-items: center;
+        }
 
         &__triangle {
             display: block;

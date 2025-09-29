@@ -156,7 +156,7 @@
             min-width: px-to-rem(150);
             display: flex;
             flex-direction: column;
-            gap: px-to-rem(28);
+            gap: px-to-rem(24);
         }
 
         &__list {
@@ -166,7 +166,7 @@
             display: flex;
             flex-direction: column;
             align-items: start;
-            gap: px-to-rem(26);
+            gap: px-to-rem(16);
             visibility: visible;
         }
     }
