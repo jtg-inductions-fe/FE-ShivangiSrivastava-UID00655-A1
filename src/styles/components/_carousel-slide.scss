@@ -1,8 +1,10 @@
 @use '../abstract/' as *;
 
+.swiper {
+    max-width: 100%;
+}
 .swiper-slide {
     text-align: center;
-    margin-top: px-to-rem(64);
     min-height: px-to-rem(480);
 
     &__user-info {
@@ -97,7 +99,7 @@
         flex-direction: column;
         align-items: center;
 
-        margin-top: px-to-rem(56);
+        margin-top: px-to-rem(0);
 
         &__user-info {
             margin-top: px-to-rem(56);
@@ -111,12 +113,13 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(102);
+        top: px-to-rem(142);
         box-sizing: border-box;
         width: 100%;
         display: flex;
         justify-content: space-between;
         z-index: $z-index-overlay;
+        margin: 0;
     }
 
     .button-prev,
@@ -151,12 +154,13 @@
 
     .swiper-buttons {
         position: absolute;
-        top: px-to-rem(76);
+        top: px-to-rem(116);
         box-sizing: border-box;
         width: 100%;
         display: flex;
         justify-content: space-between;
         z-index: $z-index-overlay;
+        margin: 0;
     }
 
     .button-prev,
