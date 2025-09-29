@@ -1,15 +1,11 @@
 @use './colors' as *;
 @use './variables' as *;
+@use './functions' as *;
+@use './mixins' as *;
 
 //prevents scrolling when navbar is expanded
 .no-scroll {
     overflow: hidden;
-}
-
-//containerizes page beyond max viewport width
-.wrapper {
-    max-width: $breakpoint-container;
-    margin: 0 auto;
 }
 
 //prevents transitions during resizing window
@@ -18,7 +14,80 @@ nav .no-transition {
 }
 
 //adds bg color and shadow on scroll
-.scrolled {
+header.scrolled {
+    height: fit-content;
+    box-sizing: border-box;
     background-color: $color-white;
     box-shadow: 0 0 25px $color-shadow;
+}
+
+nav.scrolled {
+    padding-top: px-to-rem(16);
+    padding-bottom: px-to-rem(16);
+}
+
+.wrapper {
+    text-align: center;
+    max-width: px-to-rem(396.28);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include responsive-tab {
+        max-width: px-to-rem(896);
+    }
+
+    @include responsive-desktop {
+        max-width: px-to-rem(1192);
+    }
+}
+
+//sets gap between section's heading, subheading and text
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(16);
+    align-items: center;
+    & > h1 {
+        margin: 0;
+    }
+    & > h2 {
+        margin: 0;
+    }
+    & > h3 {
+        margin: 0;
+    }
+    & > p {
+        margin-bottom: 0;
+        margin-top: px-to-rem(16);
+    }
+
+    @include responsive-tab {
+        & > h1 {
+            margin-bottom: px-to-rem(26);
+        }
+    }
+
+    @include responsive-desktop {
+        align-items: start;
+        & > h1 {
+            margin-bottom: px-to-rem(28);
+        }
+    }
+}
+
+//centers section content and gives gap
+.section-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: px-to-rem(32);
+
+    @include responsive-tab {
+        gap: px-to-rem(64);
+    }
+    @include responsive-desktop {
+        gap: px-to-rem(64);
+    }
 }

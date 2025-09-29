@@ -30,7 +30,7 @@
                         type="button"
                         aria-label="open menu"
                         aria-expanded="false"
-                        aria-controls="nav-links nav-btns"
+                        aria-controls="nav-list nav-buttons"
                         id="menu-open"
                     ></button>
 
@@ -44,7 +44,7 @@
                     ></button>
                 </div>
 
-                <div class="navbar__links no-transition" id="navbar-list">
+                <div class="navbar__links no-transition" id="nav-list">
                     <ul class="navbar__list">
                         <li>
                             <a href="#home" class="navbar__item">Home</a>
@@ -67,7 +67,7 @@
                     </ul>
                 </div>
 
-                <div class="navbar__actions no-transition" id="nav-btns">
+                <div class="navbar__actions no-transition" id="nav-buttons">
                     <button class="button button--secondary navbar__buttons">
                         Log In
                     </button>
@@ -79,8 +79,12 @@
         </header>
 
         <!-- HERO SECTION -->
-        <main class="wrapper" id="main-section">
-            <section aria-label="Introduction Section" class="hero" id="hero">
+        <main id="main-section">
+            <section
+                aria-label="Introduction Section"
+                class="hero wrapper"
+                id="hero"
+            >
                 <div class="hero__gradient"></div>
                 <div class="hero__main">
                     <div class="hero__bg">
@@ -88,20 +92,20 @@
                             <source
                                 srcset="src/assets/images/hero-img-desktop.png"
                                 media="(width >=1440px)"
-                                width="790px"
-                                height="737px"
+                                width="772"
+                                height="713"
                             />
                             <source
                                 srcset="src/assets/images/hero-img-tablet.png"
                                 media="(width >=1024px)"
-                                width="789px"
-                                height="748px"
+                                width="772"
+                                height="713"
                             />
                             <img
                                 src="src/assets/images/hero-img-mobile.png"
                                 alt="Collage of Travel Images"
-                                width="406px"
-                                height="366px"
+                                width="406"
+                                height="366"
                             />
                         </picture>
                     </div>
@@ -115,23 +119,27 @@
 
                     <div class="hero__content">
                         <button
-                            class="button button--secondary hero__explorebtn"
+                            class="button button--secondary button--icon-right hero__explorebtn"
                         >
                             Explore the world!<span
                                 class="icon-work-bag hero__exploreicon"
                             ></span>
                         </button>
-                        <h1 class="hero__heading">
-                            Travel
-                            <span class="hero__heading hero__heading--primary"
-                                >top destination
-                            </span>
-                            of the world
-                        </h1>
-                        <p class="hero__para">
-                            We always make our customers happy by providing as
-                            many choices as possible
-                        </p>
+
+                        <div class="hero__header section-header">
+                            <h1 class="hero__heading">
+                                Travel
+                                <span
+                                    class="hero__heading hero__heading--primary"
+                                    >top destination
+                                </span>
+                                of the world
+                            </h1>
+                            <p class="hero__para">
+                                We always make our customers happy by providing
+                                as many choices as possible
+                            </p>
+                        </div>
                         <div
                             class="hero__actions"
                             role="group"
@@ -143,7 +151,7 @@
                                 Get Started
                             </button>
                             <button
-                                class="button button--secondary hero__buttons hero__buttons--secondary"
+                                class="button button--secondary button--icon-left hero__buttons"
                             >
                                 <span
                                     class="icon-play-circle hero__buttons--icon"
@@ -156,7 +164,7 @@
 
                 <div class="hero__logos">
                     <div
-                        class="hero__partnerlogo"
+                        class="hero__partner-logo"
                         aria-label="Trusted by leading companies"
                     >
                         <a
@@ -169,7 +177,7 @@
                                 alt="TripAdvisor"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.expedia.co.in/"
@@ -180,7 +188,7 @@
                                 alt="Expedia"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.booking.com/in"
@@ -191,7 +199,7 @@
                                 alt="Booking.com"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.airbnb.co.in/"
@@ -202,7 +210,7 @@
                                 alt="Airbnb"
                         /></a>
                     </div>
-                    <div class="hero__partnerlogo">
+                    <div class="hero__partner-logo">
                         <a
                             class="hero__logolink"
                             href="https://www.orbitz.com/"
@@ -218,58 +226,69 @@
 
             <!-- SERVICES SECTION -->
             <section
-                class="services"
+                class="services wrapper"
                 id="discover"
                 aria-labelledby="services-heading"
             >
                 <div class="services__gradient"></div>
-                <div class="services__content">
-                    <h2 class="services__heading" id="services-heading">
-                        SERVICES
-                    </h2>
-                    <h3 class="services__description">
-                        Our top value categories for you
-                    </h3>
-                </div>
-                <div class="services__cardcontainer">
-                    <div class="services-card">
-                        <div class="services-card__img">
-                            <img
-                                src="src/assets/images/services-1.png"
-                                alt="Globe Image"
-                            />
-                        </div>
-                        <h4 class="services-card__heading">Best Tour Guide</h4>
-                        <p class="services-card__text">
-                            What looked like a small patch of purple grass,
-                            above five feet.
-                        </p>
+                <div class="section-content services__content">
+                    <div class="section-header">
+                        <h2 id="services-heading">SERVICES</h2>
+                        <h3>Our top value categories for you</h3>
                     </div>
-                    <div class="services-card">
-                        <div class="services-card__img">
-                            <img
-                                src="src/assets/images/services-2.png"
-                                alt="Calendar Image"
-                            />
+
+                    <div class="services__card-container">
+                        <div class="services-card">
+                            <div>
+                                <img
+                                    src="src/assets/images/services-1.png"
+                                    alt="Globe Image"
+                                />
+                            </div>
+                            <div class="services-card__content">
+                                <h4 class="services-card__heading">
+                                    Best Tour Guide
+                                </h4>
+                                <p class="services-card__text">
+                                    What looked like a small patch of purple
+                                    grass, above five feet.
+                                </p>
+                            </div>
                         </div>
-                        <h4 class="services-card__heading">Easy Booking</h4>
-                        <p class="services-card__text">
-                            Square, was moving across the sand in their
-                            direction.
-                        </p>
-                    </div>
-                    <div class="services-card">
-                        <div class="services-card__img">
-                            <img
-                                src="src/assets/images/services-3.png"
-                                alt="Weather Image"
-                            />
+                        <div class="services-card">
+                            <div>
+                                <img
+                                    src="src/assets/images/services-2.png"
+                                    alt="Calendar Image"
+                                />
+                            </div>
+                            <div class="services-card__content">
+                                <h4 class="services-card__heading">
+                                    Easy Booking
+                                </h4>
+                                <p class="services-card__text">
+                                    Square, was moving across the sand in their
+                                    direction.
+                                </p>
+                            </div>
                         </div>
-                        <h4 class="services-card__heading">Weather Forecast</h4>
-                        <p class="services-card__text">
-                            What looked like a small patch of purple grass,
-                            above five feet.
-                        </p>
+                        <div class="services-card">
+                            <div>
+                                <img
+                                    src="src/assets/images/services-3.png"
+                                    alt="Weather Image"
+                                />
+                            </div>
+                            <div class="services-card__content">
+                                <h4 class="services-card__heading">
+                                    Weather Forecast
+                                </h4>
+                                <p class="services-card__text">
+                                    What looked like a small patch of purple
+                                    grass, above five feet.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -277,7 +296,7 @@
             <!-- TRAVEL POINT SECTION -->
             <section
                 aria-labelledby="travel-heading"
-                class="travel"
+                class="travel wrapper"
                 id="special-deals"
             >
                 <div class="travel__ticket">
@@ -293,31 +312,29 @@
                         <source
                             srcset="src/assets/images/travelpoint-bg.png"
                             media="(width >=1024px)"
-                            width="870px"
-                            height="697px"
+                            width="870"
+                            height="697"
                         />
                         <img
                             src="src/assets/images/travelpoint-bg-mobile.png"
                             alt="Image of a woman on a suitcase"
-                            width="398px"
-                            height="319px"
+                            width="398"
+                            height="319"
                         />
                     </picture>
                 </div>
 
-                <div class="travel__content">
-                    <h2 class="travel__heading" id="travel-heading">
-                        TRAVEL POINT
-                    </h2>
-                    <h3 class="travel__subheading">
-                        We helping you find your dream location
-                    </h3>
-                    <p class="travel__text">
-                        Contrary to popular belief, Lorem Ipsum is not simply
-                        random text. It has roots in a piece of classical Latin
-                        literature from 45 BC.
-                    </p>
-                    <div class="travel__cardscontainer">
+                <div class="travel__content section-content">
+                    <div class="section-header">
+                        <h2 id="travel-heading">TRAVEL POINT</h2>
+                        <h3>We helping you find your dream location</h3>
+                        <p class="travel__text">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC.
+                        </p>
+                    </div>
+                    <div class="travel__cards-container">
                         <div class="travel-card">
                             <h4 class="travel-card__heading">500+</h4>
                             <p class="travel-card__text">Holiday Package</p>
@@ -340,36 +357,43 @@
 
             <!-- Key Features -->
 
-            <section aria-labelledby="features-heading" class="features">
+            <section
+                aria-labelledby="features-heading"
+                class="features wrapper"
+            >
                 <div class="features__bg">
                     <picture>
                         <source
                             srcset="src/assets/images/keyfeatures-bg-tab.png"
                             media="(width>=1024px)"
-                            width="694px"
-                            height="869px"
+                            width="694"
+                            height="869"
                         />
                         <img
                             src="src/assets/images/keyfeatures-bg-mobile.png"
                             alt="Collage of popular destinations"
-                            width="350px"
-                            height="439px"
+                            width="350"
+                            height="439"
                         />
                     </picture>
                 </div>
 
-                <div class="features__content">
-                    <h2 class="features__heading" id="features-heading">
-                        KEY FEATURES
-                    </h2>
-                    <h3 class="features__subheading">We offer best services</h3>
-                    <p class="features__text">
-                        Contrary to popular belief, Lorem Ipsum is not simply
-                        random text. It has roots in a piece of classical Latin
-                        literature from 45 BC.
-                    </p>
+                <div class="features__content section-content">
+                    <div class="section-header">
+                        <h2 class="features__heading" id="features-heading">
+                            KEY FEATURES
+                        </h2>
+                        <h3 class="features__subheading">
+                            We offer best services
+                        </h3>
+                        <p class="features__text">
+                            Contrary to popular belief, Lorem Ipsum is not
+                            simply random text. It has roots in a piece of
+                            classical Latin literature from 45 BC.
+                        </p>
+                    </div>
 
-                    <div class="features__cardcontainer">
+                    <div class="features__card-container">
                         <div class="features-card">
                             <span class="icon-locationpin features-card__icon"
                                 ><span class="path1"></span
@@ -418,26 +442,28 @@
 
             <!-- TESTIMONIALS SECTION -->
             <section
-                class="testimonials"
+                class="testimonials wrapper"
                 aria-labelledby="testimonials-heading"
             >
-                <h2 class="testimonials__heading" id="testimonials-heading">
-                    TESTIMONIALS
-                </h2>
-                <h3 class="testimonials__description">Trust our clients</h3>
                 <div class="testimonials__bg">
-                    <picture aria-hidden="true" role="presentation">
+                    <picture>
                         <source
                             srcset="
-                                src/assets/images/Testimonials-bg-desktop.png
+                                src/assets/images/testimonials-bg-desktop.png
                             "
                             media="(width>=1440px)"
                         />
                         <img
                             src="src/assets/images/testimonials-bg-tab.png"
                             alt=""
+                            aria-hidden="true"
+                            role="presentation"
                         />
                     </picture>
+                </div>
+                <div class="section-header testimonials__header">
+                    <h2 id="testimonials-heading">TESTIMONIALS</h2>
+                    <h3>Trust our clients</h3>
                 </div>
 
                 <div class="swiper">
@@ -563,11 +589,16 @@
 
             <!-- SUBSCRIPTION FORM -->
 
-            <section class="subscribe" aria-labelledby="subscribe-heading">
-                <h2 class="subscribe__heading">SUBSCRIBE TO OUR NEWSLETTER</h2>
-                <h3 class="subscribe__subheading" id="subscribe-heading">
-                    Prepare yourself & let's explore the beauty of the world
-                </h3>
+            <section
+                class="subscribe wrapper"
+                aria-labelledby="subscribe-heading"
+            >
+                <div class="section-header subscribe__header">
+                    <h2 id="subscribe-heading">SUBSCRIBE TO OUR NEWSLETTER</h2>
+                    <h3 class="subscribe__subheading">
+                        Prepare yourself & let's explore the beauty of the world
+                    </h3>
+                </div>
 
                 <div class="subscribe__triangle">
                     <img
@@ -626,7 +657,7 @@
                     text. It has roots in a piece of classical Latin literature
                     from 45 BC.
                 </p>
-                <div class="footer__socialcontainer">
+                <div class="footer__social-container">
                     <a
                         class="footer__social"
                         aria-label="Facebook Link"
@@ -675,13 +706,13 @@
                         ></button>
                     </div>
                     <ul class="company-details__list">
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#">About</a>
                         </li>
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#">Career</a>
                         </li>
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#">Mobile</a>
                         </li>
                     </ul>
@@ -696,20 +727,20 @@
                     </div>
 
                     <ul class="company-details__list">
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#"
                                 >Why Travlog?</a
                             >
                         </li>
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#"
                                 >Partner with us</a
                             >
                         </li>
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#">FAQ's</a>
                         </li>
-                        <li>
+                        <li class="company-details__list-item">
                             <a class="company-details__text" href="#">Blog</a>
                         </li>
                     </ul>
@@ -724,7 +755,7 @@
                     </div>
 
                     <ul class="company-details__list">
-                        <li>
+                        <li class="company-details__list-item">
                             <a
                                 class="company-details__text"
                                 href="tel:+0092123456789"
@@ -732,17 +763,18 @@
                             >
                         </li>
 
-                        <li>
+                        <li class="company-details__list-item">
                             <a
                                 class="company-details__text"
                                 href="mailto:info@travlog.com"
                                 >info@travlog.com</a
                             >
                         </li>
-                        <li>
+                        <li class="company-details__list-item">
                             <p class="company-details__text">
-                                205. R Street, New York BD23200
+                                205. R Street, New York
                             </p>
+                            <p class="company-details__text">BD23200</p>
                         </li>
                     </ul>
                 </div>

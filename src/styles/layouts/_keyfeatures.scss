@@ -1,35 +1,25 @@
 @use '../abstract/' as *;
 
 .features {
-    text-align: center;
-    margin-top: px-to-rem(90);
+    margin-top: px-to-rem(98);
+    @include flex-center;
+    flex-direction: column;
+    gap: px-to-rem(102);
 
-    &__heading {
-        margin-top: px-to-rem(104);
-        margin-bottom: px-to-rem(16);
-    }
-
-    &__subheading {
-        margin-top: 0;
-        margin-bottom: px-to-rem(26);
-        @include text-overflow(4);
+    &__content {
+        margin: px-to-rem(0 32);
     }
 
     &__text {
-        margin-top: 0;
-        padding: px-to-rem(0 30);
-        letter-spacing: px-to-rem(0.4);
-        @include font-scale(18, $base: 1.6);
+        max-width: px-to-rem(320);
         @include text-overflow(4);
     }
 
-    &__cardcontainer {
-        margin-top: px-to-rem(28);
-        min-height: px-to-rem(920);
+    &__card-container {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         gap: px-to-rem(8);
+        width: 100%;
     }
 }
 
@@ -37,9 +27,10 @@
     text-align: start;
     border-radius: px-to-rem(32);
     box-sizing: border-box;
-    min-height: px-to-rem(290);
-    margin: px-to-rem(0 48);
-    padding: px-to-rem(32);
+    padding: px-to-rem(32 40 32 32);
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(32);
 
     &:hover {
         border: 1px solid $color-border;
@@ -49,10 +40,8 @@
     }
 
     &__content {
-        margin-top: px-to-rem(30);
         display: flex;
         flex-direction: column;
-        flex-shrink: 1;
         gap: px-to-rem(8);
     }
 
@@ -71,92 +60,62 @@
 @include responsive-tab {
     .features {
         margin-top: px-to-rem(130);
-
-        &__heading {
-            margin-top: px-to-rem(66);
-            margin-bottom: 0;
-        }
-
-        &__subheading {
-            margin-top: px-to-rem(18);
-            margin-bottom: px-to-rem(30);
-        }
+        gap: px-to-rem(68);
 
         &__text {
-            margin-top: 0;
-            padding: px-to-rem(0 100);
+            max-width: px-to-rem(800);
             @include text-overflow(2);
         }
 
-        &__cardcontainer {
-            margin-top: px-to-rem(60);
+        &__card-container {
             gap: px-to-rem(0);
-            min-height: px-to-rem(492);
+            margin: 0;
+            align-self: start;
         }
-    }
-
-    .features-card {
-        padding: px-to-rem(36 32 26);
-        margin: px-to-rem(0 96);
-        @include flex-center;
-        min-height: px-to-rem(164);
-        display: flex;
-        gap: px-to-rem(32);
 
         &__content {
             margin: 0;
         }
+    }
+
+    .features-card {
+        padding: px-to-rem(32 16);
+        flex-direction: row;
+        align-items: center;
     }
 }
 
 @include responsive-desktop {
     .features {
+        margin-top: px-to-rem(128);
         text-align: start;
-        margin-top: px-to-rem(80);
-        margin-left: px-to-rem(124);
-        display: flex;
-        flex-direction: row-reverse;
         min-height: px-to-rem(900);
-        justify-content: space-between;
         overflow: hidden;
 
         &__bg {
-            position: relative;
+            position: absolute;
             right: px-to-rem(-22);
         }
 
         &__content {
-            width: px-to-rem(550);
-            margin-top: px-to-rem(8);
-            padding: px-to-rem(0 20 0 16);
-        }
-
-        &__heading {
-            margin: 0;
-        }
-
-        &__subheading {
-            margin-top: px-to-rem(16);
-            margin-bottom: px-to-rem(32);
+            width: px-to-rem(530);
+            align-self: start;
+            margin: px-to-rem(0 16);
         }
 
         &__text {
-            padding: 0;
+            max-width: 100%;
         }
 
-        &__cardcontainer {
-            width: px-to-rem(558);
-            margin-top: px-to-rem(56);
+        &__card-container {
             gap: 0;
-            min-height: px-to-rem(560);
         }
     }
 
     .features-card {
-        margin: 0;
-        @include flex-center;
+        flex-direction: row;
+        align-items: center;
         gap: px-to-rem(32);
-        min-height: px-to-rem(164);
         padding: px-to-rem(36 32 28);
         &__content {
             margin: 0;

@@ -5,10 +5,10 @@ $icomoon-path: '../assets/font/icomoon/icomoon';
 $font-path: '../assets/font/Roboto-';
 
 //breakpoints for mobile, tablet and desktop views
-$breakpoint-sm: 430px;
+$breakpoint-xs: 430px;
+$breakpoint-sm: 540px;
 $breakpoint-md: 1024px;
-$breakpoint-lg: 1280px;
-$breakpoint-container: 1440px;
+$breakpoint-lg: 1440px;
 
 // variables for font-weight
 $font-weight-black: 900;

@@ -4,18 +4,8 @@
 .testimonials {
     z-index: $z-index-base;
     position: relative;
-    text-align: center;
-    margin-top: px-to-rem(36);
-
-    &__heading {
-        margin-top: 0;
-        margin-bottom: px-to-rem(16);
-    }
-
-    &__description {
-        margin-top: 0;
-    }
-
+    margin-top: px-to-rem(71);
+    display: block;
     &__bg {
         display: none;
     }
@@ -23,29 +13,33 @@
 
 @include responsive-tab {
     .testimonials {
-        margin-top: px-to-rem(136);
+        margin-top: px-to-rem(128);
 
         &__bg {
-            min-height: px-to-rem(200);
-            display: block;
             position: absolute;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
+            display: block;
+            top: px-to-rem(-44);
+            left: px-to-rem(-100);
+            right: px-to-rem(-100);
         }
     }
 }
 
 @include responsive-desktop {
     .testimonials {
-        margin-top: px-to-rem(48);
+        margin-top: px-to-rem(40);
+
+        &__header {
+            align-items: center;
+        }
 
         &__bg {
-            min-height: px-to-rem(200);
             display: block;
+            margin: 0;
             position: absolute;
-            top: px-to-rem(-80);
+            top: px-to-rem(-266);
+            left: px-to-rem(-128);
+            right: px-to-rem(-128);
         }
     }
 }

@@ -1,8 +1,8 @@
 //Provides Navbar Open/Close functionality
 const hamOpen = document.querySelector('#menu-open');
 const hamClose = document.querySelector('#menu-close');
-const navLinks = document.querySelector('#navbar-list');
-const navBtns = document.querySelector('#nav-btns');
+const navLinks = document.querySelector('#nav-list');
+const navBtns = document.querySelector('#nav-buttons');
 const navMenu = document.querySelector('#nav-menu');
 const mainSection = document.querySelector('#main-section');
 const footerSection = document.querySelector('#footer-section');
@@ -40,12 +40,14 @@ if (ready) {
 
 //adds background to navbar on scrolling
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
+    if (window.scrollY > navBar.offsetTop) {
         if (!navBar.classList.contains('scrolled')) {
             header.classList.add('scrolled');
+            navBar.classList.add('scrolled');
         }
     } else {
         header.classList.remove('scrolled');
+        navBar.classList.remove('scrolled');
     }
 });
 

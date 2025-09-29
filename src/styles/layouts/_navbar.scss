@@ -8,22 +8,24 @@
     top: 0;
     z-index: $z-index-nav;
     height: px-to-rem(120);
+    box-sizing: border-box;
     width: 100%;
     transition:
         background-color 0.2s linear,
-        box-shadow 0.2s linear;
+        box-shadow 0.2s linear,
+        height 0.2s linear;
 }
 .navbar {
-    height: inherit;
     position: relative;
-    z-index: $z-index-overlay;
     box-sizing: border-box;
-    padding: px-to-rem(0 20 0 17);
-    @include flex-center;
+    padding: px-to-rem(38 20 38 17);
+    transition: padding 0.3s ease;
+
+    display: flex;
     justify-content: space-between;
 
     &__logo {
-        z-index: inherit;
+        z-index: $z-index-overlay;
     }
 
     &__home {
@@ -40,10 +42,8 @@
     &__menu--openicon {
         display: block;
         transition: opacity 0.5s linear;
-        opacity: 1;
         &.closed {
             display: none;
-            opacity: 0;
         }
     }
 
@@ -65,6 +65,8 @@
         position: absolute;
         width: 100%;
         height: 100vh;
+        padding: px-to-rem(120 72);
+        box-sizing: border-box;
         top: 0;
         left: 0;
         background-color: $color-accent-primary;
@@ -90,10 +92,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        font-size: px-to-rem(27);
-        line-height: px-to-rem(100);
-        margin-top: px-to-rem(100);
-        margin-left: px-to-rem(44);
+        gap: px-to-rem(56);
+        padding: 0;
+        margin: 0;
     }
 
     &__item {
@@ -101,6 +102,7 @@
         transition: color 0.5s ease;
         font-weight: $font-weight-bold;
         text-decoration: none;
+        padding: px-to-rem(12);
         @include focus;
         &:hover {
             color: $color-text-primary;
@@ -112,6 +114,8 @@
         position: absolute;
         @include flex-center;
         flex-direction: column;
+        padding: px-to-rem(0 72);
+        box-sizing: border-box;
         gap: px-to-rem(32);
         width: 100%;
         top: 75vh;
@@ -131,8 +135,7 @@
     }
 
     &__buttons {
-        font-size: px-to-rem(20);
-        width: 90vw;
+        width: inherit;
     }
 }
 
@@ -141,18 +144,17 @@
         height: px-to-rem(113);
     }
     .navbar {
-        padding: px-to-rem(0 64 0 68);
+        padding: px-to-rem(36 64 36 68);
 
         &__logo {
-            order: 2;
-            padding-left: px-to-rem(180);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         &__links {
             transform: translateX(-100%);
-        }
-        &__list {
-            margin-left: px-to-rem(80);
+            padding: px-to-rem(120);
         }
 
         &__actions {
@@ -161,43 +163,29 @@
             transition: none;
             position: static;
             flex-direction: row;
-            margin: 0;
+            padding: 0;
             gap: px-to-rem(8);
-            width: px-to-rem(220);
-            height: px-to-rem(49);
+            width: auto;
             z-index: $z-index-base;
-            order: 3;
-            opacity: 1;
-
             &.active {
                 visibility: hidden;
             }
         }
 
         &__buttons {
-            @include font-scale(14);
-            width: px-to-rem(105);
-            &:last-child {
-                width: px-to-rem(115);
-            }
+            width: auto;
         }
     }
 }
 
 @include responsive-desktop {
     .header {
-        height: px-to-rem(160);
+        height: px-to-rem(145);
     }
     .navbar {
         margin: 0 auto;
-        padding: px-to-rem(25 100 0 150);
-        max-width: $breakpoint-container;
-        right: 0;
-        left: 0;
-
-        &__logo {
-            padding: 0;
-        }
+        padding: px-to-rem(68 98 32 150);
+        max-width: $breakpoint-lg;
 
         &__menu-icons {
             display: none;
@@ -213,45 +201,36 @@
             transition: none;
             transform: none;
             overflow: visible;
-            height: px-to-rem(17);
+            height: auto;
             position: static;
-            width: px-to-rem(420);
+            width: auto;
             background-color: transparent;
-            margin: 0;
             border: none;
             visibility: visible;
-            opacity: 1;
+            padding: 0;
         }
 
         &__list {
             flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            @include font-scale(14);
             margin: 0;
-            padding: 0;
+            gap: px-to-rem(32);
+            padding: px-to-rem(0);
         }
 
         &__actions {
             flex-direction: row;
             position: static;
-            margin: 0;
+            padding: 0;
             transform: none;
-            gap: px-to-rem(10);
-            width: px-to-rem(220);
-            height: px-to-rem(50);
+            gap: px-to-rem(8);
+            width: auto;
             z-index: $z-index-base;
             visibility: visible;
-            opacity: 1;
         }
 
         &__buttons {
             transition: none;
-            @include font-scale(14);
-            width: px-to-rem(105);
-            &:last-child {
-                width: px-to-rem(115);
-            }
+            width: auto;
         }
     }
 }
