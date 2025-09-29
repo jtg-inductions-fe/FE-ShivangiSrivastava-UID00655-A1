@@ -4,7 +4,7 @@
     margin-top: px-to-rem(98);
     @include flex-center;
     flex-direction: column;
-    gap: px-to-rem(100);
+    gap: px-to-rem(102);
 
     &__content {
         margin: px-to-rem(0 32);
@@ -13,11 +13,6 @@
     &__text {
         max-width: px-to-rem(320);
         @include text-overflow(4);
-    }
-
-    &__header {
-        @include flex-center;
-        flex-direction: column;
     }
 
     &__card-container {
@@ -106,10 +101,6 @@
             width: px-to-rem(530);
             align-self: start;
             margin: px-to-rem(0 16);
-        }
-
-        &__header {
-            align-items: start;
         }
 
         &__text {

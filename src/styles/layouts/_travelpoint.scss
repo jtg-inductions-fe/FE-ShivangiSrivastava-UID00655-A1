@@ -4,11 +4,6 @@
     position: relative;
     margin-top: px-to-rem(68);
 
-    &__header {
-        @include flex-center;
-        flex-direction: column;
-    }
-
     &__ticket {
         display: none;
     }
@@ -62,10 +57,11 @@
 
 @include responsive-tab {
     .travel {
-        margin-top: px-to-rem(64);
+        margin-top: px-to-rem(128);
+        gap: px-to-rem(30);
 
         &__img {
-            margin: px-to-rem(128 0 60 32);
+            margin-left: px-to-rem(30);
         }
 
         &__text {
@@ -93,10 +89,8 @@
 
 @include responsive-desktop {
     .travel {
-        margin-top: px-to-rem(140);
-        display: flex;
-        justify-content: end;
-        box-sizing: border-box;
+        margin-top: px-to-rem(144);
+        width: 100%;
 
         &__ticket {
             display: block;
@@ -109,10 +103,6 @@
             max-width: 100%;
         }
 
-        &__header {
-            align-items: start;
-        }
-
         &__img {
             position: absolute;
             left: px-to-rem(-130);
@@ -120,6 +110,7 @@
         }
 
         &__content {
+            align-self: end;
             width: px-to-rem(450);
             text-align: start;
         }

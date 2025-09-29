@@ -3,7 +3,7 @@
 
 .services {
     position: relative;
-    margin-top: px-to-rem(64);
+    margin-top: px-to-rem(66);
 
     &__card-container {
         display: flex;
@@ -93,16 +93,11 @@
         display: flex;
         text-align: start;
         align-items: center;
-        margin-top: px-to-rem(61);
-        margin-bottom: px-to-rem(61);
+        margin-top: px-to-rem(58);
 
         &__content {
             flex-direction: row;
             gap: 0;
-        }
-
-        &__header {
-            align-items: start;
         }
 
         &__gradient {

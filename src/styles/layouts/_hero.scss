@@ -4,8 +4,6 @@
 
 .hero {
     margin-top: px-to-rem(26);
-    @include flex-center;
-    flex-direction: column;
     gap: px-to-rem(68);
 
     &__arrows {
@@ -66,9 +64,7 @@
     &__actions {
         @include flex-center;
         flex-direction: column;
-        height: px-to-rem(158);
         width: 100%;
-        flex: 1;
         gap: px-to-rem(28);
         box-sizing: border-box;
     }
@@ -84,7 +80,6 @@
 
     &__logos {
         box-sizing: border-box;
-        min-height: px-to-rem(72);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

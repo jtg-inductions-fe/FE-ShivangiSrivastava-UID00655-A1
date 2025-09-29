@@ -5,6 +5,7 @@
     z-index: $z-index-base;
     position: relative;
     margin-top: px-to-rem(71);
+    display: block;
     &__bg {
         display: none;
     }
@@ -27,6 +28,10 @@
 @include responsive-desktop {
     .testimonials {
         margin-top: px-to-rem(40);
+
+        &__header {
+            align-items: center;
+        }
 
         &__bg {
             display: block;
